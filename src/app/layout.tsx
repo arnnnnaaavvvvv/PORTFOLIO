@@ -1,60 +1,40 @@
 import type { Metadata, Viewport } from "next";
-import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
-import "./globals.css";
-import SmoothScrollProvider from "@/components/SmoothScrollProvider";
-import PageTransition from "@/components/PageTransition";
-import CursorDot from "@/components/CursorDot";
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
+import Script from "next/script";
 
 export const viewport: Viewport = {
-  themeColor: "#0d1117",
+  themeColor: "#0f0f0f",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export const metadata: Metadata = {
   title: "Arnav Singh — Full-Stack AI Engineer & Systems Architect",
   description:
-    "Portfolio of Arnav Singh, Full-Stack AI Engineer. Architecting high-throughput, explainable intelligent platforms & distributed systems end-to-end. Computer Science Undergraduate at Chandigarh University.",
+    "Portfolio of Arnav Singh — Full-Stack AI Engineer, Systems Architect, and B.Tech CSE student at Chandigarh University. Architecting distributed autonomous agent runtimes, cloud IDEs, and high-throughput microservices.",
   keywords: [
     "Arnav Singh",
     "Full-Stack AI Engineer",
     "Systems Architect",
+    "Chandigarh University",
     "CLUDE",
     "IGNITE",
     "SIRUS",
-    "Chandigarh University",
-    "FastAPI",
-    "Next.js",
-    "PostgreSQL",
-    "pgvector",
-    "Tree-sitter",
-    "Causal AI",
     "Distributed Systems",
+    "Next.js",
+    "PyTorch",
+    "Docker",
+    "Kubernetes",
   ],
   authors: [{ name: "Arnav Singh", url: "https://github.com/arnnnnaaavvvvv" }],
+  icons: {
+    icon: "/img/favicon/icon.svg",
+    apple: "/img/favicon/apple-touch-icon.png",
+  },
   openGraph: {
     title: "Arnav Singh — Full-Stack AI Engineer & Systems Architect",
     description:
-      "Architecting high-throughput, explainable intelligent platforms & distributed engines where verifiable correctness takes precedence over hallucination.",
+      "Architecting intelligent platforms & distributed engines where verifiable correctness meets scale.",
     url: "https://github.com/arnnnnaaavvvvv",
     siteName: "Arnav Singh Portfolio",
     locale: "en_US",
@@ -68,17 +48,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}
-    >
-      <body style={{ backgroundColor: "#0d1117", color: "#f2f0ea" }}>
-        <SmoothScrollProvider>
-          <PageTransition>
-            <CursorDot />
-            {children}
-          </PageTransition>
-        </SmoothScrollProvider>
+    <html lang="en" dir="ltr">
+      <head>
+        <link rel="stylesheet" type="text/css" href="/css/loader.css" />
+        <link rel="stylesheet" type="text/css" href="/css/plugins.css" />
+        <link rel="stylesheet" type="text/css" href="/css/main.css" />
+      </head>
+      <body>
+        {children}
+        <Script src="/js/libs.min.js" strategy="beforeInteractive" />
+        <Script src="/js/app.js" strategy="afterInteractive" />
       </body>
     </html>
   );

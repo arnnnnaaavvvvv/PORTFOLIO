@@ -1,150 +1,1551 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import ProjectRow, { ProjectData } from "@/components/ProjectRow";
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 
-const PROJECTS: ProjectData[] = [
-  {
-    number: "01",
-    title: "CLUDE — Autonomous Production Incident Root-Cause Engine",
-    category: "Causal AI & Developer Infrastructure",
-    description:
-      "Pinpoints the exact commit that broke production with causal AI reasoning and onboards engineers to unfamiliar codebases in minutes. Evaluates semantic causality across structural git diffs to correlate multiline stack traces (Python, Node.js/TS, Go, Java, Rust) against commit history in < 8s.",
-    metrics: [
-      "< 8s Mean Time to Cause",
-      "Tree-sitter AST Syntax Chunks",
-      "pgvector HNSW Search",
-      "Calibrated Confidence Scores",
-    ],
-    tags: [
-      "FastAPI",
-      "Next.js 14",
-      "PostgreSQL 16",
-      "pgvector HNSW",
-      "Claude 3.5 Sonnet",
-      "Tree-sitter",
-      "Redis",
-      "Docker",
-    ],
-    liveUrl: "https://frontend-mu-roan-llgeruknl5.vercel.app",
-    sourceUrl: "https://github.com/arnnnnaaavvvvv/CLUDE",
-  },
-  {
-    number: "02",
-    title: "IGNITE — Pan-India Dynamic Tourist Safety & Smart Route Engine",
-    category: "Geospatial Data & Real-Time Resiliency",
-    description:
-      "Pan-India tourist safety routing and itinerary engine covering all 28 States & 8 Union Territories. Fuses live IMD meteorological data, 6 environmental natural zones, Acute Mountain Sickness (AMS) hypoxia altitude risk scoring, and autonomous hazard rerouting into an explainable, deterministic risk-scored engine.",
-    metrics: [
-      "All 28 States & 8 UTs Covered",
-      "Sub-100ms Reroute Polyline",
-      "Live IMD Sensor Fusion",
-      "Offline-First GIS Tile Engine",
-    ],
-    tags: [
-      "FastAPI",
-      "React 19 + Vite",
-      "Leaflet.js Offline GIS",
-      "Deterministic Risk AST",
-      "WebSocket Live Mesh",
-      "PostGIS",
-      "Tailwind CSS",
-    ],
-    liveUrl: "https://ignite-lemon-nu.vercel.app/",
-    sourceUrl: "https://github.com/arnnnnaaavvvvv/IGNITE",
-  },
-  {
-    number: "03",
-    title: "SIRUS — Enterprise Multi-Tenant Quantitative Engine & Trading Platform",
-    category: "High-Throughput Distributed Systems",
-    description:
-      "High-throughput systematic algorithmic trading SaaS with Direct Market Access (Zerodha Kite, Alpaca, KuCoin, Interactive Brokers, AngelOne). Features sub-100ms vectorized NumPy/Pandas strategy backtesting processing 540,000 ticks/sec, an AES-256 envelope-encrypted Demat key vault, and real-time Redis Streams event bus.",
-    metrics: [
-      "540,000 Ticks / Second Backtester",
-      "AES-256 Demat Envelope Vault",
-      "Sub-100ms DMA Order Routing",
-      "Zero-Allocation Redis Streams",
-    ],
-    tags: [
-      "Next.js 14",
-      "Three.js Particles",
-      "FastAPI",
-      "Redis Streams",
-      "Vectorized Backtester",
-      "AES-256 Encryption",
-      "Docker",
-    ],
-    liveUrl: "https://web-frontend-three-gamma.vercel.app/",
-    sourceUrl: "https://github.com/arnnnnaaavvvvv/SIRUS",
-  },
-];
+import React from "react";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      
-      <main>
-        {/* Hero Section with Scoped Parallax */}
-        <Hero />
+      {/*  Loader Start  */}
+    <div className="mxd-page-transition"></div>
+    <div className="mxd-loader">
+      <div className="mxd-loader__top">
+        <span>Arnav Singh — Systems Architect</span>
+      </div>
+      <div className="mxd-loader__images">
+        <img src="/img/loa_01.webp" alt="Azurio Template Loader Image" />
+        <img src="/img/loa_02.webp" alt="Azurio Template Loader Image" />
+        <img src="/img/loa_03.webp" alt="Azurio Template Loader Image" />
+        <img src="/img/loa_04.webp" alt="Azurio Template Loader Image" />
+        <img src="/img/loa_05.webp" alt="Azurio Template Loader Image" />
+        <img src="/img/loa_06.webp" alt="Azurio Template Loader Image" />
+        <img src="/img/loa_07.webp" alt="Azurio Template Loader Image" />
+      </div>
+      <div className="mxd-loader__bottom">
+        <div className="mxd-loader__count">
+          <span className="count__text">0</span>
+          <span className="count__percent">%</span>
+        </div>
+        <span className="mxd-loader__caption">Loading</span>
+      </div>
+    </div>
+    {/*  Loader End  */}
+      {/*  Navigation Start  */}
+    <nav className="mxd-menu">
+      <div className="mxd-menu__backdrop"></div>
 
-        {/* Selected Works (x3 ProjectRow instances) */}
-        <section
-          id="work"
-          className="section-pad hairline-bottom"
-          style={{ position: "relative" }}
-        >
-          <div className="portfolio-container">
-            <div style={{ marginBottom: "32px" }}>
-              <span
-                style={{
-                  fontFamily: "var(--font-mono)",
-                  fontSize: "0.8rem",
-                  color: "var(--accent-amber)",
-                  letterSpacing: "0.06em",
-                  textTransform: "uppercase",
-                }}
-              >
-                {"// 01 Selected Systems"}
-              </span>
-              <h2
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontSize: "clamp(1.8rem, 3.8vw, 2.8rem)",
-                  fontWeight: 700,
-                  letterSpacing: "-0.03em",
-                  color: "var(--text-primary)",
-                  marginTop: "8px",
-                }}
-              >
-                Production Systems & Engineering Engines
-              </h2>
-            </div>
+      {/*  Menu Overlay Start  */}
+      <div className="mxd-menu__overlay">
+        <div className="mxd-menu__content" data-lenis-prevent>
 
-            {/* Project Rows */}
-            <div>
-              {PROJECTS.map((project, index) => (
-                <ProjectRow
-                  key={project.number}
-                  project={project}
-                  index={index}
-                />
-              ))}
+          {/*  Menu Logo Start  */}
+          <div className="mxd-menu__logo">
+            <a href="#hero" className="menu-logo">
+              {/*  logo icon  */}
+              <svg className="menu-logo__image" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 42.4 36">
+                <path d="M25.8,13.8h2.8v5.5h-2.8v-5.5ZM13.8,16.6v2.8h2.8v-5.5h-2.8v2.8ZM32.2,0v2.8h-2.8V0h2.8ZM26.7,5.5h2.8v-2.8h-2.8v2.8ZM21.2,5.5h-5.5v2.8h11.1v-2.8h-5.5ZM12.8,2.8v2.8h2.8v-2.8h-2.8ZM10.1,0v2.8h2.8V0h-2.8ZM7.3,5.5v5.5h2.8V2.8h-2.8v2.8ZM4.5,13.8v2.8H0v2.8h2.8v2.8H0v2.8h2.8v11.1h2.8v-8.3h5.5v-2.8h-5.5v-8.3h1.9v-5.5h-2.9v2.8ZM35,5.5v-2.8h-2.8v8.3h2.8v-5.5ZM42.4,19.4v-2.8h-4.7v-5.5h-2.8v5.5h1.9v8.3h-5.5v2.8h5.5v8.3h2.8v-11.1h2.8v-2.8h-2.8v-2.8h2.8Z"/>
+              </svg>
+              {/*  logo text  */}
+              <div className="menu-logo__text">
+                <span>Azurio</span>
+                <span>Template</span>
+              </div>
+            </a>
+          </div>
+          {/*  Menu Logo End  */}
+
+          {/*  Menu Media Start  */}
+          <div className="mxd-menu__media">
+            <div className="menu-media__wrapper">
+              {/*  <img src="/img/gifs/dolores.gif" alt="Image" />  */}
+              <video preload="auto" autoPlay muted loop playsInline poster="/video/900x1280_menu.webp">
+                <source type="/video/mp4" src="/video/900x1280_menu.mp4" />
+                <source type="/video/webm" src="/video/900x1280_menu.webm" />
+              </video>
             </div>
           </div>
-        </section>
+          {/*  Menu Media End  */}
 
-        {/* About Section with Stack Marquee */}
-        <About />
+          {/*  Main Navigation Start  */}
+          <div className="mxd-menu__navigation">
+            <div className="mxd-menu__inner">
+              <div className="mxd-menu__shadow shadow-top"></div>
+              <div className="mxd-menu__caption">
+                <p>🚀 Autonomous AI Systems<br />and Distributed Architecture</p>
+              </div>
+              {/*  left side  */}
+              <div className="mxd-menu__left">
+                <div className="main-menu">
+                  <div className="main-menu__content">
+                    <ul id="main-menu" className="main-menu__accordion">
+                      <li className="main-menu__item">
+                        <div className="main-menu__divider divider-top"></div>
+                        <div className="main-menu__toggle">
+                          <p className="main-menu__link">
+                            <span className="main-menu__number">/ 01</span>
+                            <span className="main-menu__caption">Home</span>
+                          </p>
+                          <div className="main-menu__arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                              <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z"/>
+                            </svg>
+                          </div>
+                        </div>
+                        <ul className="submenu">
+                          <li className="submenu__item active">
+                            <a href="#hero">Branding studio</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="index-software-development-company.html">Software development company</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="index-creative-agency.html">Creative agency</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="index-freelancer-portfolio.html">Freelancer portfolio</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="index-design-studio.html">Design studio</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="index-web-developer.html">Web Developer</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="index-personal-portfolio.html">Personal portfolio</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="index-digital-agency.html">Digital agency</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="index-web-studio.html">Web Studio</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="index-digital-designer.html">Digital designer</a>
+                          </li>
+                        </ul>
+                        <div className="main-menu__divider divider-bottom"></div>
+                      </li>
+                      <li className="main-menu__item">
+                        {/*  <div className="main-menu__divider divider-top"></div>  */}
+                        <div className="main-menu__toggle">
+                          <p className="main-menu__link">
+                            <span className="main-menu__number">/ 02</span>
+                            <span className="main-menu__caption">Works</span>
+                          </p>
+                          <div className="main-menu__arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                              <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z"/>
+                            </svg>
+                          </div>
+                        </div>
+                        <ul className="submenu">
+                          <li className="submenu__item">
+                            <a href="#works">Works default</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="#works">Works grid</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="#works">Works grid sticky</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="#works">Project details</a>
+                          </li>
+                        </ul>
+                        <div className="main-menu__divider divider-bottom"></div>
+                      </li>
+                      <li className="main-menu__item">
+                        {/*  <div className="main-menu__divider divider-top"></div>  */}
+                        <div className="main-menu__toggle">
+                          <p className="main-menu__link">
+                            <span className="main-menu__number">/ 03</span>
+                            <span className="main-menu__caption">Pages</span>
+                          </p>
+                          <div className="main-menu__arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                              <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z"/>
+                            </svg>
+                          </div>
+                        </div>
+                        <ul className="submenu">
+                          <li className="submenu__item">
+                            <a href="#about">About me</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="#about">About us</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="#services">Services</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="team.html">Our team</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="pricing.html">Pricing</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="faq.html">FAQ page</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="404.html">404 error page</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="index.html">Landing page</a>
+                          </li>
+                        </ul>
+                        <div className="main-menu__divider divider-bottom"></div>
+                      </li>
+                      <li className="main-menu__item">
+                        {/*  <div className="main-menu__divider divider-top"></div>  */}
+                        <div className="main-menu__toggle">
+                          <p className="main-menu__link">
+                            <span className="main-menu__number">/ 04</span>
+                            <span className="main-menu__caption">Insights</span>
+                          </p>
+                          <div className="main-menu__arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                              <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z"/>
+                            </svg>
+                          </div>
+                        </div>
+                        <ul className="submenu">
+                          <li className="submenu__item">
+                            <a href="#insights">Blog standard</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="#insights">Blog creative</a>
+                          </li>
+                          <li className="submenu__item">
+                            <a href="#insights">Single post</a>
+                          </li>
+                        </ul>
+                        <div className="main-menu__divider divider-bottom"></div>
+                      </li>
+                      <li className="main-menu__item">
+                        {/*  <div className="main-menu__divider divider-top"></div>  */}
+                        <div className="main-menu__toggle">
+                          <a className="main-menu__link" href="#contact">
+                            <span className="main-menu__number">/ 05</span>
+                            <span className="main-menu__caption">Contact</span>
+                          </a>
+                          {/*  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                            <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z"/>
+                          </svg>  */}
+                        </div>
+                        <div className="main-menu__divider divider-bottom"></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              {/*  right side  */}
+              <div className="mxd-menu__right">
+                <div className="menu-contact">
+                  <div className="menu-contact__item">
+                    <ul className="menu-contact__list">
+                      <li>
+                        <a className="tag tag-m" href="mailto:arnav152007@gmail.com">
+                          <span className="mxd-scramble">arnav152007@gmail.com</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="tag tag-m" href="tel:+918423622491">
+                          <span className="mxd-scramble">+91 8423622491</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="menu-contact__item">
+                    <ul className="menu-contact__list">
+                      <li>
+                        <a className="tag tag-m" href="https://maps.google.com/?q=Chandigarh+University" target="_blank">
+                          <span>Chandigarh University Campus,<br />Punjab, India</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="menu-contact__item">
+                    <ul className="menu-contact__list">
+                      <li>
+                        <a className="tag tag-m" href="https://dribbble.com/" target="_blank"><span className="mxd-scramble">Dribbble</span></a>
+                      </li>
+                      <li>
+                        <a className="tag tag-m" href="https://www.linkedin.com/in/arnav-singh-986722252" target="_blank"><span className="mxd-scramble">LinkedIn</span></a>
+                      </li>
+                      <li>
+                        <a className="tag tag-m" href="https://github.com/arnnnnaaavvvvv" target="_blank"><span className="mxd-scramble">Github</span></a>
+                      </li>
+                      <li>
+                        <a className="tag tag-m" href="https://www.figma.com/community" target="_blank"><span className="mxd-scramble">Figma Community</span></a>
+                      </li>
+                      <li>
+                        <a className="tag tag-m" href="https://codepen.io/" target="_blank"><span className="mxd-scramble">Codepen</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              {/*  data bottom line  */}
+              <div className="mxd-menu__shadow"></div>
+              <div className="mxd-menu__data">
+                <div className="menu-data__left">
+                  <p className="menu-data__text">
+                    Made with
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                      <path d="M2.6,6.4v2.6H0V3.9h2.6v2.6ZM15.4,3.9v5.1h2.6V3.9h-2.6ZM12.9,11.6h2.6v-2.6h-2.6v2.6ZM2.6,9v2.6h2.6v-2.6h-2.6ZM10.3,14.1h2.6v-2.6h-2.6v2.6ZM5.1,11.6v2.6h2.6v-2.6h-2.6ZM7.7,3.9V1.3H2.6v2.6h5.1ZM15.4,3.9V1.3h-5.1v2.6h5.1ZM10.3,6.4v-2.6h-2.6v2.6h2.6ZM7.7,16.7h2.6v-2.6h-2.6v2.6Z"/>
+                    </svg>
+                    {/*  <i className="ph-fill ph-heart t-additional"></i>  */}
+                    by
+                    <a href="https://wrapmarket.com/shop/MixDesign" target="_blank">
+                      <span className="mxd-scramble">Mix_Design</span>
+                    </a>
+                  </p>
+                </div>
+                <div className="menu-data__right">
+                  <p className="menu-data__text">Arnav Singh Portfolio</p>
+                  <p className="menu-data__text">©2026</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          {/*  Main Navigation End  */}
 
-        {/* Direct Contact Section */}
-        <Contact />
+        </div>
+      </div>
+      {/*  Menu Overlay End  */}
+
+    </nav>
+    {/*  Navigation End  */}
+      {/*  Header Start  */}
+    <header id="header" className="mxd-header mxd-header-permanent">
+      {/*  header logo  */}
+      <div className="mxd-header__logo loading-fade">
+        <a className="mxd-logo" href="#hero">
+          {/*  logo icon  */}
+          <svg className="mxd-logo__image" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 42.4 36">
+            <path d="M25.8,13.8h2.8v5.5h-2.8v-5.5ZM13.8,16.6v2.8h2.8v-5.5h-2.8v2.8ZM32.2,0v2.8h-2.8V0h2.8ZM26.7,5.5h2.8v-2.8h-2.8v2.8ZM21.2,5.5h-5.5v2.8h11.1v-2.8h-5.5ZM12.8,2.8v2.8h2.8v-2.8h-2.8ZM10.1,0v2.8h2.8V0h-2.8ZM7.3,5.5v5.5h2.8V2.8h-2.8v2.8ZM4.5,13.8v2.8H0v2.8h2.8v2.8H0v2.8h2.8v11.1h2.8v-8.3h5.5v-2.8h-5.5v-8.3h1.9v-5.5h-2.9v2.8ZM35,5.5v-2.8h-2.8v8.3h2.8v-5.5ZM42.4,19.4v-2.8h-4.7v-5.5h-2.8v5.5h1.9v8.3h-5.5v2.8h5.5v8.3h2.8v-11.1h2.8v-2.8h-2.8v-2.8h2.8Z"/>
+          </svg>
+          {/*  logo text  */}
+          <div className="mxd-logo__text">
+            <span className="mxd-scramble">Arnav</span>
+            <span className="mxd-scramble">Singh</span>
+          </div>
+        </a>
+      </div>
+      {/*  header controls  */}
+      <div className="mxd-header__controls loading-fade">
+        <a className="btn mxd-header__link slide-right-up" href="#contact" aria-label="Say Hello">
+          <span className="btn-caption mxd-scramble">Say Hello</span>
+          <i>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+              <path d="M18,0v14.4h-3.6v-7.2h-3.6v-3.6H3.6V0h14.4ZM7.2,10.8h3.6v-3.6h-3.6s0,3.6,0,3.6ZM3.6,14.4h3.6v-3.6h-3.6v3.6ZM0,18h3.6v-3.6H0v3.6Z"/>
+            </svg>
+          </i>
+          {/*  Phosphor icon  */}
+          {/*  <i className="ph-bold ph-arrow-up-right"></i>  */}
+        </a>
+        <button id="color-switcher" className="btn mxd-color-switcher permanent" type="button" role="switch" aria-label="light/dark mode" aria-checked="true"></button>
+      </div>
+    </header>
+    {/*  Header End  */}
+
+      <main id="mxd-page-content" className="mxd-page-content">
+        <div id="hero">
+          {/*  Hero Section Start  */}
+      <div className="mxd-section pinned-section mxd-hero-section no-padding mxd-hero-fullheight-desktop loading-wrap">
+        <div className="pinned-section__inner">
+          <div className="mxd-hero-01">
+          <div className="mxd-hero-01__cover"></div>
+          <div className="mxd-hero-01__wrap">
+            {/*  top group  */}
+            <div className="mxd-hero-01__top">
+              <div className="mxd-hero-01__data-wrap">
+                <div className="mxd-hero-01__data-tags">
+                  <div className="tags-column">
+                    <ul>
+                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Systems Architect</span></li>
+                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Full-Stack AI</span></li>
+                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Distributed Systems</span></li>
+                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Autonomous Agents</span></li>
+                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Cloud Infrastructure</span></li>
+                    </ul>
+                  </div>
+                  <div className="tags-column">
+                    <ul>
+                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Next.js 14</span></li>
+                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">TypeScript</span></li>
+                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">PyTorch / LLMs</span></li>
+                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Docker & K8s</span></li>
+                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Chandigarh Univ</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="mxd-hero-01__data-contact">
+                  <ul>
+                    <li className="loading-item">
+                      <a className="tag tag-s-mobile mxd-scramble" href="tel:+918423622491">+91 8423622491</a>
+                    </li>
+                    <li className="loading-item">
+                      <a className="tag tag-s-mobile mxd-scramble" href="https://www.linkedin.com/in/arnav-singh-986722252" target="_blank">arnav-singh-986722252</a>
+                    </li>
+                    <li className="loading-item">
+                      <a className="tag tag-s-mobile mxd-scramble" href="mailto:arnav152007@gmail.com">arnav152007@gmail.com</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mxd-hero-01__video-wrap loading-fade">
+                {/*  <img src="/img/hero/1000x750_h02.webp" alt="Hero Placeholder" />  */}
+                <video className="mxd-hero-01__video" 
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  poster="/video/360x225_hero-01.webp">
+                  <source type="/video/mp4" src="/video/360x225_hero-01.mp4" />
+                  <source type="/video/webm" src="/video/360x225_hero-01.webm" />
+                </video>
+                <div className="mxd-hero-01__video-btn">
+                  <a className="btn btn-default-icon-small btn-default-permanent slide-right" href="#works">
+                      <span className="btn-caption mxd-scramble">Selected Works</span>
+                      {/*  <i className="btn-icon ph-bold ph-arrow-right"></i>  */}
+                      <i className="btn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                          <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z"/>
+                        </svg>
+                      </i>
+                    </a>
+                </div>
+              </div>
+            </div>
+            {/*  bottom group  */}
+            <div className="mxd-hero-01__bottom">
+              <div className="mxd-hero-01__caption">
+                <div className="fullwidth-text">
+                  <div className="fullwidth-text__wrap">
+                    <a className="fullwidth-text__content permanent active-cursor-accent" data-cursor-text="Let's Chat" href="#contact">
+                      <span className="loading-chars">ARNAV</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div className="pinned-section__trigger"></div>
+        
+      </div>
+      {/*  Hero Section End  */}
+        </div>
+        <div id="works">
+          {/*  Section - Progects Stack Start  */}
+      <div className="mxd-section">
+        <div className="mxd-container fullwidth-container">
+
+          {/*  Block - Progects Stack Start  */}
+          <div className="mxd-block">
+            <div className="mxd-stack-cards">
+              {/*  single card  */}
+              <div className="mxd-stack-cards__card">
+                <div className="card__marquees">
+                  {/*  Marquee Divider Start  */}
+                  <div className="marquee marquee-stack marquee--gsap muted-extra">
+                    <div className="marquee__top">
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">Design/</p>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">Development/</p>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">Branding/</p>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">eCommerce/</p>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">Marketing/</p>
+                      </div>
+                    </div>
+                    <div className="marquee__bottom">
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">Design/</p>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">Development/</p>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">Branding/</p>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">eCommerce/</p>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">Marketing/</p>
+                      </div>
+                    </div>
+                    <div className="marquee__top">
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">Design/</p>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">Development/</p>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">Branding/</p>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">eCommerce/</p>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">Marketing/</p>
+                      </div>
+                    </div>
+                    <div className="marquee__bottom">
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">Design/</p>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">Development/</p>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">Branding/</p>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">eCommerce/</p>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-regular text">
+                        <p className="marquee__text text-with-gliph">Marketing/</p>
+                      </div>
+                    </div>
+                  </div>
+                  {/*  Marquee Divider End  */}
+                </div>
+                <div className="card__wrapper">
+                  <div className="card__content">
+                    <div className="card__descr">
+                      <div className="card__tags">
+                        <span className="tag tag-m tag-permanent mxd-scramble">Design</span>
+                        <span className="tag tag-m tag-permanent mxd-scramble">Illustrations</span>
+                        <span className="tag tag-m tag-permanent mxd-scramble">Packaging</span>
+                        <span className="tag tag-m tag-permanent mxd-scramble">marketing</span>
+                      </div>
+                      <div className="card__btngroup">
+                        <a className="btn btn-line btn-line-permanent" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
+                          <span className="btn-caption mxd-scramble">Know More</span>
+                        </a>
+                      </div>
+                    </div>
+                    <a className="card__title active-cursor-permanent" data-cursor-text="View Work" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
+                      <p className="permanent">CLUDE — Scalable Cloud IDE</p>
+                    </a>
+                  </div>
+                  <div className="card__image">
+                    <img className="card__media" src="/img/works/showcase-stack/pr03.webp" alt="Project Preview Image" />
+                    <div className="card__cover"></div>
+                  </div>
+                </div>
+              </div>
+              {/*  single card  */}
+              <div className="mxd-stack-cards__card">
+                <div className="card__wrapper">
+                  <div className="card__content">
+                    <div className="card__descr">
+                      <div className="card__tags">
+                        <span className="tag tag-m tag-permanent mxd-scramble">Design</span>
+                        <span className="tag tag-m tag-permanent mxd-scramble">Illustrations</span>
+                        <span className="tag tag-m tag-permanent mxd-scramble">Packaging</span>
+                        <span className="tag tag-m tag-permanent mxd-scramble">marketing</span>
+                      </div>
+                      <div className="card__btngroup">
+                        <a className="btn btn-line btn-line-permanent" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
+                          <span className="btn-caption mxd-scramble">Know More</span>
+                        </a>
+                      </div>
+                    </div>
+                    <a className="card__title active-cursor-permanent" data-cursor-text="View Work" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
+                      <p className="permanent">IGNITE — Collaborative Engine</p>
+                    </a>
+                  </div>
+                  <div className="card__image">
+                    <img className="card__media" src="/img/works/showcase-stack/pr02.webp" alt="Project Preview Image" />
+                    <div className="card__cover"></div>
+                  </div>
+                </div>
+              </div>
+              {/*  single card  */}
+              <div className="mxd-stack-cards__card">
+                <div className="card__wrapper">
+                  <div className="card__content">
+                    <div className="card__descr">
+                      <div className="card__tags">
+                        <span className="tag tag-m tag-permanent mxd-scramble">Design</span>
+                        <span className="tag tag-m tag-permanent mxd-scramble">Illustrations</span>
+                        <span className="tag tag-m tag-permanent mxd-scramble">Packaging</span>
+                        <span className="tag tag-m tag-permanent mxd-scramble">marketing</span>
+                      </div>
+                      <div className="card__btngroup">
+                        <a className="btn btn-line btn-line-permanent" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
+                          <span className="btn-caption mxd-scramble">Know More</span>
+                        </a>
+                      </div>
+                    </div>
+                    <a className="card__title active-cursor-permanent" data-cursor-text="View Work" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
+                      <p className="permanent">SIRUS — Autonomous Agent Runtime</p>
+                    </a>
+                    
+                  </div>
+                  <div className="card__image">
+                    <img className="card__media" src="/img/works/showcase-stack/pr01.webp" alt="Project Preview Image" />
+                    <div className="card__cover"></div>
+                  </div>
+                </div>
+              </div>
+              {/*  single card  */}
+              <div className="mxd-stack-cards__card">
+                <div className="card__wrapper">
+                  <div className="card__content">
+                    <div className="card__descr">
+                      <div className="card__tags">
+                        <span className="tag tag-m tag-permanent mxd-scramble">Design</span>
+                        <span className="tag tag-m tag-permanent mxd-scramble">Illustrations</span>
+                        <span className="tag tag-m tag-permanent mxd-scramble">Packaging</span>
+                        <span className="tag tag-m tag-permanent mxd-scramble">marketing</span>
+                      </div>
+                      <div className="card__btngroup">
+                        <a className="btn btn-line btn-line-permanent" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
+                          <span className="btn-caption mxd-scramble">Know More</span>
+                        </a>
+                      </div>
+                    </div>
+                    <a className="card__title active-cursor-permanent" data-cursor-text="View Work" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
+                      <p className="permanent">SYSTEMS ARCHITECTURE & AI BENCHMARKS</p>
+                    </a>
+                  </div>
+                  <div className="card__image">
+                    <img className="card__media" src="/img/works/showcase-stack/pr04.webp" alt="Project Preview Image" />
+                    <div className="card__cover cover-darken"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/*  Block - Progects Stack End  */}
+
+        </div>
+      </div>
+      {/*  Section - Progects Stack End  */}
+        </div>
+        <div id="services">
+          {/*  Section - Divider Sticky Caption Start  */}
+      <div className="mxd-section blur-section">
+        <div className="mxd-container grid-l-container">
+
+          {/*  Divider - Sticky Caption Start  */}
+          <div className="mxd-dv-sticky-cap">
+            <div className="mxd-dv-sticky-cap__static">
+              <div className="mxd-dv-sticky-cap__top">
+                <div className="mxd-dv-sticky-cap__content">
+                  <div className="mxd-dv-sticky-cap__btngroup anim-uni-in-up">
+                    <a className="btn btn-line btn-line-permanent" href="#services">
+                      <span className="btn-caption mxd-scramble">Services</span>
+                    </a>
+                  </div>
+                  <div className="mxd-dv-sticky-cap__caption">
+                    <a className="active-cursor-accent" data-cursor-text="What We&nbsp;Do" href="services.html">
+                      <p className="mxd-dv-sticky-cap__text mxd-split-lines permanent">Digital agency specializing in 
+                        <span>innovative design</span> & cutting-edge <span>development</span>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="mxd-dv-sticky-cap__center"></div>
+              <div className="mxd-dv-sticky-cap__bottom"></div>
+            </div>
+            <div className="mxd-dv-sticky-cap__scroll">
+              <div className="scroll-images-row row-01">
+                <div className="container-fluid p-0">
+                  <div className="row g-0">
+                    <div className="col-12 col-md-4"></div>
+                    <div className="col-12 col-md-5 scroll-images-row__item">
+                      <div className="scroll-images-row__obj">
+                        <div className="scroll-images-row__image mxd-clip-image">
+                          <img src="/img/dividers/1200x900_row01.webp" alt="" />
+                        </div>
+                        <div className="scroll-images-row__tags">
+                          <span className="tag tag-m tag-medium mxd-scramble">Branding</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-12 col-md-3"></div>
+                  </div>
+                </div>
+              </div>
+              <div className="scroll-images-row row-02">
+                <div className="container-fluid p-0">
+                  <div className="row g-0">
+                    <div className="col-12 col-md-6 scroll-images-row__item">
+                      <div className="scroll-images-row__obj">
+                        <div className="scroll-images-row__image mxd-clip-image">
+                          <img src="/img/dividers/1200x900_row02.webp" alt="" />
+                        </div>
+                        <div className="scroll-images-row__tags">
+                          <span className="tag tag-m tag-medium mxd-scramble">Illustrations</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-12 col-md-1"></div>
+                    <div className="col-12 col-md-4 scroll-images-row__item">
+                      <div className="scroll-images-row__obj">
+                        <div className="scroll-images-row__image mxd-clip-image">
+                          <img src="/img/dividers/737x1200_row02.webp" alt="" />
+                        </div>
+                        <div className="scroll-images-row__tags">
+                          <span className="tag tag-m tag-medium mxd-scramble">Photography</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-12 col-md-1"></div>
+                  </div>
+                </div>
+              </div>
+              <div className="scroll-images-row row-03">
+                <div className="container-fluid p-0">
+                  <div className="row g-0">
+                    <div className="col-12 col-md-1"></div>
+                    <div className="col-12 col-md-4 scroll-images-row__item">
+                      <div className="scroll-images-row__obj">
+                        <div className="scroll-images-row__image mxd-clip-image">
+                          <img src="/img/dividers/800x1200_row03.webp" alt="" />
+                        </div>
+                        <div className="scroll-images-row__tags">
+                          <span className="tag tag-m tag-medium mxd-scramble">Fashion</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-12 col-md-1"></div>
+                    <div className="col-12 col-md-6 scroll-images-row__item">
+                      <div className="scroll-images-row__obj">
+                        <div className="scroll-images-row__image mxd-clip-image">
+                          <img src="/img/dividers/1200x677_row03.webp" alt="" />
+                        </div>
+                        <div className="scroll-images-row__tags">
+                          <span className="tag tag-m tag-medium mxd-scramble">Packaging</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="scroll-images-row row-04">
+                <div className="container-fluid p-0">
+                  <div className="row g-0">
+                    <div className="col-12 col-md-3"></div>
+                    <div className="col-12 col-md-5 scroll-images-row__item">
+                      <div className="scroll-images-row__obj">
+                        <div className="scroll-images-row__image mxd-clip-image">
+                          <img src="/img/dividers/1200x1200_row04.webp" alt="" />
+                        </div>
+                        <div className="scroll-images-row__tags">
+                          <span className="tag tag-m tag-medium mxd-scramble">Illustrations</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-12 col-md-4"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/*  Divider - Sticky Caption End  */}
+
+        </div>
+      </div>
+      {/*  Section - Divider Sticky Caption End  */}
+          {/*  Divider - Sticky Images Start  */}
+      <div className="mxd-section">
+
+        <div className="mxd-dv-sticky-img">
+          <div className="mxd-dv-sticky-img__sticky">
+            {/*  progress bar  */}
+            <div className="mxd-dv-sticky-img__progress"></div>
+            {/*  images  */}
+            <div className="mxd-dv-sticky-img__images">
+              <div className="images__list">
+                {/*  image item  */}
+                <div className="images__listitem">
+                  <div className="images__overflow">
+                    <div className="mxd-cover mxd-cover-06"></div>
+                    <img className="images__img" src="/img/dividers/1920x1200_dv01.webp" alt="Image" />
+                  </div>
+                </div>
+                {/*  image item  */}
+                <div className="images__listitem">
+                  <div className="images__overflow">
+                    <div className="mxd-cover mxd-cover-06"></div>
+                    <img className="images__img" src="/img/dividers/1920x1200_dv02.webp" alt="Image" />
+                  </div>
+                </div>
+                {/*  image item  */}
+                <div className="images__listitem">
+                  <div className="images__overflow">
+                    <div className="mxd-cover mxd-cover-06"></div>
+                    <img className="images__img" src="/img/dividers/1920x1200_dv03.webp" alt="Image" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/*  text content  */}
+            <div className="mxd-dv-sticky-img__content">
+              {/*  counter  */}
+              <p className="mxd-dv-sticky-img__number">
+                <span className="number__current">01</span>
+                &nbsp;/&nbsp;
+                <span className="number__total">03</span>
+              </p>
+              {/*  titles  */}
+              <div className="mxd-dv-sticky-img__titlewrap">
+                <div className="mxd-dv-sticky-img__titlelist">
+                  <div className="mxd-dv-sticky-img__titleitem">
+                    <h2 className="permanent">Strategy</h2>
+                  </div>
+                  <div className="mxd-dv-sticky-img__titleitem">
+                    <h2 className="permanent">Design</h2>
+                  </div>
+                  <div className="mxd-dv-sticky-img__titleitem">
+                    <h2 className="permanent">Development</h2>
+                  </div>
+                </div>
+              </div>
+              {/*  permanent button  */}
+              <div className="mxd-dv-sticky-img__btnholder">
+                <a className="btn btn-line btn-line-permanent" href="#services">
+                  <span className="btn-caption mxd-scramble">Process</span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      {/*  Divider - Sticky Images End  */}
+        </div>
+        <div id="about">
+          {/*  Section - Manifest & Split Description Pinned Start  */}
+      <div className="mxd-section blur-section pinned-section padding-top-subtitle padding-bottom-default padding-bottom-tags-mobile">
+        <div className="pinned-section__inner">
+          <div className="mxd-container grid-l-container">
+
+            {/*  Block - Manifest Large Start  */}
+            <div className="mxd-block">
+              <div className="mxd-section-manifest pre-default">
+                <div className="container-fluid p-0">
+                  <div className="row g-0">
+                    <div className="col-12 mxd-grid-item">
+                      <div className="mxd-section-manifest__wrap wrap-text-m">
+                        <div className="mxd-section-manifest__controls anim-uni-in-up">
+                          <a className="btn btn-line btn-line-default" href="#about">
+                            <span className="btn-caption mxd-scramble">Engineering Bio</span>
+                          </a>
+                        </div>
+                        <div className="mxd-section-manifest__text manifest-text-m">
+                          <a className="manifest manifest-l mxd-split-lines active-cursor-accent" data-cursor-text="About Us" href="about-us.html">
+                            We are a creative web agency specializing in innovative design and 
+                            cutting-edge development. <span>We help businesses stand out 
+                            and thrive in the modern landscape.</span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/*  Block - Manifest Large End  */}
+
+            {/*  Block - Split Description Start  */}
+            <div className="mxd-block">
+              <div className="mxd-split-descr pre-manifest-l">
+                <div className="container-fluid p-0">
+                  <div className="row g-0">
+                    <div className="col-12 col-lg-6 mxd-grid-item">
+                      <div className="mxd-split-descr__image">
+                        <img src="/img/illustrations/about04.webp" alt="Azurio Template Example Image" />
+                      </div>
+                    </div>
+                    <div className="col-12 col-lg-6 mxd-grid-item">
+                      <div className="mxd-split-descr__wrap">
+                        <div className="mxd-split-descr__content">
+                          <p className="t-bold t-large mxd-split-lines">From pixel-perfect designs to flawless code, every aspect of our projects is 
+                            crafted with care to ensure the highest standards of quality. <span>We are passionate 
+                            about integrating the latest technologies and trends, including interactive 
+                            animations and mobile-first strategies.
+                            </span>
+                          </p>
+                        </div>
+                        <div className="mxd-split-descr__tags">
+                          <div className="container-fluid p-0">
+                            <div className="row g-0">
+                              <div className="col-12 col-md-6 col-xl-4">
+                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">TypeScript</span>
+                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">Next.js 14</span>
+                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">Python</span>
+                              </div>
+                              <div className="col-12 col-md-6 col-xl-4">
+                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">Docker / K8s</span>
+                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">FastAPI</span>
+                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">PyTorch / LLMs</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/*  Block - Split Description End  */}
+
+          </div>
+          <div className="pinned-section__trigger"></div>
+        </div>
+      </div>
+      {/*  Section - Manifest & Split Description Pinned End  */}
+        </div>
+        <div id="divider">
+          {/*  Section - Parallax Divider Image & Title Start  */}
+      <div className="mxd-section blur-section">
+        <div className="mxd-container fullwidth-container">
+          <div className="mxd-divider">
+            {/*  image  */}
+            <div className="mxd-divider__image divider-image-1 parallax-img">
+              {/*  <img className="parallax-img" src="/img/illustrations/1920x1080_divider-01.webp" alt="" />  */}
+            </div>
+            {/*  cover layer  */}
+            <div className="mxd-divider__cover cover-04"></div>
+            {/*  content  */}
+            <div className="mxd-divider__content">
+              <div className="mxd-divider__btngroup anim-uni-in-up">
+                <a className="btn btn-line btn-line-permanent" href="#works">
+                  <span className="btn-caption mxd-scramble">Selected Works</span>
+                </a>
+              </div>
+              <div className="mxd-divider__caption">
+                <a className="active-cursor-accent" data-cursor-text="Our Team" href="team.html">
+                  <h2 className="permanent mxd-split-lines">Driven by Scale, Powered by Neural Systems</h2>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/*  Section - Parallax Divider Image & Title End  */}
+        </div>
+        <div id="insights">
+          {/*  Section - Blog Preview Start  */}
+      <div className="mxd-section blur-section pinned-section padding-top-title padding-bottom-preview">
+        <div className="pinned-section__inner">
+          <div className="mxd-container grid-s-container">
+
+            {/*  Block - Section Title v04 Start  */}
+            <div className="mxd-block">
+              <div className="mxd-section-title pre-subtitle-s controls-bottom-mobile">
+                <div className="container-fluid p-0">
+                  <div className="row g-0">
+                    <div className="col-12 col-xl-6 mxd-grid-item-s">
+                      <div className="mxd-section-title__title pre-caption">
+                        <h2 className="mxd-split-lines">Featured<br />insights</h2>
+                      </div>
+                    </div>
+                    <div className="col-12 col-xl-5 mxd-grid-item-s">
+                      <div className="mxd-section-title__data top-controls">
+                        <div className="mxd-section-title__controls anim-uni-in-up">
+                          <a className="btn btn-line btn-line-default" href="#insights">
+                            <span className="btn-caption mxd-scramble">Engineering Briefs</span>
+                          </a>
+                        </div>
+                        <div className="mxd-section-title__caption pre-controls">
+                          <p className="t-bold t-large mxd-split-lines">Inspiring ideas, creative insights, and the latest in 
+                          design and tech. <span>Fueling innovation for your digital journey.</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/*  Block - Section Title v04 End  */}
+
+            {/*  Block - Blog Preview Grid x4 Start  */}
+            <div className="mxd-block">
+              <div className="mxd-blog-grid">
+                <div className="container-fluid p-0">
+                  <div className="row g-0 mxd-blog-grid__gallery">
+                    {/*  item  */}
+                    <div className="col-12 col-lg-3 mxd-blog-item mxd-blog-item-s animate-card-4">
+                      <div className="mxd-blog-item__date">
+                        <span className="meta-date">02 February, 2026</span>
+                      </div>
+                      <a className="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
+                        <img className="" src="/img/blog/preview/grid-x3/pr-01.webp" alt="Blog Preview Image" />
+                      </a>
+                      <div className="mxd-blog-item__caption">
+                        <div className="mxd-blog-item__title">
+                          <a className="blog-name-s" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">Building Multi-Tenant Container Runtimes at Scale</a>
+                        </div>
+                      </div>
+                    </div>
+                    {/*  item  */}
+                    <div className="col-12 col-lg-3 mxd-blog-item mxd-blog-item-s animate-card-4">
+                      <div className="mxd-blog-item__date">
+                        <span className="meta-date">28 January, 2026</span>
+                      </div>
+                      <a className="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
+                        <img className="" src="/img/blog/preview/grid-x3/pr-02.webp" alt="Blog Preview Image" />
+                      </a>
+                      <div className="mxd-blog-item__caption">
+                        <div className="mxd-blog-item__title">
+                          <a className="blog-name-s" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">Autonomous Multi-Agent Orchestration via Graph State Machines</a>
+                        </div>
+                      </div>
+                    </div>
+                    {/*  item  */}
+                    <div className="col-12 col-lg-3 mxd-blog-item mxd-blog-item-s animate-card-4">
+                      <div className="mxd-blog-item__date">
+                        <span className="meta-date">15 January, 2026</span>
+                      </div>
+                      <a className="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
+                        <img className="" src="/img/blog/preview/grid-x3/pr-04.webp" alt="Blog Preview Image" />
+                      </a>
+                      <div className="mxd-blog-item__caption">
+                        <div className="mxd-blog-item__title">
+                          <a className="blog-name-s" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">Low-Latency Conflict-Free Replicated Data Types (CRDTs)</a>
+                        </div>
+                      </div>
+                    </div>
+                    {/*  item  */}
+                    <div className="col-12 col-lg-3 mxd-blog-item mxd-blog-item-s animate-card-4">
+                      <div className="mxd-blog-item__date">
+                        <span className="meta-date">03 January, 2026</span>
+                      </div>
+                      <a className="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
+                        <img className="" src="/img/blog/preview/grid-x3/pr-03.webp" alt="Blog Preview Image" />
+                      </a>
+                      <div className="mxd-blog-item__caption">
+                        <div className="mxd-blog-item__title">
+                          <a className="blog-name-s" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">Fine-Tuning Open Source LLMs for Real-Time Code Synthesis</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/*  Block - Blog Preview Grid x4 End  */}
+
+          </div>
+          <div className="pinned-section__trigger"></div>
+        </div>
+      </div>
+      {/*  Section - Blog Preview End  */}
+        </div>
+        <div id="contact">
+          {/*  Section - CTA with Marquee Start  */}
+      <div className="mxd-section blur-section bg-color-opposite">
+        <div className="mxd-container fullwidth-container">
+
+          {/*  Block - CTA with Matter.js Objects Start  */}
+          <div className="mxd-block">
+            <div className="mxd-promo transparent">
+              <div className="mxd-promo__wrap auto-height">
+                {/*  content  */}
+                <div className="mxd-promo__content">
+                  <div className="mxd-promo__btngroup anim-uni-in-up">
+                    <a className="btn btn-line btn-line-opposite" href="#contact">
+                      <span className="btn-caption mxd-scramble">Get In Touch</span>
+                    </a>
+                  </div>
+                  <div className="mxd-promo__caption">
+                    <a className="active-cursor-accent" data-cursor-text="Contact Us" href="#contact">
+                      <h2 className="opposite mxd-split-lines">Let's engineer your next breakthrough</h2>
+                    </a>
+                  </div>
+                </div>
+                {/*  marquee  */}
+                <div className="mxd-promo__marquee">
+                  
+                  {/*  Marquee Divider Start  */}
+                  <div className="marquee marquee-left--gsap">
+                    <div className="marquee__toleft marquee__images">
+                      {/*  single item  */}
+                      <div className="marquee__item item-imageblock">
+                        <div className="marquee__tags">
+                          <span className="tag tag-s tag-medium-opposite mxd-scramble">TypeScript</span>
+                        </div>
+                        <div className="marquee__image">
+                          <img src="/img/cta/mar_01.webp" alt="" />
+                        </div>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-imageblock">
+                        <div className="marquee__tags">
+                          <span className="tag tag-s tag-medium-opposite mxd-scramble">PyTorch</span>
+                        </div>
+                        <div className="marquee__image">
+                          <img src="/img/cta/mar_02.webp" alt="" />
+                        </div>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-imageblock">
+                        <div className="marquee__tags">
+                          <span className="tag tag-s tag-medium-opposite mxd-scramble">Distributed Systems</span>
+                        </div>
+                        <div className="marquee__image">
+                          <img src="/img/cta/mar_03.webp" alt="" />
+                        </div>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-imageblock">
+                        <div className="marquee__tags">
+                          <span className="tag tag-s tag-medium-opposite mxd-scramble">Docker</span>
+                        </div>
+                        <div className="marquee__image">
+                          <img src="/img/cta/mar_04.webp" alt="" />
+                        </div>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-imageblock">
+                        <div className="marquee__tags">
+                          <span className="tag tag-s tag-medium-opposite mxd-scramble">Kubernetes</span>
+                        </div>
+                        <div className="marquee__image">
+                          <img src="/img/cta/mar_05.webp" alt="" />
+                        </div>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-imageblock">
+                        <div className="marquee__tags">
+                          <span className="tag tag-s tag-medium-opposite mxd-scramble">Next.js 14</span>
+                        </div>
+                        <div className="marquee__image">
+                          <img src="/img/cta/mar_06.webp" alt="" />
+                        </div>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-imageblock">
+                        <div className="marquee__tags">
+                          <span className="tag tag-s tag-medium-opposite mxd-scramble">FastAPI</span>
+                        </div>
+                        <div className="marquee__image">
+                          <img src="/img/cta/mar_07.webp" alt="" />
+                        </div>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-imageblock">
+                        <div className="marquee__tags">
+                          <span className="tag tag-s tag-medium-opposite mxd-scramble">LangChain</span>
+                        </div>
+                        <div className="marquee__image">
+                          <img src="/img/cta/mar_08.webp" alt="" />
+                        </div>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-imageblock">
+                        <div className="marquee__tags">
+                          <span className="tag tag-s tag-medium-opposite mxd-scramble">Docker</span>
+                        </div>
+                        <div className="marquee__image">
+                          <img src="/img/cta/mar_09.webp" alt="" />
+                        </div>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-imageblock">
+                        <div className="marquee__tags">
+                          <span className="tag tag-s tag-medium-opposite mxd-scramble">PostgreSQL</span>
+                        </div>
+                        <div className="marquee__image">
+                          <img src="/img/cta/mar_10.webp" alt="" />
+                        </div>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-imageblock">
+                        <div className="marquee__tags">
+                          <span className="tag tag-s tag-medium-opposite mxd-scramble">TypeScript</span>
+                        </div>
+                        <div className="marquee__image">
+                          <img src="/img/cta/mar_01.webp" alt="" />
+                        </div>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-imageblock">
+                        <div className="marquee__tags">
+                          <span className="tag tag-s tag-medium-opposite mxd-scramble">PyTorch</span>
+                        </div>
+                        <div className="marquee__image">
+                          <img src="/img/cta/mar_02.webp" alt="" />
+                        </div>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-imageblock">
+                        <div className="marquee__tags">
+                          <span className="tag tag-s tag-medium-opposite mxd-scramble">Distributed Systems</span>
+                        </div>
+                        <div className="marquee__image">
+                          <img src="/img/cta/mar_03.webp" alt="" />
+                        </div>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-imageblock">
+                        <div className="marquee__tags">
+                          <span className="tag tag-s tag-medium-opposite mxd-scramble">Docker</span>
+                        </div>
+                        <div className="marquee__image">
+                          <img src="/img/cta/mar_04.webp" alt="" />
+                        </div>
+                      </div>
+                      {/*  single item  */}
+                      <div className="marquee__item item-imageblock">
+                        <div className="marquee__tags">
+                          <span className="tag tag-s tag-medium-opposite mxd-scramble">Kubernetes</span>
+                        </div>
+                        <div className="marquee__image">
+                          <img src="/img/cta/mar_05.webp" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {/*  Marquee Divider End  */}
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          {/*  Block - CTA with Matter.js Objects End  */}
+
+        </div>
+      </div>
+      {/*  Section - CTA with Marquee End  */}
+        </div>
       </main>
 
-      {/* Footer */}
-      <Footer />
+      {/*  Footer Start  */}
+    <footer id="mxd-footer" className="mxd-footer blur-section">
+      <div className="mxd-container grid-l-container">
+
+        {/*  Footer Block - Navigation v2 Start  */}
+        <div className="mxd-block">
+          <div className="container-fluid p-0">
+            <div className="row g-0">
+              <div className="col-12 col-xl-6 mxd-footer__item">
+                <nav className="mxd-footer__nav02">
+                  <div className="container-fluid p-0">
+                    <div className="row g-0">
+                      <div className="col-12 col-md-6 mxd-footer-nav02__item mxd-grid-item">
+                        <div className="mxd-footer-nav02__block">
+                          <div className="mxd-footer-nav02__title">
+                            <p className="footer-data anim-uni-slide-down">
+                              <span>/ Discover</span>
+                            </p>
+                          </div>
+                          <div className="mxd-footer-nav02__list">
+                            <ul>
+                              <li><a className="anim-uni-slide-down" href="#hero"><span>Home</span></a></li>
+                              <li><a className="anim-uni-slide-down" href="#about"><span>About us</span></a></li>
+                              <li><a className="anim-uni-slide-down" href="#works"><span>Case studies</span></a></li>
+                              <li><a className="anim-uni-slide-down" href="#services"><span>Services</span></a></li>
+                              <li><a className="anim-uni-slide-down" href="#about"><span>Our team</span></a></li>
+                              <li><a className="anim-uni-slide-down" href="#insights"><span>Insights</span></a></li>
+                              <li><a className="anim-uni-slide-down" href="#contact"><span>Contact</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-12 col-md-6 mxd-footer-nav02__item mxd-grid-item">
+                        <div className="mxd-footer-nav02__block">
+                          <div className="mxd-footer-nav02__title">
+                            <p className="footer-data anim-uni-slide-down">
+                              <span>/ Contact</span>
+                            </p>
+                          </div>
+                          <div className="mxd-footer-nav02__list">
+                            <ul>
+                              <li>
+                                <a className="anim-uni-slide-down" href="mailto:arnav152007@gmail.com">
+                                  <span>arnav152007@gmail.com</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a className="anim-uni-slide-down" href="tel:+918423622491">
+                                  <span>+91 8423622491</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div className="mxd-footer-nav02__block">
+                          <div className="mxd-footer-nav02__title">
+                            <p className="footer-data anim-uni-slide-down">
+                              <span>/ Info</span>
+                            </p>
+                          </div>
+                          <div className="mxd-footer-nav02__list">
+                            <ul>
+                              <li>
+                                <a className="anim-uni-slide-down" href="#contact"><span>Open for Roles</span></a>
+                              </li>
+                              <li>
+                                <a className="anim-uni-slide-down" href="#about"><span>Chandigarh Univ</span></a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+              <div className="col-12 col-xl-6 mxd-footer__item mxd-grid-item">
+                <div className="mxd-footer__socials-list">
+                  <div className="container-fluid p-0">
+                    <div className="row g-0">
+                      <div className="col-12 mxd-footer-nav02__item">
+                        <div className="mxd-footer-nav02__block">
+                          <div className="mxd-footer-nav02__title">
+                            <p className="footer-data anim-uni-slide-down">
+                              <span>/ Ecosystem</span>
+                            </p>
+                          </div>
+                          <div className="mxd-footer-nav02__list">
+                            <a className="socials-list__item slide-right-up" href="https://github.com/arnnnnaaavvvvvarnnnnaaavvvvv" target="_blank">
+                              <div className="socials-list__divider divider-top anim-uni-clip-in"></div>
+                              <div className="socials-list__info">
+                                <div className="socials-list__number anim-uni-slide-down">
+                                  <span>[01]</span>
+                                </div>
+                                <div className="socials-list__name anim-uni-slide-down">
+                                  <span>GitHub</span>
+                                </div>
+                              </div>
+                              <div className="socials-list__arrow anim-uni-slide-down">
+                                <i>
+                                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 18 18"  xmlSpace="preserve">
+                                  <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
+                                    M0,18h3.6v-3.6H0V18z"/>
+                                  </svg>
+                                </i>
+                              </div>
+                              <div className="socials-list__divider divider-bottom anim-uni-clip-in"></div>
+                            </a>
+                            <a className="socials-list__item slide-right-up" href="https://www.linkedin.com/in/arnav-singh-986722252" target="_blank">
+                              <div className="socials-list__divider divider-top anim-uni-clip-in"></div>
+                              <div className="socials-list__info">
+                                <div className="socials-list__number anim-uni-slide-down">
+                                  <span>[02]</span>
+                                </div>
+                                <div className="socials-list__name anim-uni-slide-down">
+                                  <span>LinkedIn</span>
+                                </div>
+                              </div>
+                              <div className="socials-list__arrow anim-uni-slide-down">
+                                <i>
+                                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 18 18"  xmlSpace="preserve">
+                                  <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
+                                    M0,18h3.6v-3.6H0V18z"/>
+                                  </svg>
+                                </i>
+                              </div>
+                              <div className="socials-list__divider divider-bottom anim-uni-clip-in"></div>
+                            </a>
+                            <a className="socials-list__item slide-right-up" href="https://github.com/" target="_blank">
+                              <div className="socials-list__divider divider-top anim-uni-clip-in"></div>
+                              <div className="socials-list__info">
+                                <div className="socials-list__number anim-uni-slide-down">
+                                  <span>[03]</span>
+                                </div>
+                                <div className="socials-list__name anim-uni-slide-down">
+                                  <span>Github</span>
+                                </div>
+                              </div>
+                              <div className="socials-list__arrow anim-uni-slide-down">
+                                <i>
+                                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 18 18"  xmlSpace="preserve">
+                                  <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
+                                    M0,18h3.6v-3.6H0V18z"/>
+                                  </svg>
+                                </i>
+                              </div>
+                              <div className="socials-list__divider divider-bottom anim-uni-clip-in"></div>
+                            </a>
+                            <a className="socials-list__item slide-right-up" href="https://frontend-mu-roan-llgeruknl5.vercel.app" target="_blank">
+                              <div className="socials-list__divider divider-top anim-uni-clip-in"></div>
+                              <div className="socials-list__info">
+                                <div className="socials-list__number anim-uni-slide-down">
+                                  <span>[04]</span>
+                                </div>
+                                <div className="socials-list__name anim-uni-slide-down">
+                                  <span>CLUDE Demo</span>
+                                </div>
+                              </div>
+                              <div className="socials-list__arrow anim-uni-slide-down">
+                                <i>
+                                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 18 18"  xmlSpace="preserve">
+                                  <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
+                                    M0,18h3.6v-3.6H0V18z"/>
+                                  </svg>
+                                </i>
+                              </div>
+                              <div className="socials-list__divider divider-bottom anim-uni-clip-in"></div>
+                            </a>
+                            <a className="socials-list__item slide-right-up" href="https://ignite-lemon-nu.vercel.app/" target="_blank">
+                              <div className="socials-list__divider divider-top anim-uni-clip-in"></div>
+                              <div className="socials-list__info">
+                                <div className="socials-list__number anim-uni-slide-down">
+                                  <span>[05]</span>
+                                </div>
+                                <div className="socials-list__name anim-uni-slide-down">
+                                  <span>IGNITE Demo</span>
+                                </div>
+                              </div>
+                              <div className="socials-list__arrow anim-uni-slide-down">
+                                <i>
+                                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 18 18"  xmlSpace="preserve">
+                                  <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
+                                    M0,18h3.6v-3.6H0V18z"/>
+                                  </svg>
+                                </i>
+                              </div>
+                              <div className="socials-list__divider divider-bottom anim-uni-clip-in"></div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/*  Footer Block - Navigation v2 End  */}
+
+        {/*  Footer Block - Controls Start  */}
+        <div className="mxd-block">
+          <div className="container-fluid p-0">
+            <div className="row g-0">
+              <div className="col-12 col-xl-6 mxd-footer__item"></div>
+              <div className="col-12 col-xl-6 mxd-footer__item mxd-grid-item">
+                <div className="mxd-footer__controls-middle">
+                  <div className="anim-uni-slide-down">
+                    <a id="to-top" className="btn btn-line-icon btn-line-default slide-up" href="#">
+                      <span className="btn-caption mxd-scramble">Back to Top</span>
+                      <i>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                          viewBox="0 0 18 18"  xmlSpace="preserve">
+                        <path d="M0,7.2h3.6v3.6H0V7.2z M10.8,3.6V0H7.2v3.6H3.6v3.6h3.6V18h3.6V7.2h3.6V3.6H10.8z M14.4,7.2v3.6H18V7.2H14.4z"/>
+                        </svg>
+                      </i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/*  Footer Block - Controls End  */}
+
+        {/*  Footer Block - Fullwidth Text Start  */}
+        <div className="mxd-block">
+          <div className="mxd-footer__fw-mark mxd-grid-item">
+            <div className="fw-mark__wrap">
+              <div className="fw-mark__content">
+                <span className="anim-uni-chars">ARNAV SINGH</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/*  Footer Block - Fullwidth Text End  */}
+
+        {/*  Footer Block - Data Start  */}
+        <div className="mxd-block">
+          <div className="mxd-footer__data">
+            <div className="container-fluid p-0">
+              <div className="row g-0">
+                <div className="col-12 col-xl-6 mxd-footer__item mxd-grid-item">
+                  <div className="mxd-footer__data-item anim-uni-fade-in">
+                    <p className="footer-data">
+                      <span>© 2026 Arnav Singh. All systems operational.</span>
+                    </p>
+                  </div>
+                </div>
+                <div className="col-12 col-xl-6 mxd-footer__item">
+                  <div className="container-fluid p-0">
+                    <div className="row g-0">
+                      <div className="col-12 col-xl-6 mxd-grid-item">
+                        <div className="mxd-footer__data-item anim-uni-fade-in">
+                          <p className="footer-data">
+                            <span>
+                              HTML Template by&nbsp;
+                              <a href="https://wrapmarket.com/shop/MixDesign" target="_blank">
+                                <span className="mxd-scramble">mix_design</span>
+                              </a>
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                      <div className="col-12 col-xl-6 mxd-grid-item">
+                        <div className="mxd-footer__data-item anim-uni-fade-in justify-end">
+                          <p className="footer-data">
+                            <span>©2026</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/*  Footer Block - Data End  */}
+
+      </div>
+    </footer>
+    {/*  Footer End  */}
+      {/*  Global Cursor Start  */}
+    <div id="mxd-cursor" className="mxd-cursor">
+      <div id="mxd-cursor__dot" className="mxd-cursor__dot"></div>
+      <p id="mxd-cursor__text" className="mxd-cursor__text"></p>
+      <div id="mxd-cursor__image" className="mxd-cursor__image"></div>
+    </div>
+    {/*  Global Cursor End  */}
     </>
   );
 }
