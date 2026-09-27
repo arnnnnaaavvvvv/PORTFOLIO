@@ -3,7 +3,6 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { EASE, lineRevealVariant } from "@/lib/motion";
-import Hero3DPhoto from "./Hero3DPhoto";
 
 const NAME_LINES = ["ARNAV", "SINGH"];
 
@@ -90,7 +89,7 @@ export default function Hero() {
           </span>
         </motion.div>
 
-        {/* 1 & 2. Centered Name + Behind-the-name Photo Stage */}
+        {/* 1. Centered Stacked Name Stage */}
         <div
           className="hero-center-stage"
           style={{
@@ -104,31 +103,6 @@ export default function Hero() {
             width: "100%",
           }}
         >
-          {/* Photo: Positioned behind the centered name (lower in stacking order), peaking out */}
-          <div
-            className="hero-behind-photo-wrap"
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -42%)",
-              zIndex: 1,
-              width: "clamp(200px, 32vw, 380px)",
-              pointerEvents: "auto",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Hero3DPhoto
-              style={{
-                width: "100%",
-                height: "auto",
-                maxHeight: "48vh",
-              }}
-            />
-          </div>
-
           {/* Parallax-wrapped Centered Headline: ARNAV / SINGH */}
           <motion.div
             style={{
@@ -148,12 +122,12 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
               style={{
-                fontFamily: "var(--font-display)",
-                fontSize: "clamp(3rem, 12vw, 9rem)",
-                fontWeight: 800,
-                letterSpacing: "-0.03em",
-                lineHeight: 0.9,
-                color: "var(--text-primary)",
+                fontFamily: "var(--font-display, 'Space Grotesk', sans-serif)",
+                fontSize: "clamp(3.5rem, 13vw, 10rem)",
+                fontWeight: 700,
+                letterSpacing: "-0.01em",
+                lineHeight: 0.92,
+                color: "var(--ink, var(--text-primary))",
                 margin: 0,
                 textAlign: "center",
                 display: "flex",
@@ -187,7 +161,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* 3. "SELECTED WORKS" button: Standalone pill positioned below centered name/photo */}
+        {/* 2. "SELECTED WORKS" button: Standalone pill positioned below stacked name */}
         <motion.div
           variants={metaRowVariants}
           initial="hidden"
@@ -196,7 +170,7 @@ export default function Hero() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginTop: "56px",
+            marginTop: "36px",
             marginBottom: "40px",
             position: "relative",
             zIndex: 3,

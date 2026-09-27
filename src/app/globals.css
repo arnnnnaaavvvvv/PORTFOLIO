@@ -18,6 +18,10 @@
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
+  --ink: var(--t-bright, #0f0f0f);
+  --ink-dim: var(--t-medium, #6e6e6e);
+  --line: var(--stroke-elements, rgba(0, 0, 0, 0.12));
+
   --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -219,7 +223,7 @@ button {
   background-color: transparent !important;
 }
 
-/* 1. LAYOUT — Center the name */
+/* 1. LAYOUT — Center the stacked name */
 .hero-center-stage {
   position: relative !important;
   min-height: 60vh !important;
@@ -232,6 +236,7 @@ button {
   max-width: 100vw !important;
   margin: auto !important;
   padding: 0 4vw !important;
+  background-color: transparent !important;
 }
 
 .hero-headline-wrap {
@@ -242,7 +247,6 @@ button {
   text-align: center !important;
   position: relative !important;
   z-index: 2 !important;
-  pointer-events: none !important;
   width: 100% !important;
 }
 
@@ -254,11 +258,11 @@ button {
 }
 
 .hero-name-text {
-  font-family: var(--font-display, 'Space Grotesk', -apple-system, sans-serif) !important;
-  font-size: clamp(3rem, 12vw, 9rem) !important;
-  line-height: 0.9 !important;
-  font-weight: 800 !important;
-  letter-spacing: -0.025em !important;
+  font-family: 'Space Grotesk', var(--font-display), -apple-system, sans-serif !important;
+  font-size: clamp(3.5rem, 13vw, 10rem) !important;
+  line-height: 0.92 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
   text-transform: uppercase !important;
   color: var(--t-bright, #0f0f0f) !important;
   text-align: center !important;
@@ -275,43 +279,11 @@ button {
   letter-spacing: inherit !important;
 }
 
-/* 2. PHOTO — Reposition, don't overlap the centered text */
-.hero-behind-photo-wrap {
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -42%) !important;
-  z-index: 1 !important;
-  width: clamp(200px, 32vw, 380px) !important;
-  max-height: 48vh !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  pointer-events: auto !important;
-}
-
-.hero-cutout-img {
-  width: 100% !important;
-  height: 100% !important;
-  max-height: 46vh !important;
-  object-fit: contain !important;
-  display: block !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  user-select: none !important;
-  pointer-events: none !important;
-}
-
-/* 3. "SELECTED WORKS" button: Standalone pill positioned below centered name/photo */
+/* 2. "SELECTED WORKS" button: Standalone pill positioned below stacked name */
 .hero-btn-wrap {
   position: relative !important;
   z-index: 3 !important;
-  margin-top: clamp(48px, 8vh, 72px) !important;
+  margin-top: 36px !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
@@ -362,23 +334,114 @@ button {
   background: #222222 !important;
 }
 
+/* Rebuilt 3-Column Footer */
+.portfolio-footer {
+  width: 100% !important;
+  border-top: 1px solid var(--line, var(--border-hairline, #232a36)) !important;
+  padding: 48px 4vw !important;
+  background-color: var(--bg-primary, #0d1117) !important;
+  color: var(--ink, var(--text-primary, #f2f0ea)) !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  box-sizing: border-box !important;
+}
+
+.footer-col-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 24px !important;
+  flex-wrap: wrap !important;
+}
+
+.footer-social-icons {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+.footer-icon-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--ink, var(--text-primary, #f2f0ea)) !important;
+  opacity: 0.6 !important;
+  transition: opacity 150ms ease !important;
+  text-decoration: none !important;
+}
+
+.footer-icon-link:hover {
+  opacity: 1 !important;
+}
+
+.footer-icon-link svg {
+  width: 20px !important;
+  height: 20px !important;
+  fill: currentColor !important;
+}
+
+.footer-resume-link {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace) !important;
+  font-size: 13px !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  color: var(--ink, var(--text-primary, #f2f0ea)) !important;
+  transition: opacity 150ms ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.footer-resume-link:hover {
+  opacity: 0.8 !important;
+}
+
+.footer-resume-link .resume-sep {
+  color: var(--ink-dim, var(--text-dim, #9aa4b2)) !important;
+  margin: 0 4px !important;
+}
+
+.footer-col-center {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace) !important;
+  font-size: 13px !important;
+  color: var(--ink-dim, var(--text-dim, #9aa4b2)) !important;
+  text-align: center !important;
+}
+
+.footer-col-right {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  min-width: 100px !important;
+}
+
 /* 4. Responsive check: mobile under 640px */
 @media only screen and (max-width: 640px) {
   .hero-center-stage {
-    min-height: 52vh !important;
+    min-height: 50vh !important;
     padding: 0 2vw !important;
   }
-  .hero-behind-photo-wrap {
-    width: clamp(120px, 42vw, 175px) !important;
-    top: 48% !important;
-    transform: translate(-50%, -46%) !important;
-    max-height: 32vh !important;
-  }
   .hero-name-text {
-    font-size: clamp(2.8rem, 14vw, 5.5rem) !important;
+    font-size: clamp(3rem, 14vw, 5.5rem) !important;
     line-height: 0.92 !important;
   }
   .hero-btn-wrap {
-    margin-top: 36px !important;
+    margin-top: 28px !important;
+  }
+  .portfolio-footer {
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 36px 20px !important;
+  }
+  .footer-col-left {
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: center !important;
+  }
+  .footer-col-right {
+    display: none !important;
   }
 }

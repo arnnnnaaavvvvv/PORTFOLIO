@@ -1,6 +1,6 @@
 
 import React from "react";
-import Hero3DPhoto from "@/components/Hero3DPhoto";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -346,13 +346,8 @@ export default function Home() {
               <div className="mxd-hero-01">
                 <div className="mxd-hero-01__cover"></div>
                 
-                {/* 1 & 2. Centered Name + Behind-the-name Photo Stage */}
+                {/* 1. Centered Stacked Name */}
                 <div className="hero-center-stage">
-                  {/* Photo: Positioned behind the centered name (lower in stacking order, z-index: 1) */}
-                  <div className="hero-behind-photo-wrap loading-fade" id="hero-photo-wrap">
-                    <Hero3DPhoto />
-                  </div>
-
                   {/* Centered Headline: ARNAV / SINGH */}
                   <div className="hero-headline-wrap">
                     <span className="hero-headline-line">
@@ -363,7 +358,7 @@ export default function Home() {
                     </span>
                   </div>
 
-                  {/* 3. "SELECTED WORKS" button: Standalone pill positioned below centered name/photo */}
+                  {/* 2. "SELECTED WORKS" button: Standalone pill positioned below stacked name */}
                   <div className="hero-btn-wrap loading-fade">
                     <a className="btn btn-default-icon-small btn-default-permanent slide-right hero-works-pill" href="#works">
                       <span className="btn-caption mxd-scramble">Selected Works</span>
@@ -1196,293 +1191,8 @@ export default function Home() {
       </main>
 
       {/*  Footer Start  */}
-    <footer id="mxd-footer" className="mxd-footer blur-section">
-      <div className="mxd-container grid-l-container">
-
-        {/*  Footer Block - Navigation v2 Start  */}
-        <div className="mxd-block">
-          <div className="container-fluid p-0">
-            <div className="row g-0">
-              <div className="col-12 col-xl-6 mxd-footer__item">
-                <nav className="mxd-footer__nav02">
-                  <div className="container-fluid p-0">
-                    <div className="row g-0">
-                      <div className="col-12 col-md-6 mxd-footer-nav02__item mxd-grid-item">
-                        <div className="mxd-footer-nav02__block">
-                          <div className="mxd-footer-nav02__title">
-                            <p className="footer-data anim-uni-slide-down">
-                              <span>/ Discover</span>
-                            </p>
-                          </div>
-                          <div className="mxd-footer-nav02__list">
-                            <ul>
-                              <li><a className="anim-uni-slide-down" href="#hero"><span>Home</span></a></li>
-                              <li><a className="anim-uni-slide-down" href="#about"><span>About us</span></a></li>
-                              <li><a className="anim-uni-slide-down" href="#works"><span>Case studies</span></a></li>
-                              <li><a className="anim-uni-slide-down" href="#services"><span>Services</span></a></li>
-                              <li><a className="anim-uni-slide-down" href="#about"><span>Our team</span></a></li>
-                              <li><a className="anim-uni-slide-down" href="#insights"><span>Insights</span></a></li>
-                              <li><a className="anim-uni-slide-down" href="#contact"><span>Contact</span></a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-12 col-md-6 mxd-footer-nav02__item mxd-grid-item">
-                        <div className="mxd-footer-nav02__block">
-                          <div className="mxd-footer-nav02__title">
-                            <p className="footer-data anim-uni-slide-down">
-                              <span>/ Contact</span>
-                            </p>
-                          </div>
-                          <div className="mxd-footer-nav02__list">
-                            <ul>
-                              <li>
-                                <a className="anim-uni-slide-down" href="mailto:arnav152007@gmail.com">
-                                  <span>arnav152007@gmail.com</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a className="anim-uni-slide-down" href="tel:+918423622491">
-                                  <span>+91 8423622491</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div className="mxd-footer-nav02__block">
-                          <div className="mxd-footer-nav02__title">
-                            <p className="footer-data anim-uni-slide-down">
-                              <span>/ Info</span>
-                            </p>
-                          </div>
-                          <div className="mxd-footer-nav02__list">
-                            <ul>
-                              <li>
-                                <a className="anim-uni-slide-down" href="#contact"><span>Open for Roles</span></a>
-                              </li>
-                              <li>
-                                <a className="anim-uni-slide-down" href="#about"><span>Chandigarh Univ</span></a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </nav>
-              </div>
-              <div className="col-12 col-xl-6 mxd-footer__item mxd-grid-item">
-                <div className="mxd-footer__socials-list">
-                  <div className="container-fluid p-0">
-                    <div className="row g-0">
-                      <div className="col-12 mxd-footer-nav02__item">
-                        <div className="mxd-footer-nav02__block">
-                          <div className="mxd-footer-nav02__title">
-                            <p className="footer-data anim-uni-slide-down">
-                              <span>/ Ecosystem</span>
-                            </p>
-                          </div>
-                          <div className="mxd-footer-nav02__list">
-                            <a className="socials-list__item slide-right-up" href="https://github.com/arnnnnaaavvvvvarnnnnaaavvvvv" target="_blank">
-                              <div className="socials-list__divider divider-top anim-uni-clip-in"></div>
-                              <div className="socials-list__info">
-                                <div className="socials-list__number anim-uni-slide-down">
-                                  <span>[01]</span>
-                                </div>
-                                <div className="socials-list__name anim-uni-slide-down">
-                                  <span>GitHub</span>
-                                </div>
-                              </div>
-                              <div className="socials-list__arrow anim-uni-slide-down">
-                                <i>
-                                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 18 18"  xmlSpace="preserve">
-                                  <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
-                                    M0,18h3.6v-3.6H0V18z"/>
-                                  </svg>
-                                </i>
-                              </div>
-                              <div className="socials-list__divider divider-bottom anim-uni-clip-in"></div>
-                            </a>
-                            <a className="socials-list__item slide-right-up" href="https://www.linkedin.com/in/arnav-singh-986722252" target="_blank">
-                              <div className="socials-list__divider divider-top anim-uni-clip-in"></div>
-                              <div className="socials-list__info">
-                                <div className="socials-list__number anim-uni-slide-down">
-                                  <span>[02]</span>
-                                </div>
-                                <div className="socials-list__name anim-uni-slide-down">
-                                  <span>LinkedIn</span>
-                                </div>
-                              </div>
-                              <div className="socials-list__arrow anim-uni-slide-down">
-                                <i>
-                                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 18 18"  xmlSpace="preserve">
-                                  <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
-                                    M0,18h3.6v-3.6H0V18z"/>
-                                  </svg>
-                                </i>
-                              </div>
-                              <div className="socials-list__divider divider-bottom anim-uni-clip-in"></div>
-                            </a>
-                            <a className="socials-list__item slide-right-up" href="https://github.com/" target="_blank">
-                              <div className="socials-list__divider divider-top anim-uni-clip-in"></div>
-                              <div className="socials-list__info">
-                                <div className="socials-list__number anim-uni-slide-down">
-                                  <span>[03]</span>
-                                </div>
-                                <div className="socials-list__name anim-uni-slide-down">
-                                  <span>Github</span>
-                                </div>
-                              </div>
-                              <div className="socials-list__arrow anim-uni-slide-down">
-                                <i>
-                                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 18 18"  xmlSpace="preserve">
-                                  <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
-                                    M0,18h3.6v-3.6H0V18z"/>
-                                  </svg>
-                                </i>
-                              </div>
-                              <div className="socials-list__divider divider-bottom anim-uni-clip-in"></div>
-                            </a>
-                            <a className="socials-list__item slide-right-up" href="https://frontend-mu-roan-llgeruknl5.vercel.app" target="_blank">
-                              <div className="socials-list__divider divider-top anim-uni-clip-in"></div>
-                              <div className="socials-list__info">
-                                <div className="socials-list__number anim-uni-slide-down">
-                                  <span>[04]</span>
-                                </div>
-                                <div className="socials-list__name anim-uni-slide-down">
-                                  <span>CLUDE Demo</span>
-                                </div>
-                              </div>
-                              <div className="socials-list__arrow anim-uni-slide-down">
-                                <i>
-                                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 18 18"  xmlSpace="preserve">
-                                  <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
-                                    M0,18h3.6v-3.6H0V18z"/>
-                                  </svg>
-                                </i>
-                              </div>
-                              <div className="socials-list__divider divider-bottom anim-uni-clip-in"></div>
-                            </a>
-                            <a className="socials-list__item slide-right-up" href="https://ignite-lemon-nu.vercel.app/" target="_blank">
-                              <div className="socials-list__divider divider-top anim-uni-clip-in"></div>
-                              <div className="socials-list__info">
-                                <div className="socials-list__number anim-uni-slide-down">
-                                  <span>[05]</span>
-                                </div>
-                                <div className="socials-list__name anim-uni-slide-down">
-                                  <span>IGNITE Demo</span>
-                                </div>
-                              </div>
-                              <div className="socials-list__arrow anim-uni-slide-down">
-                                <i>
-                                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 18 18"  xmlSpace="preserve">
-                                  <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2C7.2,7.2,7.2,10.8,7.2,10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z
-                                    M0,18h3.6v-3.6H0V18z"/>
-                                  </svg>
-                                </i>
-                              </div>
-                              <div className="socials-list__divider divider-bottom anim-uni-clip-in"></div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/*  Footer Block - Navigation v2 End  */}
-
-        {/*  Footer Block - Controls Start  */}
-        <div className="mxd-block">
-          <div className="container-fluid p-0">
-            <div className="row g-0">
-              <div className="col-12 col-xl-6 mxd-footer__item"></div>
-              <div className="col-12 col-xl-6 mxd-footer__item mxd-grid-item">
-                <div className="mxd-footer__controls-middle">
-                  <div className="anim-uni-slide-down">
-                    <a id="to-top" className="btn btn-line-icon btn-line-default slide-up" href="#">
-                      <span className="btn-caption mxd-scramble">Back to Top</span>
-                      <i>
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                          viewBox="0 0 18 18"  xmlSpace="preserve">
-                        <path d="M0,7.2h3.6v3.6H0V7.2z M10.8,3.6V0H7.2v3.6H3.6v3.6h3.6V18h3.6V7.2h3.6V3.6H10.8z M14.4,7.2v3.6H18V7.2H14.4z"/>
-                        </svg>
-                      </i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/*  Footer Block - Controls End  */}
-
-        {/*  Footer Block - Fullwidth Text Start  */}
-        <div className="mxd-block">
-          <div className="mxd-footer__fw-mark mxd-grid-item">
-            <div className="fw-mark__wrap">
-              <div className="fw-mark__content">
-                <span className="anim-uni-chars">ARNAV SINGH</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/*  Footer Block - Fullwidth Text End  */}
-
-        {/*  Footer Block - Data Start  */}
-        <div className="mxd-block">
-          <div className="mxd-footer__data">
-            <div className="container-fluid p-0">
-              <div className="row g-0">
-                <div className="col-12 col-xl-6 mxd-footer__item mxd-grid-item">
-                  <div className="mxd-footer__data-item anim-uni-fade-in">
-                    <p className="footer-data">
-                      <span>© 2026 Arnav Singh. All systems operational.</span>
-                    </p>
-                  </div>
-                </div>
-                <div className="col-12 col-xl-6 mxd-footer__item">
-                  <div className="container-fluid p-0">
-                    <div className="row g-0">
-                      <div className="col-12 col-xl-6 mxd-grid-item">
-                        <div className="mxd-footer__data-item anim-uni-fade-in">
-                          <p className="footer-data">
-                            <span>
-                              HTML Template by&nbsp;
-                              <a href="https://wrapmarket.com/shop/MixDesign" target="_blank">
-                                <span className="mxd-scramble">mix_design</span>
-                              </a>
-                            </span>
-                          </p>
-                        </div>
-                      </div>
-                      <div className="col-12 col-xl-6 mxd-grid-item">
-                        <div className="mxd-footer__data-item anim-uni-fade-in justify-end">
-                          <p className="footer-data">
-                            <span>©2026</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/*  Footer Block - Data End  */}
-
-      </div>
-    </footer>
-    {/*  Footer End  */}
+      <Footer />
+      {/*  Footer End  */}
       {/*  Global Cursor Start  */}
     <div id="mxd-cursor" className="mxd-cursor">
       <div id="mxd-cursor__dot" className="mxd-cursor__dot"></div>
