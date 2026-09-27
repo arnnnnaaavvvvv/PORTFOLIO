@@ -1,6 +1,7 @@
 
 import React from "react";
 import Footer from "@/components/Footer";
+import HeroNameImage from "@/components/HeroNameImage";
 
 export default function Home() {
   return (
@@ -346,17 +347,9 @@ export default function Home() {
               <div className="mxd-hero-01">
                 <div className="mxd-hero-01__cover"></div>
                 
-                {/* 1. Centered Stacked Name */}
+                {/* 1. Centered Hero Name Image */}
                 <div className="hero-center-stage">
-                  {/* Centered Headline: ARNAV / SINGH */}
-                  <div className="hero-headline-wrap">
-                    <span className="hero-headline-line">
-                      <span className="hero-name-text loading-chars">ARNAV</span>
-                    </span>
-                    <span className="hero-headline-line">
-                      <span className="hero-name-text loading-chars">SINGH</span>
-                    </span>
-                  </div>
+                  <HeroNameImage />
                 </div>
 
               </div>

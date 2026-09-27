@@ -20948,46 +20948,27 @@ form textarea:required:valid {
   background-color: transparent !important;
 }
 
-.hero-headline-wrap {
+.hero-image-wrap {
+  width: 100% !important;
+  max-width: 1024px !important;
+  margin: 0 auto !important;
   display: flex !important;
-  flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  text-align: center !important;
-  position: relative !important;
-  z-index: 2 !important;
-  width: 100% !important;
-  padding-bottom: clamp(16px, 2.5vw, 28px) !important;
-  border-bottom: 1px solid var(--line, var(--border-hairline, rgba(0, 0, 0, 0.12))) !important;
 }
 
-.hero-headline-line {
+.hero-image {
+  width: 100% !important;
+  height: auto !important;
   display: block !important;
-  text-align: center !important;
-  overflow: hidden !important;
-  width: 100% !important;
 }
 
-.hero-name-text {
-  font-family: 'Space Grotesk', var(--font-display), -apple-system, sans-serif !important;
-  font-size: clamp(4.5rem, 15vw, 12rem) !important;
-  line-height: 0.86 !important;
-  font-weight: 700 !important;
-  letter-spacing: -0.03em !important;
-  text-transform: uppercase !important;
-  color: var(--t-bright, #0f0f0f) !important;
-  text-align: center !important;
-  display: inline-block !important;
-  white-space: nowrap !important;
-}
-
-.hero-name-text .char,
-.hero-name-text .word {
-  display: inline-block !important;
-  font-size: inherit !important;
-  line-height: inherit !important;
-  font-weight: inherit !important;
-  letter-spacing: inherit !important;
+@media (prefers-reduced-motion: reduce) {
+  .hero-image-wrap {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 /* 2. "SELECTED WORKS" button: Standalone pill positioned below stacked name */
@@ -21134,13 +21115,8 @@ form textarea:required:valid {
     min-height: 50vh !important;
     padding: 0 2vw !important;
   }
-  .hero-headline-wrap {
-    padding-bottom: 16px !important;
-  }
-  .hero-name-text {
-    font-size: clamp(3.2rem, 16vw, 6.2rem) !important;
-    line-height: 0.88 !important;
-    letter-spacing: -0.03em !important;
+  .hero-image-wrap {
+    padding: 0 4vw !important;
   }
   .hero-btn-wrap {
     margin-top: 28px !important;
