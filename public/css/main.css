@@ -20896,7 +20896,8 @@ form textarea:required:valid {
    HERO SHOWCASE (CENTERED NAME + BEHIND-PHOTO CUTOUT)
    =================================================== */
 
-#hero {
+#hero,
+.hero {
   min-height: 100vh !important;
   height: 100vh !important;
   display: flex !important;
@@ -20905,7 +20906,11 @@ form textarea:required:valid {
   width: 100% !important;
   position: relative !important;
   overflow: hidden !important;
-  background-color: var(--base, #eeeae8) !important;
+  background-color: #f2f0ea !important;
+}
+
+.hero {
+  background-color: #f2f0ea !important;
 }
 
 #hero .mxd-hero-01__cover {

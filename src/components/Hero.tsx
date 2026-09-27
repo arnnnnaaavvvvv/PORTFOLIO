@@ -64,8 +64,9 @@ export default function Hero() {
         paddingBottom: "60px",
         position: "relative",
         overflow: "hidden",
+        backgroundColor: "#f2f0ea",
       }}
-      className="hairline-bottom hero-custom-section"
+      className="hairline-bottom hero-custom-section hero"
     >
       <div className="portfolio-container" style={{ width: "100%", position: "relative" }}>
         
