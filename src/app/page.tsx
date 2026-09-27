@@ -356,75 +356,13 @@ export default function Home() {
           <div className="mxd-hero-01">
           <div className="mxd-hero-01__cover"></div>
           <div className="mxd-hero-01__wrap">
-            {/*  top group  */}
-            <div className="mxd-hero-01__top">
-              <div className="mxd-hero-01__data-wrap">
-                <div className="mxd-hero-01__data-tags">
-                  <div className="tags-column">
-                    <ul>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Systems Architect</span></li>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Full-Stack AI</span></li>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Distributed Systems</span></li>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Autonomous Agents</span></li>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Cloud Infrastructure</span></li>
-                    </ul>
-                  </div>
-                  <div className="tags-column">
-                    <ul>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Next.js 14</span></li>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">TypeScript</span></li>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">PyTorch / LLMs</span></li>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Docker & K8s</span></li>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Chandigarh Univ</span></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="mxd-hero-01__data-contact">
-                  <ul>
-                    <li className="loading-item">
-                      <a className="tag tag-s-mobile mxd-scramble" href="tel:+918423622491">+91 8423622491</a>
-                    </li>
-                    <li className="loading-item">
-                      <a className="tag tag-s-mobile mxd-scramble" href="https://www.linkedin.com/in/arnav-singh-986722252" target="_blank">arnav-singh-986722252</a>
-                    </li>
-                    <li className="loading-item">
-                      <a className="tag tag-s-mobile mxd-scramble" href="mailto:arnav152007@gmail.com">arnav152007@gmail.com</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="mxd-hero-01__video-wrap loading-fade">
-                {/*  <img src="/img/hero/1000x750_h02.webp" alt="Hero Placeholder" />  */}
-                <video className="mxd-hero-01__video" 
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="auto"
-                  poster="/video/360x225_hero-01.webp">
-                  <source type="/video/mp4" src="/video/360x225_hero-01.mp4" />
-                  <source type="/video/webm" src="/video/360x225_hero-01.webm" />
-                </video>
-                <div className="mxd-hero-01__video-btn">
-                  <a className="btn btn-default-icon-small btn-default-permanent slide-right" href="#works">
-                      <span className="btn-caption mxd-scramble">Selected Works</span>
-                      {/*  <i className="btn-icon ph-bold ph-arrow-right"></i>  */}
-                      <i className="btn-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
-                          <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z"/>
-                        </svg>
-                      </i>
-                    </a>
-                </div>
-              </div>
-            </div>
             {/*  bottom group  */}
             <div className="mxd-hero-01__bottom">
               <div className="mxd-hero-01__caption">
                 <div className="fullwidth-text">
                   <div className="fullwidth-text__wrap">
                     <a className="fullwidth-text__content permanent active-cursor-accent" data-cursor-text="Let's Chat" href="#contact">
-                      <span className="loading-chars">ARNAV</span>
+                      <span className="loading-chars">ARNAV SINGH</span>
                     </a>
                   </div>
                 </div>

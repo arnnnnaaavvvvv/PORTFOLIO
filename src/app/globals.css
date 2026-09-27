@@ -182,3 +182,29 @@ button {
     transform: none;
   }
 }
+
+/* Hero Centered Full Name Display */
+.mxd-hero-01 {
+  min-height: 85vh;
+  justify-content: center !important;
+}
+
+.mxd-hero-01__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.mxd-hero-01__bottom {
+  width: 100%;
+  margin: auto 0;
+}
+
+.fullwidth-text__wrap .fullwidth-text__content {
+  font-size: clamp(3.5rem, 13vw, 15.5rem) !important;
+  justify-content: center !important;
+  text-align: center;
+  width: 100%;
+}
+
