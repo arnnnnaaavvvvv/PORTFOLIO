@@ -341,6 +341,8 @@ export default function Home() {
 
       <main id="mxd-page-content" className="mxd-page-content">
         <div id="hero" className="hero">
+          {/* Subtle corner gradient for top-right UI contrast */}
+          <div className="hero-corner-gradient" aria-hidden="true"></div>
           {/*  Hero Section Start  */}
           <div className="mxd-section pinned-section mxd-hero-section no-padding mxd-hero-fullheight-desktop loading-wrap">
             <div className="pinned-section__inner">

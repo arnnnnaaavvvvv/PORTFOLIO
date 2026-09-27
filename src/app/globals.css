@@ -244,6 +244,13 @@ button {
   background-color: transparent !important;
 }
 
+.hero-scroll-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
 .hero-image-wrap {
   width: 100% !important;
   max-width: 1024px !important;
@@ -256,7 +263,31 @@ button {
 .hero-image {
   width: 100% !important;
   height: auto !important;
+  max-height: 85vh !important;
+  object-fit: cover !important;
+  object-position: center 45% !important;
   display: block !important;
+}
+
+.hero-mobile-edge-fade {
+  display: none;
+}
+
+/* 3. Corner UI contrast gradient: behind top-right corner only */
+.hero-corner-gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 380px;
+  height: 180px;
+  background: radial-gradient(ellipse at 100% 0%, rgba(13, 17, 23, 0.14) 0%, rgba(13, 17, 23, 0.04) 50%, transparent 70%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.mxd-header-permanent .mxd-header__link,
+.mxd-header-permanent .mxd-color-switcher {
+  color: #0f0f0f !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -409,10 +440,47 @@ button {
 @media only screen and (max-width: 640px) {
   .hero-center-stage {
     min-height: 50vh !important;
-    padding: 0 2vw !important;
+    padding: 0 !important;
+    position: relative !important;
+  }
+  .hero-scroll-container {
+    width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    justify-content: flex-start !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    position: relative !important;
+  }
+  .hero-scroll-container::-webkit-scrollbar {
+    display: none !important;
   }
   .hero-image-wrap {
-    padding: 0 4vw !important;
+    min-width: 640px !important;
+    width: 640px !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 16px !important;
+    display: block !important;
+  }
+  .hero-image {
+    min-width: 640px !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-position: center 45% !important;
+  }
+  .hero-mobile-edge-fade {
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 32px !important;
+    background: linear-gradient(to right, transparent, #f2f0ea) !important;
+    pointer-events: none !important;
+    z-index: 5 !important;
   }
   .hero-btn-wrap {
     margin-top: 28px !important;

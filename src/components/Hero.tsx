@@ -40,6 +40,9 @@ export default function Hero() {
       }}
       className="hairline-bottom hero-custom-section hero"
     >
+      {/* Subtle corner gradient for top-right UI contrast */}
+      <div className="hero-corner-gradient" aria-hidden="true"></div>
+
       <div className="portfolio-container" style={{ width: "100%", position: "relative" }}>
         
         {/* Subtle sub-label */}
@@ -57,18 +60,21 @@ export default function Hero() {
             width: "100%",
           }}
         >
-          <motion.div
-            className="hero-image-wrap"
-            initial={shouldReduceMotion ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, ease: EASE }}
-          >
-            <img
-              src="/hero-name.png"
-              alt="Arnav Singh — Full-Stack AI Developer"
-              className="hero-image"
-            />
-          </motion.div>
+          <div className="hero-scroll-container">
+            <motion.div
+              className="hero-image-wrap"
+              initial={shouldReduceMotion ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, ease: EASE }}
+            >
+              <img
+                src="/hero-name.png"
+                alt="Arnav Singh — Full-Stack AI Developer"
+                className="hero-image"
+              />
+            </motion.div>
+            <div className="hero-mobile-edge-fade" aria-hidden="true" />
+          </div>
         </div>
 
         {/* Meta Row: Fades in after headline without parallax */}
