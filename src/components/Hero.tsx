@@ -161,57 +161,6 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* 2. "SELECTED WORKS" button: Standalone pill positioned below stacked name */}
-        <motion.div
-          variants={metaRowVariants}
-          initial="hidden"
-          animate="visible"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: "36px",
-            marginBottom: "40px",
-            position: "relative",
-            zIndex: 3,
-          }}
-        >
-          <a
-            href="#work"
-            className="selected-works-pill-btn"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "10px",
-              padding: "12px 28px",
-              borderRadius: "9999px",
-              backgroundColor: "var(--text-primary)",
-              color: "var(--bg-primary)",
-              fontFamily: "var(--font-mono)",
-              fontSize: "0.85rem",
-              fontWeight: 600,
-              letterSpacing: "0.06em",
-              textTransform: "uppercase",
-              textDecoration: "none",
-              boxShadow: "0 10px 25px rgba(0, 0, 0, 0.2)",
-              transition: "transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-2px) scale(1.03)";
-              e.currentTarget.style.boxShadow = "0 14px 32px rgba(0, 0, 0, 0.28)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0) scale(1)";
-              e.currentTarget.style.boxShadow = "0 10px 25px rgba(0, 0, 0, 0.2)";
-            }}
-          >
-            <span>SELECTED WORKS</span>
-            <svg width="14" height="14" viewBox="0 0 18 18" fill="currentColor">
-              <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-            </svg>
-          </a>
-        </motion.div>
-
         {/* Meta Row: Fades in after headline without parallax */}
         <motion.div
           variants={metaRowVariants}
