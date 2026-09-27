@@ -1,5 +1,6 @@
 
 import React from "react";
+import Hero3DPhoto from "@/components/Hero3DPhoto";
 
 export default function Home() {
   return (
@@ -345,44 +346,33 @@ export default function Home() {
               <div className="mxd-hero-01">
                 <div className="mxd-hero-01__cover"></div>
                 
-                {/* Stage: Top ARNAV / Center Video Card / Bottom SINGH */}
-                <div className="hero-stage-container">
-                  {/* Top Line: ARNAV */}
-                  <div className="hero-title-line top-line">
-                    <span className="hero-huge-title loading-chars">ARNAV</span>
+                {/* 1 & 2. Centered Name + Behind-the-name Photo Stage */}
+                <div className="hero-center-stage">
+                  {/* Photo: Positioned behind the centered name (lower in stacking order, z-index: 1) */}
+                  <div className="hero-behind-photo-wrap loading-fade" id="hero-photo-wrap">
+                    <Hero3DPhoto />
                   </div>
 
-                  {/* Centered Floating Preview Video Card */}
-                  <div className="hero-center-media-wrap loading-fade">
-                    <div className="mxd-hero-01__video-wrap">
-                      <video
-                        className="mxd-hero-01__video"
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        preload="auto"
-                        poster="/video/360x225_hero-01.webp"
-                      >
-                        <source type="video/mp4" src="/video/360x225_hero-01.mp4" />
-                        <source type="video/webm" src="/video/360x225_hero-01.webm" />
-                      </video>
-                      <div className="mxd-hero-01__video-btn">
-                        <a className="btn btn-default-icon-small btn-default-permanent slide-right" href="#works">
-                          <span className="btn-caption mxd-scramble">Selected Works</span>
-                          <i className="btn-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
-                              <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z"/>
-                            </svg>
-                          </i>
-                        </a>
-                      </div>
-                    </div>
+                  {/* Centered Headline: ARNAV / SINGH */}
+                  <div className="hero-headline-wrap">
+                    <span className="hero-headline-line">
+                      <span className="hero-name-text loading-chars">ARNAV</span>
+                    </span>
+                    <span className="hero-headline-line">
+                      <span className="hero-name-text loading-chars">SINGH</span>
+                    </span>
                   </div>
 
-                  {/* Bottom Line: SINGH */}
-                  <div className="hero-title-line bottom-line">
-                    <span className="hero-huge-title loading-chars">SINGH</span>
+                  {/* 3. "SELECTED WORKS" button: Standalone pill positioned below centered name/photo */}
+                  <div className="hero-btn-wrap loading-fade">
+                    <a className="btn btn-default-icon-small btn-default-permanent slide-right hero-works-pill" href="#works">
+                      <span className="btn-caption mxd-scramble">Selected Works</span>
+                      <i className="btn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                          <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z"/>
+                        </svg>
+                      </i>
+                    </a>
                   </div>
                 </div>
 

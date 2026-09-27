@@ -20893,7 +20893,7 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 
 /* ===================================================
-   HERO SHOWCASE (INSPIRED BY REFERENCE IMAGE)
+   HERO SHOWCASE (CENTERED NAME + BEHIND-PHOTO CUTOUT)
    =================================================== */
 
 #hero {
@@ -20926,107 +20926,118 @@ form textarea:required:valid {
   background-color: transparent !important;
 }
 
-#hero .hero-stage-container {
-  width: 100% !important;
-  max-width: 100vw !important;
-  height: 100% !important;
+/* 1. LAYOUT — Center the name */
+.hero-center-stage {
+  position: relative !important;
+  min-height: 60vh !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  position: relative !important;
-  padding: 0 4vw !important;
-  margin: auto !important;
-}
-
-#hero .hero-title-line {
+  text-align: center !important;
   width: 100% !important;
+  max-width: 100vw !important;
+  margin: auto !important;
+  padding: 0 4vw !important;
+}
+
+.hero-headline-wrap {
   display: flex !important;
+  flex-direction: column !important;
   align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
   position: relative !important;
-  z-index: 3 !important;
+  z-index: 2 !important;
   pointer-events: none !important;
+  width: 100% !important;
 }
 
-#hero .hero-title-line.top-line {
-  justify-content: flex-start !important;
-  padding-left: 6vw !important;
-  margin-bottom: 7rem !important;
+.hero-headline-line {
+  display: block !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  width: 100% !important;
 }
 
-#hero .hero-title-line.bottom-line {
-  justify-content: flex-start !important;
-  padding-left: 5vw !important;
-  margin-top: 7rem !important;
-}
-
-#hero .hero-huge-title {
-  font-family: 'Oxanium', 'Space Grotesk', -apple-system, sans-serif !important;
+.hero-name-text {
+  font-family: var(--font-display, 'Space Grotesk', -apple-system, sans-serif) !important;
+  font-size: clamp(3rem, 12vw, 9rem) !important;
+  line-height: 0.9 !important;
   font-weight: 800 !important;
-  font-style: italic !important;
-  font-size: clamp(5.5rem, 15.5vw, 14.5rem) !important;
-  line-height: 0.82 !important;
-  letter-spacing: 0.22em !important;
+  letter-spacing: -0.025em !important;
   text-transform: uppercase !important;
   color: var(--t-bright, #0f0f0f) !important;
-  white-space: nowrap !important;
-  display: inline-flex !important;
-  align-items: center !important;
-}
-
-#hero .hero-huge-title .char {
+  text-align: center !important;
   display: inline-block !important;
-  font-family: inherit !important;
-  font-style: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
+  white-space: nowrap !important;
 }
 
-#hero .hero-huge-title .word {
-  display: inline-flex !important;
-  font-family: inherit !important;
-  font-style: inherit !important;
-  font-weight: inherit !important;
+.hero-name-text .char,
+.hero-name-text .word {
+  display: inline-block !important;
+  font-size: inherit !important;
   line-height: inherit !important;
-  margin: 0 0.15em !important;
+  font-weight: inherit !important;
+  letter-spacing: inherit !important;
 }
 
-#hero .hero-center-media-wrap {
+/* 2. PHOTO — Reposition, don't overlap the centered text */
+.hero-behind-photo-wrap {
   position: absolute !important;
   top: 50% !important;
   left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  z-index: 2 !important;
+  transform: translate(-50%, -42%) !important;
+  z-index: 1 !important;
+  width: clamp(200px, 32vw, 380px) !important;
+  max-height: 48vh !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin: 0 !important;
-  max-width: 380px !important;
-  width: clamp(260px, 28vw, 380px) !important;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28) !important;
-  border-radius: 18px !important;
-  overflow: hidden !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
   pointer-events: auto !important;
 }
 
-#hero .hero-center-media-wrap .mxd-hero-01__video-wrap {
-  width: 100% !important;
-  height: auto !important;
-  max-width: 100% !important;
-  aspect-ratio: 16 / 10 !important;
-  border-radius: 18px !important;
-  overflow: hidden !important;
-  position: relative !important;
-}
-
-#hero .hero-center-media-wrap video {
+.hero-cutout-img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover !important;
+  max-height: 46vh !important;
+  object-fit: contain !important;
   display: block !important;
-  border-radius: 18px !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  user-select: none !important;
+  pointer-events: none !important;
 }
 
+/* 3. "SELECTED WORKS" button: Standalone pill positioned below centered name/photo */
+.hero-btn-wrap {
+  position: relative !important;
+  z-index: 3 !important;
+  margin-top: clamp(48px, 8vh, 72px) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.hero-works-pill {
+  padding: 0.9rem 2.2rem !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.06em !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.hero-works-pill:hover {
+  transform: translateY(-2px) scale(1.03) !important;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22) !important;
+}
+
+/* Header right alignment */
 .mxd-header {
   justify-content: flex-end !important;
 }
@@ -21038,7 +21049,7 @@ form textarea:required:valid {
 .hero-menu-pill {
   background: #0f0f0f !important;
   color: #ffffff !important;
-  font-family: 'Oxanium', -apple-system, sans-serif !important;
+  font-family: 'Space Grotesk', -apple-system, sans-serif !important;
   font-weight: 800 !important;
   font-size: 0.95rem !important;
   letter-spacing: 0.08em !important;
@@ -21058,21 +21069,23 @@ form textarea:required:valid {
   background: #222222 !important;
 }
 
-@media only screen and (max-width: 768px) {
-  #hero .hero-stage-container {
-    padding: 0 4vw !important;
+/* 4. Responsive check: mobile under 640px */
+@media only screen and (max-width: 640px) {
+  .hero-center-stage {
+    min-height: 52vh !important;
+    padding: 0 2vw !important;
   }
-  #hero .hero-title-line.top-line {
-    margin-bottom: -1rem !important;
+  .hero-behind-photo-wrap {
+    width: clamp(120px, 42vw, 175px) !important;
+    top: 48% !important;
+    transform: translate(-50%, -46%) !important;
+    max-height: 32vh !important;
   }
-  #hero .hero-title-line.bottom-line {
-    margin-top: -1rem !important;
+  .hero-name-text {
+    font-size: clamp(2.8rem, 14vw, 5.5rem) !important;
+    line-height: 0.92 !important;
   }
-  #hero .hero-huge-title {
-    font-size: clamp(3.5rem, 18vw, 7rem) !important;
-  }
-  #hero .hero-center-media-wrap {
-    width: 75vw !important;
-    max-width: 280px !important;
+  .hero-btn-wrap {
+    margin-top: 36px !important;
   }
 }

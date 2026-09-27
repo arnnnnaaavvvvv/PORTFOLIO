@@ -369,7 +369,30 @@ function pageAppearance() {
     gsap.set(fadeInItems, { opacity: 0 });
     gsap.to(fadeInItems, { duration: 0.8, ease: "none", opacity: 1, delay: 1 });
   }
-    
+
+  // Hero 3D Photo Cursor-tilt + Spring physics
+  const photoWrap = document.getElementById('hero-photo-wrap');
+  if (photoWrap) {
+    let currentX = 0, currentY = 0, targetX = 0, targetY = 0;
+    window.addEventListener('mousemove', (e) => {
+      const rect = photoWrap.getBoundingClientRect();
+      const x = (e.clientX - (rect.left + rect.width / 2)) / (window.innerWidth / 2);
+      const y = (e.clientY - (rect.top + rect.height / 2)) / (window.innerHeight / 2);
+      targetX = Math.max(-12, Math.min(12, x * 14));
+      targetY = Math.max(-12, Math.min(12, -y * 14));
+    });
+    window.addEventListener('mouseleave', () => {
+      targetX = 0;
+      targetY = 0;
+    });
+    function updateTilt() {
+      currentX += (targetX - currentX) * 0.08;
+      currentY += (targetY - currentY) * 0.08;
+      photoWrap.style.transform = `translate(-50%, -46%) perspective(1000px) rotateX(${currentY}deg) rotateY(${currentX}deg)`;
+      requestAnimationFrame(updateTilt);
+    }
+    requestAnimationFrame(updateTilt);
+  }
 }
 // --------------------------------------------- //
 // Base - Loader & Pages Transition End
