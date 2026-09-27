@@ -21048,22 +21048,21 @@ form textarea:required:valid {
 /* Rebuilt 3-Column Footer */
 .portfolio-footer {
   width: 100% !important;
-  border-top: 1px solid var(--line, var(--border-hairline, #232a36)) !important;
-  padding: 48px 4vw !important;
-  background-color: var(--bg-primary, #0d1117) !important;
+  border-top: 1px solid var(--line, var(--border-hairline, rgba(0, 0, 0, 0.12))) !important;
+  padding: 40px 4vw !important;
+  background-color: transparent !important;
   color: var(--ink, var(--text-primary, #f2f0ea)) !important;
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
-  flex-wrap: wrap !important;
   box-sizing: border-box !important;
 }
 
 .footer-col-left {
   display: flex !important;
   align-items: center !important;
-  gap: 24px !important;
-  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+  flex: 1 1 0% !important;
 }
 
 .footer-social-icons {
@@ -21089,7 +21088,22 @@ form textarea:required:valid {
 .footer-icon-link svg {
   width: 20px !important;
   height: 20px !important;
-  fill: currentColor !important;
+  display: block !important;
+}
+
+.footer-col-center {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace) !important;
+  font-size: 13px !important;
+  color: var(--ink-dim, var(--text-dim, #9aa4b2)) !important;
+  text-align: center !important;
+  flex: 0 0 auto !important;
+}
+
+.footer-col-right {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  flex: 1 1 0% !important;
 }
 
 .footer-resume-link {
@@ -21098,33 +21112,20 @@ form textarea:required:valid {
   letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
   text-decoration: none !important;
-  color: var(--ink, var(--text-primary, #f2f0ea)) !important;
-  transition: opacity 150ms ease !important;
+  color: var(--ink-dim, var(--text-dim, #9aa4b2)) !important;
+  transition: color 150ms ease, opacity 150ms ease !important;
   display: inline-flex !important;
   align-items: center !important;
 }
 
 .footer-resume-link:hover {
-  opacity: 0.8 !important;
+  color: var(--ink, var(--text-primary, #f2f0ea)) !important;
+  opacity: 1 !important;
 }
 
 .footer-resume-link .resume-sep {
   color: var(--ink-dim, var(--text-dim, #9aa4b2)) !important;
   margin: 0 4px !important;
-}
-
-.footer-col-center {
-  font-family: var(--font-mono, 'JetBrains Mono', monospace) !important;
-  font-size: 13px !important;
-  color: var(--ink-dim, var(--text-dim, #9aa4b2)) !important;
-  text-align: center !important;
-}
-
-.footer-col-right {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: flex-end !important;
-  min-width: 100px !important;
 }
 
 /* 4. Responsive check: mobile under 640px */
@@ -21146,17 +21147,25 @@ form textarea:required:valid {
   }
   .portfolio-footer {
     flex-direction: column !important;
-    gap: 20px !important;
+    gap: 18px !important;
     align-items: center !important;
     text-align: center !important;
     padding: 36px 20px !important;
   }
   .footer-col-left {
-    flex-direction: column !important;
-    gap: 16px !important;
-    align-items: center !important;
+    order: 1 !important;
+    justify-content: center !important;
+    width: 100% !important;
   }
   .footer-col-right {
-    display: none !important;
+    order: 2 !important;
+    justify-content: center !important;
+    width: 100% !important;
+    display: flex !important;
+  }
+  .footer-col-center {
+    order: 3 !important;
+    justify-content: center !important;
+    width: 100% !important;
   }
 }
