@@ -344,6 +344,9 @@ export default function Home() {
           {/*  <i className="ph-bold ph-arrow-up-right"></i>  */}
         </a>
         <button id="color-switcher" className="btn mxd-color-switcher permanent" type="button" role="switch" aria-label="light/dark mode" aria-checked="true"></button>
+        <button type="button" className="hero-menu-pill mxd-menu__toggle" aria-label="Open Navigation Menu">
+          MENU
+        </button>
       </div>
     </header>
     {/*  Header End  */}
@@ -351,30 +354,57 @@ export default function Home() {
       <main id="mxd-page-content" className="mxd-page-content">
         <div id="hero">
           {/*  Hero Section Start  */}
-      <div className="mxd-section pinned-section mxd-hero-section no-padding mxd-hero-fullheight-desktop loading-wrap">
-        <div className="pinned-section__inner">
-          <div className="mxd-hero-01">
-          <div className="mxd-hero-01__cover"></div>
-          <div className="mxd-hero-01__wrap">
-            {/*  bottom group  */}
-            <div className="mxd-hero-01__bottom">
-              <div className="mxd-hero-01__caption">
-                <div className="fullwidth-text">
-                  <div className="fullwidth-text__wrap">
-                    <a className="fullwidth-text__content permanent active-cursor-accent" data-cursor-text="Let's Chat" href="#contact">
-                      <span className="loading-chars">ARNAV SINGH</span>
-                    </a>
+          <div className="mxd-section pinned-section mxd-hero-section no-padding mxd-hero-fullheight-desktop loading-wrap">
+            <div className="pinned-section__inner">
+              <div className="mxd-hero-01">
+                <div className="mxd-hero-01__cover"></div>
+                
+                {/* Stage: Top ARNAV / Center Video Card / Bottom SINGH */}
+                <div className="hero-stage-container">
+                  {/* Top Line: ARNAV */}
+                  <div className="hero-title-line top-line">
+                    <span className="hero-huge-title loading-chars">ARNAV</span>
+                  </div>
+
+                  {/* Centered Floating Preview Video Card */}
+                  <div className="hero-center-media-wrap loading-fade">
+                    <div className="mxd-hero-01__video-wrap">
+                      <video
+                        className="mxd-hero-01__video"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="auto"
+                        poster="/video/360x225_hero-01.webp"
+                      >
+                        <source type="video/mp4" src="/video/360x225_hero-01.mp4" />
+                        <source type="video/webm" src="/video/360x225_hero-01.webm" />
+                      </video>
+                      <div className="mxd-hero-01__video-btn">
+                        <a className="btn btn-default-icon-small btn-default-permanent slide-right" href="#works">
+                          <span className="btn-caption mxd-scramble">Selected Works</span>
+                          <i className="btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
+                              <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z"/>
+                            </svg>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom Line: SINGH */}
+                  <div className="hero-title-line bottom-line">
+                    <span className="hero-huge-title loading-chars">SINGH</span>
                   </div>
                 </div>
+
               </div>
             </div>
+            <div className="pinned-section__trigger"></div>
           </div>
-        </div>
-        </div>
-        <div className="pinned-section__trigger"></div>
-        
-      </div>
-      {/*  Hero Section End  */}
+          {/*  Hero Section End  */}
         </div>
         <div id="works">
           {/*  Section - Progects Stack Start  */}

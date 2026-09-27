@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
   /* Design Tokens */
@@ -184,7 +184,8 @@ button {
 }
 
 /* ===================================================
-   HERO DEAD-CENTER & OPTIMAL SIZING (ARNAV SINGH)
+   HERO SHOWCASE (INSPIRED BY REFERENCE IMAGE)
+   Two-Line Massive Oxanium Italic Display + Center Card
    =================================================== */
 
 #hero {
@@ -196,6 +197,11 @@ button {
   width: 100% !important;
   position: relative !important;
   overflow: hidden !important;
+  background-color: var(--base, #eeeae8) !important;
+}
+
+#hero .mxd-hero-01__cover {
+  display: none !important;
 }
 
 #hero .mxd-hero-section,
@@ -210,76 +216,149 @@ button {
   padding: 0 !important;
   margin: 0 auto !important;
   width: 100% !important;
+  position: relative !important;
+  background-color: transparent !important;
 }
 
-#hero .mxd-hero-01__wrap {
+#hero .hero-stage-container {
   width: 100% !important;
-  max-width: 100% !important;
+  max-width: 100vw !important;
   height: 100% !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
+  position: relative !important;
+  padding: 0 4vw !important;
   margin: auto !important;
-  padding: 0 2rem !important;
 }
 
-#hero .mxd-hero-01__bottom {
+#hero .hero-title-line {
   width: 100% !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
-  margin: auto 0 !important;
+  position: relative !important;
+  z-index: 3 !important;
+  pointer-events: none !important;
 }
 
-#hero .mxd-hero-01__caption {
-  width: 100% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+#hero .hero-title-line.top-line {
+  justify-content: flex-start !important;
+  padding-left: 6vw !important;
+  margin-bottom: 7rem !important;
 }
 
-#hero .fullwidth-text,
-#hero .fullwidth-text__wrap {
-  width: 100% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  container-type: normal !important;
+#hero .hero-title-line.bottom-line {
+  justify-content: flex-start !important;
+  padding-left: 5vw !important;
+  margin-top: 7rem !important;
 }
 
-#hero .fullwidth-text__content {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
-  width: auto !important;
-  max-width: 90vw !important;
-  margin: 0 auto !important;
-  font-size: clamp(2.2rem, 7.5vw, 7.8rem) !important;
-  line-height: 1 !important;
-  letter-spacing: -0.01em !important;
+#hero .hero-huge-title {
+  font-family: 'Oxanium', 'Space Grotesk', -apple-system, sans-serif !important;
+  font-weight: 800 !important;
+  font-style: italic !important;
+  font-size: clamp(5.5rem, 15.5vw, 14.5rem) !important;
+  line-height: 0.82 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: var(--t-bright, #0f0f0f) !important;
   white-space: nowrap !important;
-  color: var(--t-bright, #ffffff) !important;
-}
-
-#hero .fullwidth-text__content span,
-#hero .fullwidth-text__content .char,
-#hero .fullwidth-text__content .word {
-  font-size: inherit !important;
-  line-height: 1 !important;
-  text-align: center !important;
-}
-
-#hero .fullwidth-text__content .word {
   display: inline-flex !important;
   align-items: center !important;
-  margin: 0 0.18em !important;
 }
 
-#hero .fullwidth-text__content .char {
+#hero .hero-huge-title .char {
   display: inline-block !important;
+  font-family: inherit !important;
+  font-style: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+
+#hero .hero-huge-title .word {
+  display: inline-flex !important;
+  font-family: inherit !important;
+  font-style: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  margin: 0 0.15em !important;
+}
+
+#hero .hero-center-media-wrap {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  max-width: 380px !important;
+  width: clamp(260px, 28vw, 380px) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28) !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  pointer-events: auto !important;
+}
+
+#hero .hero-center-media-wrap .mxd-hero-01__video-wrap {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  aspect-ratio: 16 / 10 !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+#hero .hero-center-media-wrap video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  border-radius: 18px !important;
+}
+
+.hero-menu-pill {
+  background: #0f0f0f !important;
+  color: #ffffff !important;
+  font-family: 'Oxanium', -apple-system, sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.08em !important;
+  padding: 0.55rem 1.4rem !important;
+  border-radius: 9999px !important;
+  border: none !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-transform: uppercase !important;
+  transition: transform 0.25s ease, background 0.25s ease !important;
+}
+
+.hero-menu-pill:hover {
+  transform: scale(1.05) !important;
+  background: #222222 !important;
+}
+
+@media only screen and (max-width: 768px) {
+  #hero .hero-stage-container {
+    padding: 0 4vw !important;
+  }
+  #hero .hero-title-line.top-line {
+    margin-bottom: -1rem !important;
+  }
+  #hero .hero-title-line.bottom-line {
+    margin-top: -1rem !important;
+  }
+  #hero .hero-huge-title {
+    font-size: clamp(3.5rem, 18vw, 7rem) !important;
+  }
+  #hero .hero-center-media-wrap {
+    width: 75vw !important;
+    max-width: 280px !important;
+  }
 }

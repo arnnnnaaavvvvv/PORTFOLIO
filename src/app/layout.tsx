@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import "./globals.css";
 
 export const viewport: Viewport = {
   themeColor: "#0f0f0f",
@@ -50,6 +51,9 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Oxanium:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="/css/loader.css" />
         <link rel="stylesheet" type="text/css" href="/css/plugins.css" />
         <link rel="stylesheet" type="text/css" href="/css/main.css" />
