@@ -184,17 +184,18 @@ button {
 }
 
 /* ===================================================
-   HERO CENTERED FULL NAME (ARNAV SINGH)
+   HERO DEAD-CENTER & OPTIMAL SIZING (ARNAV SINGH)
    =================================================== */
 
 #hero {
-  min-height: 100vh;
+  min-height: 100vh !important;
+  height: 100vh !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
+  width: 100% !important;
+  position: relative !important;
+  overflow: hidden !important;
 }
 
 #hero .mxd-hero-section,
@@ -207,64 +208,78 @@ button {
   align-items: center !important;
   justify-content: center !important;
   padding: 0 !important;
-  margin: 0 !important;
+  margin: 0 auto !important;
   width: 100% !important;
 }
 
 #hero .mxd-hero-01__wrap {
   width: 100% !important;
   max-width: 100% !important;
+  height: 100% !important;
   display: flex !important;
+  flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
   margin: auto !important;
-  padding: 0 1.5rem !important;
+  padding: 0 2rem !important;
 }
 
-#hero .mxd-hero-01__bottom,
-#hero .mxd-hero-01__caption,
+#hero .mxd-hero-01__bottom {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: auto 0 !important;
+}
+
+#hero .mxd-hero-01__caption {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
 #hero .fullwidth-text,
 #hero .fullwidth-text__wrap {
+  width: 100% !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   text-align: center !important;
-  width: 100% !important;
-  margin: 0 !important;
   padding: 0 !important;
+  margin: 0 !important;
   container-type: normal !important;
-}
-
-#hero .fullwidth-text__content,
-#hero .fullwidth-text__content span,
-#hero .fullwidth-text__content .char,
-#hero .fullwidth-text__content .word {
-  font-size: clamp(2.4rem, 8.8vw, 8.8rem) !important;
-  line-height: 1 !important;
-  letter-spacing: -0.01em !important;
-  white-space: nowrap !important;
-  text-align: center !important;
-  text-transform: uppercase !important;
 }
 
 #hero .fullwidth-text__content {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+  text-align: center !important;
   width: auto !important;
-  max-width: 95vw !important;
+  max-width: 90vw !important;
   margin: 0 auto !important;
+  font-size: clamp(2.2rem, 7.5vw, 7.8rem) !important;
+  line-height: 1 !important;
+  letter-spacing: -0.01em !important;
+  white-space: nowrap !important;
   color: var(--t-bright, #ffffff) !important;
+}
+
+#hero .fullwidth-text__content span,
+#hero .fullwidth-text__content .char,
+#hero .fullwidth-text__content .word {
+  font-size: inherit !important;
+  line-height: 1 !important;
+  text-align: center !important;
 }
 
 #hero .fullwidth-text__content .word {
   display: inline-flex !important;
   align-items: center !important;
-  margin: 0 0.15em !important;
+  margin: 0 0.18em !important;
 }
 
 #hero .fullwidth-text__content .char {
   display: inline-block !important;
 }
-
-

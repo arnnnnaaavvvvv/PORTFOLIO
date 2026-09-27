@@ -1278,7 +1278,7 @@ html.lenis, html.lenis body {
     -webkit-box-pack: end;
        -moz-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end;
+            justify-content: center; align-items: center;
   }
   .mxd-section-title__controls.pre-title {
     margin-bottom: 0;
@@ -2174,7 +2174,7 @@ html.lenis, html.lenis body {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 28cqw;
+  font-size: clamp(2.2rem, 7.5vw, 7.8rem); justify-content: center;
   line-height: 0.746;
 }
 .fullwidth-text__content span {
@@ -2210,7 +2210,7 @@ html.lenis, html.lenis body {
 }
 @media only screen and (min-width: 992px) {
   .fullwidth-text__content {
-    font-size: 28cqw;
+    font-size: clamp(2.2rem, 7.5vw, 7.8rem); justify-content: center;
   }
   .fullwidth-text__content.small {
     font-size: 10.46cqw;
@@ -6281,7 +6281,7 @@ form textarea:required:valid {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 28cqw;
+  font-size: clamp(2.2rem, 7.5vw, 7.8rem); justify-content: center;
   line-height: 0.746;
 }
 .fw-mark__content span {
@@ -6313,7 +6313,7 @@ form textarea:required:valid {
 }
 @media only screen and (min-width: 992px) {
   .fw-mark__content {
-    font-size: 28cqw;
+    font-size: clamp(2.2rem, 7.5vw, 7.8rem); justify-content: center;
   }
 }
 
@@ -7735,7 +7735,7 @@ form textarea:required:valid {
   -webkit-box-pack: end;
      -moz-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end;
+          justify-content: center; align-items: center;
   padding-top: 6.6rem;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -7759,7 +7759,7 @@ form textarea:required:valid {
     -webkit-box-pack: end;
        -moz-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end;
+            justify-content: center; align-items: center;
     padding-top: 7rem;
   }
 }
@@ -9144,7 +9144,7 @@ form textarea:required:valid {
   -webkit-box-pack: end;
      -moz-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end;
+          justify-content: center; align-items: center;
   margin: 0 auto;
   padding: 6.3rem 3rem 0 3rem;
 }
