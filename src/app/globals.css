@@ -321,6 +321,14 @@ button {
   border-radius: 18px !important;
 }
 
+.mxd-header {
+  justify-content: flex-end !important;
+}
+
+.mxd-header__controls {
+  margin-left: auto !important;
+}
+
 .hero-menu-pill {
   background: #0f0f0f !important;
   color: #ffffff !important;
