@@ -183,28 +183,88 @@ button {
   }
 }
 
-/* Hero Centered Full Name Display */
-.mxd-hero-01 {
-  min-height: 85vh;
+/* ===================================================
+   HERO CENTERED FULL NAME (ARNAV SINGH)
+   =================================================== */
+
+#hero {
+  min-height: 100vh;
+  display: flex !important;
+  align-items: center !important;
   justify-content: center !important;
-}
-
-.mxd-hero-01__wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh;
-}
-
-.mxd-hero-01__bottom {
-  width: 100%;
-  margin: auto 0;
-}
-
-.fullwidth-text__wrap .fullwidth-text__content {
-  font-size: clamp(3.5rem, 13vw, 15.5rem) !important;
-  justify-content: center !important;
-  text-align: center;
+  position: relative;
+  overflow: hidden;
   width: 100%;
 }
+
+#hero .mxd-hero-section,
+#hero .pinned-section__inner,
+#hero .mxd-hero-01 {
+  min-height: 100vh !important;
+  height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+#hero .mxd-hero-01__wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: auto !important;
+  padding: 0 1.5rem !important;
+}
+
+#hero .mxd-hero-01__bottom,
+#hero .mxd-hero-01__caption,
+#hero .fullwidth-text,
+#hero .fullwidth-text__wrap {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  container-type: normal !important;
+}
+
+#hero .fullwidth-text__content,
+#hero .fullwidth-text__content span,
+#hero .fullwidth-text__content .char,
+#hero .fullwidth-text__content .word {
+  font-size: clamp(2.4rem, 8.8vw, 8.8rem) !important;
+  line-height: 1 !important;
+  letter-spacing: -0.01em !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+}
+
+#hero .fullwidth-text__content {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  max-width: 95vw !important;
+  margin: 0 auto !important;
+  color: var(--t-bright, #ffffff) !important;
+}
+
+#hero .fullwidth-text__content .word {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 0.15em !important;
+}
+
+#hero .fullwidth-text__content .char {
+  display: inline-block !important;
+}
+
 
