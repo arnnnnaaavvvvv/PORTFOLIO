@@ -2,43 +2,57 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import Magnetic from "@/components/Magnetic";
+
+interface NavItem {
+  id: string;
+  label: string;
+}
+
+const NAV_ITEMS: NavItem[] = [
+  { id: "work", label: "Work" },
+  { id: "about", label: "About" },
+  { id: "contact", label: "Contact" },
+];
 
 export default function Header() {
+  const [activeSection, setActiveSection] = useState<string>("work");
   const [scrolled, setScrolled] = useState(false);
-  const [logoText, setLogoText] = useState("ARNAV SINGH");
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      setScrolled(window.scrollY > 30);
     };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    // Scroll-spy IntersectionObserver
+    const observerOptions: IntersectionObserverInit = {
+      root: null,
+      rootMargin: "-25% 0px -60% 0px",
+      threshold: 0,
+    };
+
+    const sectionElements = NAV_ITEMS.map((item) => document.getElementById(item.id)).filter(
+      Boolean
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    sectionElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
+    };
   }, []);
-
-  const scrambleCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_#@*&";
-  const originalText = "ARNAV SINGH";
-
-  const handleMouseEnter = () => {
-    let iteration = 0;
-    const interval = setInterval(() => {
-      setLogoText((prev) =>
-        prev
-          .split("")
-          .map((letter, index) => {
-            if (index < iteration) {
-              return originalText[index];
-            }
-            return scrambleCharacters[Math.floor(Math.random() * scrambleCharacters.length)];
-          })
-          .join("")
-      );
-
-      if (iteration >= originalText.length) {
-        clearInterval(interval);
-      }
-      iteration += 1 / 2;
-    }, 25);
-  };
 
   return (
     <header
@@ -47,16 +61,16 @@ export default function Header() {
         top: 0,
         left: 0,
         right: 0,
-        zIndex: 100,
-        height: "68px",
-        backgroundColor: scrolled ? "rgba(13, 17, 23, 0.95)" : "rgba(13, 17, 23, 0.8)",
-        backdropFilter: "blur(12px)",
+        zIndex: 50,
+        height: 64,
+        backgroundColor: scrolled ? "rgba(13, 17, 23, 0.95)" : "rgba(13, 17, 23, 0.85)",
         borderBottom: "1px solid var(--border-hairline)",
-        transition: "all var(--duration-medium) var(--ease-quint)",
+        backdropFilter: "blur(10px)",
+        transition: "background-color 0.25s ease",
       }}
     >
       <div
-        className="mxd-container"
+        className="portfolio-container"
         style={{
           height: "100%",
           display: "flex",
@@ -64,186 +78,131 @@ export default function Header() {
           justifyContent: "space-between",
         }}
       >
-        {/* Brand Monogram + Scramble Logo */}
-        <Link
-          href="/"
-          onMouseEnter={handleMouseEnter}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "14px",
-            textDecoration: "none",
-          }}
-          data-cursor-text="Home"
-        >
-          {/* Azurio-style geometric logo glyph */}
-          <div
+        {/* Name / Brand Identity */}
+        <Magnetic maxDistance={4}>
+          <Link
+            href="/"
             style={{
-              width: "36px",
-              height: "36px",
-              borderRadius: "8px",
-              backgroundColor: "var(--bg-secondary)",
-              border: "1px solid var(--border-hairline)",
               display: "flex",
               alignItems: "center",
-              justifyContent: "center",
-              color: "var(--accent-amber)",
-              fontFamily: "var(--font-mono)",
-              fontWeight: 700,
-              fontSize: "0.85rem",
-              letterSpacing: "-0.05em",
+              gap: 10,
+              textDecoration: "none",
             }}
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M4 20L12 4L20 20M7 14H17" />
-            </svg>
-          </div>
-
-          <div>
             <span
               style={{
                 fontFamily: "var(--font-display)",
                 fontWeight: 700,
                 fontSize: "0.95rem",
-                letterSpacing: "0.06em",
                 color: "var(--text-primary)",
-                display: "block",
+                letterSpacing: "0.02em",
               }}
             >
-              {logoText}
+              Arnav Singh
             </span>
             <span
               style={{
                 fontFamily: "var(--font-mono)",
-                fontSize: "0.68rem",
-                letterSpacing: "0.05em",
+                fontSize: "0.72rem",
                 color: "var(--text-muted)",
-                display: "block",
-                textTransform: "uppercase",
               }}
             >
-              Full-Stack AI Engineer
+              / AI Engineer
             </span>
-          </div>
-        </Link>
+          </Link>
+        </Magnetic>
 
-        {/* Desktop Nav Links */}
+        {/* Scroll-Spy Navigation with shared layoutId animated underline */}
         <nav
-          style={{
-            display: "none",
-            alignItems: "center",
-            gap: "28px",
-          }}
-          className="desktop-nav"
-        >
-          <a
-            href="#projects"
-            style={{
-              fontFamily: "var(--font-mono)",
-              fontSize: "0.78rem",
-              color: "var(--text-dim)",
-              transition: "color var(--duration-micro) var(--ease-micro)",
-            }}
-            onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--accent-amber)")}
-            onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--text-dim)")}
-          >
-            / 01 Works
-          </a>
-          <a
-            href="#about"
-            style={{
-              fontFamily: "var(--font-mono)",
-              fontSize: "0.78rem",
-              color: "var(--text-dim)",
-              transition: "color var(--duration-micro) var(--ease-micro)",
-            }}
-            onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--accent-amber)")}
-            onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--text-dim)")}
-          >
-            / 02 About
-          </a>
-          <a
-            href="#process"
-            style={{
-              fontFamily: "var(--font-mono)",
-              fontSize: "0.78rem",
-              color: "var(--text-dim)",
-              transition: "color var(--duration-micro) var(--ease-micro)",
-            }}
-            onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--accent-amber)")}
-            onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--text-dim)")}
-          >
-            / 03 Process
-          </a>
-          <a
-            href="#contact"
-            style={{
-              fontFamily: "var(--font-mono)",
-              fontSize: "0.78rem",
-              color: "var(--text-dim)",
-              transition: "color var(--duration-micro) var(--ease-micro)",
-            }}
-            onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--accent-amber)")}
-            onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--text-dim)")}
-          >
-            / 04 Contact
-          </a>
-        </nav>
-
-        {/* Right Controls: Availability Badge + Say Hello CTA */}
-        <div
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "16px",
+            gap: 28,
           }}
         >
-          {/* Status Badge */}
-          <div
-            style={{
-              display: "none",
-              alignItems: "center",
-              gap: "8px",
-              padding: "6px 14px",
-              borderRadius: "100px",
-              backgroundColor: "rgba(16, 185, 129, 0.08)",
-              border: "1px solid rgba(16, 185, 129, 0.25)",
-              fontFamily: "var(--font-mono)",
-              fontSize: "0.74rem",
-              color: "var(--text-primary)",
-            }}
-            className="status-badge"
-          >
-            <span className="live-pulse" />
-            <span>Open to High-Signal Roles</span>
-          </div>
+          {NAV_ITEMS.map((item) => {
+            const isActive = activeSection === item.id;
+            return (
+              <Magnetic key={item.id} maxDistance={5}>
+                <a
+                  href={`#${item.id}`}
+                  style={{
+                    position: "relative",
+                    display: "inline-block",
+                    padding: "6px 0",
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "0.78rem",
+                    letterSpacing: "0.04em",
+                    color: isActive ? "var(--text-primary)" : "var(--text-dim)",
+                    transition: "color 0.2s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isActive) e.currentTarget.style.color = "var(--text-primary)";
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isActive) e.currentTarget.style.color = "var(--text-dim)";
+                  }}
+                >
+                  {item.label}
 
-          {/* Say Hello Button */}
-          <a
-            href="#contact"
-            className="btn-mxd"
-            data-cursor-text="Say Hello"
-          >
-            <span>Say Hello</span>
-            <i>
-              <svg width="12" height="12" viewBox="0 0 18 18" fill="currentColor">
-                <path d="M18,0v14.4h-3.6V7.2h-3.6V3.6H3.6V0H18z M7.2,10.8h3.6V7.2H7.2V10.8z M3.6,14.4h3.6v-3.6H3.6V14.4z M0,18h3.6v-3.6H0V18z" />
-              </svg>
-            </i>
-          </a>
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeNavIndicator"
+                      style={{
+                        position: "absolute",
+                        bottom: 0,
+                        left: 0,
+                        right: 0,
+                        height: 2,
+                        backgroundColor: "var(--accent-amber)",
+                        borderRadius: 1,
+                      }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 380,
+                        damping: 30,
+                      }}
+                    />
+                  )}
+                </a>
+              </Magnetic>
+            );
+          })}
+        </nav>
+
+        {/* Right CTA / Connect Link */}
+        <div>
+          <Magnetic maxDistance={6}>
+            <a
+              href="mailto:arnav152007@gmail.com"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 6,
+                padding: "6px 14px",
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.75rem",
+                color: "var(--text-primary)",
+                backgroundColor: "var(--bg-secondary)",
+                border: "1px solid var(--border-hairline)",
+                borderRadius: 4,
+                transition: "border-color 0.2s ease, color 0.2s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = "var(--accent-amber)";
+                e.currentTarget.style.color = "var(--accent-amber)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "var(--border-hairline)";
+                e.currentTarget.style.color = "var(--text-primary)";
+              }}
+            >
+              <span>Say Hello</span>
+              <span style={{ fontSize: "0.85rem", lineHeight: 1 }}>↗</span>
+            </a>
+          </Magnetic>
         </div>
       </div>
-
-      <style jsx>{`
-        @media (min-width: 860px) {
-          .desktop-nav {
-            display: flex !important;
-          }
-          .status-badge {
-            display: inline-flex !important;
-          }
-        }
-      `}</style>
     </header>
   );
 }

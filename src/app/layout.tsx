@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import SmoothScroll from "@/components/SmoothScroll";
-import CustomCursor from "@/components/CustomCursor";
-import Header from "@/components/Header";
+import SmoothScrollProvider from "@/components/SmoothScrollProvider";
+import PageTransition from "@/components/PageTransition";
+import CursorDot from "@/components/CursorDot";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -73,11 +73,12 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <body style={{ backgroundColor: "#0d1117", color: "#f2f0ea" }}>
-        <SmoothScroll>
-          <CustomCursor />
-          <Header />
-          {children}
-        </SmoothScroll>
+        <SmoothScrollProvider>
+          <PageTransition>
+            <CursorDot />
+            {children}
+          </PageTransition>
+        </SmoothScrollProvider>
       </body>
     </html>
   );
