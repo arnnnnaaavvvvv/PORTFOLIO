@@ -350,93 +350,148 @@ export default function Home() {
 
       <main id="mxd-page-content" className="mxd-page-content">
         <div id="hero">
-          {/*  Hero Section Start  */}
-      <div className="mxd-section pinned-section mxd-hero-section no-padding mxd-hero-fullheight-desktop loading-wrap">
-        <div className="pinned-section__inner">
-          <div className="mxd-hero-01">
-          <div className="mxd-hero-01__cover"></div>
-          <div className="mxd-hero-01__wrap">
-            {/*  top group  */}
-            <div className="mxd-hero-01__top">
-              <div className="mxd-hero-01__data-wrap">
-                <div className="mxd-hero-01__data-tags">
-                  <div className="tags-column">
-                    <ul>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Systems Architect</span></li>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Full-Stack AI</span></li>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Distributed Systems</span></li>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Autonomous Agents</span></li>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Cloud Infrastructure</span></li>
-                    </ul>
-                  </div>
-                  <div className="tags-column">
-                    <ul>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Next.js 14</span></li>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">TypeScript</span></li>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">PyTorch / LLMs</span></li>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Docker & K8s</span></li>
-                      <li className="loading-item"><span className="tag tag-s-mobile tag-permanent mxd-scramble">Chandigarh Univ</span></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="mxd-hero-01__data-contact">
-                  <ul>
-                    <li className="loading-item">
-                      <a className="tag tag-s-mobile mxd-scramble" href="tel:+918423622491">+91 8423622491</a>
-                    </li>
-                    <li className="loading-item">
-                      <a className="tag tag-s-mobile mxd-scramble" href="https://www.linkedin.com/in/arnav-singh-986722252" target="_blank">arnav-singh-986722252</a>
-                    </li>
-                    <li className="loading-item">
-                      <a className="tag tag-s-mobile mxd-scramble" href="mailto:arnav152007@gmail.com">arnav152007@gmail.com</a>
-                    </li>
-                  </ul>
-                </div>
+          {/* Hero Section Inspired by Image 2 */}
+          <div className="hero-showcase-wrap">
+            {/* Top Bar */}
+            <div className="hero-top-row">
+              <div className="hero-tags-strip">
+                <span className="hero-tag-mono">SYSTEMS ARCHITECT</span>
+                <span className="hero-tag-mono">FULL-STACK AI</span>
+                <span className="hero-tag-mono">DISTRIBUTED SYSTEMS</span>
+                <span className="hero-tag-mono">CHANDIGARH UNIV</span>
               </div>
-              <div className="mxd-hero-01__video-wrap loading-fade">
-                {/*  <img src="/img/hero/1000x750_h02.webp" alt="Hero Placeholder" />  */}
-                <video className="mxd-hero-01__video" 
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="auto"
-                  poster="/video/360x225_hero-01.webp">
-                  <source type="/video/mp4" src="/video/360x225_hero-01.mp4" />
-                  <source type="/video/webm" src="/video/360x225_hero-01.webm" />
-                </video>
-                <div className="mxd-hero-01__video-btn">
-                  <a className="btn btn-default-icon-small btn-default-permanent slide-right" href="#works">
-                      <span className="btn-caption mxd-scramble">Selected Works</span>
-                      {/*  <i className="btn-icon ph-bold ph-arrow-right"></i>  */}
+              <div className="hero-top-controls">
+                <button
+                  type="button"
+                  className="hero-menu-pill mxd-menu__toggle"
+                  aria-label="Open Navigation Menu"
+                  data-cursor-text="Menu"
+                >
+                  MENU
+                </button>
+              </div>
+            </div>
+
+            {/* Center Stage: ARNAV / Floating Preview Card / SINGH */}
+            <div className="hero-center-stage">
+              <div className="hero-name-row top-row">
+                <h1 className="hero-massive-name">ARNAV</h1>
+              </div>
+
+              {/* Floating Preview Card centered / overlapping */}
+              <div className="hero-floating-card-wrap">
+                <div className="hero-floating-card">
+                  <video
+                    className="hero-card-video"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                    poster="/video/360x225_hero-01.webp"
+                  >
+                    <source type="video/mp4" src="/video/360x225_hero-01.mp4" />
+                    <source type="video/webm" src="/video/360x225_hero-01.webm" />
+                  </video>
+                  <div className="hero-card-badge">
+                    <a
+                      className="btn btn-default-icon-small btn-default-permanent slide-right"
+                      href="#works"
+                      data-cursor-text="View Works"
+                    >
+                      <span className="btn-caption">SELECTED WORKS</span>
                       <i className="btn-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
-                          <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18" width="14" height="14">
+                          <path fill="currentColor" d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
                         </svg>
                       </i>
                     </a>
-                </div>
-              </div>
-            </div>
-            {/*  bottom group  */}
-            <div className="mxd-hero-01__bottom">
-              <div className="mxd-hero-01__caption">
-                <div className="fullwidth-text">
-                  <div className="fullwidth-text__wrap">
-                    <a className="fullwidth-text__content permanent active-cursor-accent" data-cursor-text="Let's Chat" href="#contact">
-                      <span className="loading-chars">ARNAV</span>
-                    </a>
                   </div>
                 </div>
               </div>
+
+              <div className="hero-name-row bottom-row">
+                <h1 className="hero-massive-name">SINGH</h1>
+              </div>
+            </div>
+
+            {/* Bottom Bar: Social Icons / Resume Link / Showcase Mode */}
+            <div className="hero-bottom-bar">
+              {/* Left: Contact Icons */}
+              <div className="hero-social-icons">
+                {/* GitHub */}
+                <a
+                  href="https://github.com/arnnnnaaavvvvv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hero-social-icon"
+                  aria-label="GitHub Profile"
+                  data-cursor-text="GitHub"
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                </a>
+
+                {/* LinkedIn */}
+                <a
+                  href="https://www.linkedin.com/in/arnav-singh-986722252"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hero-social-icon"
+                  aria-label="LinkedIn Profile"
+                  data-cursor-text="LinkedIn"
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m1.4 9.74v-8.37H5.06v8.37h2.8z" />
+                  </svg>
+                </a>
+
+                {/* Mail */}
+                <a
+                  href="mailto:arnav152007@gmail.com"
+                  className="hero-social-icon"
+                  aria-label="Send Email"
+                  data-cursor-text="Email"
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                </a>
+
+                {/* Phone */}
+                <a
+                  href="tel:+918423622491"
+                  className="hero-social-icon"
+                  aria-label="Call Direct"
+                  data-cursor-text="Call"
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </a>
+              </div>
+
+              {/* Center: Resume Button */}
+              <div className="hero-resume-wrapper">
+                <a
+                  href="#about"
+                  className="hero-resume-link"
+                  data-cursor-text="Resume"
+                >
+                  FETCH // RESUME
+                </a>
+              </div>
+
+              {/* Right: Showcase Mode Toggle */}
+              <div className="hero-showcase-mode" data-cursor-text="Mode">
+                <span>SHOWCASE MODE:</span>
+                <span className="hero-mode-pill inactive">ON</span>
+                <span className="hero-mode-pill active">OFF</span>
+              </div>
             </div>
           </div>
-        </div>
-        </div>
-        <div className="pinned-section__trigger"></div>
-        
-      </div>
-      {/*  Hero Section End  */}
         </div>
         <div id="works">
           {/*  Section - Progects Stack Start  */}
