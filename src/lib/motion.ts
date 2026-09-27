@@ -50,7 +50,7 @@ export const staggerContainer: Variants = {
 export const lineRevealVariant: Variants = {
   hidden: {
     opacity: 0,
-    y: 16,
+    y: 32,
   },
   visible: {
     opacity: 1,

@@ -105,6 +105,7 @@ export default function Hero() {
         >
           {/* Parallax-wrapped Centered Headline: ARNAV / SINGH */}
           <motion.div
+            className="hero-headline-wrap"
             style={{
               y: yOffset,
               position: "relative",
@@ -115,18 +116,22 @@ export default function Hero() {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
+              paddingBottom: "clamp(16px, 2.5vw, 28px)",
+              borderBottom: "1px solid var(--line, var(--border-hairline, rgba(0, 0, 0, 0.12)))",
             }}
           >
             <motion.h1
+              className="hero-name-text"
               variants={headlineContainerVariants}
               initial="hidden"
               animate="visible"
               style={{
                 fontFamily: "var(--font-display, 'Space Grotesk', sans-serif)",
-                fontSize: "clamp(3.5rem, 13vw, 10rem)",
+                fontSize: "clamp(4.5rem, 15vw, 12rem)",
                 fontWeight: 700,
-                letterSpacing: "-0.01em",
-                lineHeight: 0.92,
+                letterSpacing: "-0.03em",
+                lineHeight: 0.86,
+                textTransform: "uppercase",
                 color: "var(--ink, var(--text-primary))",
                 margin: 0,
                 textAlign: "center",
@@ -140,6 +145,7 @@ export default function Hero() {
               {NAME_LINES.map((line, idx) => (
                 <span
                   key={idx}
+                  className="hero-headline-line"
                   style={{
                     display: "block",
                     overflow: "hidden",

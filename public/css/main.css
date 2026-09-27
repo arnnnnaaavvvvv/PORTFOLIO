@@ -20952,6 +20952,8 @@ form textarea:required:valid {
   position: relative !important;
   z-index: 2 !important;
   width: 100% !important;
+  padding-bottom: clamp(16px, 2.5vw, 28px) !important;
+  border-bottom: 1px solid var(--line, var(--border-hairline, rgba(0, 0, 0, 0.12))) !important;
 }
 
 .hero-headline-line {
@@ -20963,10 +20965,10 @@ form textarea:required:valid {
 
 .hero-name-text {
   font-family: 'Space Grotesk', var(--font-display), -apple-system, sans-serif !important;
-  font-size: clamp(3.5rem, 13vw, 10rem) !important;
-  line-height: 0.92 !important;
+  font-size: clamp(4.5rem, 15vw, 12rem) !important;
+  line-height: 0.86 !important;
   font-weight: 700 !important;
-  letter-spacing: -0.01em !important;
+  letter-spacing: -0.03em !important;
   text-transform: uppercase !important;
   color: var(--t-bright, #0f0f0f) !important;
   text-align: center !important;
@@ -21126,9 +21128,13 @@ form textarea:required:valid {
     min-height: 50vh !important;
     padding: 0 2vw !important;
   }
+  .hero-headline-wrap {
+    padding-bottom: 16px !important;
+  }
   .hero-name-text {
-    font-size: clamp(3rem, 14vw, 5.5rem) !important;
-    line-height: 0.92 !important;
+    font-size: clamp(3.2rem, 16vw, 6.2rem) !important;
+    line-height: 0.88 !important;
+    letter-spacing: -0.03em !important;
   }
   .hero-btn-wrap {
     margin-top: 28px !important;

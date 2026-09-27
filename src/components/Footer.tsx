@@ -59,7 +59,7 @@ export default function Footer() {
           className="footer-resume-link"
         >
           <span>FETCH</span>
-          <span className="resume-sep">//</span>
+          <span className="resume-sep">{"//"}</span>
           <span>RESUME</span>
         </a>
       </div>
