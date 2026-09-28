@@ -377,89 +377,89 @@ export default function Home() {
                     <div className="marquee__top">
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Design/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Development/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Branding/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">eCommerce/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Marketing/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                     </div>
                     <div className="marquee__bottom">
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Design/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Development/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Branding/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">eCommerce/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Marketing/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                     </div>
                     <div className="marquee__top">
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Design/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Development/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Branding/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">eCommerce/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Marketing/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                     </div>
                     <div className="marquee__bottom">
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Design/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Development/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Branding/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">eCommerce/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                       {/*  single item  */}
                       <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Marketing/</p>
+                        <p className="marquee__text text-with-gliph">PROJECTS/</p>
                       </div>
                     </div>
                   </div>
