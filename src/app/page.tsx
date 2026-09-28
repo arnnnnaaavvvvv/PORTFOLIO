@@ -371,99 +371,88 @@ export default function Home() {
             <div className="mxd-stack-cards">
               {/*  single card  */}
               <div className="mxd-stack-cards__card">
-                <div className="card__marquees">
-                  {/*  Marquee Divider Start  */}
-                  <div className="marquee marquee-stack marquee--gsap muted-extra">
-                    <div className="marquee__top">
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Design/</p>
-                      </div>
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Development/</p>
-                      </div>
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Branding/</p>
-                      </div>
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">eCommerce/</p>
-                      </div>
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Marketing/</p>
+                <div className="card__marquees projects-floating-container">
+                  <div className="projects-floating-wrapper">
+                    {/* Row 1: Left drift */}
+                    <div className="projects-float-row projects-row-1">
+                      <div className="projects-track projects-track--left">
+                        <div className="projects-track-set">
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                        </div>
+                        <div className="projects-track-set" aria-hidden="true">
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                        </div>
                       </div>
                     </div>
-                    <div className="marquee__bottom">
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Design/</p>
-                      </div>
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Development/</p>
-                      </div>
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Branding/</p>
-                      </div>
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">eCommerce/</p>
-                      </div>
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Marketing/</p>
+
+                    {/* Row 2: Right drift */}
+                    <div className="projects-float-row projects-row-2">
+                      <div className="projects-track projects-track--right">
+                        <div className="projects-track-set">
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                        </div>
+                        <div className="projects-track-set" aria-hidden="true">
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                        </div>
                       </div>
                     </div>
-                    <div className="marquee__top">
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Design/</p>
-                      </div>
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Development/</p>
-                      </div>
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Branding/</p>
-                      </div>
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">eCommerce/</p>
-                      </div>
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Marketing/</p>
+
+                    {/* Row 3: Left drift */}
+                    <div className="projects-float-row projects-row-3">
+                      <div className="projects-track projects-track--left">
+                        <div className="projects-track-set">
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                        </div>
+                        <div className="projects-track-set" aria-hidden="true">
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                        </div>
                       </div>
                     </div>
-                    <div className="marquee__bottom">
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Design/</p>
-                      </div>
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Development/</p>
-                      </div>
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Branding/</p>
-                      </div>
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">eCommerce/</p>
-                      </div>
-                      {/*  single item  */}
-                      <div className="marquee__item item-regular text">
-                        <p className="marquee__text text-with-gliph">Marketing/</p>
+
+                    {/* Row 4: Right drift */}
+                    <div className="projects-float-row projects-row-4">
+                      <div className="projects-track projects-track--right">
+                        <div className="projects-track-set">
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                        </div>
+                        <div className="projects-track-set" aria-hidden="true">
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                          <span className="projects-float-text">PROJECTS/</span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  {/*  Marquee Divider End  */}
                 </div>
                 <div className="card__wrapper">
                   <div className="card__content">
