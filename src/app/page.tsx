@@ -331,7 +331,6 @@ export default function Home() {
           {/*  Phosphor icon  */}
           {/*  <i className="ph-bold ph-arrow-up-right"></i>  */}
         </a>
-        <button id="color-switcher" className="btn mxd-color-switcher permanent" type="button" role="switch" aria-label="light/dark mode" aria-checked="true"></button>
         <button type="button" className="hero-menu-pill mxd-menu__toggle" aria-label="Open Navigation Menu">
           MENU
         </button>

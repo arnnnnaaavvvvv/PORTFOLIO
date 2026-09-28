@@ -1,28 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oxanium:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
-  /* Design Tokens */
-  --bg-primary: #0d1117;
-  --bg-secondary: #11151d;
-  --border-hairline: #232a36;
-  --border-active: #3c4758;
+  /* Design Tokens — Light Mode Only */
+  --bg-primary: #f8f6f2;
+  --bg-secondary: #f0ede6;
+  --border-hairline: rgba(0, 0, 0, 0.08);
+  --border-active: rgba(0, 0, 0, 0.2);
   
-  --text-primary: #f2f0ea;
-  --text-dim: #9aa4b2;
-  --text-muted: #5e6878;
+  --text-primary: #121212;
+  --text-dim: #575960;
+  --text-muted: #7d7f89;
   
-  --accent-amber: #d8a94e;
-  --accent-amber-subtle: rgba(216, 169, 78, 0.08);
+  --accent-amber: #b07d2b;
+  --accent-amber-subtle: rgba(176, 125, 43, 0.08);
 
   --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  --ink: var(--t-bright, #0f0f0f);
-  --ink-dim: var(--t-medium, #6e6e6e);
-  --line: var(--stroke-elements, rgba(0, 0, 0, 0.12));
+  --ink: #121212;
+  --ink-dim: #575960;
+  --line: rgba(0, 0, 0, 0.1);
 
   --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: light;
 }
 
 /* Reset */
@@ -35,6 +36,7 @@
 html {
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  color-scheme: light;
   font-family: var(--font-body);
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   -webkit-font-smoothing: antialiased;
@@ -45,6 +47,7 @@ html {
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  color-scheme: light;
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
@@ -294,9 +297,13 @@ button {
   z-index: 2;
 }
 
-.mxd-header-permanent .mxd-header__link,
-.mxd-header-permanent .mxd-color-switcher {
+.mxd-header-permanent .mxd-header__link {
   color: #0f0f0f !important;
+}
+
+.mxd-color-switcher,
+#color-switcher {
+  display: none !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

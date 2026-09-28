@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const viewport: Viewport = {
-  themeColor: "#0f0f0f",
+  themeColor: "#f8f6f2",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -49,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" dir="ltr">
+    <html lang="en" dir="ltr" color-scheme="light">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -57,6 +57,11 @@ export default function RootLayout({
         <link rel="stylesheet" type="text/css" href="/css/loader.css" />
         <link rel="stylesheet" type="text/css" href="/css/plugins.css" />
         <link rel="stylesheet" type="text/css" href="/css/main.css" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{localStorage.setItem('template.theme','light');document.documentElement.setAttribute('color-scheme','light');}catch(e){}`,
+          }}
+        />
       </head>
       <body>
         {children}
