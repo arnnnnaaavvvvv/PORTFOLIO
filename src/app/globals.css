@@ -578,11 +578,18 @@ button {
   }
 
   .hero-footer {
-    padding: 12px 18px 18px !important;
-    gap: 8px !important;
+    padding: 16px 20px 20px !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
   }
-  .hero-footer .footer-col-center {
-    font-size: 11px !important;
+  .hero-footer .footer-col-left {
+    justify-content: flex-start !important;
+    width: auto !important;
+  }
+  .hero-footer .footer-col-right {
+    justify-content: flex-end !important;
+    width: auto !important;
   }
   .hero-footer .footer-resume-link {
     font-size: 11px !important;

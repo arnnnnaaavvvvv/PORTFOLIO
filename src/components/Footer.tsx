@@ -11,10 +11,6 @@ export default function Footer({ className = "" }: { className?: string }) {
         <SocialIcons />
       </div>
 
-      {/* CENTER: Copyright notice */}
-      <div className="footer-col-center">
-        <span>© 2026 Arnav Singh</span>
-      </div>
 
       {/* RIGHT: Resume link */}
       <div className="footer-col-right">
