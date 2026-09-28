@@ -3,9 +3,9 @@
 import React from "react";
 import SocialIcons from "./SocialIcons";
 
-export default function Footer() {
+export default function Footer({ className = "" }: { className?: string }) {
   return (
-    <footer className="portfolio-footer">
+    <footer className={`portfolio-footer ${className}`.trim()}>
       {/* LEFT: Social icon links */}
       <div className="footer-col-left">
         <SocialIcons />

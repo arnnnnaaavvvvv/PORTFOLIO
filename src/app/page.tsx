@@ -353,6 +353,8 @@ export default function Home() {
                   <HeroNameImage />
                 </div>
 
+                {/* 2. Hero Footer Bar (First Page Footer) */}
+                <Footer className="hero-footer loading-fade" />
               </div>
             </div>
             <div className="pinned-section__trigger"></div>
