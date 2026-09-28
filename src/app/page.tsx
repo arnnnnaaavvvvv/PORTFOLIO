@@ -2,6 +2,7 @@
 import React from "react";
 import Footer from "@/components/Footer";
 import HeroNameImage from "@/components/HeroNameImage";
+import ProjectTechStack from "@/components/ProjectTechStack";
 
 export default function Home() {
   return (
@@ -469,24 +470,25 @@ export default function Home() {
                   <div className="card__content">
                     <div className="card__descr">
                       <div className="card__tags">
-                        <span className="tag tag-m tag-permanent mxd-scramble">Design</span>
-                        <span className="tag tag-m tag-permanent mxd-scramble">Illustrations</span>
-                        <span className="tag tag-m tag-permanent mxd-scramble">Packaging</span>
-                        <span className="tag tag-m tag-permanent mxd-scramble">marketing</span>
+                        <span className="tag tag-m tag-permanent mxd-scramble" style={{ color: "#0f172a" }}>Design</span>
+                        <span className="tag tag-m tag-permanent mxd-scramble" style={{ color: "#0f172a" }}>Illustrations</span>
+                        <span className="tag tag-m tag-permanent mxd-scramble" style={{ color: "#0f172a" }}>Packaging</span>
+                        <span className="tag tag-m tag-permanent mxd-scramble" style={{ color: "#0f172a" }}>marketing</span>
                       </div>
                       <div className="card__btngroup">
-                        <a className="btn btn-line btn-line-permanent" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
+                        <a className="btn btn-line btn-line-permanent" style={{ color: "#0f172a" }} href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
                           <span className="btn-caption mxd-scramble">Know More</span>
                         </a>
                       </div>
                     </div>
-                    <a className="card__title active-cursor-permanent" data-cursor-text="View Work" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
-                      <p className="permanent">CLUDE — Scalable Cloud IDE</p>
-                    </a>
+                  </div>
+                  {/* Tech Stack Footer Section */}
+                  <div className="card__techstack-wrapper">
+                    <ProjectTechStack />
                   </div>
                   <div className="card__image">
-                    <img className="card__media" src="/img/works/showcase-stack/pr03.webp" alt="Project Preview Image" />
-                    <div className="card__cover"></div>
+                    <img className="card__media" src="/img/works/showcase-stack/neurosense.png" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast" }} />
+                    <div className="card__cover" style={{ backgroundColor: "transparent" }}></div>
                   </div>
                 </div>
               </div>
