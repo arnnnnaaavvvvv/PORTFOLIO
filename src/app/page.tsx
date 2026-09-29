@@ -503,9 +503,9 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="card__image">
-                    <img className="card__media" src="/img/works/showcase-stack/clude.png" alt="Project Preview Image" />
-                    <div className="card__cover"></div>
+                  <div className="card__image" style={{ pointerEvents: "none" }}>
+                    <img className="card__media" src="/img/works/showcase-stack/clude.png" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast" }} />
+                    <div className="card__cover" style={{ backgroundColor: "transparent", pointerEvents: "none" }}></div>
                   </div>
                 </div>
               </div>
