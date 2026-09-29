@@ -494,11 +494,23 @@ export default function Home() {
               {/*  single card  */}
               <div className="mxd-stack-cards__card">
                 <div className="card__wrapper">
-                  <div className="card__content">
-                    <div className="card__descr">
-                      <div className="card__btngroup">
-                        <a className="btn btn-line btn-line-permanent" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
-                          <span className="btn-caption mxd-scramble">Know More</span>
+                  <div className="card__content" style={{ zIndex: 20 }}>
+                    <div className="card__descr" style={{ justifyContent: "flex-end", width: "100%", pointerEvents: "none", opacity: 1, transform: "none" }}>
+                      <div className="card__btngroup" style={{ marginLeft: "auto", display: "flex", justifyContent: "flex-end", pointerEvents: "auto" }}>
+                        <a
+                          className="live-demo-box-btn"
+                          href="https://frontend-mu-roan-llgeruknl5.vercel.app"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="Open Live Demo"
+                        >
+                          <span className="live-demo-pulse-dot"></span>
+                          <span className="live-demo-label">LIVE DEMO</span>
+                          <span className="live-demo-icon-box">
+                            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M7 17L17 7M17 7H7M17 7V17" />
+                            </svg>
+                          </span>
                         </a>
                       </div>
                     </div>
