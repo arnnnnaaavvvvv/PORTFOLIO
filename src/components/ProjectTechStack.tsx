@@ -183,7 +183,7 @@ export default function ProjectTechStack() {
       {/* Label / Header badge */}
       <div className="project-techstack-header">
         <span className="techstack-dot"></span>
-        <span className="techstack-label">TECH STACK &amp; ARCHITECTURE</span>
+        <span className="techstack-label">TECH STACK</span>
       </div>
 
       {/* Interactive Tech Stack Badges */}
