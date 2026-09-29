@@ -502,9 +502,6 @@ export default function Home() {
                         </a>
                       </div>
                     </div>
-                    <a className="card__title active-cursor-permanent" data-cursor-text="View Work" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
-                      <p className="permanent">IGNITE — Collaborative Engine</p>
-                    </a>
                   </div>
                   <div className="card__image">
                     <img className="card__media" src="/img/works/showcase-stack/clude.png" alt="Project Preview Image" />
