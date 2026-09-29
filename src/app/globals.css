@@ -607,9 +607,19 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
-  pointer-events: auto;
+  z-index: 30;
+  pointer-events: none;
   padding: 0 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card__techstack-wrapper.is-revealed,
+.mxd-stack-cards__card.is-revealed .card__techstack-wrapper {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
 }
 
 .project-techstack-dock {
@@ -627,6 +637,7 @@ button {
   border-radius: 20px;
   box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.03);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: auto !important;
 }
 
 .project-techstack-dock:hover {
@@ -688,9 +699,12 @@ button {
   background: #ffffff;
   border: 1px solid rgba(226, 232, 240, 0.9);
   border-radius: 9999px;
-  cursor: pointer;
+  cursor: pointer !important;
   user-select: none;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 5;
 }
 
 .techstack-icon {
@@ -730,4 +744,162 @@ button {
     font-size: 10px;
   }
 }
+
+/* ==========================================================================
+   Interactive Live Demo Box Button
+   ========================================================================== */
+.live-demo-box-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px 8px 14px;
+  background: #000000;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  cursor: pointer !important;
+  user-select: none;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  z-index: 35 !important;
+  pointer-events: auto !important;
+}
+
+.live-demo-box-btn:hover {
+  background: #000000;
+  border-color: #ffffff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.35), 0 8px 25px rgba(0, 0, 0, 0.6);
+  transform: translateY(-2px);
+}
+
+.live-demo-box-btn:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.live-demo-box-btn .live-demo-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.85);
+  animation: liveDemoPulse 1.8s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+@keyframes liveDemoPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 6px rgba(16, 185, 129, 0.7);
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0.85;
+    box-shadow: 0 0 14px rgba(16, 185, 129, 1);
+  }
+}
+
+.live-demo-box-btn .live-demo-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.live-demo-box-btn .live-demo-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 7px;
+  color: #ffffff;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.live-demo-box-btn:hover .live-demo-icon-box {
+  background: #ffffff;
+  color: #000000;
+}
+
+.live-demo-box-btn .live-demo-icon-box svg {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.live-demo-box-btn:hover .live-demo-icon-box svg {
+  transform: translate(1px, -1px);
+}
+
+/* ==========================================================================
+   Loader Adjustments
+   ========================================================================== */
+.mxd-loader {
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 20px !important;
+}
+
+.mxd-loader[style*="display: none"] {
+  display: none !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
+.mxd-loader .mxd-loader__top {
+  display: none !important;
+}
+
+.mxd-loader .mxd-loader__images {
+  width: 220px !important;
+  height: 350px !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
+}
+
+.mxd-loader .mxd-loader__images img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 25% !important;
+  border-radius: 14px !important;
+}
+
+.mxd-loader .mxd-loader__bottom {
+  position: relative !important;
+  top: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  width: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  gap: 0.4rem !important;
+}
+
+@media only screen and (min-width: 1600px) {
+  .mxd-loader .mxd-loader__images {
+    width: 260px !important;
+    height: 410px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mxd-loader .mxd-loader__images {
+    width: 190px !important;
+    height: 300px !important;
+  }
+}
+
+
+
 

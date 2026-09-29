@@ -10,17 +10,10 @@ export default function Home() {
       {/*  Loader Start  */}
     <div className="mxd-page-transition"></div>
     <div className="mxd-loader">
-      <div className="mxd-loader__top">
-        <span>Arnav Singh — Systems Architect</span>
-      </div>
+      <div className="mxd-loader__top"></div>
       <div className="mxd-loader__images">
-        <img src="/img/loa_01.webp" alt="Azurio Template Loader Image" />
-        <img src="/img/loa_02.webp" alt="Azurio Template Loader Image" />
-        <img src="/img/loa_03.webp" alt="Azurio Template Loader Image" />
-        <img src="/img/loa_04.webp" alt="Azurio Template Loader Image" />
-        <img src="/img/loa_05.webp" alt="Azurio Template Loader Image" />
-        <img src="/img/loa_06.webp" alt="Azurio Template Loader Image" />
-        <img src="/img/loa_07.webp" alt="Azurio Template Loader Image" />
+        <img src="/img/arnav_loader_color.jpg" alt="Arnav Singh" />
+        <img src="/img/arnav_loader_bw.jpg" alt="Arnav Singh" />
       </div>
       <div className="mxd-loader__bottom">
         <div className="mxd-loader__count">
@@ -467,28 +460,34 @@ export default function Home() {
                   {/*  Marquee Divider End  */}
                 </div>
                 <div className="card__wrapper">
-                  <div className="card__content">
-                    <div className="card__descr">
-                      <div className="card__tags">
-                        <span className="tag tag-m tag-permanent mxd-scramble" style={{ color: "#0f172a" }}>Design</span>
-                        <span className="tag tag-m tag-permanent mxd-scramble" style={{ color: "#0f172a" }}>Illustrations</span>
-                        <span className="tag tag-m tag-permanent mxd-scramble" style={{ color: "#0f172a" }}>Packaging</span>
-                        <span className="tag tag-m tag-permanent mxd-scramble" style={{ color: "#0f172a" }}>marketing</span>
-                      </div>
-                      <div className="card__btngroup">
-                        <a className="btn btn-line btn-line-permanent" style={{ color: "#0f172a" }} href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
-                          <span className="btn-caption mxd-scramble">Know More</span>
+                  <div className="card__content" style={{ zIndex: 20 }}>
+                    <div className="card__descr" style={{ justifyContent: "flex-end", width: "100%", pointerEvents: "none" }}>
+                      <div className="card__btngroup" style={{ marginLeft: "auto", display: "flex", justifyContent: "flex-end", pointerEvents: "auto" }}>
+                        <a
+                          className="live-demo-box-btn"
+                          href="https://neurosense-orcin.vercel.app"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="Open Live Demo"
+                        >
+                          <span className="live-demo-pulse-dot"></span>
+                          <span className="live-demo-label">LIVE DEMO</span>
+                          <span className="live-demo-icon-box">
+                            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M7 17L17 7M17 7H7M17 7V17" />
+                            </svg>
+                          </span>
                         </a>
                       </div>
                     </div>
                   </div>
                   {/* Tech Stack Footer Section */}
-                  <div className="card__techstack-wrapper">
+                  <div className="card__techstack-wrapper" style={{ zIndex: 25, pointerEvents: "auto" }}>
                     <ProjectTechStack />
                   </div>
-                  <div className="card__image">
+                  <div className="card__image" style={{ pointerEvents: "none" }}>
                     <img className="card__media" src="/img/works/showcase-stack/neurosense.png" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast" }} />
-                    <div className="card__cover" style={{ backgroundColor: "transparent" }}></div>
+                    <div className="card__cover" style={{ backgroundColor: "transparent", pointerEvents: "none" }}></div>
                   </div>
                 </div>
               </div>
@@ -497,12 +496,6 @@ export default function Home() {
                 <div className="card__wrapper">
                   <div className="card__content">
                     <div className="card__descr">
-                      <div className="card__tags">
-                        <span className="tag tag-m tag-permanent mxd-scramble">Design</span>
-                        <span className="tag tag-m tag-permanent mxd-scramble">Illustrations</span>
-                        <span className="tag tag-m tag-permanent mxd-scramble">Packaging</span>
-                        <span className="tag tag-m tag-permanent mxd-scramble">marketing</span>
-                      </div>
                       <div className="card__btngroup">
                         <a className="btn btn-line btn-line-permanent" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
                           <span className="btn-caption mxd-scramble">Know More</span>
@@ -524,12 +517,6 @@ export default function Home() {
                 <div className="card__wrapper">
                   <div className="card__content">
                     <div className="card__descr">
-                      <div className="card__tags">
-                        <span className="tag tag-m tag-permanent mxd-scramble">Design</span>
-                        <span className="tag tag-m tag-permanent mxd-scramble">Illustrations</span>
-                        <span className="tag tag-m tag-permanent mxd-scramble">Packaging</span>
-                        <span className="tag tag-m tag-permanent mxd-scramble">marketing</span>
-                      </div>
                       <div className="card__btngroup">
                         <a className="btn btn-line btn-line-permanent" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
                           <span className="btn-caption mxd-scramble">Know More</span>
@@ -552,12 +539,6 @@ export default function Home() {
                 <div className="card__wrapper">
                   <div className="card__content">
                     <div className="card__descr">
-                      <div className="card__tags">
-                        <span className="tag tag-m tag-permanent mxd-scramble">Design</span>
-                        <span className="tag tag-m tag-permanent mxd-scramble">Illustrations</span>
-                        <span className="tag tag-m tag-permanent mxd-scramble">Packaging</span>
-                        <span className="tag tag-m tag-permanent mxd-scramble">marketing</span>
-                      </div>
                       <div className="card__btngroup">
                         <a className="btn btn-line btn-line-permanent" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
                           <span className="btn-caption mxd-scramble">Know More</span>

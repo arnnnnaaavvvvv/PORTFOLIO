@@ -1752,6 +1752,11 @@ function mxdProjectsStack() {
     gsap.set(cardImg, { scale: 0.9 });
     gsap.set(cardCover, { opacity: 0 });
 
+    const marquee = introCard.querySelector(".card__marquees");
+    const titleLines = introCard.querySelectorAll(".line-mask .line");
+    const description = introCard.querySelector(".card__descr");
+    const techStack = introCard.querySelector(".card__techstack-wrapper");
+
     // animate in the texts
     function animateContentIn(titleLines, description) {
       gsap.to(titleLines, { y: "0%", duration: 0.75, ease: "common", stagger: { amount: 0.15 } });
@@ -1773,10 +1778,6 @@ function mxdProjectsStack() {
         ease: "common",
       });
     }
-
-    const marquee = introCard.querySelector(".card__marquees");
-    const titleLines = introCard.querySelectorAll(".line-mask .line");
-    const description = introCard.querySelector(".card__descr");
 
     ScrollTrigger.create({
       trigger: introCard,
@@ -1801,13 +1802,21 @@ function mxdProjectsStack() {
           gsap.set(marquee, { opacity: 0 });
         }
 
-        if (lastProgress >= 1 && !introCard.contentRevealed) {
+        if (lastProgress >= 0.7 && !introCard.contentRevealed) {
           introCard.contentRevealed = true;
+          introCard.classList.add("is-revealed");
           animateContentIn(titleLines, description);
+          if (techStack) {
+            techStack.classList.add("is-revealed");
+          }
         }
-        if (lastProgress < 1 && introCard.contentRevealed) {
+        if (lastProgress < 0.7 && introCard.contentRevealed) {
           introCard.contentRevealed = false;
+          introCard.classList.remove("is-revealed");
           animateContentOut(titleLines, description);
+          if (techStack) {
+            techStack.classList.remove("is-revealed");
+          }
         }
       },
       // markers: true,
