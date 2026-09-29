@@ -507,7 +507,7 @@ export default function Home() {
                     </a>
                   </div>
                   <div className="card__image">
-                    <img className="card__media" src="/img/works/showcase-stack/pr02.webp" alt="Project Preview Image" />
+                    <img className="card__media" src="/img/works/showcase-stack/clude.png" alt="Project Preview Image" />
                     <div className="card__cover"></div>
                   </div>
                 </div>
