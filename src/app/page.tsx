@@ -517,7 +517,7 @@ export default function Home() {
                   </div>
                   {/* Tech Stack Footer Section */}
                   <div className="card__techstack-wrapper is-revealed" style={{ zIndex: 25, pointerEvents: "auto", opacity: 1, transform: "none" }}>
-                    <ProjectTechStack items={CLUDE_TECH_STACKS} />
+                    <ProjectTechStack items={CLUDE_TECH_STACKS} theme="dark" />
                   </div>
                   <div className="card__image" style={{ pointerEvents: "none" }}>
                     <img className="card__media" src="/img/works/showcase-stack/clude.png" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast" }} />

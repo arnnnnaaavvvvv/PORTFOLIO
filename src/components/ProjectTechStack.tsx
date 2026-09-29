@@ -15,12 +15,12 @@ export const NEUROSENSE_TECH_STACKS: TechItem[] = [
   {
     name: "Next.js",
     category: "Frontend",
-    color: "#FFFFFF",
-    bgColor: "rgba(255, 255, 255, 0.2)",
-    borderColor: "rgba(255, 255, 255, 0.6)",
+    color: "#000000",
+    bgColor: "rgba(0, 0, 0, 0.04)",
+    borderColor: "rgba(0, 0, 0, 0.15)",
     icon: (
       <svg viewBox="0 0 24 24" width="17" height="17" fill="none">
-        <circle cx="12" cy="12" r="11" fill="#000" stroke="rgba(255, 255, 255, 0.35)" strokeWidth="1.2" />
+        <circle cx="12" cy="12" r="12" fill="#000" />
         <path d="M14.9 16.5L8.5 8.2V15.8H7.2V7.5H8.7L15.3 16V7.5H16.6V16.5H14.9Z" fill="#FFF" />
         <path d="M16.6 7.5L12 13.5V14.5L16.6 8.5V7.5Z" fill="url(#nextG)" />
         <defs>
@@ -344,11 +344,18 @@ export const CLUDE_TECH_STACKS: TechItem[] = [
   },
 ];
 
-export default function ProjectTechStack({ items = NEUROSENSE_TECH_STACKS }: { items?: TechItem[] }) {
+export default function ProjectTechStack({
+  items = NEUROSENSE_TECH_STACKS,
+  theme = "light",
+}: {
+  items?: TechItem[];
+  theme?: "light" | "dark";
+}) {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+  const isDark = theme === "dark";
 
   return (
-    <div className="project-techstack-dock">
+    <div className={`project-techstack-dock ${isDark ? "project-techstack-dock--dark" : "project-techstack-dock--light"}`}>
       {/* Label / Header badge */}
       <div className="project-techstack-header">
         <span className="techstack-dot"></span>
@@ -362,17 +369,28 @@ export default function ProjectTechStack({ items = NEUROSENSE_TECH_STACKS }: { i
           return (
             <div
               key={tech.name}
-              className="techstack-badge"
+              className={`techstack-badge ${isDark ? "techstack-badge--dark" : "techstack-badge--light"}`}
               onMouseEnter={() => setHoveredIdx(idx)}
               onMouseLeave={() => setHoveredIdx(null)}
-              style={{
-                backgroundColor: isHovered ? "rgba(255, 255, 255, 0.12)" : "rgba(255, 255, 255, 0.05)",
-                borderColor: isHovered ? tech.borderColor : "rgba(255, 255, 255, 0.12)",
-                boxShadow: isHovered
-                  ? `0 6px 20px ${tech.bgColor}, 0 0 10px ${tech.bgColor}`
-                  : "0 2px 6px rgba(0, 0, 0, 0.4)",
-                transform: isHovered ? "translateY(-3px) scale(1.03)" : "translateY(0) scale(1)",
-              }}
+              style={
+                isDark
+                  ? {
+                      backgroundColor: isHovered ? "rgba(255, 255, 255, 0.12)" : "rgba(255, 255, 255, 0.05)",
+                      borderColor: isHovered ? tech.borderColor : "rgba(255, 255, 255, 0.12)",
+                      boxShadow: isHovered
+                        ? `0 6px 20px ${tech.bgColor}, 0 0 10px ${tech.bgColor}`
+                        : "0 2px 6px rgba(0, 0, 0, 0.4)",
+                      transform: isHovered ? "translateY(-3px) scale(1.03)" : "translateY(0) scale(1)",
+                    }
+                  : {
+                      backgroundColor: isHovered ? tech.bgColor : "#ffffff",
+                      borderColor: isHovered ? tech.borderColor : "rgba(226, 232, 240, 0.9)",
+                      boxShadow: isHovered
+                        ? `0 6px 18px ${tech.bgColor}, 0 2px 6px rgba(0,0,0,0.06)`
+                        : "0 2px 6px rgba(0, 0, 0, 0.03)",
+                      transform: isHovered ? "translateY(-3px) scale(1.03)" : "translateY(0) scale(1)",
+                    }
+              }
             >
               <span className="techstack-icon">{tech.icon}</span>
               <span className="techstack-name">{tech.name}</span>

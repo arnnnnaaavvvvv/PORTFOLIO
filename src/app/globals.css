@@ -631,20 +631,57 @@ button {
   max-width: 1120px;
   width: 100%;
   padding: 13px 22px;
-  background: rgba(6, 9, 18, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 20px;
-  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: auto !important;
 }
 
-.project-techstack-dock:hover {
+/* Light Theme Dock (Card 1 / Light Background) */
+.project-techstack-dock.project-techstack-dock--light {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.07), 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.project-techstack-dock.project-techstack-dock--light:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(203, 213, 225, 1);
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.project-techstack-dock--light .techstack-label {
+  color: #64748b !important;
+}
+
+.project-techstack-dock--light .techstack-name {
+  color: #0f172a !important;
+  font-weight: 600;
+}
+
+/* Dark Theme Dock (Card 2 / Dark Background) */
+.project-techstack-dock.project-techstack-dock--dark {
+  background: rgba(6, 9, 18, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.project-techstack-dock.project-techstack-dock--dark:hover {
   background: rgba(10, 14, 26, 0.95);
   border-color: rgba(255, 255, 255, 0.22);
   box-shadow: 0 24px 50px -8px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.project-techstack-dock--dark .techstack-label {
+  color: #94a3b8 !important;
+}
+
+.project-techstack-dock--dark .techstack-name {
+  color: #f1f5f9 !important;
+  font-weight: 500;
 }
 
 .project-techstack-header {
