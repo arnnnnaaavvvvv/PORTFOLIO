@@ -2,7 +2,7 @@
 import React from "react";
 import Footer from "@/components/Footer";
 import HeroNameImage from "@/components/HeroNameImage";
-import ProjectTechStack from "@/components/ProjectTechStack";
+import ProjectTechStack, { CLUDE_TECH_STACKS } from "@/components/ProjectTechStack";
 
 export default function Home() {
   return (
@@ -514,6 +514,10 @@ export default function Home() {
                         </a>
                       </div>
                     </div>
+                  </div>
+                  {/* Tech Stack Footer Section */}
+                  <div className="card__techstack-wrapper is-revealed" style={{ zIndex: 25, pointerEvents: "auto", opacity: 1, transform: "none" }}>
+                    <ProjectTechStack items={CLUDE_TECH_STACKS} />
                   </div>
                   <div className="card__image" style={{ pointerEvents: "none" }}>
                     <img className="card__media" src="/img/works/showcase-stack/clude.png" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast" }} />

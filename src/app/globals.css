@@ -616,7 +616,8 @@ button {
 }
 
 .card__techstack-wrapper.is-revealed,
-.mxd-stack-cards__card.is-revealed .card__techstack-wrapper {
+.mxd-stack-cards__card.is-revealed .card__techstack-wrapper,
+.mxd-stack-cards__card:nth-child(n+2) .card__techstack-wrapper {
   opacity: 1 !important;
   transform: translateY(0) !important;
   pointer-events: auto !important;
