@@ -362,7 +362,7 @@ export default function Home() {
 
           {/*  Block - Progects Stack Start  */}
           <div className="mxd-block">
-            <div className="mxd-stack-cards">
+            <div className="mxd-stack-cards" style={{ backgroundColor: "#030712" }}>
               {/*  single card  */}
               <div className="mxd-stack-cards__card">
                 <div className="card__marquees">
@@ -492,8 +492,8 @@ export default function Home() {
                 </div>
               </div>
               {/*  single card  */}
-              <div className="mxd-stack-cards__card">
-                <div className="card__wrapper">
+              <div className="mxd-stack-cards__card" style={{ backgroundColor: "#030712" }}>
+                <div className="card__wrapper" style={{ backgroundColor: "#030712" }}>
                   <div className="card__content" style={{ zIndex: 20 }}>
                     <div className="card__descr" style={{ justifyContent: "flex-end", width: "100%", pointerEvents: "none", opacity: 1, transform: "none" }}>
                       <div className="card__btngroup" style={{ marginLeft: "auto", display: "flex", justifyContent: "flex-end", pointerEvents: "auto" }}>
@@ -519,15 +519,15 @@ export default function Home() {
                   <div className="card__techstack-wrapper is-revealed" style={{ zIndex: 25, pointerEvents: "auto", opacity: 1, transform: "none" }}>
                     <ProjectTechStack items={CLUDE_TECH_STACKS} theme="dark" />
                   </div>
-                  <div className="card__image" style={{ pointerEvents: "none" }}>
-                    <img className="card__media" src="/img/works/showcase-stack/clude.png" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast" }} />
+                  <div className="card__image" style={{ pointerEvents: "none", backgroundColor: "#030712", overflow: "hidden" }}>
+                    <img className="card__media" src="/img/works/showcase-stack/clude.png" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast", top: "-2px", height: "calc(100% + 4px)", position: "relative", objectFit: "cover" }} />
                     <div className="card__cover" style={{ backgroundColor: "transparent", pointerEvents: "none" }}></div>
                   </div>
                 </div>
               </div>
               {/*  single card  */}
-              <div className="mxd-stack-cards__card" style={{ backgroundColor: "#06121c" }}>
-                <div className="card__wrapper" style={{ backgroundColor: "#06121c" }}>
+              <div className="mxd-stack-cards__card" style={{ backgroundColor: "#04121d" }}>
+                <div className="card__wrapper" style={{ backgroundColor: "#04121d" }}>
                   <div className="card__content" style={{ zIndex: 20 }}>
                     <div className="card__descr" style={{ justifyContent: "flex-end", width: "100%", pointerEvents: "none", opacity: 1, transform: "none" }}>
                       <div className="card__btngroup" style={{ marginLeft: "auto", display: "flex", justifyContent: "flex-end", pointerEvents: "auto" }}>
@@ -553,8 +553,8 @@ export default function Home() {
                   <div className="card__techstack-wrapper is-revealed" style={{ zIndex: 25, pointerEvents: "auto", opacity: 1, transform: "none" }}>
                     <ProjectTechStack items={IGNITE_TECH_STACKS} theme="dark" />
                   </div>
-                  <div className="card__image" style={{ pointerEvents: "none" }}>
-                    <img className="card__media" src="/img/works/showcase-stack/ignite.png" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast" }} />
+                  <div className="card__image" style={{ pointerEvents: "none", backgroundColor: "#04121d", overflow: "hidden" }}>
+                    <img className="card__media" src="/img/works/showcase-stack/ignite.png?v=2" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast", top: "-2px", height: "calc(100% + 4px)", position: "relative", objectFit: "cover" }} />
                     <div className="card__cover" style={{ backgroundColor: "transparent", pointerEvents: "none" }}></div>
                   </div>
                 </div>
