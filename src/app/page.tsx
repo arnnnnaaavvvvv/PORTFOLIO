@@ -533,7 +533,7 @@ export default function Home() {
                       <div className="card__btngroup" style={{ marginLeft: "auto", display: "flex", justifyContent: "flex-end", pointerEvents: "auto" }}>
                         <a
                           className="live-demo-box-btn"
-                          href="https://github.com/arnnnnaaavvvvv/IGNITE"
+                          href="https://ignite-lemon-nu.vercel.app/"
                           target="_blank"
                           rel="noopener noreferrer"
                           title="Open Live Demo"
