@@ -554,7 +554,7 @@ export default function Home() {
                     <ProjectTechStack items={IGNITE_TECH_STACKS} theme="dark" />
                   </div>
                   <div className="card__image" style={{ pointerEvents: "none", backgroundColor: "#04121d", overflow: "hidden" }}>
-                    <img className="card__media" src="/img/works/showcase-stack/ignite.png?v=3" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast", top: "-2px", height: "calc(100% + 4px)", position: "relative", objectFit: "cover" }} />
+                    <img className="card__media" src="/img/works/showcase-stack/ignite.png?v=4" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast", top: "-2px", height: "calc(100% + 4px)", position: "relative", objectFit: "cover" }} />
                     <div className="card__cover" style={{ backgroundColor: "transparent", pointerEvents: "none" }}></div>
                   </div>
                 </div>
