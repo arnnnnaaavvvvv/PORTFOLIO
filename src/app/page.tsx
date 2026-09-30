@@ -542,7 +542,7 @@ export default function Home() {
                     
                   </div>
                   <div className="card__image">
-                    <img className="card__media" src="/img/works/showcase-stack/pr01.webp" alt="Project Preview Image" />
+                    <img className="card__media" src="/img/works/showcase-stack/ignite.png" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast" }} />
                     <div className="card__cover"></div>
                   </div>
                 </div>
