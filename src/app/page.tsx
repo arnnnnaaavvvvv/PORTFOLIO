@@ -2,7 +2,7 @@
 import React from "react";
 import Footer from "@/components/Footer";
 import HeroNameImage from "@/components/HeroNameImage";
-import ProjectTechStack, { CLUDE_TECH_STACKS } from "@/components/ProjectTechStack";
+import ProjectTechStack, { CLUDE_TECH_STACKS, IGNITE_TECH_STACKS } from "@/components/ProjectTechStack";
 
 export default function Home() {
   return (
@@ -528,22 +528,34 @@ export default function Home() {
               {/*  single card  */}
               <div className="mxd-stack-cards__card">
                 <div className="card__wrapper">
-                  <div className="card__content">
-                    <div className="card__descr">
-                      <div className="card__btngroup">
-                        <a className="btn btn-line btn-line-permanent" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
-                          <span className="btn-caption mxd-scramble">Know More</span>
+                  <div className="card__content" style={{ zIndex: 20 }}>
+                    <div className="card__descr" style={{ justifyContent: "flex-end", width: "100%", pointerEvents: "none", opacity: 1, transform: "none" }}>
+                      <div className="card__btngroup" style={{ marginLeft: "auto", display: "flex", justifyContent: "flex-end", pointerEvents: "auto" }}>
+                        <a
+                          className="live-demo-box-btn"
+                          href="https://github.com/arnnnnaaavvvvv/IGNITE"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="Open Live Demo"
+                        >
+                          <span className="live-demo-pulse-dot"></span>
+                          <span className="live-demo-label">LIVE DEMO</span>
+                          <span className="live-demo-icon-box">
+                            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M7 17L17 7M17 7H7M17 7V17" />
+                            </svg>
+                          </span>
                         </a>
                       </div>
                     </div>
-                    <a className="card__title active-cursor-permanent" data-cursor-text="View Work" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
-                      <p className="permanent">SIRUS — Autonomous Agent Runtime</p>
-                    </a>
-                    
                   </div>
-                  <div className="card__image">
+                  {/* Tech Stack Footer Section */}
+                  <div className="card__techstack-wrapper is-revealed" style={{ zIndex: 25, pointerEvents: "auto", opacity: 1, transform: "none" }}>
+                    <ProjectTechStack items={IGNITE_TECH_STACKS} theme="dark" />
+                  </div>
+                  <div className="card__image" style={{ pointerEvents: "none" }}>
                     <img className="card__media" src="/img/works/showcase-stack/ignite.png" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast" }} />
-                    <div className="card__cover"></div>
+                    <div className="card__cover" style={{ backgroundColor: "transparent", pointerEvents: "none" }}></div>
                   </div>
                 </div>
               </div>
