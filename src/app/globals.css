@@ -898,9 +898,10 @@ button {
 }
 
 .mxd-loader .mxd-loader__images {
-  width: 220px !important;
-  height: 350px !important;
-  border-radius: 14px !important;
+  width: 280px !important;
+  height: 280px !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 18px !important;
   overflow: hidden !important;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
 }
@@ -909,8 +910,8 @@ button {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
-  object-position: center 25% !important;
-  border-radius: 14px !important;
+  object-position: center 65% !important;
+  border-radius: 18px !important;
 }
 
 .mxd-loader .mxd-loader__bottom {
@@ -926,15 +927,17 @@ button {
 
 @media only screen and (min-width: 1600px) {
   .mxd-loader .mxd-loader__images {
-    width: 260px !important;
-    height: 410px !important;
+    width: 320px !important;
+    height: 320px !important;
+    aspect-ratio: 1 / 1 !important;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .mxd-loader .mxd-loader__images {
-    width: 190px !important;
-    height: 300px !important;
+    width: 230px !important;
+    height: 230px !important;
+    aspect-ratio: 1 / 1 !important;
   }
 }
 

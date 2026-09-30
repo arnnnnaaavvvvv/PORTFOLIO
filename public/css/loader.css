@@ -112,9 +112,10 @@
 
 .mxd-loader__images {
   position: relative;
-  width: 220px;
-  height: 350px;
-  border-radius: 14px;
+  width: 280px;
+  height: 280px;
+  aspect-ratio: 1 / 1;
+  border-radius: 18px;
   overflow: hidden;
   clip-path: polygon(100% 100%, 100% 100%, 0% 100%, 0% 100%);
   will-change: clip-path;
@@ -126,9 +127,9 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center 25%;
-     object-position: center 25%;
-  border-radius: 14px;
+  -o-object-position: center 65%;
+     object-position: center 65%;
+  border-radius: 18px;
   opacity: 0;
   will-change: opacity;
   -webkit-backface-visibility: hidden;
@@ -143,13 +144,15 @@
 }
 @media only screen and (min-width: 1600px) {
   .mxd-loader__images {
-    width: 260px;
-    height: 410px;
+    width: 320px;
+    height: 320px;
+    aspect-ratio: 1 / 1;
   }
 }
 @media only screen and (max-width: 768px) {
   .mxd-loader__images {
-    width: 190px;
-    height: 300px;
+    width: 230px;
+    height: 230px;
+    aspect-ratio: 1 / 1;
   }
 }
