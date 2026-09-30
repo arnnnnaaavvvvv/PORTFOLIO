@@ -526,8 +526,8 @@ export default function Home() {
                 </div>
               </div>
               {/*  single card  */}
-              <div className="mxd-stack-cards__card">
-                <div className="card__wrapper">
+              <div className="mxd-stack-cards__card" style={{ backgroundColor: "#06121c" }}>
+                <div className="card__wrapper" style={{ backgroundColor: "#06121c" }}>
                   <div className="card__content" style={{ zIndex: 20 }}>
                     <div className="card__descr" style={{ justifyContent: "flex-end", width: "100%", pointerEvents: "none", opacity: 1, transform: "none" }}>
                       <div className="card__btngroup" style={{ marginLeft: "auto", display: "flex", justifyContent: "flex-end", pointerEvents: "auto" }}>
