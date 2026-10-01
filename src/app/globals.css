@@ -1123,7 +1123,7 @@ button {
   will-change: transform;
 }
 
-/* 3. Bio Paragraph Typography (Space Grotesk, Ultra-Premium) */
+/* 3. Bio Paragraph Typography (Space Grotesk, Ultra-Premium Clarity) */
 .about-bio-content {
   position: relative;
   z-index: 3;
@@ -1131,22 +1131,22 @@ button {
 
 .about-bio-text {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(1.12rem, 1.26vw, 1.24rem);
+  font-size: clamp(1.22rem, 1.42vw, 1.38rem);
   font-weight: 500;
-  line-height: 1.65;
-  color: #1a1c1e;
+  line-height: 1.68;
+  color: #111315;
   letter-spacing: -0.012em;
   margin: 0;
-  max-width: 630px;
+  max-width: 660px;
 }
 
 /* 4. Crisp Divider Line */
 .about-tagline-divider {
   width: 100%;
-  max-width: 630px;
+  max-width: 660px;
   height: 1.5px;
-  background-color: #22252a;
-  margin: 2.2rem 0 1.5rem 0;
+  background-color: #111315;
+  margin: 2.2rem 0 1.6rem 0;
   opacity: 0.95;
 }
 
@@ -1156,16 +1156,16 @@ button {
   align-items: center;
   flex-wrap: wrap;
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.98rem;
   font-weight: 700;
   letter-spacing: 0.22em;
-  color: #22252a;
+  color: #111315;
 }
 
 .about-tagline-row .tagline-slash {
-  color: #df7e64;
-  margin: 0 0.85rem;
-  font-weight: 600;
+  color: #111315;
+  margin: 0 0.95rem;
+  font-weight: 700;
 }
 
 /* 6. Right Column Card Positioning */
@@ -1233,8 +1233,17 @@ button {
   }
 
   .about-bio-text {
-    font-size: 1.05rem;
-    line-height: 1.6;
+    font-size: 1.15rem;
+    line-height: 1.62;
+  }
+
+  .about-tagline-row {
+    font-size: 0.88rem;
+    letter-spacing: 0.16em;
+  }
+
+  .about-tagline-row .tagline-slash {
+    margin: 0 0.65rem;
   }
 }
 
