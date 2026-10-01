@@ -1022,108 +1022,212 @@ button {
 }
 
 /* ===================================================
-   ABOUT SECTION — BEIGE BACKGROUND
+   ABOUT SECTION — BEIGE BACKGROUND & ULTRA-PREMIUM ALIGNMENT
    =================================================== */
-#about,
-#about .mxd-section,
-#about .pinned-section,
-#about .pinned-section__inner,
-#about .mxd-section-manifest,
-#about .mxd-split-descr {
+#about {
   background-color: #edf1e9 !important;
-}
-
-/* ===================================================
-   ABOUT SECTION — "HI, I'M ARNAV" TYPOGRAPHY
-   =================================================== */
-.about-hero-typography {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-decoration: none !important;
-  user-select: none;
-  padding: 0.5rem 0 0.5rem 0;
+  position: relative;
   width: 100%;
 }
 
-.about-hero-lead {
-  font-family: 'Bebas Neue', 'Anton', sans-serif;
-  font-size: clamp(3.2rem, 5.2vw, 6.2rem);
-  line-height: 0.95;
-  color: #1d1d31;
-  letter-spacing: 0.03em;
-  transform: skewX(-9deg);
-  transform-origin: left bottom;
-  display: inline-block;
-  will-change: transform;
+.about-section-content {
+  background-color: #edf1e9 !important;
+  padding: 6rem 0 6.5rem 0;
 }
 
-.about-hero-name {
-  font-family: 'Bebas Neue', 'Anton', sans-serif;
-  font-size: clamp(6.2rem, 13vw, 15.5rem);
-  line-height: 0.85;
-  color: #2B2B2B !important;
-  letter-spacing: -0.01em;
-  transform: skewX(-9deg);
-  transform-origin: left bottom;
-  display: inline-block;
-  will-change: transform;
-  margin-top: 0.12em;
+.about-two-column-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@media only screen and (max-width: 768px) {
-  .about-hero-lead {
-    font-size: clamp(2.4rem, 8vw, 3.8rem);
-  }
-  .about-hero-name {
-    font-size: clamp(4.6rem, 16vw, 7.8rem);
-  }
-}
-
-/* ===================================================
-   ABOUT BIO & PORTRAIT CARD STYLING (REFERENCE MATCH)
-   =================================================== */
 .about-bio-wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 620px;
-  padding: 1.5rem 0;
+  max-width: 630px;
+  position: relative;
+  z-index: 2;
+  padding: 1rem 0;
+}
+
+/* 1. Sleek Pill Badge (+ ABOUT ME) */
+.about-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background-color: #121316;
+  color: #ffffff;
+  padding: 7px 18px 7px 15px;
+  border-radius: 9999px;
+  width: fit-content;
+  margin-bottom: 2.2rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-badge-pill .badge-plus {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.about-badge-pill .badge-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* 2. Heading Group with Watermark */
+.about-heading-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.about-watermark-text {
+  position: absolute;
+  top: 12%;
+  left: 20%;
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: clamp(7.5rem, 13vw, 15rem);
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: 0.04em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(43, 43, 43, 0.13);
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.about-lead-title {
+  position: relative;
+  z-index: 2;
+  font-family: 'Space Grotesk', 'Oxanium', sans-serif;
+  font-size: clamp(2.6rem, 3.8vw, 4.4rem);
+  font-style: italic;
+  font-weight: 800;
+  line-height: 1;
+  color: #2B2B2B;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.2rem 0;
+  text-transform: uppercase;
+}
+
+.about-main-name {
+  position: relative;
+  z-index: 2;
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: clamp(6.5rem, 11.5vw, 13.5rem);
+  font-weight: 900;
+  line-height: 0.85;
+  color: #2B2B2B !important;
+  letter-spacing: -0.01em;
+  transform: skewX(-7deg);
+  transform-origin: left bottom;
+  display: inline-block;
+  margin: 0;
+  text-transform: uppercase;
+  will-change: transform;
+}
+
+/* 3. Bio Paragraph Typography (Space Grotesk, Ultra-Premium) */
+.about-bio-content {
+  position: relative;
+  z-index: 3;
 }
 
 .about-bio-text {
-  font-family: var(--font-body), 'Inter', -apple-system, sans-serif;
-  font-size: clamp(1.05rem, 1.25vw, 1.22rem);
-  line-height: 1.82;
-  color: #4a4d52;
-  font-weight: 450;
-  letter-spacing: -0.01em;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.12rem, 1.26vw, 1.24rem);
+  font-weight: 500;
+  line-height: 1.65;
+  color: #1a1c1e;
+  letter-spacing: -0.012em;
   margin: 0;
+  max-width: 630px;
 }
 
+/* 4. Crisp Divider Line */
 .about-tagline-divider {
   width: 100%;
-  max-width: 580px;
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0.14);
-  margin: 2.4rem 0 1.6rem 0;
+  max-width: 630px;
+  height: 1.5px;
+  background-color: #22252a;
+  margin: 2.2rem 0 1.5rem 0;
+  opacity: 0.95;
 }
 
+/* 5. Tagline Row */
 .about-tagline-row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  font-family: var(--font-display), 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.22em;
-  color: #2B2B2B;
+  color: #22252a;
 }
 
 .about-tagline-row .tagline-slash {
   color: #df7e64;
-  margin: 0 0.75rem;
+  margin: 0 0.85rem;
   font-weight: 600;
+}
+
+/* 6. Right Column Card Positioning */
+.about-card-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2rem;
+}
+
+@media only screen and (max-width: 991px) {
+  .about-section-content {
+    padding: 3.5rem 0 4rem 0;
+  }
+
+  .about-bio-wrap {
+    max-width: 100%;
+  }
+
+  .about-card-col {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+
+  .about-tagline-divider {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about-watermark-text {
+    font-size: clamp(4.8rem, 18vw, 8rem);
+    top: 6%;
+    left: 10%;
+  }
+
+  .about-lead-title {
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+
+  .about-main-name {
+    font-size: clamp(4.8rem, 18vw, 7.5rem);
+  }
+
+  .about-bio-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
 }
 
 /* ===================================================

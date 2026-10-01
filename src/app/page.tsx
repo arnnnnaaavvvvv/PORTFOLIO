@@ -602,79 +602,65 @@ export default function Home() {
           </div>
           {/*  Section - Progects Stack End  */}
         </div>
-        <div id="about" style={{ backgroundColor: "#edf1e9" }}>
-          {/*  Section - Manifest & Split Description Pinned Start  */}
-          <div className="mxd-section blur-section pinned-section padding-top-subtitle padding-bottom-default padding-bottom-tags-mobile" style={{ backgroundColor: "#edf1e9" }}>
-            <div className="pinned-section__inner" style={{ backgroundColor: "#edf1e9" }}>
-              <div className="mxd-container grid-l-container">
+        <div id="about" className="about-section-wrapper" style={{ backgroundColor: "#edf1e9" }}>
+          {/*  Section - About Me Start  */}
+          <div className="mxd-section blur-section about-section-content" style={{ backgroundColor: "#edf1e9" }}>
+            <div className="mxd-container grid-l-container">
+              <div className="container-fluid p-0">
+                <div className="row g-0 align-items-center about-two-column-row">
+                  {/* Left Column: Bio Details */}
+                  <div className="col-12 col-lg-7 mxd-grid-item">
+                    <div className="about-bio-wrap">
+                      {/* Pill Badge */}
+                      <div className="about-badge-pill">
+                        <span className="badge-plus">+</span>
+                        <span className="badge-text">ABOUT ME</span>
+                      </div>
 
-                {/*  Block - Manifest Large Start  */}
-                <div className="mxd-block">
-                  <div className="mxd-section-manifest pre-default">
-                    <div className="container-fluid p-0">
-                      <div className="row g-0">
-                        <div className="col-12 mxd-grid-item">
-                          <div className="mxd-section-manifest__wrap wrap-text-m">
-                            <div className="mxd-section-manifest__controls anim-uni-in-up">
-                              <a className="btn btn-line btn-line-default" href="#about">
-                                <span className="btn-caption mxd-scramble">Engineering Bio</span>
-                              </a>
-                            </div>
-                            <div className="mxd-section-manifest__text manifest-text-m">
-                              <div className="about-hero-typography">
-                                <span className="about-hero-lead">HI, I&apos;M</span>
-                                <span className="about-hero-name">ARNAV</span>
-                              </div>
-                            </div>
-                          </div>
+                      {/* Heading with Watermark */}
+                      <div className="about-heading-group">
+                        <div className="about-watermark-text" aria-hidden="true">
+                          ABOUT
                         </div>
+                        <h2 className="about-lead-title">HI, I&apos;M</h2>
+                        <h1 className="about-main-name">ARNAV</h1>
+                      </div>
+
+                      {/* Bio Paragraph */}
+                      <div className="about-bio-content">
+                        <p className="about-bio-text">
+                          Full-Stack AI Engineer with hands-on experience designing and delivering AI-integrated, production-ready web applications from concept to deployment. I specialize in building intelligent platforms by combining modern frontend technologies with scalable, secure backend architectures. My expertise spans React, Next.js, FastAPI, PostgreSQL, Redis, and LLM-powered systems with RAG pipelines. Passionate about solving real-world problems through technology, I focus on creating explainable, high-performance, and user-centric applications that drive meaningful impact across healthcare, finance, travel, and developer tooling.
+                        </p>
+                      </div>
+
+                      {/* Divider Line */}
+                      <div className="about-tagline-divider"></div>
+
+                      {/* Tagline Row */}
+                      <div className="about-tagline-row">
+                        <span className="tagline-word">BUILD</span>
+                        <span className="tagline-slash">/</span>
+                        <span className="tagline-word">SHIP</span>
+                        <span className="tagline-slash">/</span>
+                        <span className="tagline-word">ITERATE</span>
+                        <span className="tagline-slash">/</span>
+                        <span className="tagline-word">REPEAT</span>
                       </div>
                     </div>
                   </div>
-                </div>
-                {/*  Block - Manifest Large End  */}
 
-                {/*  Block - Split Description Start  */}
-                <div className="mxd-block">
-                  <div className="mxd-split-descr pre-manifest-l">
-                    <div className="container-fluid p-0">
-                      <div className="row g-0 align-items-center">
-                        <div className="col-12 col-lg-6 mxd-grid-item">
-                          <div className="about-bio-wrap">
-                            <div className="about-bio-content">
-                              <p className="about-bio-text">
-                                Full-Stack AI Engineer with hands-on experience designing and delivering AI-integrated, production-ready web applications from concept to deployment. I specialize in building intelligent platforms by combining modern frontend technologies with scalable, secure backend architectures. My expertise spans React, Next.js, FastAPI, PostgreSQL, Redis, and LLM-powered systems with RAG pipelines. Passionate about solving real-world problems through technology, I focus on creating explainable, high-performance, and user-centric applications that drive meaningful impact across healthcare, finance, travel, and developer tooling.
-                              </p>
-                            </div>
-                            <div className="about-tagline-divider"></div>
-                            <div className="about-tagline-row">
-                              <span className="tagline-word">BUILD</span>
-                              <span className="tagline-slash">/</span>
-                              <span className="tagline-word">SHIP</span>
-                              <span className="tagline-slash">/</span>
-                              <span className="tagline-word">ITERATE</span>
-                              <span className="tagline-slash">/</span>
-                              <span className="tagline-word">REPEAT</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-12 col-lg-6 mxd-grid-item">
-                          <InteractivePortraitCard
-                            imageSrc="/img/illustrations/arnav_card_interactive.png"
-                            altText="Arnav Singh - Full-Stack AI Engineer"
-                          />
-                        </div>
-                      </div>
-                    </div>
+                  {/* Right Column: Interactive Portrait Card */}
+                  <div className="col-12 col-lg-5 mxd-grid-item about-card-col">
+                    <InteractivePortraitCard
+                      imageSrc="/img/illustrations/arnav_card_interactive.png"
+                      altText="Arnav Singh - Full-Stack AI Engineer"
+                    />
                   </div>
                 </div>
-                {/*  Block - Split Description End  */}
-
               </div>
-              <div className="pinned-section__trigger"></div>
             </div>
           </div>
-          {/*  Section - Manifest & Split Description Pinned End  */}
+          {/*  Section - About Me End  */}
         </div>
         <div id="services">
           {/*  Section - Divider Sticky Caption Start  */}
