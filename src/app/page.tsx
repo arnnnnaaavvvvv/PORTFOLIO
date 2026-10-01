@@ -669,8 +669,8 @@ export default function Home() {
                   <div className="mxd-dv-sticky-cap__top">
                     <div className="mxd-dv-sticky-cap__content">
                       <div className="mxd-dv-sticky-cap__btngroup anim-uni-in-up">
-                        <a className="btn btn-line btn-line-permanent" href="#services">
-                          <span className="btn-caption mxd-scramble">Services</span>
+                        <a className="philosophy-badge-pill" href="#services">
+                          <span className="badge-text">PHILOSOPHY</span>
                         </a>
                       </div>
                       <div className="mxd-dv-sticky-cap__caption">

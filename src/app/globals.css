@@ -1222,11 +1222,61 @@ button {
 
 #services .mxd-dv-sticky-cap__static {
   padding: 3.5rem 0 4rem 0 !important;
+  mix-blend-mode: normal !important;
+}
+
+#services .mxd-dv-sticky-cap__text.permanent {
+  color: #111315 !important;
+}
+
+#services .mxd-dv-sticky-cap__text.permanent span {
+  color: #72777f !important;
 }
 
 #services .mxd-dv-sticky-cap__scroll {
   gap: 7.5rem !important;
   padding-bottom: 25vh !important;
+}
+
+/* Philosophy Badge Pill (Ultra-Premium Obsidian Capsule) */
+.philosophy-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #1a1c22 0%, #0c0e12 100%);
+  color: #ffffff !important;
+  padding: 8px 24px;
+  border-radius: 9999px;
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 
+    0 2px 6px rgba(0, 0, 0, 0.1),
+    0 8px 20px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  user-select: none;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.philosophy-badge-pill:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.26);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.16),
+    0 12px 26px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24);
+  color: #ffffff !important;
+}
+
+.philosophy-badge-pill .badge-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 768px) {
