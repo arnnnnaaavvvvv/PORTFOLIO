@@ -1223,13 +1223,24 @@ button {
 #services .mxd-dv-sticky-cap__static {
   padding: 3.5rem 0 4rem 0 !important;
   mix-blend-mode: normal !important;
-  z-index: 5 !important;
+  z-index: auto !important;
   transform: none !important;
 }
 
 #services .mxd-dv-sticky-cap__content {
   max-width: 900px !important;
   position: relative;
+  z-index: auto !important;
+}
+
+#services .mxd-dv-sticky-cap__btngroup {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+#services .mxd-dv-sticky-cap__caption {
+  position: relative !important;
+  z-index: 3 !important;
 }
 
 #services .mxd-dv-sticky-cap__text.permanent {
@@ -1283,12 +1294,16 @@ button {
 }
 
 #services .mxd-dv-sticky-cap__scroll {
+  position: relative !important;
+  z-index: 2 !important;
   gap: 7.5rem !important;
   padding-bottom: 25vh !important;
 }
 
 /* 6 Floating 3D Cards — Refined depth shadows & zero-gap geometry */
 #services .scroll-images-row__obj {
+  position: relative !important;
+  z-index: 2 !important;
   display: block !important;
   line-height: 0 !important;
   font-size: 0 !important;
@@ -1360,8 +1375,8 @@ button {
   cursor: pointer;
   text-decoration: none !important;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
-  z-index: 10;
+  position: relative !important;
+  z-index: 1 !important;
 }
 
 .philosophy-badge-pill:hover {

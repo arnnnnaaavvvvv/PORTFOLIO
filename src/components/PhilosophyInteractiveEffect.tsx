@@ -206,7 +206,7 @@ export default function PhilosophyInteractiveEffect() {
         width: "100vw",
         height: "100vh",
         pointerEvents: "none",
-        zIndex: 3,
+        zIndex: 2,
         opacity: trailState.visible ? trailState.opacity : 0,
         transition: "opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1)",
       }}
