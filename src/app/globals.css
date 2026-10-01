@@ -1524,28 +1524,52 @@ button {
   margin: 0 auto;
 }
 
-/* Avatar Card with Coral/Orange Border */
+/* Interactive Avatar Card with Sleek Black Border */
+.vision-avatar-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 800px;
+  z-index: 10;
+  pointer-events: auto !important;
+}
+
 .vision-avatar-card {
+  position: relative;
   width: 96px;
   height: 96px;
   border-radius: 24px;
-  border: 2px solid #eb583d;
+  border: 2.5px solid #111315;
   overflow: hidden;
   box-shadow: 
-    0 10px 24px -4px rgba(235, 88, 61, 0.22),
-    0 4px 12px rgba(0, 0, 0, 0.06);
+    0 12px 28px -4px rgba(0, 0, 0, 0.22),
+    0 4px 12px rgba(0, 0, 0, 0.08);
   background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  will-change: transform, box-shadow;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.vision-avatar-card:hover {
-  transform: translateY(-3px) scale(1.03);
+.vision-avatar-card:hover,
+.vision-avatar-card.is-hovered {
+  border-color: #000000;
   box-shadow: 
-    0 14px 28px -4px rgba(235, 88, 61, 0.32),
-    0 6px 16px rgba(0, 0, 0, 0.08);
+    0 18px 38px -4px rgba(0, 0, 0, 0.3),
+    0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.vision-avatar-card.is-pressed {
+  box-shadow: 
+    0 6px 16px -2px rgba(0, 0, 0, 0.25),
+    0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .vision-avatar-img {
@@ -1553,6 +1577,19 @@ button {
   height: 100%;
   object-fit: cover;
   display: block;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.vision-avatar-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  pointer-events: none;
+  z-index: 3;
+  transition: opacity 0.2s ease;
+  mix-blend-mode: overlay;
 }
 
 /* Subtitle: "Your Vision. My Expertise." */
@@ -1604,7 +1641,7 @@ button {
 }
 
 .vision-down-cue:hover {
-  color: #eb583d;
+  color: #111315;
   transform: translateY(4px);
   animation-play-state: paused;
 }

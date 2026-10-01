@@ -6,6 +6,7 @@ import InteractivePortraitCard from "@/components/InteractivePortraitCard";
 import ProjectTechStack, { CLUDE_TECH_STACKS, IGNITE_TECH_STACKS, SIRUS_TECH_STACKS } from "@/components/ProjectTechStack";
 import PhilosophyInteractiveEffect from "@/components/PhilosophyInteractiveEffect";
 import VisionShowcaseSection from "@/components/VisionShowcaseSection";
+import VisionAvatarCard from "@/components/VisionAvatarCard";
 
 export default function Home() {
   return (
@@ -777,13 +778,10 @@ export default function Home() {
                   <div className="images__listitem">
                     <div className="images__overflow vision-slide-beige-container">
                       <div className="vision-showcase-container">
-                        <div className="vision-avatar-card">
-                          <img
-                            src="/img/arnav_vision_dither.png"
-                            alt="Arnav Singh — Full-Stack & AI Solutions"
-                            className="vision-avatar-img"
-                          />
-                        </div>
+                        <VisionAvatarCard
+                          imageSrc="/img/arnav_vision_dither.png"
+                          altText="Arnav Singh — Full-Stack & AI Solutions"
+                        />
                         <p className="vision-subtitle">Your Vision. My Expertise.</p>
                         <h2 className="vision-headline">
                           <span className="vision-headline-line">FULL-STACK DEVELOPMENT</span>
