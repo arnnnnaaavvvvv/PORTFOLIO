@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import HeroNameImage from "@/components/HeroNameImage";
 import InteractivePortraitCard from "@/components/InteractivePortraitCard";
 import ProjectTechStack, { CLUDE_TECH_STACKS, IGNITE_TECH_STACKS, SIRUS_TECH_STACKS } from "@/components/ProjectTechStack";
+import PhilosophyInteractiveEffect from "@/components/PhilosophyInteractiveEffect";
 
 export default function Home() {
   return (
@@ -659,6 +660,7 @@ export default function Home() {
           {/*  Section - About Me End  */}
         </div>
         <div id="services">
+          <PhilosophyInteractiveEffect />
           {/*  Section - Divider Sticky Caption Start  */}
           <div className="mxd-section blur-section">
             <div className="mxd-container grid-l-container">

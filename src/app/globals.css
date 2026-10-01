@@ -1223,25 +1223,88 @@ button {
 #services .mxd-dv-sticky-cap__static {
   padding: 3.5rem 0 4rem 0 !important;
   mix-blend-mode: normal !important;
+  z-index: 5 !important;
+  transform: none !important;
 }
 
 #services .mxd-dv-sticky-cap__content {
   max-width: 900px !important;
+  position: relative;
 }
 
 #services .mxd-dv-sticky-cap__text.permanent {
   font-size: clamp(1.9rem, 2.7vw, 2.9rem) !important;
   line-height: 1.32 !important;
-  color: #111315 !important;
+  color: #222428 !important;
+  transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1), text-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: color, text-shadow, filter, transform;
 }
 
 #services .mxd-dv-sticky-cap__text.permanent span {
-  color: #72777f !important;
+  color: #636871 !important;
+  transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Light / Inverted tone when image approaches and overlaps */
+#services .mxd-dv-sticky-cap__content.philosophy-text-illuminated .mxd-dv-sticky-cap__text.permanent {
+  color: #ffffff !important;
+  text-shadow: 
+    0 0 22px rgba(255, 230, 180, 0.55),
+    0 0 45px rgba(255, 205, 120, 0.22),
+    0 2px 10px rgba(0, 0, 0, 0.95);
+}
+
+#services .mxd-dv-sticky-cap__content.philosophy-text-illuminated .mxd-dv-sticky-cap__text.permanent span {
+  color: #e2e8f0 !important;
+}
+
+/* 150-250ms subtle blur & horizontal distortion pulse */
+#services .mxd-dv-sticky-cap__text.is-distorting {
+  animation: philDistortPulse 0.22s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes philDistortPulse {
+  0% {
+    filter: blur(0px);
+    transform: skewX(0deg) scale(1);
+  }
+  30% {
+    filter: blur(1.2px);
+    transform: skewX(-1.2deg) scale(1.004);
+  }
+  70% {
+    filter: blur(0.5px);
+    transform: skewX(0.5deg) scale(1.002);
+  }
+  100% {
+    filter: blur(0px);
+    transform: skewX(0deg) scale(1);
+  }
 }
 
 #services .mxd-dv-sticky-cap__scroll {
   gap: 7.5rem !important;
   padding-bottom: 25vh !important;
+}
+
+/* 6 Floating 3D Cards — Refined depth shadows */
+#services .scroll-images-row__obj {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 
+    0 12px 32px -6px rgba(0, 0, 0, 0.22),
+    0 28px 65px -12px rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Localized rim glow that follows moving card edge when near text */
+#services .scroll-images-row__obj.has-edge-glow {
+  box-shadow: 
+    0 18px 48px -8px rgba(0, 0, 0, 0.36),
+    0 0 35px rgba(255, 215, 140, 0.35),
+    inset 0 0 0 1.5px rgba(255, 235, 185, 0.5);
+  border-color: rgba(255, 235, 185, 0.4);
 }
 
 #services .scroll-images-row__obj img {
