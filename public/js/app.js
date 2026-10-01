@@ -2538,12 +2538,13 @@ function mxdDvStickyMedia() {
 
     // Set initial before-scroll state
     function setInitialState() {
+      const isFirstBlank = titles[0] && !titles[0].textContent.trim();
       overflows.forEach((ovf, i) => {
         gsap.set(ovf, {
           clipPath: i === 0 ? FULL : CLIPPED,
           autoAlpha: 1,
           willChange: "clip-path, opacity, transform",
-          pointerEvents: "none"
+          pointerEvents: (i === 0 && isFirstBlank) ? "auto" : "none"
         });
       });
 
@@ -2577,17 +2578,24 @@ function mxdDvStickyMedia() {
       const initialScroll = computeTotalScroll();
       applySectionHeight(initialScroll);
 
+      const isFirstBlank = titles[0] && !titles[0].textContent.trim();
       const tl = gsap.timeline({
         defaults: { ease: "power2.out" },
         paused: true
       });
 
-      tl.to(numberBlock, { duration: 0.32, autoAlpha: 1, y: 0 }, 0);
-      tl.to(titles[0], { duration: 0.32, yPercent: 0 }, 0.05);
-      if (btnHolder) tl.to(btnHolder, { duration: 0.32, autoAlpha: 1, y: 0 }, 0.05);
+      if (!isFirstBlank) {
+        tl.to(numberBlock, { duration: 0.32, autoAlpha: 1, y: 0 }, 0);
+        tl.to(titles[0], { duration: 0.32, yPercent: 0 }, 0.05);
+        if (btnHolder) tl.to(btnHolder, { duration: 0.32, autoAlpha: 1, y: 0 }, 0.05);
+      }
 
       for (let i = 1; i < imagesCount; i++) {
         tl.to(overflows[i], { duration: 0.6, clipPath: FULL }, "+=0.12");
+        if (isFirstBlank && i === 1) {
+          tl.to(numberBlock, { duration: 0.28, autoAlpha: 1, y: 0 }, "-=0.48");
+          if (btnHolder) tl.to(btnHolder, { duration: 0.28, autoAlpha: 1, y: 0 }, "<");
+        }
         tl.to(titles[i - 1], { duration: 0.28, yPercent: -100 }, "-=0.48");
         tl.to(titles[i], { duration: 0.28, yPercent: 0 }, "<");
       }

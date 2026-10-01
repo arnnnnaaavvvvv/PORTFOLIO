@@ -1653,3 +1653,38 @@ button {
     margin-top: 3.4rem;
   }
 }
+
+/* ==========================================================================
+   Sticky Divider Slider — Slide 1 Beige Vision Integration
+   ========================================================================== */
+.vision-slide-beige-container {
+  background-color: #edf1e9 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  pointer-events: auto !important;
+  position: relative !important;
+}
+
+.vision-slide-beige-container .vision-showcase-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 2rem 1.5rem !important;
+  margin: auto !important;
+  max-width: 1100px !important;
+  width: 100% !important;
+  pointer-events: auto !important;
+}
+
+.vision-title-blank {
+  display: none !important;
+}
+
+.vision-slide-title-empty {
+  pointer-events: none !important;
+}

@@ -764,9 +764,91 @@ export default function Home() {
             </div>
           </div>
           {/*  Section - Divider Sticky Caption End  */}
+          {/*  Divider - Sticky Images Start  */}
+          <div className="mxd-section">
+
+            <div className="mxd-dv-sticky-img">
+              <div className="mxd-dv-sticky-img__sticky">
+                {/*  progress bar  */}
+                <div className="mxd-dv-sticky-img__progress"></div>
+                {/*  images  */}
+                <div className="mxd-dv-sticky-img__images">
+                  {/*  Page 1: Reference from Image 1 in Beige  */}
+                  <div className="images__listitem">
+                    <div className="images__overflow vision-slide-beige-container">
+                      <div className="vision-showcase-container">
+                        <div className="vision-avatar-card">
+                          <img
+                            src="/img/arnav_vision_dither.png"
+                            alt="Arnav Singh — Full-Stack & AI Solutions"
+                            className="vision-avatar-img"
+                          />
+                        </div>
+                        <p className="vision-subtitle">Your Vision. My Expertise.</p>
+                        <h2 className="vision-headline">
+                          <span className="vision-headline-line">FULL-STACK DEVELOPMENT</span>
+                          <span className="vision-headline-line">&amp; DESIGN SOLUTIONS</span>
+                        </h2>
+                        <a href="#divider" className="vision-down-cue" aria-label="Scroll down">
+                          <svg className="vision-down-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <polyline points="19 12 12 19 5 12" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  {/*  Page 2: Design (Restored)  */}
+                  <div className="images__listitem">
+                    <div className="images__overflow">
+                      <div className="mxd-cover mxd-cover-06"></div>
+                      <img className="images__img" src="/img/dividers/1920x1200_dv02.webp" alt="Design" />
+                    </div>
+                  </div>
+                  {/*  Page 3: Development (Restored)  */}
+                  <div className="images__listitem">
+                    <div className="images__overflow">
+                      <div className="mxd-cover mxd-cover-06"></div>
+                      <img className="images__img" src="/img/dividers/1920x1200_dv03.webp" alt="Development" />
+                    </div>
+                  </div>
+                </div>
+                {/*  text content  */}
+                <div className="mxd-dv-sticky-img__content">
+                  {/*  counter  */}
+                  <p className="mxd-dv-sticky-img__number">
+                    <span className="number__current">01</span>
+                    &nbsp;/&nbsp;
+                    <span className="number__total">03</span>
+                  </p>
+                  {/*  titles  */}
+                  <div className="mxd-dv-sticky-img__titlewrap">
+                    <div className="mxd-dv-sticky-img__titlelist">
+                      <div className="mxd-dv-sticky-img__titleitem vision-slide-title-empty">
+                        <h2 className="permanent vision-title-blank"></h2>
+                      </div>
+                      <div className="mxd-dv-sticky-img__titleitem">
+                        <h2 className="permanent">Design</h2>
+                      </div>
+                      <div className="mxd-dv-sticky-img__titleitem">
+                        <h2 className="permanent">Development</h2>
+                      </div>
+                    </div>
+                  </div>
+                  {/*  permanent button  */}
+                  <div className="mxd-dv-sticky-img__btnholder">
+                    <a className="btn btn-line btn-line-permanent" href="#services">
+                      <span className="btn-caption mxd-scramble">Process</span>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          {/*  Divider - Sticky Images End  */}
         </div>
-        {/*  Vision & Design Solutions Showcase Section (Reference from Image 1)  */}
-        <VisionShowcaseSection />
         <div id="divider">
           {/*  Section - Parallax Divider Image & Title Start  */}
           <div className="mxd-section blur-section">
