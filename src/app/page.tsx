@@ -620,10 +620,10 @@ export default function Home() {
                               </a>
                             </div>
                             <div className="mxd-section-manifest__text manifest-text-m">
-                              <a className="manifest manifest-l mxd-split-lines active-cursor-accent" data-cursor-text="About Us" href="about-us.html">
-                                We are a creative web agency specializing in innovative design and
-                                cutting-edge development. <span>We help businesses stand out
-                                  and thrive in the modern landscape.</span></a>
+                              <div className="about-hero-typography">
+                                <span className="about-hero-lead">HI, I&apos;M</span>
+                                <span className="about-hero-name">ARNAV</span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -637,36 +637,34 @@ export default function Home() {
                 <div className="mxd-block">
                   <div className="mxd-split-descr pre-manifest-l">
                     <div className="container-fluid p-0">
-                      <div className="row g-0">
+                      <div className="row g-0 align-items-center">
                         <div className="col-12 col-lg-6 mxd-grid-item">
-                          <div className="mxd-split-descr__image">
-                            <img src="/img/illustrations/arnav_sketch.webp" alt="Arnav Singh" />
+                          <div className="about-bio-wrap">
+                            <div className="about-bio-content">
+                              <p className="about-bio-text">
+                                Full-Stack AI Engineer with hands-on experience designing and delivering AI-integrated, production-ready web applications from concept to deployment. I specialize in building intelligent platforms by combining modern frontend technologies with scalable, secure backend architectures. My expertise spans React, Next.js, FastAPI, PostgreSQL, Redis, and LLM-powered systems with RAG pipelines. Passionate about solving real-world problems through technology, I focus on creating explainable, high-performance, and user-centric applications that drive meaningful impact across healthcare, finance, travel, and developer tooling.
+                              </p>
+                            </div>
+                            <div className="about-tagline-divider"></div>
+                            <div className="about-tagline-row">
+                              <span className="tagline-word">BUILD</span>
+                              <span className="tagline-slash">/</span>
+                              <span className="tagline-word">SHIP</span>
+                              <span className="tagline-slash">/</span>
+                              <span className="tagline-word">ITERATE</span>
+                              <span className="tagline-slash">/</span>
+                              <span className="tagline-word">REPEAT</span>
+                            </div>
                           </div>
                         </div>
                         <div className="col-12 col-lg-6 mxd-grid-item">
-                          <div className="mxd-split-descr__wrap">
-                            <div className="mxd-split-descr__content">
-                              <p className="t-bold t-large mxd-split-lines">From pixel-perfect designs to flawless code, every aspect of our projects is
-                                crafted with care to ensure the highest standards of quality. <span>We are passionate
-                                  about integrating the latest technologies and trends, including interactive
-                                  animations and mobile-first strategies.
-                                </span>
-                              </p>
-                            </div>
-                            <div className="mxd-split-descr__tags">
-                              <div className="container-fluid p-0">
-                                <div className="row g-0">
-                                  <div className="col-12 col-md-6 col-xl-4">
-                                    <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">TypeScript</span>
-                                    <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">Next.js 14</span>
-                                    <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">Python</span>
-                                  </div>
-                                  <div className="col-12 col-md-6 col-xl-4">
-                                    <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">Docker / K8s</span>
-                                    <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">FastAPI</span>
-                                    <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">PyTorch / LLMs</span>
-                                  </div>
-                                </div>
+                          <div className="about-portrait-card-wrap">
+                            <div className="about-portrait-backing"></div>
+                            <div className="about-portrait-card">
+                              <img src="/img/illustrations/arnav_sketch.webp" alt="Arnav Singh" className="about-portrait-img" />
+                              <div className="about-status-pill">
+                                <span className="about-status-dot"></span>
+                                <span className="about-status-text">OPEN TO WORK</span>
                               </div>
                             </div>
                           </div>
