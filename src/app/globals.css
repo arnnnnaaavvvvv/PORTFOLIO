@@ -1286,7 +1286,7 @@ button {
 
 #services .mxd-dv-sticky-cap__scroll {
   gap: 7.5rem !important;
-  padding-bottom: calc(25vh + 520px) !important;
+  padding-bottom: calc(25vh + 180px) !important;
 }
 
 /* 6 Floating 3D Cards — Refined depth shadows & zero-gap geometry */
