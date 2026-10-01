@@ -613,7 +613,6 @@ export default function Home() {
                     <div className="about-bio-wrap">
                       {/* Pill Badge */}
                       <div className="about-badge-pill">
-                        <span className="badge-plus">+</span>
                         <span className="badge-text">ABOUT ME</span>
                       </div>
 

@@ -1053,34 +1053,41 @@ button {
   padding: 1rem 0;
 }
 
-/* 1. Sleek Pill Badge (+ ABOUT ME) */
+/* 1. Ultra-Premium Pill Badge (ABOUT ME) */
 .about-badge-pill {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  background-color: #121316;
+  justify-content: center;
+  background: linear-gradient(180deg, #1a1c22 0%, #0c0e12 100%);
   color: #ffffff;
-  padding: 7px 18px 7px 15px;
+  padding: 8px 22px;
   border-radius: 9999px;
   width: fit-content;
   margin-bottom: 2.2rem;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 
+    0 2px 6px rgba(0, 0, 0, 0.1),
+    0 8px 20px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  user-select: none;
+  cursor: default;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.about-badge-pill .badge-plus {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 700;
-  line-height: 1;
-  color: #ffffff;
+.about-badge-pill:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.26);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.16),
+    0 12px 26px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24);
 }
 
 .about-badge-pill .badge-text {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.76rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.16em;
   line-height: 1;
   text-transform: uppercase;
   color: #ffffff;
