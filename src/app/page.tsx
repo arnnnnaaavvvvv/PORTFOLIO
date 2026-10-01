@@ -693,7 +693,7 @@ export default function Home() {
                         <div className="col-12 col-md-5 scroll-images-row__item">
                           <div className="scroll-images-row__obj">
                             <div className="scroll-images-row__image mxd-clip-image">
-                              <img src="/img/dividers/1200x900_row01.webp" alt="" />
+                              <img src="/img/dividers/frontend_development.png" alt="" />
                             </div>
                             <div className="scroll-images-row__tags">
                               <span className="tag tag-m tag-medium mxd-scramble">Branding</span>
@@ -710,7 +710,7 @@ export default function Home() {
                         <div className="col-12 col-md-6 scroll-images-row__item">
                           <div className="scroll-images-row__obj">
                             <div className="scroll-images-row__image mxd-clip-image">
-                              <img src="/img/dividers/1200x900_row02.webp" alt="" />
+                              <img src="/img/dividers/backend_development.png" alt="" />
                             </div>
                             <div className="scroll-images-row__tags">
                               <span className="tag tag-m tag-medium mxd-scramble">Illustrations</span>
@@ -721,7 +721,7 @@ export default function Home() {
                         <div className="col-12 col-md-4 scroll-images-row__item">
                           <div className="scroll-images-row__obj">
                             <div className="scroll-images-row__image mxd-clip-image">
-                              <img src="/img/dividers/737x1200_row02.webp" alt="" />
+                              <img src="/img/dividers/ui_ux_design.png" alt="" />
                             </div>
                             <div className="scroll-images-row__tags">
                               <span className="tag tag-m tag-medium mxd-scramble">Photography</span>
@@ -739,7 +739,7 @@ export default function Home() {
                         <div className="col-12 col-md-4 scroll-images-row__item">
                           <div className="scroll-images-row__obj">
                             <div className="scroll-images-row__image mxd-clip-image">
-                              <img src="/img/dividers/800x1200_row03.webp" alt="" />
+                              <img src="/img/dividers/authentications.png" alt="" />
                             </div>
                             <div className="scroll-images-row__tags">
                               <span className="tag tag-m tag-medium mxd-scramble">Fashion</span>
@@ -750,7 +750,7 @@ export default function Home() {
                         <div className="col-12 col-md-6 scroll-images-row__item">
                           <div className="scroll-images-row__obj">
                             <div className="scroll-images-row__image mxd-clip-image">
-                              <img src="/img/dividers/1200x677_row03.webp" alt="" />
+                              <img src="/img/dividers/animations.png" alt="" />
                             </div>
                             <div className="scroll-images-row__tags">
                               <span className="tag tag-m tag-medium mxd-scramble">Packaging</span>
@@ -767,7 +767,7 @@ export default function Home() {
                         <div className="col-12 col-md-5 scroll-images-row__item">
                           <div className="scroll-images-row__obj">
                             <div className="scroll-images-row__image mxd-clip-image">
-                              <img src="/img/dividers/1200x1200_row04.webp" alt="" />
+                              <img src="/img/dividers/system_design_architecture.png" alt="" />
                             </div>
                             <div className="scroll-images-row__tags">
                               <span className="tag tag-m tag-medium mxd-scramble">Illustrations</span>
