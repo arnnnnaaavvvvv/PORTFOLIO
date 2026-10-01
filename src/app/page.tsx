@@ -639,11 +639,6 @@ export default function Home() {
                 <div className="container-fluid p-0">
                   <div className="row g-0">
                     <div className="col-12 col-lg-6 mxd-grid-item">
-                      <div className="mxd-split-descr__image">
-                        <img src="/img/illustrations/arnav_sketch.webp" alt="Arnav Singh" />
-                      </div>
-                    </div>
-                    <div className="col-12 col-lg-6 mxd-grid-item">
                       <div className="mxd-split-descr__wrap">
                         <div className="mxd-split-descr__content">
                           <p className="t-bold t-large mxd-split-lines">From pixel-perfect designs to flawless code, every aspect of our projects is 
@@ -669,6 +664,11 @@ export default function Home() {
                             </div>
                           </div>
                         </div>
+                      </div>
+                    </div>
+                    <div className="col-12 col-lg-6 mxd-grid-item">
+                      <div className="mxd-split-descr__image">
+                        <img src="/img/illustrations/arnav_sketch.webp" alt="Arnav Singh" />
                       </div>
                     </div>
                   </div>
