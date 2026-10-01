@@ -1496,3 +1496,142 @@ button {
     margin: 0 auto;
   }
 }
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* --------------------------------------------- */
+/* Vision & Solutions Showcase Section (Beige Reference Aesthetic) */
+/* --------------------------------------------- */
+.vision-showcase-section {
+  background-color: #edf1e9 !important;
+  min-height: 100vh;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 9rem 2rem 8rem 2rem !important;
+  position: relative !important;
+  width: 100% !important;
+  z-index: 4;
+}
+
+.vision-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.vision-avatar-wrap {
+  width: 106px;
+  height: 106px;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 28px -4px rgba(0, 0, 0, 0.12);
+  margin-bottom: 2.2rem;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vision-avatar-wrap:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 14px 32px -4px rgba(0, 0, 0, 0.18);
+}
+
+.vision-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.vision-tagline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #16181d;
+  margin-bottom: 2.8rem;
+  line-height: 1.2;
+}
+
+.vision-headline-wrap {
+  width: 100%;
+  max-width: 840px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.6rem;
+}
+
+.vision-headline-img {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  transform: translateZ(0);
+}
+
+.vision-scroll-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #16181d;
+  animation: visionArrowBounce 2.2s ease-in-out infinite;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  opacity: 0.85;
+}
+
+.vision-scroll-arrow:hover {
+  opacity: 1;
+  transform: translateY(2px);
+}
+
+@keyframes visionArrowBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .vision-showcase-section {
+    min-height: 80vh;
+    padding: 6rem 1.6rem 5rem 1.6rem !important;
+  }
+
+  .vision-avatar-wrap {
+    width: 88px;
+    height: 88px;
+    border-radius: 20px;
+    margin-bottom: 1.8rem;
+  }
+
+  .vision-tagline {
+    font-size: 1.35rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .vision-headline-wrap {
+    margin-bottom: 2.8rem;
+  }
+
+  .vision-headline-img {
+    max-width: 100%;
+  }
+}

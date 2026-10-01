@@ -763,74 +763,40 @@ export default function Home() {
             </div>
           </div>
           {/*  Section - Divider Sticky Caption End  */}
-          {/*  Divider - Sticky Images Start  */}
-          <div className="mxd-section">
-
-            <div className="mxd-dv-sticky-img">
-              <div className="mxd-dv-sticky-img__sticky">
-                {/*  progress bar  */}
-                <div className="mxd-dv-sticky-img__progress"></div>
-                {/*  images  */}
-                <div className="mxd-dv-sticky-img__images">
-                  <div className="images__list">
-                    {/*  image item  */}
-                    <div className="images__listitem">
-                      <div className="images__overflow">
-                        <div className="mxd-cover mxd-cover-06"></div>
-                        <img className="images__img" src="/img/dividers/1920x1200_dv01.webp" alt="Image" />
-                      </div>
-                    </div>
-                    {/*  image item  */}
-                    <div className="images__listitem">
-                      <div className="images__overflow">
-                        <div className="mxd-cover mxd-cover-06"></div>
-                        <img className="images__img" src="/img/dividers/1920x1200_dv02.webp" alt="Image" />
-                      </div>
-                    </div>
-                    {/*  image item  */}
-                    <div className="images__listitem">
-                      <div className="images__overflow">
-                        <div className="mxd-cover mxd-cover-06"></div>
-                        <img className="images__img" src="/img/dividers/1920x1200_dv03.webp" alt="Image" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/*  text content  */}
-                <div className="mxd-dv-sticky-img__content">
-                  {/*  counter  */}
-                  <p className="mxd-dv-sticky-img__number">
-                    <span className="number__current">01</span>
-                    &nbsp;/&nbsp;
-                    <span className="number__total">03</span>
-                  </p>
-                  {/*  titles  */}
-                  <div className="mxd-dv-sticky-img__titlewrap">
-                    <div className="mxd-dv-sticky-img__titlelist">
-                      <div className="mxd-dv-sticky-img__titleitem">
-                        <h2 className="permanent">Strategy</h2>
-                      </div>
-                      <div className="mxd-dv-sticky-img__titleitem">
-                        <h2 className="permanent">Design</h2>
-                      </div>
-                      <div className="mxd-dv-sticky-img__titleitem">
-                        <h2 className="permanent">Development</h2>
-                      </div>
-                    </div>
-                  </div>
-                  {/*  permanent button  */}
-                  <div className="mxd-dv-sticky-img__btnholder">
-                    <a className="btn btn-line btn-line-permanent" href="#services">
-                      <span className="btn-caption mxd-scramble">Process</span>
-                    </a>
-                  </div>
-
-                </div>
+          {/*  Section - Vision & Solutions Showcase Start  */}
+          <div className="mxd-section vision-showcase-section" id="solutions">
+            <div className="vision-container">
+              {/* Avatar with Coral Accent */}
+              <div className="vision-avatar-wrap">
+                <img
+                  src="/img/vision_avatar_ref.png"
+                  alt="Arnav Singh"
+                  className="vision-avatar-img"
+                />
               </div>
-            </div>
 
+              {/* Tagline */}
+              <p className="vision-tagline">Your Vision. My Expertise.</p>
+
+              {/* Display Headline */}
+              <div className="vision-headline-wrap">
+                <img
+                  src="/img/vision_title_uhd.png"
+                  alt="FULL-STACK DEVELOPMENT & DESIGN SOLUTIONS"
+                  className="vision-headline-img"
+                />
+                <h2 className="sr-only">FULL-STACK DEVELOPMENT &amp; DESIGN SOLUTIONS</h2>
+              </div>
+
+              {/* Scroll Indicator Arrow */}
+              <a href="#divider" className="vision-scroll-arrow" aria-label="Scroll to next section">
+                <svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2V27M12 27L4 19M12 27L20 19" stroke="#16181d" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+            </div>
           </div>
-          {/*  Divider - Sticky Images End  */}
+          {/*  Section - Vision & Solutions Showcase End  */}
         </div>
         <div id="divider">
           {/*  Section - Parallax Divider Image & Title Start  */}
