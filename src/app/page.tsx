@@ -601,10 +601,10 @@ export default function Home() {
           </div>
           {/*  Section - Progects Stack End  */}
         </div>
-        <div id="about">
+        <div id="about" style={{ backgroundColor: "#edf1e9" }}>
           {/*  Section - Manifest & Split Description Pinned Start  */}
-          <div className="mxd-section blur-section pinned-section padding-top-subtitle padding-bottom-default padding-bottom-tags-mobile">
-            <div className="pinned-section__inner">
+          <div className="mxd-section blur-section pinned-section padding-top-subtitle padding-bottom-default padding-bottom-tags-mobile" style={{ backgroundColor: "#edf1e9" }}>
+            <div className="pinned-section__inner" style={{ backgroundColor: "#edf1e9" }}>
               <div className="mxd-container grid-l-container">
 
                 {/*  Block - Manifest Large Start  */}

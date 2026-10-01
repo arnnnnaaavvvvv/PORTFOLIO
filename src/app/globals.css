@@ -1022,6 +1022,18 @@ button {
 }
 
 /* ===================================================
+   ABOUT SECTION — BEIGE BACKGROUND
+   =================================================== */
+#about,
+#about .mxd-section,
+#about .pinned-section,
+#about .pinned-section__inner,
+#about .mxd-section-manifest,
+#about .mxd-split-descr {
+  background-color: #edf1e9 !important;
+}
+
+/* ===================================================
    ABOUT SECTION — "HI, I'M ARNAV" TYPOGRAPHY
    =================================================== */
 .about-hero-typography {
