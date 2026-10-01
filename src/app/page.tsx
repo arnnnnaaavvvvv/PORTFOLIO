@@ -587,8 +587,8 @@ export default function Home() {
                   <div className="card__techstack-wrapper is-revealed" style={{ zIndex: 25, pointerEvents: "auto", opacity: 1, transform: "none" }}>
                     <ProjectTechStack items={SIRUS_TECH_STACKS} theme="emerald" />
                   </div>
-                  <div className="card__image" style={{ pointerEvents: "none", backgroundColor: "#0c1411", overflow: "hidden" }}>
-                    <img className="card__media" src="/img/works/showcase-stack/sirus.png?v=3" alt="SIRUS - Automated Quantitative Trading" style={{ imageRendering: "-webkit-optimize-contrast", top: "-2px", height: "calc(100% + 4px)", position: "relative", objectFit: "cover" }} />
+                  <div className="card__image" style={{ pointerEvents: "none", backgroundColor: "#0f1515", overflow: "hidden" }}>
+                    <img className="card__media" src="/img/works/showcase-stack/sirus.png?v=4" alt="SIRUS - Automated Quantitative Trading" style={{ imageRendering: "-webkit-optimize-contrast", top: "-2px", height: "calc(100% + 4px)", position: "relative", objectFit: "cover" }} />
                     <div className="card__cover" style={{ backgroundColor: "transparent", pointerEvents: "none" }}></div>
                   </div>
                 </div>
