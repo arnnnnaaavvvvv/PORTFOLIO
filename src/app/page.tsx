@@ -674,9 +674,9 @@ export default function Home() {
                         </a>
                       </div>
                       <div className="mxd-dv-sticky-cap__caption">
-                        <a className="active-cursor-accent" data-cursor-text="What We&nbsp;Do" href="services.html">
-                          <p className="mxd-dv-sticky-cap__text mxd-split-lines permanent">Digital agency specializing in
-                            <span>innovative design</span> & cutting-edge <span>development</span>
+                        <a className="active-cursor-accent" data-cursor-text="Philosophy" href="#services">
+                          <p className="mxd-dv-sticky-cap__text mxd-split-lines permanent">
+                            I build intelligent, production-ready systems where <span>explainable AI</span> meets <span>clean engineering</span> and considered design, and ship work that <span>solves real problems</span>.
                           </p>
                         </a>
                       </div>

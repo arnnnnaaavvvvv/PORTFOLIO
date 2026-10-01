@@ -1225,7 +1225,13 @@ button {
   mix-blend-mode: normal !important;
 }
 
+#services .mxd-dv-sticky-cap__content {
+  max-width: 900px !important;
+}
+
 #services .mxd-dv-sticky-cap__text.permanent {
+  font-size: clamp(1.9rem, 2.7vw, 2.9rem) !important;
+  line-height: 1.32 !important;
   color: #111315 !important;
 }
 
