@@ -2660,11 +2660,11 @@ function mxdDvStickyCaption() {
       onEnterBack: () => flipTo(centerArea),
       onLeaveBack: () => flipTo(topArea),
     });
-    // 2. Keep content centered when scroll area ends rather than dropping to bottom
+    // 2. Flip from center → bottom when scroll area bottom touches bottom
     ScrollTrigger.create({
       trigger: scrollArea,
       start: "bottom bottom",
-      onEnter: () => flipTo(centerArea),
+      onEnter: () => flipTo(bottomArea),
       onLeaveBack: () => flipTo(centerArea),
     });
 

@@ -1227,16 +1227,6 @@ button {
   transform: none !important;
 }
 
-#services .mxd-dv-sticky-cap__bottom {
-  position: absolute !important;
-  top: 50% !important;
-  bottom: auto !important;
-  transform: translateY(-50%) !important;
-  display: flex !important;
-  justify-content: center !important;
-  width: 100% !important;
-}
-
 #services .mxd-dv-sticky-cap__content {
   max-width: 720px !important;
   position: relative;
