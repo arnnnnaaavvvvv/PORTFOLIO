@@ -2,8 +2,10 @@
 
 :root {
   /* Design Tokens — Light Mode Only */
-  --bg-primary: #f8f6f2;
-  --bg-secondary: #f0ede6;
+  --base: #edf1e9;
+  --base--light: #edf1e9;
+  --bg-primary: #edf1e9;
+  --bg-secondary: #e4e9df;
   --border-hairline: rgba(0, 0, 0, 0.08);
   --border-active: rgba(0, 0, 0, 0.2);
 
@@ -1032,7 +1034,7 @@ button {
 
 .about-section-content {
   background-color: #edf1e9 !important;
-  padding: 6rem 0 6.5rem 0;
+  padding: 5rem 0 2rem 0;
 }
 
 .about-two-column-row {
@@ -1176,7 +1178,7 @@ button {
 
 @media only screen and (max-width: 991px) {
   .about-section-content {
-    padding: 3.5rem 0 4rem 0;
+    padding: 3.5rem 0 2rem 0;
   }
 
   .about-bio-wrap {
@@ -1191,6 +1193,33 @@ button {
   .about-tagline-divider {
     max-width: 100%;
   }
+}
+
+/* ===================================================
+   SERVICES SECTION — SEAMLESS TRANSITION FROM ABOUT
+   =================================================== */
+#services {
+  background-color: #edf1e9 !important;
+  position: relative;
+  width: 100%;
+}
+
+#services .mxd-section {
+  padding-top: 0 !important;
+  background-color: #edf1e9 !important;
+}
+
+#services .mxd-dv-sticky-cap {
+  background-color: #edf1e9 !important;
+}
+
+#services .mxd-dv-sticky-cap__static {
+  padding: 3.5rem 0 4rem 0 !important;
+}
+
+#services .mxd-dv-sticky-cap__scroll {
+  gap: 7.5rem !important;
+  padding-bottom: 25vh !important;
 }
 
 @media only screen and (max-width: 768px) {
