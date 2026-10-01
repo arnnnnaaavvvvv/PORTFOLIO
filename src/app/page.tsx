@@ -640,7 +640,7 @@ export default function Home() {
                   <div className="row g-0">
                     <div className="col-12 col-lg-6 mxd-grid-item">
                       <div className="mxd-split-descr__image">
-                        <img src="/img/illustrations/about04.webp" alt="Azurio Template Example Image" />
+                        <img src="/img/illustrations/arnav_sketch.webp" alt="Arnav Singh" />
                       </div>
                     </div>
                     <div className="col-12 col-lg-6 mxd-grid-item">
