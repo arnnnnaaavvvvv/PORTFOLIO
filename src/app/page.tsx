@@ -617,11 +617,8 @@ export default function Home() {
                         <span className="badge-text">ABOUT ME</span>
                       </div>
 
-                      {/* Heading with Watermark */}
+                      {/* Heading */}
                       <div className="about-heading-group">
-                        <div className="about-watermark-text" aria-hidden="true">
-                          ABOUT
-                        </div>
                         <h2 className="about-lead-title">HI, I&apos;M</h2>
                         <h1 className="about-main-name">ARNAV</h1>
                       </div>

@@ -1084,26 +1084,10 @@ button {
   color: #ffffff;
 }
 
-/* 2. Heading Group with Watermark */
+/* 2. Heading Group */
 .about-heading-group {
   position: relative;
   margin-bottom: 2rem;
-}
-
-.about-watermark-text {
-  position: absolute;
-  top: 12%;
-  left: 20%;
-  font-family: 'Bebas Neue', 'Anton', sans-serif;
-  font-size: clamp(7.5rem, 13vw, 15rem);
-  font-weight: 900;
-  line-height: 0.85;
-  letter-spacing: 0.04em;
-  color: transparent;
-  -webkit-text-stroke: 1.5px rgba(43, 43, 43, 0.13);
-  z-index: 1;
-  pointer-events: none;
-  user-select: none;
 }
 
 .about-lead-title {
@@ -1210,11 +1194,6 @@ button {
 }
 
 @media only screen and (max-width: 768px) {
-  .about-watermark-text {
-    font-size: clamp(4.8rem, 18vw, 8rem);
-    top: 6%;
-    left: 10%;
-  }
 
   .about-lead-title {
     font-size: clamp(2rem, 7vw, 3rem);
