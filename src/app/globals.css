@@ -1287,17 +1287,32 @@ button {
   padding-bottom: 25vh !important;
 }
 
-/* 6 Floating 3D Cards — Refined depth shadows */
+/* 6 Floating 3D Cards — Refined depth shadows & zero-gap geometry */
 #services .scroll-images-row__obj {
+  display: block !important;
+  line-height: 0 !important;
+  font-size: 0 !important;
   gap: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
   background: transparent !important;
-  border-radius: 14px;
-  overflow: hidden;
+  border-radius: 14px !important;
+  overflow: hidden !important;
   box-shadow: 
-    0 12px 32px -6px rgba(0, 0, 0, 0.22),
-    0 28px 65px -12px rgba(0, 0, 0, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+    0 12px 32px -6px rgba(0, 0, 0, 0.28),
+    0 28px 65px -12px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#services .scroll-images-row__image {
+  display: block !important;
+  line-height: 0 !important;
+  font-size: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  border-radius: 13px !important;
 }
 
 #services .scroll-images-row__tags {
@@ -1314,6 +1329,13 @@ button {
 }
 
 #services .scroll-images-row__obj img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  vertical-align: top !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 13px !important;
   image-rendering: -webkit-optimize-contrast;
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -1329,15 +1351,17 @@ button {
   padding: 11px 32px;
   border-radius: 9999px;
   width: fit-content;
-  border: 1.5px solid rgba(255, 255, 255, 0.16);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
   box-shadow: 
-    0 3px 8px rgba(0, 0, 0, 0.12),
-    0 10px 24px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    0 4px 14px rgba(0, 0, 0, 0.25),
+    0 12px 30px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
   user-select: none;
   cursor: pointer;
   text-decoration: none !important;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  z-index: 10;
 }
 
 .philosophy-badge-pill:hover {

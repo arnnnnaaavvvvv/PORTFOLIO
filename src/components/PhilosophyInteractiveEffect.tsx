@@ -68,15 +68,17 @@ export default function PhilosophyInteractiveEffect() {
         const dy = Math.abs(objCenterY - textCenterY);
         const dx = Math.abs(objCenterX - textCenterX);
 
-        // Vertical collision range
-        const verticalRange = (rect.height / 2 + textRect.height / 2) + 140;
+        // Calculate actual physical overlap with the text
+        const overlapTop = Math.max(rect.top, textRect.top);
+        const overlapBottom = Math.min(rect.bottom, textRect.bottom);
+        const overlapHeight = Math.max(0, overlapBottom - overlapTop);
 
+        // Proximity is based on whether the card is actually behind the text
         let proximity = 0;
-        if (dy < verticalRange) {
-          proximity = 1 - (dy / verticalRange);
-          proximity = Math.max(0, Math.min(1, proximity));
-          // Smooth ease curve
-          proximity = proximity * proximity * (3 - 2 * proximity);
+        if (overlapHeight > 0) {
+          // Card is physically behind the text
+          const coverageRatio = Math.min(1, overlapHeight / (textRect.height * 0.35));
+          proximity = coverageRatio * coverageRatio * (3 - 2 * coverageRatio);
         }
 
         // Horizontal factor: check if horizontally close or overlapping
@@ -85,7 +87,7 @@ export default function PhilosophyInteractiveEffect() {
           proximity = proximity * 1.15;
         } else {
           const maxLateral = viewportWidth * 0.65;
-          const lateralFactor = Math.max(0.35, 1 - (dx / maxLateral));
+          const lateralFactor = Math.max(0.2, 1 - (dx / maxLateral));
           proximity = proximity * lateralFactor;
         }
 
@@ -98,8 +100,9 @@ export default function PhilosophyInteractiveEffect() {
           activeSide = objCenterX < textCenterX ? "left" : objCenterX > textCenterX ? "right" : "center";
         }
 
-        // Toggle localized edge glow on the floating card
-        if (proximity > 0.28) {
+        // Card edge glow when near or on text
+        const distToTextCenter = Math.hypot(objCenterX - textCenterX, objCenterY - textCenterY);
+        if (distToTextCenter < 380) {
           obj.classList.add("has-edge-glow");
         } else {
           obj.classList.remove("has-edge-glow");
@@ -107,7 +110,7 @@ export default function PhilosophyInteractiveEffect() {
       }
 
       // --- 1. ADAPTIVE TYPOGRAPHY TRANSITION ---
-      if (maxProximity > 0.15) {
+      if (maxProximity > 0.25) {
         content.classList.add("philosophy-text-illuminated");
 
         // Trigger subtle horizontal distortion & blur on entry (~150-250ms)

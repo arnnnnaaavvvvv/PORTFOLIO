@@ -688,16 +688,14 @@ export default function Home() {
                 <div className="mxd-dv-sticky-cap__scroll">
                   <div className="scroll-images-row row-01">
                     <div className="container-fluid p-0">
-                      <div className="row g-0">
-                        <div className="col-12 col-md-4"></div>
-                        <div className="col-12 col-md-5 scroll-images-row__item">
+                      <div className="row g-0 justify-content-center">
+                        <div className="col-12 col-md-5 scroll-images-row__item d-flex justify-content-center">
                           <div className="scroll-images-row__obj">
                             <div className="scroll-images-row__image mxd-clip-image">
                               <img src="/img/dividers/frontend_development.png" alt="" />
                             </div>
                           </div>
                         </div>
-                        <div className="col-12 col-md-3"></div>
                       </div>
                     </div>
                   </div>
@@ -747,16 +745,14 @@ export default function Home() {
                   </div>
                   <div className="scroll-images-row row-04">
                     <div className="container-fluid p-0">
-                      <div className="row g-0">
-                        <div className="col-12 col-md-3"></div>
-                        <div className="col-12 col-md-5 scroll-images-row__item">
+                      <div className="row g-0 justify-content-center">
+                        <div className="col-12 col-md-5 scroll-images-row__item d-flex justify-content-center">
                           <div className="scroll-images-row__obj">
                             <div className="scroll-images-row__image mxd-clip-image">
                               <img src="/img/dividers/system_design_architecture.png" alt="" />
                             </div>
                           </div>
                         </div>
-                        <div className="col-12 col-md-4"></div>
                       </div>
                     </div>
                   </div>
