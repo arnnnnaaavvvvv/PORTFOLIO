@@ -1058,36 +1058,36 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, #1a1c22 0%, #0c0e12 100%);
+  background: linear-gradient(180deg, #1c1e24 0%, #0c0e12 100%);
   color: #ffffff;
-  padding: 8px 22px;
+  padding: 11px 30px;
   border-radius: 9999px;
   width: fit-content;
   margin-bottom: 2.2rem;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1.5px solid rgba(255, 255, 255, 0.16);
   box-shadow: 
-    0 2px 6px rgba(0, 0, 0, 0.1),
-    0 8px 20px rgba(0, 0, 0, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+    0 3px 8px rgba(0, 0, 0, 0.12),
+    0 10px 24px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
   user-select: none;
   cursor: default;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .about-badge-pill:hover {
-  transform: translateY(-1px);
-  border-color: rgba(255, 255, 255, 0.26);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.3);
   box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.16),
-    0 12px 26px rgba(0, 0, 0, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.24);
+    0 6px 16px rgba(0, 0, 0, 0.18),
+    0 16px 32px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
 }
 
 .about-badge-pill .badge-text {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.96rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   line-height: 1;
   text-transform: uppercase;
   color: #ffffff;
@@ -1249,16 +1249,16 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, #1a1c22 0%, #0c0e12 100%);
+  background: linear-gradient(180deg, #1c1e24 0%, #0c0e12 100%);
   color: #ffffff !important;
-  padding: 8px 24px;
+  padding: 11px 32px;
   border-radius: 9999px;
   width: fit-content;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1.5px solid rgba(255, 255, 255, 0.16);
   box-shadow: 
-    0 2px 6px rgba(0, 0, 0, 0.1),
-    0 8px 20px rgba(0, 0, 0, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+    0 3px 8px rgba(0, 0, 0, 0.12),
+    0 10px 24px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
   user-select: none;
   cursor: pointer;
   text-decoration: none !important;
@@ -1266,26 +1266,37 @@ button {
 }
 
 .philosophy-badge-pill:hover {
-  transform: translateY(-1px);
-  border-color: rgba(255, 255, 255, 0.26);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.3);
   box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.16),
-    0 12px 26px rgba(0, 0, 0, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.24);
+    0 6px 16px rgba(0, 0, 0, 0.18),
+    0 16px 32px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
   color: #ffffff !important;
 }
 
 .philosophy-badge-pill .badge-text {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.96rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   line-height: 1;
   text-transform: uppercase;
   color: #ffffff;
 }
 
 @media only screen and (max-width: 768px) {
+  .about-badge-pill,
+  .philosophy-badge-pill {
+    padding: 9px 24px;
+    margin-bottom: 1.8rem;
+  }
+
+  .about-badge-pill .badge-text,
+  .philosophy-badge-pill .badge-text {
+    font-size: 0.88rem;
+    letter-spacing: 0.16em;
+  }
 
   .about-lead-title {
     font-size: clamp(2rem, 7vw, 3rem);
