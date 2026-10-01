@@ -770,13 +770,20 @@ export default function ProjectTechStack({
   theme = "light",
 }: {
   items?: TechItem[];
-  theme?: "light" | "dark";
+  theme?: "light" | "dark" | "emerald";
 }) {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
-  const isDark = theme === "dark";
+  const isEmerald = theme === "emerald";
+  const isDark = theme === "dark" || isEmerald;
+
+  const dockClass = isEmerald
+    ? "project-techstack-dock--emerald"
+    : isDark
+    ? "project-techstack-dock--dark"
+    : "project-techstack-dock--light";
 
   return (
-    <div className={`project-techstack-dock ${isDark ? "project-techstack-dock--dark" : "project-techstack-dock--light"}`}>
+    <div className={`project-techstack-dock ${dockClass}`}>
       {/* Label / Header badge */}
       <div className="project-techstack-header">
         <span className="techstack-dot"></span>
@@ -790,11 +797,20 @@ export default function ProjectTechStack({
           return (
             <div
               key={tech.name}
-              className={`techstack-badge ${isDark ? "techstack-badge--dark" : "techstack-badge--light"}`}
+              className={`techstack-badge ${isEmerald ? "techstack-badge--dark" : isDark ? "techstack-badge--dark" : "techstack-badge--light"}`}
               onMouseEnter={() => setHoveredIdx(idx)}
               onMouseLeave={() => setHoveredIdx(null)}
               style={
-                isDark
+                isEmerald
+                  ? {
+                      backgroundColor: isHovered ? "rgba(16, 185, 129, 0.22)" : "rgba(16, 185, 129, 0.08)",
+                      borderColor: isHovered ? tech.borderColor : "rgba(16, 185, 129, 0.22)",
+                      boxShadow: isHovered
+                        ? `0 6px 20px ${tech.bgColor}, 0 0 14px ${tech.bgColor}`
+                        : "0 2px 6px rgba(0, 0, 0, 0.45)",
+                      transform: isHovered ? "translateY(-3px) scale(1.03)" : "translateY(0) scale(1)",
+                    }
+                  : isDark
                   ? {
                       backgroundColor: isHovered ? "rgba(255, 255, 255, 0.12)" : "rgba(255, 255, 255, 0.05)",
                       borderColor: isHovered ? tech.borderColor : "rgba(255, 255, 255, 0.12)",

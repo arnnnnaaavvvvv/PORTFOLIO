@@ -560,14 +560,14 @@ export default function Home() {
                 </div>
               </div>
               {/*  single card  */}
-              <div className="mxd-stack-cards__card" style={{ backgroundColor: "#050f0b" }}>
-                <div className="card__wrapper" style={{ backgroundColor: "#050f0b" }}>
+              <div className="mxd-stack-cards__card" style={{ backgroundColor: "#0c1411" }}>
+                <div className="card__wrapper" style={{ backgroundColor: "#0c1411" }}>
                   <div className="card__content" style={{ zIndex: 20 }}>
                     <div className="card__descr" style={{ justifyContent: "flex-end", width: "100%", pointerEvents: "none", opacity: 1, transform: "none" }}>
                       <div className="card__btngroup" style={{ marginLeft: "auto", display: "flex", justifyContent: "flex-end", pointerEvents: "auto" }}>
                         <a
                           className="live-demo-box-btn"
-                          href="https://github.com/arnnnnaaavvvvv/SIRUS"
+                          href="https://web-frontend-three-gamma.vercel.app/"
                           target="_blank"
                           rel="noopener noreferrer"
                           title="Open Live Demo"
@@ -585,10 +585,10 @@ export default function Home() {
                   </div>
                   {/* Tech Stack Footer Section */}
                   <div className="card__techstack-wrapper is-revealed" style={{ zIndex: 25, pointerEvents: "auto", opacity: 1, transform: "none" }}>
-                    <ProjectTechStack items={SIRUS_TECH_STACKS} theme="dark" />
+                    <ProjectTechStack items={SIRUS_TECH_STACKS} theme="emerald" />
                   </div>
-                  <div className="card__image" style={{ pointerEvents: "none", backgroundColor: "#050f0b", overflow: "hidden" }}>
-                    <img className="card__media" src="/img/works/showcase-stack/sirus.png" alt="SIRUS - Automated Quantitative Trading" style={{ imageRendering: "-webkit-optimize-contrast", top: "-2px", height: "calc(100% + 4px)", position: "relative", objectFit: "cover" }} />
+                  <div className="card__image" style={{ pointerEvents: "none", backgroundColor: "#0c1411", overflow: "hidden" }}>
+                    <img className="card__media" src="/img/works/showcase-stack/sirus.png?v=3" alt="SIRUS - Automated Quantitative Trading" style={{ imageRendering: "-webkit-optimize-contrast", top: "-2px", height: "calc(100% + 4px)", position: "relative", objectFit: "cover" }} />
                     <div className="card__cover" style={{ backgroundColor: "transparent", pointerEvents: "none" }}></div>
                   </div>
                 </div>
