@@ -1228,13 +1228,15 @@ button {
 }
 
 #services .mxd-dv-sticky-cap__content {
-  max-width: 900px !important;
+  max-width: 720px !important;
   position: relative;
 }
 
 #services .mxd-dv-sticky-cap__text.permanent {
-  font-size: clamp(1.9rem, 2.7vw, 2.9rem) !important;
-  line-height: 1.32 !important;
+  font-size: clamp(1.9rem, 2.7vw, 2.85rem) !important;
+  line-height: 1.68 !important;
+  letter-spacing: -0.01em !important;
+  word-spacing: 0.05em !important;
   color: #222428 !important;
   transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1), text-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: color, text-shadow, filter, transform;
