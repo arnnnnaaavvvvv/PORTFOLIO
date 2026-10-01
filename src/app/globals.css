@@ -1348,55 +1348,67 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, #1c1e24 0%, #0c0e12 100%);
+  background: linear-gradient(180deg, #242831 0%, #0f1115 100%);
   color: #ffffff !important;
-  padding: 11px 32px;
+  padding: 1.6rem 5.2rem;
   border-radius: 9999px;
   width: fit-content;
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
   box-shadow: 
-    0 4px 14px rgba(0, 0, 0, 0.25),
-    0 12px 30px rgba(0, 0, 0, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    0 8px 24px -4px rgba(0, 0, 0, 0.42),
+    0 2px 8px rgba(0, 0, 0, 0.24),
+    inset 0 1px 1px rgba(255, 255, 255, 0.38),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.5);
   user-select: none;
   cursor: pointer;
   text-decoration: none !important;
-  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   z-index: 10;
+  margin-bottom: 0.8rem;
 }
 
 .philosophy-badge-pill:hover {
-  transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.45);
   box-shadow: 
-    0 6px 16px rgba(0, 0, 0, 0.18),
-    0 16px 32px rgba(0, 0, 0, 0.14),
-    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+    0 12px 32px -4px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.12),
+    inset 0 1px 1px rgba(255, 255, 255, 0.5);
   color: #ffffff !important;
 }
 
 .philosophy-badge-pill .badge-text {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.96rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.26em;
   line-height: 1;
   text-transform: uppercase;
   color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  padding-left: 0.26em;
 }
 
 @media only screen and (max-width: 768px) {
-  .about-badge-pill,
-  .philosophy-badge-pill {
+  .about-badge-pill {
     padding: 9px 24px;
     margin-bottom: 1.8rem;
   }
 
-  .about-badge-pill .badge-text,
-  .philosophy-badge-pill .badge-text {
+  .philosophy-badge-pill {
+    padding: 1.25rem 3.6rem;
+  }
+
+  .about-badge-pill .badge-text {
     font-size: 0.88rem;
     letter-spacing: 0.16em;
+  }
+
+  .philosophy-badge-pill .badge-text {
+    font-size: 1.3rem;
+    letter-spacing: 0.22em;
+    padding-left: 0.22em;
   }
 
   .about-lead-title {
