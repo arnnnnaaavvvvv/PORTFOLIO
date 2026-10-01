@@ -2548,7 +2548,7 @@ function mxdDvStickyMedia() {
         });
       });
 
-      titles.forEach(t => gsap.set(t, { autoAlpha: 1, yPercent: 100 }));
+      titles.forEach((t, i) => gsap.set(t, { autoAlpha: (!isFirstBlank && i === 0) ? 1 : 0, yPercent: 100 }));
       gsap.set(numberBlock, { autoAlpha: 0, y: 8 });
       if (btnHolder) gsap.set(btnHolder, { autoAlpha: 0, y: 8 });
       if (progressEl) gsap.set(progressEl, { transformOrigin: "left center", scaleX: 0 });
@@ -2570,7 +2570,7 @@ function mxdDvStickyMedia() {
       if (imagesCount < 2) {
         const tlShort = gsap.timeline();
         tlShort.to(numberBlock, { duration: 0.36, autoAlpha: 1, y: 0 });
-        tlShort.to(titles[0], { duration: 0.36, yPercent: 0 }, "-=0.26");
+        tlShort.to(titles[0], { duration: 0.36, yPercent: 0, autoAlpha: 1 }, "-=0.26");
         if (btnHolder) tlShort.to(btnHolder, { duration: 0.36, autoAlpha: 1, y: 0 }, "-=0.26");
         return;
       }
@@ -2586,7 +2586,7 @@ function mxdDvStickyMedia() {
 
       if (!isFirstBlank) {
         tl.to(numberBlock, { duration: 0.32, autoAlpha: 1, y: 0 }, 0);
-        tl.to(titles[0], { duration: 0.32, yPercent: 0 }, 0.05);
+        tl.to(titles[0], { duration: 0.32, yPercent: 0, autoAlpha: 1 }, 0.05);
         if (btnHolder) tl.to(btnHolder, { duration: 0.32, autoAlpha: 1, y: 0 }, 0.05);
       }
 
@@ -2596,8 +2596,8 @@ function mxdDvStickyMedia() {
           tl.to(numberBlock, { duration: 0.28, autoAlpha: 1, y: 0 }, "-=0.48");
           if (btnHolder) tl.to(btnHolder, { duration: 0.28, autoAlpha: 1, y: 0 }, "<");
         }
-        tl.to(titles[i - 1], { duration: 0.28, yPercent: -100 }, "-=0.48");
-        tl.to(titles[i], { duration: 0.28, yPercent: 0 }, "<");
+        tl.to(titles[i - 1], { duration: 0.28, yPercent: -100, autoAlpha: 0 }, "-=0.48");
+        tl.to(titles[i], { duration: 0.28, yPercent: 0, autoAlpha: 1 }, "<");
       }
 
       const st = ScrollTrigger.create({
