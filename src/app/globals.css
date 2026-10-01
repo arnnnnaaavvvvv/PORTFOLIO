@@ -1289,6 +1289,8 @@ button {
 
 /* 6 Floating 3D Cards — Refined depth shadows */
 #services .scroll-images-row__obj {
+  gap: 0 !important;
+  background: transparent !important;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 
@@ -1296,6 +1298,10 @@ button {
     0 28px 65px -12px rgba(0, 0, 0, 0.16);
   border: 1px solid rgba(255, 255, 255, 0.08);
   transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#services .scroll-images-row__tags {
+  display: none !important;
 }
 
 /* Localized rim glow that follows moving card edge when near text */

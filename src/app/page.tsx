@@ -676,11 +676,9 @@ export default function Home() {
                         </a>
                       </div>
                       <div className="mxd-dv-sticky-cap__caption">
-                        <a className="active-cursor-accent" data-cursor-text="Philosophy" href="#services">
-                          <p className="mxd-dv-sticky-cap__text mxd-split-lines permanent">
-                            I build intelligent, production-ready systems where <span>explainable AI</span> meets <span>clean engineering</span> and considered design, and ship work that <span>solves real problems</span>.
-                          </p>
-                        </a>
+                        <p className="mxd-dv-sticky-cap__text mxd-split-lines permanent">
+                          I build intelligent, production-ready systems where <span>explainable AI</span> meets <span>clean engineering</span> and considered design, and ship work that <span>solves real problems</span>.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -697,9 +695,6 @@ export default function Home() {
                             <div className="scroll-images-row__image mxd-clip-image">
                               <img src="/img/dividers/frontend_development.png" alt="" />
                             </div>
-                            <div className="scroll-images-row__tags">
-                              <span className="tag tag-m tag-medium mxd-scramble">Branding</span>
-                            </div>
                           </div>
                         </div>
                         <div className="col-12 col-md-3"></div>
@@ -714,9 +709,6 @@ export default function Home() {
                             <div className="scroll-images-row__image mxd-clip-image">
                               <img src="/img/dividers/backend_development.png" alt="" />
                             </div>
-                            <div className="scroll-images-row__tags">
-                              <span className="tag tag-m tag-medium mxd-scramble">Illustrations</span>
-                            </div>
                           </div>
                         </div>
                         <div className="col-12 col-md-1"></div>
@@ -724,9 +716,6 @@ export default function Home() {
                           <div className="scroll-images-row__obj">
                             <div className="scroll-images-row__image mxd-clip-image">
                               <img src="/img/dividers/ui_ux_design.png" alt="" />
-                            </div>
-                            <div className="scroll-images-row__tags">
-                              <span className="tag tag-m tag-medium mxd-scramble">Photography</span>
                             </div>
                           </div>
                         </div>
@@ -743,9 +732,6 @@ export default function Home() {
                             <div className="scroll-images-row__image mxd-clip-image">
                               <img src="/img/dividers/authentications.png" alt="" />
                             </div>
-                            <div className="scroll-images-row__tags">
-                              <span className="tag tag-m tag-medium mxd-scramble">Fashion</span>
-                            </div>
                           </div>
                         </div>
                         <div className="col-12 col-md-1"></div>
@@ -753,9 +739,6 @@ export default function Home() {
                           <div className="scroll-images-row__obj">
                             <div className="scroll-images-row__image mxd-clip-image">
                               <img src="/img/dividers/animations.png" alt="" />
-                            </div>
-                            <div className="scroll-images-row__tags">
-                              <span className="tag tag-m tag-medium mxd-scramble">Packaging</span>
                             </div>
                           </div>
                         </div>
@@ -770,9 +753,6 @@ export default function Home() {
                           <div className="scroll-images-row__obj">
                             <div className="scroll-images-row__image mxd-clip-image">
                               <img src="/img/dividers/system_design_architecture.png" alt="" />
-                            </div>
-                            <div className="scroll-images-row__tags">
-                              <span className="tag tag-m tag-medium mxd-scramble">Illustrations</span>
                             </div>
                           </div>
                         </div>
