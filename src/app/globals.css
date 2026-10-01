@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oxanium:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oxanium:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Bebas+Neue&family=Anton&display=swap');
 
 :root {
   /* Design Tokens — Light Mode Only */
@@ -989,4 +989,51 @@ button {
 
 .card__image {
   background-color: inherit !important;
+}
+
+/* ===================================================
+   ABOUT SECTION — "HI, I'M ARNAV" TYPOGRAPHY
+   =================================================== */
+.about-hero-typography {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none !important;
+  user-select: none;
+  padding: 0.5rem 0 0.5rem 0;
+  width: 100%;
+}
+
+.about-hero-lead {
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: clamp(3.2rem, 5.2vw, 6.2rem);
+  line-height: 0.95;
+  color: #1d1d31;
+  letter-spacing: 0.03em;
+  transform: skewX(-9deg);
+  transform-origin: left bottom;
+  display: inline-block;
+  will-change: transform;
+}
+
+.about-hero-name {
+  font-family: 'Bebas Neue', 'Anton', sans-serif;
+  font-size: clamp(6.2rem, 13vw, 15.5rem);
+  line-height: 0.85;
+  color: #2B2B2B !important;
+  letter-spacing: -0.01em;
+  transform: skewX(-9deg);
+  transform-origin: left bottom;
+  display: inline-block;
+  will-change: transform;
+  margin-top: 0.12em;
+}
+
+@media only screen and (max-width: 768px) {
+  .about-hero-lead {
+    font-size: clamp(2.4rem, 8vw, 3.8rem);
+  }
+  .about-hero-name {
+    font-size: clamp(4.6rem, 16vw, 7.8rem);
+  }
 }

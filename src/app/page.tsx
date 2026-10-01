@@ -620,10 +620,10 @@ export default function Home() {
                           </a>
                         </div>
                         <div className="mxd-section-manifest__text manifest-text-m">
-                          <a className="manifest manifest-l mxd-split-lines active-cursor-accent" data-cursor-text="About Us" href="about-us.html">
-                            We are a creative web agency specializing in innovative design and 
-                            cutting-edge development. <span>We help businesses stand out 
-                            and thrive in the modern landscape.</span></a>
+                          <div className="about-hero-typography">
+                            <span className="about-hero-lead">HI, I&apos;M</span>
+                            <span className="about-hero-name">ARNAV</span>
+                          </div>
                         </div>
                       </div>
                     </div>
