@@ -5,6 +5,7 @@ import HeroNameImage from "@/components/HeroNameImage";
 import InteractivePortraitCard from "@/components/InteractivePortraitCard";
 import ProjectTechStack, { CLUDE_TECH_STACKS, IGNITE_TECH_STACKS, SIRUS_TECH_STACKS } from "@/components/ProjectTechStack";
 import PhilosophyInteractiveEffect from "@/components/PhilosophyInteractiveEffect";
+import VisionShowcaseSection from "@/components/VisionShowcaseSection";
 
 export default function Home() {
   return (
@@ -763,41 +764,9 @@ export default function Home() {
             </div>
           </div>
           {/*  Section - Divider Sticky Caption End  */}
-          {/*  Section - Vision & Solutions Showcase Start  */}
-          <div className="mxd-section vision-showcase-section" id="solutions">
-            <div className="vision-container">
-              {/* Avatar with Coral Accent */}
-              <div className="vision-avatar-wrap">
-                <img
-                  src="/img/vision_avatar_ref.png"
-                  alt="Arnav Singh"
-                  className="vision-avatar-img"
-                />
-              </div>
-
-              {/* Tagline */}
-              <p className="vision-tagline">Your Vision. My Expertise.</p>
-
-              {/* Display Headline */}
-              <div className="vision-headline-wrap">
-                <img
-                  src="/img/vision_title_uhd.png"
-                  alt="FULL-STACK DEVELOPMENT & DESIGN SOLUTIONS"
-                  className="vision-headline-img"
-                />
-                <h2 className="sr-only">FULL-STACK DEVELOPMENT &amp; DESIGN SOLUTIONS</h2>
-              </div>
-
-              {/* Scroll Indicator Arrow */}
-              <a href="#divider" className="vision-scroll-arrow" aria-label="Scroll to next section">
-                <svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2V27M12 27L4 19M12 27L20 19" stroke="#16181d" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          {/*  Section - Vision & Solutions Showcase End  */}
         </div>
+        {/*  Vision & Design Solutions Showcase Section (Reference from Image 1)  */}
+        <VisionShowcaseSection />
         <div id="divider">
           {/*  Section - Parallax Divider Image & Title Start  */}
           <div className="mxd-section blur-section">
