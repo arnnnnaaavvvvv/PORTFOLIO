@@ -2,6 +2,7 @@
 import React from "react";
 import Footer from "@/components/Footer";
 import HeroNameImage from "@/components/HeroNameImage";
+import InteractivePortraitCard from "@/components/InteractivePortraitCard";
 import ProjectTechStack, { CLUDE_TECH_STACKS, IGNITE_TECH_STACKS, SIRUS_TECH_STACKS } from "@/components/ProjectTechStack";
 
 export default function Home() {
@@ -658,16 +659,10 @@ export default function Home() {
                           </div>
                         </div>
                         <div className="col-12 col-lg-6 mxd-grid-item">
-                          <div className="about-portrait-card-wrap">
-                            <div className="about-portrait-backing"></div>
-                            <div className="about-portrait-card">
-                              <img src="/img/illustrations/arnav_sketch.webp" alt="Arnav Singh" className="about-portrait-img" />
-                              <div className="about-status-pill">
-                                <span className="about-status-dot"></span>
-                                <span className="about-status-text">OPEN TO WORK</span>
-                              </div>
-                            </div>
-                          </div>
+                          <InteractivePortraitCard
+                            imageSrc="/img/illustrations/arnav_card_interactive.png"
+                            altText="Arnav Singh - Full-Stack AI Engineer"
+                          />
                         </div>
                       </div>
                     </div>

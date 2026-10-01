@@ -1126,98 +1126,61 @@ button {
   font-weight: 600;
 }
 
-/* Portrait Card with Layered Backing and Status Pill */
-.about-portrait-card-wrap {
+/* ===================================================
+   INTERACTIVE PORTRAIT CARD (3D TILT & LIGHTING)
+   =================================================== */
+.interactive-portrait-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem 0 1.5rem 0;
+  perspective: 1200px;
+}
+
+.interactive-portrait-card {
   position: relative;
-  display: inline-block;
+  display: block;
   width: 100%;
   max-width: 440px;
-  margin: 1.5rem auto 1.5rem 2rem;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  will-change: transform;
+  filter: drop-shadow(0 16px 36px rgba(0, 0, 0, 0.12));
+  transition: filter 0.3s ease;
 }
 
-.about-portrait-backing {
-  position: absolute;
-  inset: 0;
-  border-radius: 22px;
-  background-color: #df7e64;
-  border: 1.5px solid rgba(0, 0, 0, 0.18);
-  transform: translate(16px, 16px);
-  z-index: 1;
+.interactive-portrait-card.is-hovered {
+  filter: drop-shadow(0 26px 48px rgba(0, 0, 0, 0.22));
 }
 
-.about-portrait-card {
-  position: relative;
-  z-index: 2;
-  border-radius: 22px;
-  overflow: hidden;
-  background: #fdfcf9;
-  border: 1.5px solid rgba(0, 0, 0, 0.16);
-  box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.12);
-  line-height: 0;
-}
-
-.about-portrait-img {
+.interactive-portrait-img {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-.about-status-pill {
-  position: absolute;
-  bottom: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 7px 18px;
-  background-color: #0d1117;
-  color: #ffffff;
-  border-radius: 9999px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  pointer-events: none;
   user-select: none;
-  white-space: nowrap;
+  -webkit-user-drag: none;
 }
 
-.about-status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #10b981;
-  box-shadow: 0 0 10px #10b981;
-  animation: pulse-dot 2s infinite ease-in-out;
-}
-
-@keyframes pulse-dot {
-
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 0.55;
-    transform: scale(0.85);
-  }
-}
-
-.about-status-text {
-  font-family: var(--font-display), 'Space Grotesk', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: #ffffff;
-  line-height: 1;
+.interactive-portrait-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  pointer-events: none;
+  z-index: 5;
+  transition: opacity 0.25s ease;
+  mix-blend-mode: overlay;
 }
 
 @media only screen and (max-width: 991px) {
-  .about-portrait-card-wrap {
-    margin: 3rem auto 1rem auto;
+  .interactive-portrait-container {
+    padding: 2.5rem 0 1rem 0;
+  }
+
+  .interactive-portrait-card {
     max-width: 380px;
+    margin: 0 auto;
   }
 }
