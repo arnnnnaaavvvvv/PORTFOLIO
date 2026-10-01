@@ -288,6 +288,10 @@ button {
   object-fit: cover !important;
   object-position: center center !important;
   display: block !important;
+  image-rendering: -webkit-optimize-contrast !important;
+  image-rendering: crisp-edges !important;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .hero-mobile-edge-fade {
