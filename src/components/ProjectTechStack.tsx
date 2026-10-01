@@ -567,6 +567,204 @@ export const IGNITE_TECH_STACKS: TechItem[] = [
   },
 ];
 
+export const SIRUS_TECH_STACKS: TechItem[] = [
+  {
+    name: "Next.js",
+    category: "Frontend",
+    color: "#FFFFFF",
+    bgColor: "rgba(255, 255, 255, 0.2)",
+    borderColor: "rgba(255, 255, 255, 0.6)",
+    icon: (
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none">
+        <circle cx="12" cy="12" r="11" fill="#000" stroke="rgba(255, 255, 255, 0.35)" strokeWidth="1.2" />
+        <path d="M14.9 16.5L8.5 8.2V15.8H7.2V7.5H8.7L15.3 16V7.5H16.6V16.5H14.9Z" fill="#FFF" />
+        <path d="M16.6 7.5L12 13.5V14.5L16.6 8.5V7.5Z" fill="url(#nextGSirus)" />
+        <defs>
+          <linearGradient id="nextGSirus" x1="12" y1="7.5" x2="16.6" y2="14.5" gradientUnits="userSpaceOnUse">
+            <stop stopColor="white" />
+            <stop offset="1" stopColor="white" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+      </svg>
+    ),
+  },
+  {
+    name: "TypeScript",
+    category: "Language",
+    color: "#3178C6",
+    bgColor: "rgba(49, 120, 198, 0.12)",
+    borderColor: "rgba(49, 120, 198, 0.35)",
+    icon: (
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none">
+        <rect width="24" height="24" rx="4" fill="#3178C6" />
+        <path d="M11.5 11.2V9.5H5V11.2H7.2V18H9.3V11.2H11.5ZM13.8 15.5C14.2 16.2 14.8 16.5 15.6 16.5C16.4 16.5 16.9 16.2 16.9 15.7C16.9 15.2 16.6 14.9 15.4 14.5C13.8 14 12.8 13.4 12.8 11.8C12.8 10.3 14 9.3 15.8 9.3C17.1 9.3 18.2 9.8 18.8 10.9L17.2 12C16.9 11.5 16.4 11.1 15.7 11.1C15 11.1 14.6 11.4 14.6 11.8C14.6 12.2 14.9 12.4 16.1 12.8C17.9 13.3 18.8 14.1 18.8 15.6C18.8 17.2 17.5 18.2 15.5 18.2C13.9 18.2 12.8 17.4 12.1 16.2L13.8 15.5Z" fill="#FFF" />
+      </svg>
+    ),
+  },
+  {
+    name: "FastAPI",
+    category: "Backend",
+    color: "#009688",
+    bgColor: "rgba(0, 150, 136, 0.12)",
+    borderColor: "rgba(0, 150, 136, 0.35)",
+    icon: (
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none">
+        <circle cx="12" cy="12" r="12" fill="#009688" />
+        <path d="M12.8 3L6 13.2H11.5L10.2 21L18 10.8H12.5L12.8 3Z" fill="#FFF" />
+      </svg>
+    ),
+  },
+  {
+    name: "Python",
+    category: "Core Engine",
+    color: "#3776AB",
+    bgColor: "rgba(55, 118, 171, 0.12)",
+    borderColor: "rgba(55, 118, 171, 0.35)",
+    icon: (
+      <svg viewBox="0 0 24 24" width="17" height="17">
+        <path d="M11.9 2C6.7 2 7 4.3 7 4.3V6.6H12V7.4H5.1C2.9 7.4 2 9.7 2 12.1c0 2.4 1.8 3.5 3.5 3.5H7v-2.3c0-2.3 2-4.3 4.3-4.3h4.6c1.3 0 2.3-1 2.3-2.3V4.3C18.2 2.7 15.6 2 11.9 2zm-2.2 1.8c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1z" fill="#387EB8" />
+        <path d="M12.1 22c5.2 0 4.9-2.3 4.9-2.3v-2.3H12v-.8h6.9c2.2 0 3.1-2.3 3.1-4.7 0-2.4-1.8-3.5-3.5-3.5H17v2.3c0 2.3-2 4.3-4.3 4.3H8.1c-1.3 0-2.3 1-2.3 2.3v2.4C5.8 21.3 8.4 22 12.1 22zm2.2-1.8c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z" fill="#FFE052" />
+      </svg>
+    ),
+  },
+  {
+    name: "TimescaleDB",
+    category: "Time-Series DB",
+    color: "#FDB515",
+    bgColor: "rgba(253, 181, 21, 0.12)",
+    borderColor: "rgba(253, 181, 21, 0.35)",
+    icon: (
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none">
+        <rect width="24" height="24" rx="4" fill="#FDB515" />
+        <circle cx="12" cy="12" r="7" stroke="#1A1A1A" strokeWidth="1.8" />
+        <polyline points="12 8 12 12 15 14" stroke="#1A1A1A" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    name: "PostgreSQL",
+    category: "Database",
+    color: "#336791",
+    bgColor: "rgba(51, 103, 145, 0.12)",
+    borderColor: "rgba(51, 103, 145, 0.35)",
+    icon: (
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none">
+        <circle cx="12" cy="12" r="12" fill="#336791" />
+        <path d="M12 4C8.5 4 6 6.5 6 9.8c0 3.2 1.8 5.4 3.7 6.4v2.8h2.6v-2.2c.6.1 1.1.2 1.7.2 4.2 0 7-3 7-7.2C21 6.5 17 4 12 4zm0 2.2c3.2 0 5 1.8 5 4.8 0 3-1.8 5-4.8 5-.4 0-.8 0-1.2-.1V8.5h-2v5.8c-1.2-.8-2-2.3-2-4.5 0-2.3 1.8-3.6 5-3.6z" fill="#FFF" />
+      </svg>
+    ),
+  },
+  {
+    name: "Redis Streams",
+    category: "Event Bus & MQ",
+    color: "#DC382D",
+    bgColor: "rgba(220, 56, 45, 0.12)",
+    borderColor: "rgba(220, 56, 45, 0.35)",
+    icon: (
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="#DC382D">
+        <path d="M12 2L2 7.2l10 5.2 10-5.2L12 2zm-8.2 7.5v3.9L12 18.2l8.2-4.6V9.7L12 14.3 3.8 9.5zm0 5.4v3.9L12 23l8.2-4.2v-3.9L12 19.3l-8.2-4.4z" />
+      </svg>
+    ),
+  },
+  {
+    name: "Pandas",
+    category: "Data Wrangling",
+    color: "#E70488",
+    bgColor: "rgba(231, 4, 136, 0.12)",
+    borderColor: "rgba(231, 4, 136, 0.35)",
+    icon: (
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none">
+        <rect width="24" height="24" rx="4" fill="#150458" />
+        <rect x="5" y="10" width="3" height="9" rx="1" fill="#E70488" />
+        <rect x="10.5" y="5" width="3" height="14" rx="1" fill="#FFD13B" />
+        <rect x="16" y="8" width="3" height="11" rx="1" fill="#00D2FF" />
+      </svg>
+    ),
+  },
+  {
+    name: "NumPy",
+    category: "Vectorized Math",
+    color: "#4DABCF",
+    bgColor: "rgba(77, 171, 207, 0.12)",
+    borderColor: "rgba(77, 171, 207, 0.35)",
+    icon: (
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none">
+        <rect width="24" height="24" rx="4" fill="#013243" />
+        <path d="M12 4L18 7.5V14.5L12 18L6 14.5V7.5L12 4Z" stroke="#4DABCF" strokeWidth="1.6" />
+        <path d="M12 4V18M6 7.5L18 14.5M18 7.5L6 14.5" stroke="#4DABCF" strokeWidth="1.2" />
+      </svg>
+    ),
+  },
+  {
+    name: "WebSockets",
+    category: "Real-time Protocol",
+    color: "#FACC15",
+    bgColor: "rgba(250, 204, 21, 0.12)",
+    borderColor: "rgba(250, 204, 21, 0.35)",
+    icon: (
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#FACC15" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M7 16l-4-4 4-4" />
+        <path d="M3 12h14" />
+        <path d="M17 8l4 4-4 4" />
+        <path d="M21 12H7" />
+      </svg>
+    ),
+  },
+  {
+    name: "Firebase",
+    category: "Cloud Services",
+    color: "#FFA000",
+    bgColor: "rgba(255, 160, 0, 0.12)",
+    borderColor: "rgba(255, 160, 0, 0.35)",
+    icon: (
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none">
+        <path d="M4.5 17.5L7.2 3.8a.5.5 0 01.9-.2l3.4 6.4L4.5 17.5z" fill="#FFA000" />
+        <path d="M14.2 8.7L12.5 5.5a.5.5 0 00-.9 0L4.5 17.5l9.7-8.8z" fill="#F57C00" />
+        <path d="M19.5 17.5L16.2 11.2a.5.5 0 00-.9 0L4.5 17.5l6.7 4.2a1.8 1.8 0 001.8 0l6.5-4.2z" fill="#FFCA28" />
+      </svg>
+    ),
+  },
+  {
+    name: "Docker",
+    category: "Containers",
+    color: "#2496ED",
+    bgColor: "rgba(36, 150, 237, 0.12)",
+    borderColor: "rgba(36, 150, 237, 0.35)",
+    icon: (
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="#2496ED">
+        <path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.186.185.186m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.186.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.186.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.186.186.186m5.893 2.714h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186H8.1a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186H5.136a.186.186 0 00-.186.185v1.888c0 .102.084.185.186.185m-2.928 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H2.208a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185M23.76 10.87c-.365-.58-1.077-.91-1.78-.835a3.35 3.35 0 00-.79.17 6.14 6.14 0 00-3.687-2.51l-.27-.058-.15.23a4.93 4.93 0 00-.54 1.25H.185A.186.186 0 000 9.31v5.19c0 1.21.36 2.37 1.04 3.37a8.55 8.55 0 005.12 3.65c3.24.84 6.64.44 9.57-1.13a11.16 11.16 0 004.83-5.28c.45-.96.67-1.99.66-3.04.88-.34 1.48-1.08 1.54-1.2" />
+      </svg>
+    ),
+  },
+  {
+    name: "Kubernetes",
+    category: "Orchestration",
+    color: "#326CE5",
+    bgColor: "rgba(50, 108, 229, 0.12)",
+    borderColor: "rgba(50, 108, 229, 0.35)",
+    icon: (
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none">
+        <rect width="24" height="24" rx="4" fill="#326CE5" />
+        <circle cx="12" cy="12" r="3" fill="#FFF" />
+        <path d="M12 4v4m0 8v4m-8-8h4m8 0h4m-2.8-5.7l-2.8 2.8m-5.6 5.6l-2.8 2.8m0-11.2l2.8 2.8m5.6 5.6l2.8 2.8" stroke="#FFF" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    name: "Broker APIs",
+    category: "Execution Gateway",
+    color: "#10B981",
+    bgColor: "rgba(16, 185, 129, 0.12)",
+    borderColor: "rgba(16, 185, 129, 0.35)",
+    icon: (
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none">
+        <rect width="24" height="24" rx="4" fill="#064E3B" />
+        <path d="M7 6v12M7 9h4v6H7zm9-4v14m-1-11h4v7h-4z" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+];
+
 export default function ProjectTechStack({
   items = NEUROSENSE_TECH_STACKS,
   theme = "light",
