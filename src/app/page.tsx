@@ -588,6 +588,88 @@ export default function Home() {
       </div>
       {/*  Section - Progects Stack End  */}
         </div>
+        <div id="about">
+          {/*  Section - Manifest & Split Description Pinned Start  */}
+      <div className="mxd-section blur-section pinned-section padding-top-subtitle padding-bottom-default padding-bottom-tags-mobile">
+        <div className="pinned-section__inner">
+          <div className="mxd-container grid-l-container">
+
+            {/*  Block - Manifest Large Start  */}
+            <div className="mxd-block">
+              <div className="mxd-section-manifest pre-default">
+                <div className="container-fluid p-0">
+                  <div className="row g-0">
+                    <div className="col-12 mxd-grid-item">
+                      <div className="mxd-section-manifest__wrap wrap-text-m">
+                        <div className="mxd-section-manifest__controls anim-uni-in-up">
+                          <a className="btn btn-line btn-line-default" href="#about">
+                            <span className="btn-caption mxd-scramble">Engineering Bio</span>
+                          </a>
+                        </div>
+                        <div className="mxd-section-manifest__text manifest-text-m">
+                          <a className="manifest manifest-l mxd-split-lines active-cursor-accent" data-cursor-text="About Us" href="about-us.html">
+                            We are a creative web agency specializing in innovative design and 
+                            cutting-edge development. <span>We help businesses stand out 
+                            and thrive in the modern landscape.</span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/*  Block - Manifest Large End  */}
+
+            {/*  Block - Split Description Start  */}
+            <div className="mxd-block">
+              <div className="mxd-split-descr pre-manifest-l">
+                <div className="container-fluid p-0">
+                  <div className="row g-0">
+                    <div className="col-12 col-lg-6 mxd-grid-item">
+                      <div className="mxd-split-descr__image">
+                        <img src="/img/illustrations/about04.webp" alt="Azurio Template Example Image" />
+                      </div>
+                    </div>
+                    <div className="col-12 col-lg-6 mxd-grid-item">
+                      <div className="mxd-split-descr__wrap">
+                        <div className="mxd-split-descr__content">
+                          <p className="t-bold t-large mxd-split-lines">From pixel-perfect designs to flawless code, every aspect of our projects is 
+                            crafted with care to ensure the highest standards of quality. <span>We are passionate 
+                            about integrating the latest technologies and trends, including interactive 
+                            animations and mobile-first strategies.
+                            </span>
+                          </p>
+                        </div>
+                        <div className="mxd-split-descr__tags">
+                          <div className="container-fluid p-0">
+                            <div className="row g-0">
+                              <div className="col-12 col-md-6 col-xl-4">
+                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">TypeScript</span>
+                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">Next.js 14</span>
+                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">Python</span>
+                              </div>
+                              <div className="col-12 col-md-6 col-xl-4">
+                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">Docker / K8s</span>
+                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">FastAPI</span>
+                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">PyTorch / LLMs</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/*  Block - Split Description End  */}
+
+          </div>
+          <div className="pinned-section__trigger"></div>
+        </div>
+      </div>
+      {/*  Section - Manifest & Split Description Pinned End  */}
+        </div>
         <div id="services">
           {/*  Section - Divider Sticky Caption Start  */}
       <div className="mxd-section blur-section">
@@ -783,88 +865,6 @@ export default function Home() {
 
       </div>
       {/*  Divider - Sticky Images End  */}
-        </div>
-        <div id="about">
-          {/*  Section - Manifest & Split Description Pinned Start  */}
-      <div className="mxd-section blur-section pinned-section padding-top-subtitle padding-bottom-default padding-bottom-tags-mobile">
-        <div className="pinned-section__inner">
-          <div className="mxd-container grid-l-container">
-
-            {/*  Block - Manifest Large Start  */}
-            <div className="mxd-block">
-              <div className="mxd-section-manifest pre-default">
-                <div className="container-fluid p-0">
-                  <div className="row g-0">
-                    <div className="col-12 mxd-grid-item">
-                      <div className="mxd-section-manifest__wrap wrap-text-m">
-                        <div className="mxd-section-manifest__controls anim-uni-in-up">
-                          <a className="btn btn-line btn-line-default" href="#about">
-                            <span className="btn-caption mxd-scramble">Engineering Bio</span>
-                          </a>
-                        </div>
-                        <div className="mxd-section-manifest__text manifest-text-m">
-                          <a className="manifest manifest-l mxd-split-lines active-cursor-accent" data-cursor-text="About Us" href="about-us.html">
-                            We are a creative web agency specializing in innovative design and 
-                            cutting-edge development. <span>We help businesses stand out 
-                            and thrive in the modern landscape.</span></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*  Block - Manifest Large End  */}
-
-            {/*  Block - Split Description Start  */}
-            <div className="mxd-block">
-              <div className="mxd-split-descr pre-manifest-l">
-                <div className="container-fluid p-0">
-                  <div className="row g-0">
-                    <div className="col-12 col-lg-6 mxd-grid-item">
-                      <div className="mxd-split-descr__image">
-                        <img src="/img/illustrations/about04.webp" alt="Azurio Template Example Image" />
-                      </div>
-                    </div>
-                    <div className="col-12 col-lg-6 mxd-grid-item">
-                      <div className="mxd-split-descr__wrap">
-                        <div className="mxd-split-descr__content">
-                          <p className="t-bold t-large mxd-split-lines">From pixel-perfect designs to flawless code, every aspect of our projects is 
-                            crafted with care to ensure the highest standards of quality. <span>We are passionate 
-                            about integrating the latest technologies and trends, including interactive 
-                            animations and mobile-first strategies.
-                            </span>
-                          </p>
-                        </div>
-                        <div className="mxd-split-descr__tags">
-                          <div className="container-fluid p-0">
-                            <div className="row g-0">
-                              <div className="col-12 col-md-6 col-xl-4">
-                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">TypeScript</span>
-                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">Next.js 14</span>
-                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">Python</span>
-                              </div>
-                              <div className="col-12 col-md-6 col-xl-4">
-                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">Docker / K8s</span>
-                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">FastAPI</span>
-                                <span className="tag meta-tag tag-m mxd-scramble anim-uni-in-up">PyTorch / LLMs</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*  Block - Split Description End  */}
-
-          </div>
-          <div className="pinned-section__trigger"></div>
-        </div>
-      </div>
-      {/*  Section - Manifest & Split Description Pinned End  */}
         </div>
         <div id="divider">
           {/*  Section - Parallax Divider Image & Title Start  */}
