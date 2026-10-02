@@ -605,9 +605,9 @@ export default function Home() {
           </div>
           {/*  Section - Progects Stack End  */}
         </div>
-        <div id="about" className="about-section-wrapper" style={{ backgroundColor: "#edf1e9" }}>
+        <div id="about" className="about-section-wrapper" style={{ backgroundColor: "#faf7f0" }}>
           {/*  Section - About Me Start  */}
-          <div className="mxd-section blur-section about-section-content" style={{ backgroundColor: "#edf1e9" }}>
+          <div className="mxd-section blur-section about-section-content" style={{ backgroundColor: "#faf7f0" }}>
             <div className="mxd-container grid-l-container">
               <div className="container-fluid p-0">
                 <div className="row g-0 align-items-center about-two-column-row">

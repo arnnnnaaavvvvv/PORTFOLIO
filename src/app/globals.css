@@ -2,9 +2,9 @@
 
 :root {
   /* Design Tokens — Light Mode Only */
-  --base: #edf1e9;
-  --base--light: #edf1e9;
-  --bg-primary: #edf1e9;
+  --base: #faf7f0;
+  --base--light: #faf7f0;
+  --bg-primary: #faf7f0;
   --bg-secondary: #e4e9df;
   --border-hairline: rgba(0, 0, 0, 0.08);
   --border-active: rgba(0, 0, 0, 0.2);
@@ -1031,13 +1031,13 @@ button {
    ABOUT SECTION — BEIGE BACKGROUND & ULTRA-PREMIUM ALIGNMENT
    =================================================== */
 #about {
-  background-color: #edf1e9 !important;
+  background-color: #faf7f0 !important;
   position: relative;
   width: 100%;
 }
 
 .about-section-content {
-  background-color: #edf1e9 !important;
+  background-color: #faf7f0 !important;
   padding: 5rem 0 2rem 0;
 }
 
@@ -1210,18 +1210,18 @@ button {
    SERVICES SECTION — SEAMLESS TRANSITION FROM ABOUT
    =================================================== */
 #services {
-  background-color: #edf1e9 !important;
+  background-color: #faf7f0 !important;
   position: relative;
   width: 100%;
 }
 
 #services .mxd-section {
   padding-top: 0 !important;
-  background-color: #edf1e9 !important;
+  background-color: #faf7f0 !important;
 }
 
 #services .mxd-dv-sticky-cap {
-  background-color: #edf1e9 !important;
+  background-color: #faf7f0 !important;
 }
 
 #services .mxd-dv-sticky-cap__static {
@@ -1504,7 +1504,7 @@ button {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: #edf1e9 !important;
+  background-color: #faf7f0 !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1697,7 +1697,7 @@ button {
    Sticky Divider Slider — Slide 1 Beige Vision Integration
    ========================================================================== */
 .vision-slide-beige-container {
-  background-color: #edf1e9 !important;
+  background-color: #faf7f0 !important;
   width: 100% !important;
   height: 100% !important;
   display: flex !important;
@@ -1766,8 +1766,8 @@ button {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #edf1e9;
-  background-image: radial-gradient(ellipse 95% 75% at 50% 35%, #faf7f0 0%, #edf1e9 85%);
+  background-color: #faf7f0;
+  background-image: radial-gradient(ellipse 95% 75% at 50% 35%, #faf7f0 0%, #faf7f0 85%);
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
@@ -2128,8 +2128,8 @@ button {
 .core-competencies-slide-container {
   width: 100% !important;
   height: 100% !important;
-  background-color: #e5d7cb !important;
-  background-image: radial-gradient(ellipse 90% 85% at 50% 50%, #fef6eb 0%, #ecd9cc 70%, #dfcdbf 100%) !important;
+  background-color: #faf7f0 !important;
+  background-image: radial-gradient(ellipse 95% 85% at 50% 50%, #faf7f0 0%, #faf7f0 100%) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
