@@ -2836,20 +2836,20 @@ button {
    =================================================== */
 .achievement-card-container {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   background-color: #faf7f0 !important;
 }
 
 .achievement-card {
   width: 100%;
   background-color: #faf7f0 !important;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 24px;
-  padding: 38px 44px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 26px;
+  padding: 46px 52px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 44px;
+  gap: 52px;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   position: relative;
@@ -2857,13 +2857,13 @@ button {
 }
 
 .achievement-card:hover {
-  border-color: rgba(0, 0, 0, 0.22);
-  box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.09);
 }
 
 .achievement-cert-col {
-  flex: 0 0 380px;
-  max-width: 420px;
+  flex: 0 0 460px;
+  max-width: 490px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2880,15 +2880,15 @@ button {
   width: 100%;
   border-radius: 14px;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.09);
   background: #ffffff;
   transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease;
 }
 
 .achievement-cert-frame:hover {
   transform: scale(1.025);
-  box-shadow: 0 12px 32px -6px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 14px 36px -6px rgba(0, 0, 0, 0.16);
 }
 
 .achievement-cert-img {
@@ -2906,70 +2906,54 @@ button {
   min-width: 0;
 }
 
-.achievement-meta-row {
+.achievement-header-row {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  justify-content: flex-end;
   width: 100%;
-  margin-bottom: 0.6rem;
-}
-
-.achievement-label {
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #71717a;
-  white-space: nowrap;
-}
-
-.achievement-divider-line {
-  flex: 1;
-  height: 1px;
-  background: rgba(0, 0, 0, 0.12);
+  margin-bottom: 0.35rem;
 }
 
 .achievement-year-badge {
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 3px 14px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 4px 18px;
+  border: 1.5px solid rgba(0, 0, 0, 0.22);
   border-radius: 9999px;
-  color: #18181b;
+  color: #111113;
   background: transparent;
   letter-spacing: 0.04em;
   white-space: nowrap;
 }
 
 .achievement-title {
-  font-size: clamp(1.9rem, 3.2vw, 2.5rem);
+  font-size: clamp(2.3rem, 3.8vw, 3.2rem);
   font-weight: 800;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
-  color: #111113;
-  margin-top: 0.6rem;
-  margin-bottom: 0.35rem;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  color: #09090b;
+  margin-top: 0.2rem;
+  margin-bottom: 0.45rem;
   font-family: inherit;
 }
 
 .achievement-subtitle {
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: #52525b;
-  margin-bottom: 1.2rem;
-  line-height: 1.4;
+  font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+  font-weight: 600;
+  color: #27272a;
+  margin-bottom: 1.4rem;
+  line-height: 1.45;
 }
 
 .achievement-desc {
-  font-size: 0.98rem;
-  line-height: 1.68;
-  color: #52525b;
-  margin-bottom: 1.8rem;
+  font-size: clamp(1.04rem, 1.25vw, 1.18rem);
+  line-height: 1.76;
+  color: #3f3f46;
+  margin-bottom: 2.2rem;
 }
 
 .achievement-desc strong {
-  font-weight: 600;
-  color: #111113;
+  font-weight: 700;
+  color: #09090b;
 }
 
 .achievement-footer-row {
@@ -2978,21 +2962,13 @@ button {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1.5rem;
-  padding-top: 1.4rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 1.6rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .achievement-team-info {
   display: flex;
   align-items: center;
-  gap: 14px;
-}
-
-.achievement-team-icon {
-  color: #18181b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .achievement-team-text {
@@ -3001,31 +2977,32 @@ button {
 }
 
 .achievement-team-name {
-  font-size: 0.82rem;
-  font-weight: 700;
+  font-size: 0.96rem;
+  font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #18181b;
+  color: #09090b;
 }
 
 .achievement-team-org {
-  font-size: 0.82rem;
-  color: #71717a;
-  margin-top: 2px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #52525b;
+  margin-top: 4px;
 }
 
 .achievement-action-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  border: 1.5px solid #18181b;
+  gap: 9px;
+  border: 1.8px solid #09090b;
   border-radius: 9999px;
-  padding: 11px 24px;
-  font-size: 0.78rem;
-  font-weight: 600;
+  padding: 13px 28px;
+  font-size: 0.84rem;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #18181b;
+  color: #09090b;
   background: transparent;
   text-decoration: none;
   transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -3034,14 +3011,14 @@ button {
 }
 
 .achievement-action-btn:hover {
-  background: #18181b;
+  background: #09090b;
   color: #faf7f0;
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
 }
 
 .achievement-btn-arrow {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   transition: transform 0.25s ease;
 }
 
@@ -3052,8 +3029,8 @@ button {
 @media (max-width: 991px) {
   .achievement-card {
     flex-direction: column;
-    padding: 26px 20px;
-    gap: 28px;
+    padding: 30px 22px;
+    gap: 30px;
     align-items: stretch;
   }
 
@@ -3062,27 +3039,23 @@ button {
     max-width: 100%;
   }
 
-  .achievement-meta-row {
-    margin-bottom: 0.4rem;
-  }
-
   .achievement-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .achievement-subtitle {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
   }
 
   .achievement-desc {
-    font-size: 0.92rem;
-    margin-bottom: 1.4rem;
+    font-size: 1rem;
+    margin-bottom: 1.6rem;
   }
 
   .achievement-footer-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.2rem;
+    gap: 1.4rem;
   }
 
   .achievement-action-btn {

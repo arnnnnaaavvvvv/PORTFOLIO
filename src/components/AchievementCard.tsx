@@ -7,11 +7,11 @@ export default function AchievementCard() {
         {/* Certificate Preview Left Column */}
         <div className="achievement-cert-col">
           <a
-            href="/img/achievements/ieee-idea2impact-cert.png"
+            href="/img/achievements/ieee-idea2impact-cert.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="achievement-cert-link"
-            title="Click to view full certificate"
+            title="Click to view full ultra-HD certificate"
           >
             <div className="achievement-cert-frame">
               <img
@@ -25,10 +25,8 @@ export default function AchievementCard() {
 
         {/* Details Right Column */}
         <div className="achievement-info-col">
-          {/* Top meta row */}
-          <div className="achievement-meta-row">
-            <span className="achievement-label">ACHIEVEMENT</span>
-            <span className="achievement-divider-line" />
+          {/* Header row with 2026 badge */}
+          <div className="achievement-header-row">
             <span className="achievement-year-badge">2026</span>
           </div>
 
@@ -50,23 +48,6 @@ export default function AchievementCard() {
           {/* Bottom row: Team info & View button */}
           <div className="achievement-footer-row">
             <div className="achievement-team-info">
-              <div className="achievement-team-icon">
-                <svg
-                  width="26"
-                  height="26"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              </div>
               <div className="achievement-team-text">
                 <span className="achievement-team-name">TEAM DIGITAL DESTROYER</span>
                 <span className="achievement-team-org">
@@ -76,7 +57,7 @@ export default function AchievementCard() {
             </div>
 
             <a
-              href="/img/achievements/ieee-idea2impact-cert.png"
+              href="/img/achievements/ieee-idea2impact-cert.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="achievement-action-btn"
