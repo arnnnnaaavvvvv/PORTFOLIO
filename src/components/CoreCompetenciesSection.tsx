@@ -269,6 +269,31 @@ const COMPETENCY_CARDS: CompetencyCardData[] = [
 ];
 
 export default function CoreCompetenciesSection() {
+  const [activeTab, setActiveTab] = React.useState(0);
+  const [touchStartX, setTouchStartX] = React.useState<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX === null) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) {
+        // Swipe left -> next card
+        setActiveTab((prev) => (prev + 1) % COMPETENCY_CARDS.length);
+      } else {
+        // Swipe right -> prev card
+        setActiveTab((prev) => (prev - 1 + COMPETENCY_CARDS.length) % COMPETENCY_CARDS.length);
+      }
+    }
+    setTouchStartX(null);
+  };
+
+  const activeCard = COMPETENCY_CARDS[activeTab];
+
   return (
     <div className="competencies-showcase-wrapper" id="competencies">
       {/* Decorative silky warm champagne wave ribbons on sides matching theme */}
@@ -329,8 +354,112 @@ export default function CoreCompetenciesSection() {
           </div>
         </div>
 
-        {/* 2x2 Competencies Grid */}
-        <div className="competencies-grid">
+        {/* Mobile Tab Selector (Visible only on mobile <= 900px) */}
+        <div className="competencies-mobile-tabs" role="tablist" aria-label="Competency Domains">
+          {COMPETENCY_CARDS.map((card, idx) => (
+            <button
+              key={card.number}
+              type="button"
+              role="tab"
+              aria-selected={activeTab === idx}
+              onClick={() => setActiveTab(idx)}
+              className={`competencies-mobile-tab-btn ${activeTab === idx ? "is-active" : ""}`}
+            >
+              <span className="mobile-tab-num">{card.number}</span>
+              <span className="mobile-tab-label">
+                {idx === 0 ? "Systems" : idx === 1 ? "AI & ML" : idx === 2 ? "Geospatial" : "Infra"}
+              </span>
+            </button>
+          ))}
+        </div>
+
+        {/* Mobile Single Card View (Swipeable, visible only on <= 900px) */}
+        <div
+          className="competencies-mobile-card-wrapper"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          <div className={`competency-card ${activeCard.cardClass} competency-card--mobile`}>
+            {/* Card Header */}
+            <div className="competency-card-header">
+              <div className="competency-card-header-left">
+                <div className="competency-card-tag-row">
+                  <span className="competency-number-pill">{activeCard.number} / 04</span>
+                </div>
+                <div className="competency-title-group">
+                  <div className={`competency-icon-badge ${activeCard.iconBadgeClass}`}>
+                    {activeCard.headerIcon}
+                  </div>
+                  <div className="competency-title-text-wrap">
+                    <h3 className="competency-card-title">{activeCard.title}</h3>
+                    <p className="competency-card-subtitle">{activeCard.subtitle}</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* 3D Graphic */}
+              <div className="competency-card-illustration-wrap">
+                <img
+                  src={activeCard.illustrationSrc}
+                  alt={activeCard.illustrationAlt}
+                  className="competency-card-illustration-img"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            {/* Card Body - 4 Feature Rows */}
+            <div className="competency-items-list">
+              {activeCard.items.map((item, idx) => (
+                <div key={idx} className="competency-item-row">
+                  <div className="competency-item-icon-box">{item.icon}</div>
+                  <div className="competency-item-text">
+                    <span className="competency-item-label">{item.label}:</span>{" "}
+                    <span className="competency-item-detail">{item.detail}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile Carousel Indicators & Controls */}
+          <div className="competencies-mobile-controls">
+            <button
+              type="button"
+              className="competencies-mobile-arrow"
+              onClick={() => setActiveTab((prev) => (prev - 1 + COMPETENCY_CARDS.length) % COMPETENCY_CARDS.length)}
+              aria-label="Previous Competency"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+            </button>
+            <div className="competencies-mobile-dots">
+              {COMPETENCY_CARDS.map((_, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => setActiveTab(idx)}
+                  className={`competencies-dot ${activeTab === idx ? "is-active" : ""}`}
+                  aria-label={`Jump to Competency ${idx + 1}`}
+                />
+              ))}
+            </div>
+            <button
+              type="button"
+              className="competencies-mobile-arrow"
+              onClick={() => setActiveTab((prev) => (prev + 1) % COMPETENCY_CARDS.length)}
+              aria-label="Next Competency"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Desktop 2x2 Competencies Grid (Visible only on > 900px) */}
+        <div className="competencies-grid competencies-grid--desktop">
           {COMPETENCY_CARDS.map((card) => (
             <div key={card.number} className={`competency-card ${card.cardClass}`}>
               {/* Card Header */}
