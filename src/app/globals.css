@@ -2588,197 +2588,40 @@ button {
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
-.contact-capsule-wrapper {
-  width: 100%;
-  max-width: 860px;
-  margin: 0.8rem 0 1.2rem 0;
-}
-
-.contact-luxury-capsule-btn {
-  position: relative;
-  display: flex;
+.contact-touch-btn {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  border-radius: 9999px;
-  padding: clamp(0.9rem, 1.8vw, 1.35rem) clamp(1.6rem, 3.2vw, 2.8rem) clamp(0.9rem, 1.8vw, 1.35rem) clamp(1.2rem, 2.4vw, 2.2rem);
-  background: radial-gradient(ellipse 95% 140% at 20% 50%, rgba(220, 160, 90, 0.18) 0%, rgba(24, 21, 18, 0.88) 45%, rgba(12, 11, 10, 0.98) 100%);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1.5px solid rgba(245, 205, 155, 0.38);
-  box-shadow: 0 0 35px rgba(220, 150, 70, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.35), inset 0 0 25px rgba(220, 150, 70, 0.08), 0 20px 50px rgba(0, 0, 0, 0.65);
-  text-decoration: none !important;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.contact-luxury-capsule-btn::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 8%;
-  right: 8%;
-  height: 1.5px;
-  background: radial-gradient(ellipse at center, rgba(245, 210, 165, 0.75) 0%, rgba(245, 205, 155, 0) 80%);
-  pointer-events: none;
-}
-
-.contact-luxury-capsule-btn:hover {
-  border-color: rgba(255, 220, 175, 0.75);
-  box-shadow: 0 0 60px rgba(230, 165, 80, 0.28), inset 0 1px 3px rgba(255, 255, 255, 0.55), inset 0 0 35px rgba(220, 150, 70, 0.15), 0 25px 60px rgba(0, 0, 0, 0.85);
-  transform: translateY(-4px);
-}
-
-.capsule-icon-wrap {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: clamp(105px, 12vw, 155px);
-  height: clamp(105px, 12vw, 155px);
-  flex-shrink: 0;
-  margin-right: clamp(1.2rem, 2.5vw, 2.5rem);
-}
-
-.capsule-coffee-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  mix-blend-mode: screen;
-  filter: drop-shadow(0 0 18px rgba(240, 180, 100, 0.45));
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  user-select: none;
-  pointer-events: none;
-}
-
-.contact-luxury-capsule-btn:hover .capsule-coffee-img {
-  transform: scale(1.08) rotate(-4deg);
-}
-
-.capsule-sparkle {
-  position: absolute;
-  color: #ffd899;
-  font-size: 1.35rem;
-  line-height: 1;
-  user-select: none;
-  pointer-events: none;
-  filter: drop-shadow(0 0 6px #ffd899);
-}
-
-.sparkle-top {
-  top: 15%;
-  left: 2%;
-  animation: sparkleFloat 3s ease-in-out infinite;
-}
-
-.sparkle-bottom {
-  bottom: 12%;
-  left: 8%;
-  animation: sparkleFloat 3s ease-in-out infinite 1.5s;
-}
-
-@keyframes sparkleFloat {
-  0%, 100% {
-    opacity: 0.65;
-    transform: scale(0.9) rotate(0deg);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.15) rotate(15deg);
-  }
-}
-
-.capsule-text-col {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  flex: 1;
-  min-width: 0;
-}
-
-.capsule-pre-label {
+  gap: 0.85rem;
+  background-color: #ffffff !important;
+  color: #080809 !important;
   font-family: var(--font-body, 'Inter', sans-serif);
-  font-size: clamp(0.95rem, 1.15vw, 1.25rem);
-  font-weight: 600;
-  letter-spacing: 0.16em;
+  font-size: 0.98rem;
+  font-weight: 750;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(255, 235, 215, 0.75);
-  margin-bottom: 0.35rem;
-  line-height: 1.2;
+  padding: 1.05rem 2.6rem;
+  border-radius: 9999px;
+  border: 1px solid #ffffff;
+  text-decoration: none !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.45);
 }
 
-.capsule-main-title {
-  font-family: var(--font-display, 'Space Grotesk', -apple-system, sans-serif);
-  font-size: clamp(2.4rem, 4.4vw, 4.4rem);
-  font-weight: 850;
-  letter-spacing: -0.015em;
-  line-height: 1.05;
-  text-transform: uppercase;
-  color: #ffffff;
-  display: inline-block;
-  background: linear-gradient(180deg, #ffffff 30%, #f6dfc0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  margin: 0;
+.contact-touch-btn:hover {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
 }
 
-.capsule-action-circle {
-  width: clamp(65px, 6.5vw, 90px);
-  height: clamp(65px, 6.5vw, 90px);
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, rgba(60, 50, 40, 0.9) 0%, rgba(18, 16, 14, 0.98) 100%);
-  border: 1.5px solid rgba(245, 205, 155, 0.45);
-  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.22), 0 8px 25px rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-left: clamp(1rem, 2vw, 2.5rem);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.contact-luxury-capsule-btn:hover .capsule-action-circle {
-  background: radial-gradient(circle at 35% 35%, rgba(95, 80, 60, 0.95) 0%, rgba(25, 22, 18, 1) 100%);
-  border-color: rgba(255, 225, 185, 0.85);
-  box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.45), 0 0 30px rgba(230, 160, 75, 0.45);
-  transform: scale(1.06);
-}
-
-.capsule-arrow-icon {
-  font-size: clamp(2rem, 2.4vw, 3rem);
-  color: #ffffff;
+.contact-touch-arrow {
+  font-size: 1.25rem;
   line-height: 1;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.2s ease;
 }
 
-.contact-luxury-capsule-btn:hover .capsule-arrow-icon {
-  transform: translateX(6px);
-}
-
-@media only screen and (max-width: 768px) {
-  .contact-luxury-capsule-btn {
-    border-radius: 35px;
-    padding: 1rem 1.4rem;
-  }
-
-  .capsule-icon-wrap {
-    width: 80px;
-    height: 80px;
-    margin-right: 0.8rem;
-  }
-
-  .capsule-action-circle {
-    width: 50px;
-    height: 50px;
-    margin-left: 0.8rem;
-  }
-
-  .capsule-arrow-icon {
-    font-size: 1.6rem;
-  }
+.contact-touch-btn:hover .contact-touch-arrow {
+  transform: translateX(5px);
 }
 
 .contact-name-centerpiece {

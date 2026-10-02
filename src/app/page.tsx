@@ -872,8 +872,7 @@ export default function Home() {
                               </a>
                             </div>
                             <div className="mxd-section-title__caption pre-controls">
-                              <p className="t-bold t-large mxd-split-lines">Inspiring ideas, creative insights, and the latest in
-                                design and tech. <span>Fueling innovation for your digital journey.</span></p>
+                              <p className="t-bold t-large mxd-split-lines">A snapshot of the milestones, challenges, and <span>recognition earned along the way.</span></p>
                             </div>
                           </div>
                         </div>
