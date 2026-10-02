@@ -2634,6 +2634,9 @@ function mxdDvStickyMedia() {
           counterCurrent.textContent = formatIndex(
             Math.min(imagesCount, idx + 1)
           );
+          overflows.forEach((ovf, i) => {
+            ovf.style.pointerEvents = (i === idx) ? "auto" : "none";
+          });
         }
       });
 

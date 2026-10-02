@@ -6,6 +6,7 @@ import InteractivePortraitCard from "@/components/InteractivePortraitCard";
 import ProjectTechStack, { CLUDE_TECH_STACKS, IGNITE_TECH_STACKS, SIRUS_TECH_STACKS } from "@/components/ProjectTechStack";
 import PhilosophyInteractiveEffect from "@/components/PhilosophyInteractiveEffect";
 import VisionAvatarCard from "@/components/VisionAvatarCard";
+import TechStackSkillsSection from "@/components/TechStackSkillsSection";
 
 export default function Home() {
   return (
@@ -795,9 +796,11 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  {/*  Page 2: Clean Beige Transition (No Image, No Text)  */}
+                  {/*  Page 2: Interactive Tech Stack Skills Section  */}
                   <div className="images__listitem">
-                    <div className="images__overflow vision-slide-beige-container"></div>
+                    <div className="images__overflow vision-slide-beige-container">
+                      <TechStackSkillsSection />
+                    </div>
                   </div>
                   {/*  Page 3: Development (Restored)  */}
                   <div className="images__listitem">
