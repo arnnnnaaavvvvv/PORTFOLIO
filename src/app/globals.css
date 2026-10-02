@@ -419,6 +419,16 @@ body.menu-open .hero-menu-pill:hover {
   transform: scale(1.05) !important;
 }
 
+/* Navigation Menu Links */
+a.main-menu__toggle {
+  text-decoration: none !important;
+  color: inherit !important;
+  display: flex !important;
+  width: 100% !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
 /* Rebuilt 3-Column Footer */
 .portfolio-footer {
   width: 100% !important;

@@ -699,9 +699,28 @@ function mxdMenu(lenisInstance) {
     }
   });
 
-  // Close when clicking any link inside menu
+  // Close and navigate smoothly when clicking any link inside menu
   document.querySelectorAll(".mxd-menu a").forEach(link => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
+      if (href && href.startsWith("#")) {
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          if (isMenuOpen) {
+            menuToggleBtn?.click();
+          }
+          lenisInstance?.start();
+          setTimeout(() => {
+            if (lenisInstance) {
+              lenisInstance.scrollTo(target, { duration: 1.2, offset: 0 });
+            } else {
+              target.scrollIntoView({ behavior: "smooth" });
+            }
+          }, 80);
+          return;
+        }
+      }
       if (isMenuOpen) {
         menuToggleBtn?.click();
       }
@@ -3153,7 +3172,8 @@ $(function() {
   Accordion.prototype.dropdown = function(e) {
     var $el = e.data.el;
         $this = $(this),
-        $next = $this.next();
+        $next = $this.next('.submenu');
+    if (!$next.length) return;
     $next.slideToggle();
     $this.parent().toggleClass('open');
     if (!e.data.multiple) {

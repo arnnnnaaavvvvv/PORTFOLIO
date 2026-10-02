@@ -79,160 +79,68 @@ export default function Home() {
                   <div className="main-menu">
                     <div className="main-menu__content">
                       <ul id="main-menu" className="main-menu__accordion">
+                        {/* 01 Home */}
                         <li className="main-menu__item">
                           <div className="main-menu__divider divider-top"></div>
-                          <div className="main-menu__toggle">
-                            <p className="main-menu__link">
+                          <a className="main-menu__toggle" href="#hero">
+                            <div className="main-menu__link">
                               <span className="main-menu__number">/ 01</span>
                               <span className="main-menu__caption">Home</span>
-                            </p>
+                            </div>
                             <div className="main-menu__arrow">
                               <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
                                 <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
                               </svg>
                             </div>
-                          </div>
-                          <ul className="submenu">
-                            <li className="submenu__item active">
-                              <a href="#hero">Branding studio</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="index-software-development-company.html">Software development company</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="index-creative-agency.html">Creative agency</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="index-freelancer-portfolio.html">Freelancer portfolio</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="index-design-studio.html">Design studio</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="index-web-developer.html">Web Developer</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="index-personal-portfolio.html">Personal portfolio</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="index-digital-agency.html">Digital agency</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="index-web-studio.html">Web Studio</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="index-digital-designer.html">Digital designer</a>
-                            </li>
-                          </ul>
+                          </a>
                           <div className="main-menu__divider divider-bottom"></div>
                         </li>
+
+                        {/* 02 Projects */}
                         <li className="main-menu__item">
-                          {/*  <div className="main-menu__divider divider-top"></div>  */}
-                          <div className="main-menu__toggle">
-                            <p className="main-menu__link">
+                          <a className="main-menu__toggle" href="#projects">
+                            <div className="main-menu__link">
                               <span className="main-menu__number">/ 02</span>
-                              <span className="main-menu__caption">Works</span>
-                            </p>
+                              <span className="main-menu__caption">Projects</span>
+                            </div>
                             <div className="main-menu__arrow">
                               <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
                                 <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
                               </svg>
                             </div>
-                          </div>
-                          <ul className="submenu">
-                            <li className="submenu__item">
-                              <a href="#works">Works default</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="#works">Works grid</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="#works">Works grid sticky</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="#works">Project details</a>
-                            </li>
-                          </ul>
+                          </a>
                           <div className="main-menu__divider divider-bottom"></div>
                         </li>
+
+                        {/* 03 Achievements */}
                         <li className="main-menu__item">
-                          {/*  <div className="main-menu__divider divider-top"></div>  */}
-                          <div className="main-menu__toggle">
-                            <p className="main-menu__link">
+                          <a className="main-menu__toggle" href="#achievements">
+                            <div className="main-menu__link">
                               <span className="main-menu__number">/ 03</span>
-                              <span className="main-menu__caption">Pages</span>
-                            </p>
+                              <span className="main-menu__caption">Achievements</span>
+                            </div>
                             <div className="main-menu__arrow">
                               <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
                                 <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
                               </svg>
                             </div>
-                          </div>
-                          <ul className="submenu">
-                            <li className="submenu__item">
-                              <a href="#about">About me</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="#about">About us</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="#services">Services</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="team.html">Our team</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="pricing.html">Pricing</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="faq.html">FAQ page</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="404.html">404 error page</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="index.html">Landing page</a>
-                            </li>
-                          </ul>
+                          </a>
                           <div className="main-menu__divider divider-bottom"></div>
                         </li>
+
+                        {/* 04 Contact */}
                         <li className="main-menu__item">
-                          {/*  <div className="main-menu__divider divider-top"></div>  */}
-                          <div className="main-menu__toggle">
-                            <p className="main-menu__link">
+                          <a className="main-menu__toggle" href="#contact">
+                            <div className="main-menu__link">
                               <span className="main-menu__number">/ 04</span>
-                              <span className="main-menu__caption">Insights</span>
-                            </p>
+                              <span className="main-menu__caption">Contact</span>
+                            </div>
                             <div className="main-menu__arrow">
                               <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
                                 <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
                               </svg>
                             </div>
-                          </div>
-                          <ul className="submenu">
-                            <li className="submenu__item">
-                              <a href="#insights">Blog standard</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="#insights">Blog creative</a>
-                            </li>
-                            <li className="submenu__item">
-                              <a href="#insights">Single post</a>
-                            </li>
-                          </ul>
-                          <div className="main-menu__divider divider-bottom"></div>
-                        </li>
-                        <li className="main-menu__item">
-                          {/*  <div className="main-menu__divider divider-top"></div>  */}
-                          <div className="main-menu__toggle">
-                            <a className="main-menu__link" href="#contact">
-                              <span className="main-menu__number">/ 05</span>
-                              <span className="main-menu__caption">Contact</span>
-                            </a>
-                            {/*  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
-                            <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z"/>
-                          </svg>  */}
-                          </div>
+                          </a>
                           <div className="main-menu__divider divider-bottom"></div>
                         </li>
                       </ul>
@@ -363,6 +271,7 @@ export default function Home() {
           {/*  Hero Section End  */}
         </div>
         <div id="works" style={{ backgroundColor: "#faf7f0" }}>
+          <div id="projects" style={{ position: "relative", top: "-20px" }}></div>
           {/*  Section - Progects Stack Start  */}
           <div className="mxd-section" style={{ backgroundColor: "#faf7f0" }}>
             <div className="mxd-container fullwidth-container" style={{ backgroundColor: "#faf7f0" }}>
@@ -850,6 +759,7 @@ export default function Home() {
         </div>
 
         <div id="insights" style={{ backgroundColor: "#faf7f0" }}>
+          <div id="achievements" style={{ position: "relative", top: "-20px" }}></div>
           {/*  Section - Blog Preview Start  */}
           <div className="mxd-section blur-section padding-top-title padding-bottom-preview" style={{ backgroundColor: "#faf7f0" }}>
             <div className="pinned-section__inner">
