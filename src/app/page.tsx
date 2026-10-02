@@ -788,7 +788,7 @@ export default function Home() {
                           <span className="vision-headline-line">FULL-STACK DEVELOPMENT</span>
                           <span className="vision-headline-line">&amp; DESIGN SOLUTIONS</span>
                         </h2>
-                        <a href="#divider" className="vision-down-cue" aria-label="Scroll down">
+                        <a href="#insights" className="vision-down-cue" aria-label="Scroll down">
                           <svg className="vision-down-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                             <line x1="12" y1="5" x2="12" y2="19" />
                             <polyline points="19 12 12 19 5 12" />
@@ -846,35 +846,7 @@ export default function Home() {
           </div>
           {/*  Divider - Sticky Images End  */}
         </div>
-        <div id="divider">
-          {/*  Section - Parallax Divider Image & Title Start  */}
-          <div className="mxd-section blur-section">
-            <div className="mxd-container fullwidth-container">
-              <div className="mxd-divider">
-                {/*  image  */}
-                <div className="mxd-divider__image divider-image-1 parallax-img">
-                  {/*  <img className="parallax-img" src="/img/illustrations/1920x1080_divider-01.webp" alt="" />  */}
-                </div>
-                {/*  cover layer  */}
-                <div className="mxd-divider__cover cover-04"></div>
-                {/*  content  */}
-                <div className="mxd-divider__content">
-                  <div className="mxd-divider__btngroup anim-uni-in-up">
-                    <a className="btn btn-line btn-line-permanent" href="#works">
-                      <span className="btn-caption mxd-scramble">Selected Works</span>
-                    </a>
-                  </div>
-                  <div className="mxd-divider__caption">
-                    <a className="active-cursor-accent" data-cursor-text="Our Team" href="team.html">
-                      <h2 className="permanent mxd-split-lines">Driven by Scale, Powered by Neural Systems</h2>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/*  Section - Parallax Divider Image & Title End  */}
-        </div>
+
         <div id="insights">
           {/*  Section - Blog Preview Start  */}
           <div className="mxd-section blur-section pinned-section padding-top-title padding-bottom-preview">
@@ -888,7 +860,7 @@ export default function Home() {
                       <div className="row g-0">
                         <div className="col-12 col-xl-6 mxd-grid-item-s">
                           <div className="mxd-section-title__title pre-caption">
-                            <h2 className="mxd-split-lines">Featured<br />insights</h2>
+                            <h2 className="mxd-split-lines">ACHIEVEMENTS</h2>
                           </div>
                         </div>
                         <div className="col-12 col-xl-5 mxd-grid-item-s">
