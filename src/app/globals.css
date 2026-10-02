@@ -429,6 +429,37 @@ a.main-menu__toggle {
   align-items: center !important;
 }
 
+/* Navigation Menu Clean Centering */
+.mxd-menu__navigation {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.mxd-menu__inner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  padding: 0 4rem !important;
+}
+
+.mxd-menu__left {
+  width: 100% !important;
+  max-width: 650px !important;
+  padding-right: 0 !important;
+  overflow: visible !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+.main-menu {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  width: 100% !important;
+}
+
 /* Rebuilt 3-Column Footer */
 .portfolio-footer {
   width: 100% !important;

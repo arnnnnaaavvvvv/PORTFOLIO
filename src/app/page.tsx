@@ -39,22 +39,6 @@ export default function Home() {
         <div className="mxd-menu__overlay">
           <div className="mxd-menu__content" data-lenis-prevent>
 
-            {/*  Menu Logo Start  */}
-            <div className="mxd-menu__logo">
-              <a href="#hero" className="menu-logo">
-                {/*  logo icon  */}
-                <svg className="menu-logo__image" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 42.4 36">
-                  <path d="M25.8,13.8h2.8v5.5h-2.8v-5.5ZM13.8,16.6v2.8h2.8v-5.5h-2.8v2.8ZM32.2,0v2.8h-2.8V0h2.8ZM26.7,5.5h2.8v-2.8h-2.8v2.8ZM21.2,5.5h-5.5v2.8h11.1v-2.8h-5.5ZM12.8,2.8v2.8h2.8v-2.8h-2.8ZM10.1,0v2.8h2.8V0h-2.8ZM7.3,5.5v5.5h2.8V2.8h-2.8v2.8ZM4.5,13.8v2.8H0v2.8h2.8v2.8H0v2.8h2.8v11.1h2.8v-8.3h5.5v-2.8h-5.5v-8.3h1.9v-5.5h-2.9v2.8ZM35,5.5v-2.8h-2.8v8.3h2.8v-5.5ZM42.4,19.4v-2.8h-4.7v-5.5h-2.8v5.5h1.9v8.3h-5.5v2.8h5.5v8.3h2.8v-11.1h2.8v-2.8h-2.8v-2.8h2.8Z" />
-                </svg>
-                {/*  logo text  */}
-                <div className="menu-logo__text">
-                  <span>Azurio</span>
-                  <span>Template</span>
-                </div>
-              </a>
-            </div>
-            {/*  Menu Logo End  */}
-
             {/*  Menu Media Start  */}
             <div className="mxd-menu__media">
               <div className="menu-media__wrapper">
@@ -70,10 +54,6 @@ export default function Home() {
             {/*  Main Navigation Start  */}
             <div className="mxd-menu__navigation">
               <div className="mxd-menu__inner">
-                <div className="mxd-menu__shadow shadow-top"></div>
-                <div className="mxd-menu__caption">
-                  <p>🚀 Autonomous AI Systems<br />and Distributed Architecture</p>
-                </div>
                 {/*  left side  */}
                 <div className="mxd-menu__left">
                   <div className="main-menu">
@@ -147,76 +127,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                {/*  right side  */}
-                <div className="mxd-menu__right">
-                  <div className="menu-contact">
-                    <div className="menu-contact__item">
-                      <ul className="menu-contact__list">
-                        <li>
-                          <a className="tag tag-m" href="mailto:arnav152007@gmail.com">
-                            <span className="mxd-scramble">arnav152007@gmail.com</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a className="tag tag-m" href="tel:+918423622491">
-                            <span className="mxd-scramble">+91 8423622491</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="menu-contact__item">
-                      <ul className="menu-contact__list">
-                        <li>
-                          <a className="tag tag-m" href="https://maps.google.com/?q=Chandigarh+University" target="_blank">
-                            <span>Chandigarh University Campus,<br />Punjab, India</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="menu-contact__item">
-                      <ul className="menu-contact__list">
-                        <li>
-                          <a className="tag tag-m" href="https://dribbble.com/" target="_blank"><span className="mxd-scramble">Dribbble</span></a>
-                        </li>
-                        <li>
-                          <a className="tag tag-m" href="https://www.linkedin.com/in/arnav-singh-986722252" target="_blank"><span className="mxd-scramble">LinkedIn</span></a>
-                        </li>
-                        <li>
-                          <a className="tag tag-m" href="https://github.com/arnnnnaaavvvvv" target="_blank"><span className="mxd-scramble">Github</span></a>
-                        </li>
-                        <li>
-                          <a className="tag tag-m" href="https://www.figma.com/community" target="_blank"><span className="mxd-scramble">Figma Community</span></a>
-                        </li>
-                        <li>
-                          <a className="tag tag-m" href="https://codepen.io/" target="_blank"><span className="mxd-scramble">Codepen</span></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                {/*  data bottom line  */}
-                <div className="mxd-menu__shadow"></div>
-                <div className="mxd-menu__data">
-                  <div className="menu-data__left">
-                    <p className="menu-data__text">
-                      Made with
-                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
-                        <path d="M2.6,6.4v2.6H0V3.9h2.6v2.6ZM15.4,3.9v5.1h2.6V3.9h-2.6ZM12.9,11.6h2.6v-2.6h-2.6v2.6ZM2.6,9v2.6h2.6v-2.6h-2.6ZM10.3,14.1h2.6v-2.6h-2.6v2.6ZM5.1,11.6v2.6h2.6v-2.6h-2.6ZM7.7,3.9V1.3H2.6v2.6h5.1ZM15.4,3.9V1.3h-5.1v2.6h5.1ZM10.3,6.4v-2.6h-2.6v2.6h2.6ZM7.7,16.7h2.6v-2.6h-2.6v2.6Z" />
-                      </svg>
-                      {/*  <i className="ph-fill ph-heart t-additional"></i>  */}
-                      by
-                      <a href="https://wrapmarket.com/shop/MixDesign" target="_blank">
-                        <span className="mxd-scramble">Mix_Design</span>
-                      </a>
-                    </p>
-                  </div>
-                  <div className="menu-data__right">
-                    <p className="menu-data__text">Arnav Singh Portfolio</p>
-                    <p className="menu-data__text">©2026</p>
-                  </div>
-                </div>
               </div>
-
             </div>
             {/*  Main Navigation End  */}
 
