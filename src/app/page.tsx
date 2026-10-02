@@ -313,7 +313,7 @@ export default function Home() {
                         <ProjectTechStack />
                       </div>
                       <div className="card__image" style={{ pointerEvents: "none" }}>
-                        <img className="card__media" src="/img/works/showcase-stack/neurosense.png" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast" }} />
+                        <img className="card__media" src="/img/works/showcase-stack/neurosense.png?v=2" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast" }} />
                         <div className="card__cover" style={{ backgroundColor: "transparent", pointerEvents: "none" }}></div>
                       </div>
                     </div>
