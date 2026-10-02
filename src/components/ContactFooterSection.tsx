@@ -36,13 +36,33 @@ export default function ContactFooterSection() {
           <h2 className="contact-brush-title">
             HAVE A PROJECT OR A ROLE IN MIND?
           </h2>
-          <div>
+          <div className="contact-capsule-wrapper">
             <a
               href="mailto:arnav152007@gmail.com"
-              className="contact-touch-btn"
+              className="contact-luxury-capsule-btn"
+              title="Get in touch with Arnav Singh"
             >
-              <span>LET&apos;S GET IN TOUCH</span>
-              <span className="contact-touch-arrow">→</span>
+              {/* Left: 3D Coffee Cup with Sparkles and Orbital Glow */}
+              <div className="capsule-icon-wrap">
+                <span className="capsule-sparkle sparkle-top" aria-hidden="true">✦</span>
+                <img
+                  src="/img/coffee_cup.jpg"
+                  alt="Coffee and collaboration"
+                  className="capsule-coffee-img"
+                />
+                <span className="capsule-sparkle sparkle-bottom" aria-hidden="true">✦</span>
+              </div>
+
+              {/* Middle: Primary Text Hierarchy */}
+              <div className="capsule-text-col">
+                <span className="capsule-pre-label">LET&apos;S BUILD SOMETHING</span>
+                <span className="capsule-main-title">GET IN TOUCH</span>
+              </div>
+
+              {/* Right: Circular Action Arrow */}
+              <div className="capsule-action-circle" aria-hidden="true">
+                <span className="capsule-arrow-icon">→</span>
+              </div>
             </a>
           </div>
         </div>
