@@ -1042,6 +1042,12 @@ button {
   padding: 5rem 0 2rem 0;
 }
 
+#insights,
+#insights .mxd-section,
+#insights .pinned-section__inner {
+  background-color: #faf7f0 !important;
+}
+
 .about-two-column-row {
   display: flex;
   align-items: center;

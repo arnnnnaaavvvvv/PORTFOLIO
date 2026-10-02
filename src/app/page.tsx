@@ -847,9 +847,9 @@ export default function Home() {
           {/*  Divider - Sticky Images End  */}
         </div>
 
-        <div id="insights">
+        <div id="insights" style={{ backgroundColor: "#faf7f0" }}>
           {/*  Section - Blog Preview Start  */}
-          <div className="mxd-section blur-section pinned-section padding-top-title padding-bottom-preview">
+          <div className="mxd-section blur-section pinned-section padding-top-title padding-bottom-preview" style={{ backgroundColor: "#faf7f0" }}>
             <div className="pinned-section__inner">
               <div className="mxd-container grid-s-container">
 
