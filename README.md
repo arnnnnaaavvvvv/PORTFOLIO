@@ -9,7 +9,10 @@
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-13.4-black?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
----
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-arnavsinghportfolio.vercel.app-2ea44f?style=for-the-badge&logo=vercel&logoColor=white)](https://arnavsinghportfolio.vercel.app/)
+
+> **Live Deployment:** [https://arnavsinghportfolio.vercel.app](https://arnavsinghportfolio.vercel.app)
+
 
 ## ⚡ 1. Project Overview
 
