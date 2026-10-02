@@ -10,6 +10,7 @@ import TechStackSkillsSection from "@/components/TechStackSkillsSection";
 import CoreCompetenciesSection from "@/components/CoreCompetenciesSection";
 import ContactFooterSection from "@/components/ContactFooterSection";
 import AchievementCard from "@/components/AchievementCard";
+import FloatingMenu from "@/components/FloatingMenu";
 
 export default function Home() {
   return (
@@ -332,12 +333,12 @@ export default function Home() {
             {/*  Phosphor icon  */}
             {/*  <i className="ph-bold ph-arrow-up-right"></i>  */}
           </a>
-          <button type="button" className="hero-menu-pill mxd-menu__toggle" aria-label="Open Navigation Menu">
-            MENU
-          </button>
         </div>
       </header>
       {/*  Header End  */}
+
+      {/*  Global Fixed Floating Menu  */}
+      <FloatingMenu />
 
       <main id="mxd-page-content" className="mxd-page-content">
         <div id="hero" className="hero">
