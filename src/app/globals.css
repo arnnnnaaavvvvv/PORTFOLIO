@@ -17,6 +17,7 @@
   --accent-amber-subtle: rgba(176, 125, 43, 0.08);
 
   --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-syne: 'Syne', 'Space Grotesk', -apple-system, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
@@ -2167,12 +2168,12 @@ button {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: min(94vw, 1340px);
+  max-width: min(92vw, 1160px);
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(0.45rem, 0.9vh, 0.85rem);
+  gap: clamp(0.65rem, 1.2vh, 1.05rem);
 }
 
 .competencies-header-center {
@@ -2180,36 +2181,37 @@ button {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 0.2rem;
-  margin-bottom: clamp(0.1rem, 0.3vh, 0.3rem);
+  gap: 0.25rem;
+  margin-bottom: clamp(0.15rem, 0.4vh, 0.35rem);
 }
 
 .competencies-title-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 0.85rem;
 }
 
 .competencies-main-title {
-  font-family: var(--font-archivo), var(--font-inter), sans-serif;
-  font-size: clamp(1.8rem, 2.8vw, 2.9rem);
-  font-weight: 900;
+  font-family: var(--font-syne, var(--font-display, sans-serif));
+  font-size: clamp(2.4rem, 4.4vw, 4.4rem);
+  font-weight: 800;
   font-style: italic;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.025em;
   line-height: 1;
   margin: 0;
-  background: linear-gradient(135deg, #09090b 0%, #27272a 42%, #c2691b 82%, #d97706 100%);
+  background: linear-gradient(110deg, #101216 0%, #222731 38%, #a46422 75%, #e2a250 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .competencies-subheading-lead {
-  font-size: clamp(0.72rem, 0.95vw, 0.92rem);
-  font-weight: 800;
-  letter-spacing: 0.26em;
-  color: #18181b;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: clamp(0.78rem, 0.95vw, 0.96rem);
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  color: #27272a;
   text-transform: uppercase;
   margin: 0;
 }
@@ -2218,7 +2220,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 0.9rem;
   width: 100%;
   max-width: 580px;
   margin: 0 auto;
@@ -2228,13 +2230,14 @@ button {
 .competencies-hairline-right {
   flex: 1;
   height: 1.2px;
-  background: linear-gradient(90deg, transparent, rgba(180, 115, 40, 0.35), transparent);
+  background: linear-gradient(90deg, transparent, rgba(164, 100, 34, 0.4), transparent);
 }
 
 .competencies-hairline-text {
-  font-size: clamp(0.6rem, 0.72vw, 0.74rem);
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: clamp(0.64rem, 0.76vw, 0.76rem);
   font-weight: 600;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.28em;
   color: #71717a;
   white-space: nowrap;
   text-transform: uppercase;
@@ -2243,7 +2246,7 @@ button {
 .competencies-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp(0.75rem, 1.3vw, 1.3rem);
+  gap: clamp(0.9rem, 1.5vw, 1.4rem);
   width: 100%;
 }
 
@@ -2255,13 +2258,13 @@ button {
 
 .competency-card {
   position: relative;
-  border-radius: 20px;
-  padding: clamp(0.85rem, 1.25vw, 1.3rem);
+  border-radius: 22px;
+  padding: clamp(1.1rem, 1.4vw, 1.45rem) clamp(1.2rem, 1.6vw, 1.65rem);
   display: flex;
   flex-direction: column;
-  gap: clamp(0.5rem, 0.8vh, 0.85rem);
+  gap: clamp(0.65rem, 1vh, 0.95rem);
   border: 1.2px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 10px 28px -8px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
   backdrop-filter: blur(18px);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
@@ -2269,7 +2272,7 @@ button {
 
 .competency-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 18px 36px -10px rgba(0, 0, 0, 0.08), 0 0 0 1.5px rgba(184, 115, 40, 0.25);
+  box-shadow: 0 20px 42px -10px rgba(0, 0, 0, 0.09), 0 0 0 1.5px rgba(184, 115, 40, 0.25);
 }
 
 .competency-card--fullstack {
@@ -2292,7 +2295,7 @@ button {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 0.8rem;
+  gap: 1rem;
   position: relative;
 }
 
@@ -2300,7 +2303,7 @@ button {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.45rem;
 }
 
 .competency-card-tag-row {
@@ -2309,33 +2312,35 @@ button {
 }
 
 .competency-number-pill {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
-  font-weight: 800;
-  padding: 0.12rem 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.55rem;
   border-radius: 9999px;
   background: rgba(0, 0, 0, 0.06);
   color: #18181b;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
 .competency-title-group {
   display: flex;
   align-items: flex-start;
-  gap: 0.65rem;
+  gap: 0.85rem;
 }
 
 .competency-icon-badge {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 1px;
 }
 
 .competency-icon-badge--orange {
@@ -2361,28 +2366,33 @@ button {
 .competency-title-text-wrap {
   display: flex;
   flex-direction: column;
-  gap: 0.18rem;
+  gap: 0.25rem;
 }
 
 .competency-card-title {
-  font-size: clamp(0.98rem, 1.15vw, 1.2rem);
-  font-weight: 800;
-  color: #0f172a;
+  font-family: var(--font-display, 'Space Grotesk', -apple-system, sans-serif);
+  font-size: clamp(1.08rem, 1.25vw, 1.28rem);
+  font-weight: 700;
+  color: #09090b;
+  letter-spacing: -0.015em;
+  word-spacing: 0.05em;
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.22;
 }
 
 .competency-card-subtitle {
-  font-size: clamp(0.7rem, 0.78vw, 0.8rem);
-  color: #475569;
+  font-family: var(--font-body, 'Inter', -apple-system, sans-serif);
+  font-size: clamp(0.76rem, 0.84vw, 0.84rem);
+  font-weight: 400;
+  color: #4b5563;
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.48;
   max-width: 400px;
 }
 
 .competency-card-illustration-wrap {
-  width: clamp(72px, 7vw, 98px);
-  height: clamp(62px, 6vw, 84px);
+  width: clamp(82px, 8vw, 108px);
+  height: clamp(70px, 7vw, 92px);
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -2393,7 +2403,7 @@ button {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.08));
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.09));
   transition: transform 0.3s ease;
 }
 
@@ -2404,40 +2414,48 @@ button {
 .competency-items-list {
   display: flex;
   flex-direction: column;
-  gap: clamp(0.28rem, 0.45vh, 0.44rem);
-  padding-top: 0.4rem;
+  gap: clamp(0.48rem, 0.7vh, 0.65rem);
+  padding-top: 0.75rem;
+  margin-top: 0.2rem;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .competency-item-row {
   display: flex;
   align-items: flex-start;
-  gap: 0.55rem;
+  gap: 0.75rem;
 }
 
 .competency-item-icon-box {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  margin-top: 1px;
+  margin-top: 2px;
 }
 
 .competency-item-text {
-  font-size: clamp(0.7rem, 0.76vw, 0.8rem);
-  line-height: 1.35;
-  color: #475569;
+  font-family: var(--font-body, 'Inter', -apple-system, sans-serif);
+  font-size: clamp(0.78rem, 0.85vw, 0.85rem);
+  line-height: 1.55;
+  color: #374151;
 }
 
 .competency-item-label {
+  font-family: var(--font-display, 'Space Grotesk', -apple-system, sans-serif);
   font-weight: 700;
-  color: #1e293b;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+  margin-right: 0.35rem;
+  display: inline;
 }
 
 .competency-item-detail {
-  color: #475569;
+  font-family: var(--font-body, 'Inter', -apple-system, sans-serif);
+  font-weight: 450;
+  color: #374151;
 }
 
 .core-competencies-img {
