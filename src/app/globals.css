@@ -2168,12 +2168,12 @@ button {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: min(92vw, 1160px);
+  max-width: min(96vw, 1560px);
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(0.65rem, 1.2vh, 1.05rem);
+  gap: clamp(0.8rem, 1.5vh, 1.35rem);
 }
 
 .competencies-header-center {
@@ -2181,20 +2181,20 @@ button {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 0.25rem;
-  margin-bottom: clamp(0.15rem, 0.4vh, 0.35rem);
+  gap: 0.35rem;
+  margin-bottom: clamp(0.2rem, 0.5vh, 0.45rem);
 }
 
 .competencies-title-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.85rem;
+  gap: 1rem;
 }
 
 .competencies-main-title {
   font-family: var(--font-syne, var(--font-display, sans-serif));
-  font-size: clamp(2.4rem, 4.4vw, 4.4rem);
+  font-size: clamp(2.8rem, 4.8vw, 4.8rem);
   font-weight: 800;
   font-style: italic;
   letter-spacing: -0.025em;
@@ -2208,7 +2208,7 @@ button {
 
 .competencies-subheading-lead {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: clamp(0.78rem, 0.95vw, 0.96rem);
+  font-size: clamp(0.86rem, 1.12vw, 1.15rem);
   font-weight: 700;
   letter-spacing: 0.32em;
   color: #27272a;
@@ -2220,24 +2220,24 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.9rem;
+  gap: 1rem;
   width: 100%;
-  max-width: 580px;
+  max-width: 680px;
   margin: 0 auto;
 }
 
 .competencies-hairline-left,
 .competencies-hairline-right {
   flex: 1;
-  height: 1.2px;
-  background: linear-gradient(90deg, transparent, rgba(164, 100, 34, 0.4), transparent);
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(164, 100, 34, 0.45), transparent);
 }
 
 .competencies-hairline-text {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: clamp(0.64rem, 0.76vw, 0.76rem);
+  font-size: clamp(0.7rem, 0.86vw, 0.88rem);
   font-weight: 600;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.26em;
   color: #71717a;
   white-space: nowrap;
   text-transform: uppercase;
@@ -2246,7 +2246,7 @@ button {
 .competencies-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp(0.9rem, 1.5vw, 1.4rem);
+  gap: clamp(1.1rem, 1.8vw, 1.8rem);
   width: 100%;
 }
 
@@ -2258,13 +2258,13 @@ button {
 
 .competency-card {
   position: relative;
-  border-radius: 22px;
-  padding: clamp(1.1rem, 1.4vw, 1.45rem) clamp(1.2rem, 1.6vw, 1.65rem);
+  border-radius: 24px;
+  padding: clamp(1.3rem, 1.8vw, 1.9rem) clamp(1.4rem, 2vw, 2.2rem);
   display: flex;
   flex-direction: column;
-  gap: clamp(0.65rem, 1vh, 0.95rem);
+  gap: clamp(0.85rem, 1.3vh, 1.35rem);
   border: 1.2px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 14px 36px -8px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
   backdrop-filter: blur(18px);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
@@ -2272,7 +2272,7 @@ button {
 
 .competency-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 20px 42px -10px rgba(0, 0, 0, 0.09), 0 0 0 1.5px rgba(184, 115, 40, 0.25);
+  box-shadow: 0 22px 46px -10px rgba(0, 0, 0, 0.09), 0 0 0 1.5px rgba(184, 115, 40, 0.25);
 }
 
 .competency-card--fullstack {
@@ -2295,7 +2295,7 @@ button {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.2rem;
   position: relative;
 }
 
@@ -2303,7 +2303,7 @@ button {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  gap: 0.55rem;
 }
 
 .competency-card-tag-row {
@@ -2316,9 +2316,9 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  padding: 0.15rem 0.55rem;
+  padding: 0.18rem 0.65rem;
   border-radius: 9999px;
   background: rgba(0, 0, 0, 0.06);
   color: #18181b;
@@ -2328,19 +2328,19 @@ button {
 .competency-title-group {
   display: flex;
   align-items: flex-start;
-  gap: 0.85rem;
+  gap: 1rem;
 }
 
 .competency-icon-badge {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  margin-top: 1px;
+  margin-top: 2px;
 }
 
 .competency-icon-badge--orange {
@@ -2366,33 +2366,33 @@ button {
 .competency-title-text-wrap {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.3rem;
 }
 
 .competency-card-title {
   font-family: var(--font-display, 'Space Grotesk', -apple-system, sans-serif);
-  font-size: clamp(1.08rem, 1.25vw, 1.28rem);
+  font-size: clamp(1.22rem, 1.55vw, 1.6rem);
   font-weight: 700;
   color: #09090b;
   letter-spacing: -0.015em;
   word-spacing: 0.05em;
   margin: 0;
-  line-height: 1.22;
+  line-height: 1.24;
 }
 
 .competency-card-subtitle {
   font-family: var(--font-body, 'Inter', -apple-system, sans-serif);
-  font-size: clamp(0.76rem, 0.84vw, 0.84rem);
+  font-size: clamp(0.86rem, 1.02vw, 1.02rem);
   font-weight: 400;
   color: #4b5563;
   margin: 0;
-  line-height: 1.48;
-  max-width: 400px;
+  line-height: 1.52;
+  max-width: 480px;
 }
 
 .competency-card-illustration-wrap {
-  width: clamp(82px, 8vw, 108px);
-  height: clamp(70px, 7vw, 92px);
+  width: clamp(94px, 9.2vw, 126px);
+  height: clamp(80px, 8vw, 108px);
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -2414,21 +2414,21 @@ button {
 .competency-items-list {
   display: flex;
   flex-direction: column;
-  gap: clamp(0.48rem, 0.7vh, 0.65rem);
-  padding-top: 0.75rem;
-  margin-top: 0.2rem;
+  gap: clamp(0.6rem, 0.9vh, 0.85rem);
+  padding-top: 0.95rem;
+  margin-top: 0.25rem;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .competency-item-row {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
+  gap: 0.85rem;
 }
 
 .competency-item-icon-box {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2438,8 +2438,8 @@ button {
 
 .competency-item-text {
   font-family: var(--font-body, 'Inter', -apple-system, sans-serif);
-  font-size: clamp(0.78rem, 0.85vw, 0.85rem);
-  line-height: 1.55;
+  font-size: clamp(0.88rem, 1.02vw, 1.04rem);
+  line-height: 1.6;
   color: #374151;
 }
 
@@ -2447,8 +2447,9 @@ button {
   font-family: var(--font-display, 'Space Grotesk', -apple-system, sans-serif);
   font-weight: 700;
   color: #0f172a;
+  font-size: clamp(0.92rem, 1.06vw, 1.08rem);
   letter-spacing: -0.01em;
-  margin-right: 0.35rem;
+  margin-right: 0.4rem;
   display: inline;
 }
 
