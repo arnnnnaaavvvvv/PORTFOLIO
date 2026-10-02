@@ -58,11 +58,11 @@ export default function Home() {
             {/*  Menu Media Start  */}
             <div className="mxd-menu__media">
               <div className="menu-media__wrapper">
-                {/*  <img src="/img/gifs/dolores.gif" alt="Image" />  */}
-                <video preload="auto" autoPlay muted loop playsInline poster="/video/900x1280_menu.webp">
-                  <source type="/video/mp4" src="/video/900x1280_menu.mp4" />
-                  <source type="/video/webm" src="/video/900x1280_menu.webm" />
-                </video>
+                <img
+                  src="/img/arnav_sketch_menu.webp"
+                  alt="Arnav Singh"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
+                />
               </div>
             </div>
             {/*  Menu Media End  */}
