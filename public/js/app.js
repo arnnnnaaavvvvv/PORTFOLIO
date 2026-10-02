@@ -2538,17 +2538,17 @@ function mxdDvStickyMedia() {
 
     // Set initial before-scroll state
     function setInitialState() {
-      const isFirstBlank = titles[0] && !titles[0].textContent.trim();
+      const isBlankTitle = i => !titles[i] || !titles[i].textContent.trim();
       overflows.forEach((ovf, i) => {
         gsap.set(ovf, {
           clipPath: i === 0 ? FULL : CLIPPED,
-          autoAlpha: 1,
+          autoAlpha: i === 0 ? 1 : 0,
           willChange: "clip-path, opacity, transform",
-          pointerEvents: (i === 0 && isFirstBlank) ? "auto" : "none"
+          pointerEvents: (i === 0 && isBlankTitle(0)) ? "auto" : "none"
         });
       });
 
-      titles.forEach((t, i) => gsap.set(t, { autoAlpha: (!isFirstBlank && i === 0) ? 1 : 0, yPercent: 100 }));
+      titles.forEach((t, i) => gsap.set(t, { autoAlpha: (!isBlankTitle(i) && i === 0) ? 1 : 0, yPercent: 100 }));
       gsap.set(numberBlock, { autoAlpha: 0, y: 8 });
       if (btnHolder) gsap.set(btnHolder, { autoAlpha: 0, y: 8 });
       if (progressEl) gsap.set(progressEl, { transformOrigin: "left center", scaleX: 0 });
@@ -2578,26 +2578,38 @@ function mxdDvStickyMedia() {
       const initialScroll = computeTotalScroll();
       applySectionHeight(initialScroll);
 
-      const isFirstBlank = titles[0] && !titles[0].textContent.trim();
+      const isBlankTitle = i => !titles[i] || !titles[i].textContent.trim();
       const tl = gsap.timeline({
         defaults: { ease: "power2.out" },
         paused: true
       });
 
-      if (!isFirstBlank) {
+      if (!isBlankTitle(0)) {
         tl.to(numberBlock, { duration: 0.32, autoAlpha: 1, y: 0 }, 0);
         tl.to(titles[0], { duration: 0.32, yPercent: 0, autoAlpha: 1 }, 0.05);
         if (btnHolder) tl.to(btnHolder, { duration: 0.32, autoAlpha: 1, y: 0 }, 0.05);
       }
 
       for (let i = 1; i < imagesCount; i++) {
-        tl.to(overflows[i], { duration: 0.6, clipPath: FULL }, "+=0.12");
-        if (isFirstBlank && i === 1) {
+        tl.to(overflows[i], { duration: 0.6, clipPath: FULL, autoAlpha: 1 }, "+=0.12");
+
+        const wasBlank = isBlankTitle(i - 1);
+        const isBlank = isBlankTitle(i);
+
+        if (!wasBlank && isBlank) {
+          tl.to(numberBlock, { duration: 0.28, autoAlpha: 0, y: 8 }, "-=0.48");
+          if (btnHolder) tl.to(btnHolder, { duration: 0.28, autoAlpha: 0, y: 8 }, "<");
+        } else if (wasBlank && !isBlank) {
           tl.to(numberBlock, { duration: 0.28, autoAlpha: 1, y: 0 }, "-=0.48");
           if (btnHolder) tl.to(btnHolder, { duration: 0.28, autoAlpha: 1, y: 0 }, "<");
         }
-        tl.to(titles[i - 1], { duration: 0.28, yPercent: -100, autoAlpha: 0 }, "-=0.48");
-        tl.to(titles[i], { duration: 0.28, yPercent: 0, autoAlpha: 1 }, "<");
+
+        if (!wasBlank) {
+          tl.to(titles[i - 1], { duration: 0.28, yPercent: -100, autoAlpha: 0 }, "-=0.48");
+        }
+        if (!isBlank) {
+          tl.to(titles[i], { duration: 0.28, yPercent: 0, autoAlpha: 1 }, "<");
+        }
       }
 
       const st = ScrollTrigger.create({

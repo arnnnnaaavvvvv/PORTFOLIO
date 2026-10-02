@@ -64,8 +64,6 @@ export default function PhilosophyInteractiveEffect() {
 
         const objCenterX = rect.left + rect.width / 2;
         const objCenterY = rect.top + rect.height / 2;
-
-        const dy = Math.abs(objCenterY - textCenterY);
         const dx = Math.abs(objCenterX - textCenterX);
 
         // Calculate actual physical overlap with the text

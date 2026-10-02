@@ -5,7 +5,6 @@ import HeroNameImage from "@/components/HeroNameImage";
 import InteractivePortraitCard from "@/components/InteractivePortraitCard";
 import ProjectTechStack, { CLUDE_TECH_STACKS, IGNITE_TECH_STACKS, SIRUS_TECH_STACKS } from "@/components/ProjectTechStack";
 import PhilosophyInteractiveEffect from "@/components/PhilosophyInteractiveEffect";
-import VisionShowcaseSection from "@/components/VisionShowcaseSection";
 import VisionAvatarCard from "@/components/VisionAvatarCard";
 
 export default function Home() {
@@ -796,12 +795,9 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  {/*  Page 2: Design (Restored)  */}
+                  {/*  Page 2: Clean Beige Transition (No Image, No Text)  */}
                   <div className="images__listitem">
-                    <div className="images__overflow">
-                      <div className="mxd-cover mxd-cover-06"></div>
-                      <img className="images__img" src="/img/dividers/1920x1200_dv02.webp" alt="Design" />
-                    </div>
+                    <div className="images__overflow vision-slide-beige-container"></div>
                   </div>
                   {/*  Page 3: Development (Restored)  */}
                   <div className="images__listitem">
@@ -825,8 +821,8 @@ export default function Home() {
                       <div className="mxd-dv-sticky-img__titleitem vision-slide-title-empty">
                         <h2 className="permanent vision-title-blank"></h2>
                       </div>
-                      <div className="mxd-dv-sticky-img__titleitem">
-                        <h2 className="permanent">Design</h2>
+                      <div className="mxd-dv-sticky-img__titleitem vision-slide-title-empty">
+                        <h2 className="permanent vision-title-blank"></h2>
                       </div>
                       <div className="mxd-dv-sticky-img__titleitem">
                         <h2 className="permanent">Development</h2>
