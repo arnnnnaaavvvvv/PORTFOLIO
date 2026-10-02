@@ -1175,6 +1175,17 @@ a.main-menu__toggle {
   background-color: #faf7f0 !important;
 }
 
+.about-section-wrapper {
+  min-height: 100vh;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding: clamp(4rem, 6vh, 6rem) 0 clamp(6rem, 10vh, 10rem) 0 !important;
+  box-sizing: border-box !important;
+  position: relative;
+  width: 100%;
+}
+
 .about-two-column-row {
   display: flex;
   align-items: center;
@@ -1347,6 +1358,7 @@ a.main-menu__toggle {
   background-color: #faf7f0 !important;
   position: relative;
   width: 100%;
+  padding-top: clamp(4rem, 8vh, 8rem) !important;
 }
 
 #services .mxd-section {
@@ -1359,7 +1371,7 @@ a.main-menu__toggle {
 }
 
 #services .mxd-dv-sticky-cap__static {
-  padding: 3.5rem 0 4rem 0 !important;
+  padding: clamp(6rem, 10vh, 10rem) 0 4rem 0 !important;
   mix-blend-mode: normal !important;
   z-index: 5 !important;
   transform: none !important;
