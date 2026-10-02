@@ -613,6 +613,7 @@ function mxdMenu(lenisInstance) {
 
       lenisInstance?.stop();
       hamburgerIcon?.classList.add("active");
+      document.body.classList.add("menu-open");
       const isMobile = window.matchMedia("(max-width: 1024px)").matches;
 
       tl.to(menuBackdrop, {
@@ -651,6 +652,7 @@ function mxdMenu(lenisInstance) {
     } else {
 
       hamburgerIcon?.classList.remove("active");
+      document.body.classList.remove("menu-open");
 
       tl.to(menuOverlay, { clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", duration: 1, ease: "hop" })
       .to(menuBackdrop, {
@@ -698,6 +700,7 @@ function mxdMenu(lenisInstance) {
     gsap.set(menuArrows, { opacity: 0 });
 
     hamburgerIcon?.classList.remove("active");
+    document.body.classList.remove("menu-open");
 
     // reset accordion state
     document.querySelectorAll(".submenu").forEach(submenu => {

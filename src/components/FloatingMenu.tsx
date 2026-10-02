@@ -3,15 +3,21 @@
 import React, { useEffect, useState } from "react";
 
 export default function FloatingMenu() {
+  const [isOpen, setIsOpen] = useState(false);
   const [isHiddenOnContact, setIsHiddenOnContact] = useState(false);
 
   useEffect(() => {
     const contactSection = document.getElementById("contact");
 
     const checkVisibility = () => {
+      // If menu is open, never hide it
+      if (document.body.classList.contains("menu-open")) {
+        setIsHiddenOnContact(false);
+        return;
+      }
       if (!contactSection) return;
       const rect = contactSection.getBoundingClientRect();
-      // When the top of the contact section enters the viewport (with a 50px buffer)
+      // When contact top enters within bottom 85% of screen
       if (rect.top <= window.innerHeight * 0.85) {
         setIsHiddenOnContact(true);
       } else {
@@ -21,37 +27,35 @@ export default function FloatingMenu() {
 
     window.addEventListener("scroll", checkVisibility, { passive: true });
     window.addEventListener("resize", checkVisibility, { passive: true });
-
-    // Initial check
     checkVisibility();
 
-    // Also use IntersectionObserver as a complementary high-performance trigger
-    let observer: IntersectionObserver | null = null;
-    if (contactSection && typeof IntersectionObserver !== "undefined") {
-      observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setIsHiddenOnContact(true);
-          } else {
-            // Double-check with scroll position before showing again
-            checkVisibility();
-          }
-        },
-        {
-          root: null,
-          rootMargin: "0px 0px -15% 0px",
-          threshold: 0.05,
-        }
-      );
-      observer.observe(contactSection);
-    }
+    // Observe body for "menu-open" class added/removed by app.js
+    const observer = new MutationObserver(() => {
+      const isMenuOpen = document.body.classList.contains("menu-open");
+      setIsOpen(isMenuOpen);
+      if (isMenuOpen) {
+        setIsHiddenOnContact(false);
+      } else {
+        checkVisibility();
+      }
+    });
+
+    observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+
+    // Listen for clicks on links in the overlay menu so button resets to MENU
+    const handleMenuLinkClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.closest(".mxd-menu a")) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("click", handleMenuLinkClick);
 
     return () => {
       window.removeEventListener("scroll", checkVisibility);
       window.removeEventListener("resize", checkVisibility);
-      if (observer) {
-        observer.disconnect();
-      }
+      document.removeEventListener("click", handleMenuLinkClick);
+      observer.disconnect();
     };
   }, []);
 
@@ -59,12 +63,36 @@ export default function FloatingMenu() {
     <button
       type="button"
       id="floating-menu-pill"
-      className={`hero-menu-pill mxd-menu__toggle ${
-        isHiddenOnContact ? "menu-pill-hidden" : ""
+      className={`hero-menu-pill mxd-menu__toggle ${isOpen ? "is-menu-open" : ""} ${
+        isHiddenOnContact && !isOpen ? "menu-pill-hidden" : ""
       }`}
-      aria-label="Open Navigation Menu"
+      aria-label={isOpen ? "Close Navigation Menu" : "Open Navigation Menu"}
+      aria-expanded={isOpen}
     >
-      MENU
+      {isOpen ? (
+        <span className="menu-pill-inner">
+          <svg
+            className="menu-close-svg"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+          <span className="menu-pill-text">CLOSE</span>
+        </span>
+      ) : (
+        <span className="menu-pill-inner">
+          <span className="menu-pill-text">MENU</span>
+        </span>
+      )}
     </button>
   );
 }
