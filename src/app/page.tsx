@@ -850,7 +850,7 @@ export default function Home() {
 
         <div id="insights" style={{ backgroundColor: "#faf7f0" }}>
           {/*  Section - Blog Preview Start  */}
-          <div className="mxd-section blur-section pinned-section padding-top-title padding-bottom-preview" style={{ backgroundColor: "#faf7f0" }}>
+          <div className="mxd-section blur-section padding-top-title padding-bottom-preview" style={{ backgroundColor: "#faf7f0" }}>
             <div className="pinned-section__inner">
               <div className="mxd-container grid-s-container">
 
@@ -951,7 +951,6 @@ export default function Home() {
                 {/*  Block - Blog Preview Grid x4 End  */}
 
               </div>
-              <div className="pinned-section__trigger"></div>
             </div>
           </div>
           {/*  Section - Blog Preview End  */}
