@@ -54,23 +54,35 @@ export default function ContactFooterSection() {
           </h1>
         </div>
 
-        {/* Bottom Three-Column Navigation Footer */}
+        {/* Bottom Navigation Footer Grid */}
         <footer className="contact-bottom-footer">
           {/* Column 1: Explore */}
           <div className="contact-footer-column">
             <span className="contact-footer-heading">EXPLORE</span>
             <ul className="contact-footer-links">
               <li>
-                <a href="#hero">Home</a>
+                <a href="#hero">
+                  <span>Home</span>
+                  <span className="footer-link-subcue">/ 01</span>
+                </a>
               </li>
               <li>
-                <a href="#works">Projects</a>
+                <a href="#works">
+                  <span>Projects</span>
+                  <span className="footer-link-subcue">/ 02</span>
+                </a>
               </li>
               <li>
-                <a href="#insights">Achievements</a>
+                <a href="#insights">
+                  <span>Achievements</span>
+                  <span className="footer-link-subcue">/ 03</span>
+                </a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a href="#contact">
+                  <span>Contact</span>
+                  <span className="footer-link-subcue">/ 04</span>
+                </a>
               </li>
             </ul>
           </div>
@@ -85,7 +97,8 @@ export default function ContactFooterSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  GitHub
+                  <span>GitHub</span>
+                  <span className="footer-link-external-icon">↗</span>
                 </a>
               </li>
               <li>
@@ -94,12 +107,14 @@ export default function ContactFooterSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  LinkedIn
+                  <span>LinkedIn</span>
+                  <span className="footer-link-external-icon">↗</span>
                 </a>
               </li>
               <li>
                 <a href="mailto:arnav152007@gmail.com">
-                  Email
+                  <span>Email</span>
+                  <span className="footer-link-external-icon">↗</span>
                 </a>
               </li>
             </ul>
@@ -108,16 +123,30 @@ export default function ContactFooterSection() {
           {/* Column 3: Say Hello */}
           <div className="contact-footer-column contact-footer-say-hello">
             <span className="contact-footer-heading">SAY HELLO</span>
+            <p className="contact-say-hello-subtitle">
+              Have an exciting opportunity or want to build together? Drop me a line anytime.
+            </p>
             <div className="contact-footer-links">
               <a
                 href="mailto:arnav152007@gmail.com"
-                className="contact-footer-email"
+                className="contact-footer-email-box"
               >
-                arnav152007@gmail.com
+                <span className="contact-footer-email-text">arnav152007@gmail.com</span>
+                <span className="contact-footer-email-arrow">→</span>
               </a>
             </div>
           </div>
         </footer>
+
+        {/* Bottom Sub-bar */}
+        <div className="contact-sub-bar">
+          <p className="contact-sub-bar-left">
+            © 2026 ARNAV SINGH. ALL RIGHTS RESERVED.
+          </p>
+          <p className="contact-sub-bar-right">
+            AUTONOMOUS AI SYSTEMS &amp; FULL-STACK ARCHITECTURE
+          </p>
+        </div>
       </div>
     </section>
   );
