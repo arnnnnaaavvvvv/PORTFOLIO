@@ -2121,3 +2121,31 @@ button {
     font-size: 0.7rem;
   }
 }
+
+/* ==========================================================================
+   Slide 3 — Core Competencies Showcase (Full-Page Premium Fit)
+   ========================================================================== */
+.core-competencies-slide-container {
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #e5d7cb !important;
+  background-image: radial-gradient(ellipse 90% 85% at 50% 50%, #fef6eb 0%, #ecd9cc 70%, #dfcdbf 100%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  position: relative !important;
+  padding: 0 !important;
+}
+
+.core-competencies-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  display: block !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  transform: scale(1.02) !important;
+  filter: drop-shadow(0 4px 20px rgba(180, 120, 50, 0.06));
+}

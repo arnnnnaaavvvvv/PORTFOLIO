@@ -802,11 +802,10 @@ export default function Home() {
                       <TechStackSkillsSection />
                     </div>
                   </div>
-                  {/*  Page 3: Development (Restored)  */}
+                  {/*  Page 3: Core Competencies  */}
                   <div className="images__listitem">
-                    <div className="images__overflow">
-                      <div className="mxd-cover mxd-cover-06"></div>
-                      <img className="images__img" src="/img/dividers/1920x1200_dv03.webp" alt="Development" />
+                    <div className="images__overflow core-competencies-slide-container">
+                      <img className="images__img core-competencies-img" src="/img/dividers/core_competencies.webp" alt="Core Competencies" />
                     </div>
                   </div>
                 </div>
