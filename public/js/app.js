@@ -200,7 +200,11 @@ function mxdLoader() {
   const loaderTime = 1.2;
 
   Promise.all([
-    new Promise(resolve => imgLoad.on("done", resolve)),
+    new Promise(resolve => {
+      imgLoad.on("done", resolve);
+      imgLoad.on("fail", resolve);
+      setTimeout(resolve, 1500);
+    }),
     new Promise(resolve => setTimeout(resolve, loaderTime * 1000))
   ]).then(() => {
   gsap.timeline()
@@ -719,7 +723,7 @@ function mxdMenu(lenisInstance) {
           targetY = works ? works.offsetTop : 674;
         } else if (href === "#contact") {
           const contact = document.querySelector("#contact");
-          targetY = contact ? contact.offsetTop : 10330;
+          targetY = contact ? contact.offsetTop : (document.documentElement.scrollHeight - window.innerHeight);
         } else if (href === "#hero" || href === "#home") {
           targetY = 0;
         } else {
@@ -1118,7 +1122,7 @@ function mxdSmoothScroll() {
         targetY = works ? works.offsetTop : 674;
       } else if (hash === "#contact") {
         const contact = document.querySelector("#contact");
-        targetY = contact ? contact.offsetTop : 10330;
+        targetY = contact ? contact.offsetTop : (document.documentElement.scrollHeight - window.innerHeight);
       } else if (hash === "#hero" || hash === "#home") {
         targetY = 0;
       } else {

@@ -65,7 +65,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
-        <Script src="/js/libs.min.js" strategy="beforeInteractive" />
+        <Script src="/js/libs.min.js" strategy="afterInteractive" />
         <Script src="/js/app.js" strategy="afterInteractive" />
       </body>
     </html>
