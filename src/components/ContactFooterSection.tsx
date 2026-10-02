@@ -27,7 +27,6 @@ export default function ContactFooterSection() {
             aria-label="Scroll back to top"
           >
             <span className="contact-pill-text">BACK TO TOP</span>
-            <span className="contact-white-dot" />
           </button>
         </div>
 

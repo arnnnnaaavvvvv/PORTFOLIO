@@ -2537,6 +2537,8 @@ button {
 
 .contact-pill-back-btn {
   cursor: pointer;
+  justify-content: center;
+  text-align: center;
 }
 
 .contact-pill-back-btn:hover {
