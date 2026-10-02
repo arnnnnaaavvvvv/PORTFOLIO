@@ -9,6 +9,7 @@ import VisionAvatarCard from "@/components/VisionAvatarCard";
 import TechStackSkillsSection from "@/components/TechStackSkillsSection";
 import CoreCompetenciesSection from "@/components/CoreCompetenciesSection";
 import ContactFooterSection from "@/components/ContactFooterSection";
+import AchievementCard from "@/components/AchievementCard";
 
 export default function Home() {
   return (
@@ -873,72 +874,11 @@ export default function Home() {
                 </div>
                 {/*  Block - Section Title v04 End  */}
 
-                {/*  Block - Blog Preview Grid x4 Start  */}
+                {/*  Block - Achievement Showcase Start  */}
                 <div className="mxd-block">
-                  <div className="mxd-blog-grid">
-                    <div className="container-fluid p-0">
-                      <div className="row g-0 mxd-blog-grid__gallery">
-                        {/*  item  */}
-                        <div className="col-12 col-lg-3 mxd-blog-item mxd-blog-item-s animate-card-4">
-                          <div className="mxd-blog-item__date">
-                            <span className="meta-date">02 February, 2026</span>
-                          </div>
-                          <a className="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
-                            <img className="" src="/img/blog/preview/grid-x3/pr-01.webp" alt="Blog Preview Image" />
-                          </a>
-                          <div className="mxd-blog-item__caption">
-                            <div className="mxd-blog-item__title">
-                              <a className="blog-name-s" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">Building Multi-Tenant Container Runtimes at Scale</a>
-                            </div>
-                          </div>
-                        </div>
-                        {/*  item  */}
-                        <div className="col-12 col-lg-3 mxd-blog-item mxd-blog-item-s animate-card-4">
-                          <div className="mxd-blog-item__date">
-                            <span className="meta-date">28 January, 2026</span>
-                          </div>
-                          <a className="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
-                            <img className="" src="/img/blog/preview/grid-x3/pr-02.webp" alt="Blog Preview Image" />
-                          </a>
-                          <div className="mxd-blog-item__caption">
-                            <div className="mxd-blog-item__title">
-                              <a className="blog-name-s" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">Autonomous Multi-Agent Orchestration via Graph State Machines</a>
-                            </div>
-                          </div>
-                        </div>
-                        {/*  item  */}
-                        <div className="col-12 col-lg-3 mxd-blog-item mxd-blog-item-s animate-card-4">
-                          <div className="mxd-blog-item__date">
-                            <span className="meta-date">15 January, 2026</span>
-                          </div>
-                          <a className="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
-                            <img className="" src="/img/blog/preview/grid-x3/pr-04.webp" alt="Blog Preview Image" />
-                          </a>
-                          <div className="mxd-blog-item__caption">
-                            <div className="mxd-blog-item__title">
-                              <a className="blog-name-s" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">Low-Latency Conflict-Free Replicated Data Types (CRDTs)</a>
-                            </div>
-                          </div>
-                        </div>
-                        {/*  item  */}
-                        <div className="col-12 col-lg-3 mxd-blog-item mxd-blog-item-s animate-card-4">
-                          <div className="mxd-blog-item__date">
-                            <span className="meta-date">03 January, 2026</span>
-                          </div>
-                          <a className="mxd-blog-item__media active-cursor-permanent" data-cursor-text="Read Post" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">
-                            <img className="" src="/img/blog/preview/grid-x3/pr-03.webp" alt="Blog Preview Image" />
-                          </a>
-                          <div className="mxd-blog-item__caption">
-                            <div className="mxd-blog-item__title">
-                              <a className="blog-name-s" href="https://github.com/arnnnnaaavvvvv" target="_blank" rel="noopener noreferrer">Fine-Tuning Open Source LLMs for Real-Time Code Synthesis</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <AchievementCard />
                 </div>
-                {/*  Block - Blog Preview Grid x4 End  */}
+                {/*  Block - Achievement Showcase End  */}
 
               </div>
             </div>
