@@ -360,17 +360,17 @@ export default function Home() {
           </div>
           {/*  Hero Section End  */}
         </div>
-        <div id="works">
+        <div id="works" style={{ backgroundColor: "#faf7f0" }}>
           {/*  Section - Progects Stack Start  */}
-          <div className="mxd-section">
-            <div className="mxd-container fullwidth-container">
+          <div className="mxd-section" style={{ backgroundColor: "#faf7f0" }}>
+            <div className="mxd-container fullwidth-container" style={{ backgroundColor: "#faf7f0" }}>
 
               {/*  Block - Progects Stack Start  */}
-              <div className="mxd-block">
-                <div className="mxd-stack-cards" style={{ backgroundColor: "#030712" }}>
+              <div className="mxd-block" style={{ backgroundColor: "#faf7f0" }}>
+                <div className="mxd-stack-cards" style={{ backgroundColor: "#faf7f0" }}>
                   {/*  single card  */}
-                  <div className="mxd-stack-cards__card">
-                    <div className="card__marquees">
+                  <div className="mxd-stack-cards__card" style={{ backgroundColor: "#faf7f0" }}>
+                    <div className="card__marquees" style={{ backgroundColor: "#faf7f0" }}>
                       {/*  Marquee Divider Start  */}
                       <div className="marquee marquee-stack marquee--gsap muted-extra">
                         <div className="marquee__top">

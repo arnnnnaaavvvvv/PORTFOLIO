@@ -1016,12 +1016,15 @@ button {
 }
 
 /* Stack Cards - Eliminate white gaps and subpixel seams during scroll/pinning */
+#works,
+#works .mxd-section,
 .mxd-stack-cards {
-  background-color: #030712 !important;
+  background-color: #faf7f0 !important;
 }
 
-.mxd-stack-cards__card {
-  background-color: #030712;
+.mxd-stack-cards__card:first-child,
+.mxd-stack-cards__card:first-child .card__marquees {
+  background-color: #faf7f0 !important;
 }
 
 .card__image {
