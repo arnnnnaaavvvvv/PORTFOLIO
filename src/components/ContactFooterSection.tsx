@@ -62,25 +62,21 @@ export default function ContactFooterSection() {
               <li>
                 <a href="#hero">
                   <span>Home</span>
-                  <span className="footer-link-subcue">/ 01</span>
                 </a>
               </li>
               <li>
                 <a href="#works">
                   <span>Projects</span>
-                  <span className="footer-link-subcue">/ 02</span>
                 </a>
               </li>
               <li>
                 <a href="#insights">
                   <span>Achievements</span>
-                  <span className="footer-link-subcue">/ 03</span>
                 </a>
               </li>
               <li>
                 <a href="#contact">
                   <span>Contact</span>
-                  <span className="footer-link-subcue">/ 04</span>
                 </a>
               </li>
             </ul>
