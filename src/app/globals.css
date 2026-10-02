@@ -429,6 +429,53 @@ a.main-menu__toggle {
   align-items: center !important;
 }
 
+/* Navigation Menu Light Background (Matches Philosophy Section #faf7f0) */
+.mxd-menu__overlay {
+  background-color: #faf7f0 !important;
+}
+
+.mxd-menu__content,
+.mxd-menu__navigation,
+.mxd-menu__inner {
+  background-color: transparent !important;
+}
+
+.mxd-menu__shadow {
+  display: none !important;
+}
+
+.main-menu__caption {
+  color: #121212 !important;
+  transition: color 0.25s ease !important;
+}
+
+.main-menu__number {
+  color: #7d7f89 !important;
+}
+
+.main-menu__divider {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.main-menu__toggle svg {
+  fill: #121212 !important;
+  transition: fill 0.25s ease, transform 0.25s ease !important;
+}
+
+.main-menu__toggle:hover .main-menu__caption,
+.no-touch .main-menu__toggle:hover .main-menu__caption {
+  color: #575960 !important;
+}
+
+.main-menu__toggle:hover svg,
+.no-touch .main-menu__toggle:hover svg {
+  fill: #575960 !important;
+}
+
+.main-menu__item.open .main-menu__caption {
+  color: #575960 !important;
+}
+
 /* Navigation Menu Clean Centering */
 .mxd-menu__navigation {
   display: flex !important;
