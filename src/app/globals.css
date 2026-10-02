@@ -2855,48 +2855,28 @@ a.main-menu__toggle {
   max-width: 440px;
 }
 
-.contact-footer-email-box {
-  display: inline-flex !important;
-  align-items: center;
-  gap: 0.95rem;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 9999px;
-  padding: 0.95rem 1.85rem;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  text-decoration: none !important;
-}
-
-.contact-footer-email-text {
+.contact-footer-email-plain {
   font-family: var(--font-body, 'Inter', sans-serif);
-  font-size: clamp(1.1rem, 1.35vw, 1.45rem);
-  font-weight: 650;
+  font-size: clamp(1.15rem, 1.4vw, 1.55rem);
+  font-weight: 600;
   color: #ffffff !important;
   letter-spacing: -0.01em;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
   word-break: break-all;
+  line-height: 1.4;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border: none !important;
 }
 
-.contact-footer-email-arrow {
-  font-size: 1.25rem;
-  color: #ffffff;
-  transition: transform 0.25s ease;
-  line-height: 1;
-}
-
-.contact-footer-email-box:hover {
-  background: #ffffff !important;
-  border-color: #ffffff !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15) !important;
-}
-
-.contact-footer-email-box:hover .contact-footer-email-text,
-.contact-footer-email-box:hover .contact-footer-email-arrow {
-  color: #080809 !important;
-}
-
-.contact-footer-email-box:hover .contact-footer-email-arrow {
+.contact-footer-email-plain:hover {
+  color: rgba(255, 255, 255, 0.75) !important;
   transform: translateX(4px);
+  text-decoration: underline !important;
+  text-underline-offset: 6px;
 }
 
 .contact-sub-bar {

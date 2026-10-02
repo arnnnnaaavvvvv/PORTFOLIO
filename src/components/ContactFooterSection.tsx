@@ -124,10 +124,9 @@ export default function ContactFooterSection() {
             <div className="contact-footer-links">
               <a
                 href="mailto:arnav152007@gmail.com"
-                className="contact-footer-email-box"
+                className="contact-footer-email-plain"
               >
-                <span className="contact-footer-email-text">arnav152007@gmail.com</span>
-                <span className="contact-footer-email-arrow">→</span>
+                arnav152007@gmail.com
               </a>
             </div>
           </div>
