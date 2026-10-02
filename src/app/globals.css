@@ -361,10 +361,8 @@ button {
 }
 
 .hero-menu-pill {
-  position: fixed !important;
-  top: 3rem !important;
-  right: calc(6rem - 12px) !important;
-  z-index: 100 !important;
+  position: relative !important;
+  left: 12px !important;
   background: #0f0f0f !important;
   color: #ffffff !important;
   font-family: 'Space Grotesk', -apple-system, sans-serif !important;
@@ -373,72 +371,64 @@ button {
   letter-spacing: 0.08em !important;
   padding: 0.55rem 1.4rem !important;
   border-radius: 9999px !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border: none !important;
   cursor: pointer !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   text-transform: uppercase !important;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22) !important;
-  transition: opacity 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
-              transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
-              visibility 0.3s ease,
-              background 0.25s ease !important;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+  transition: transform 0.25s ease, background 0.25s ease !important;
 }
 
-@media only screen and (min-width: 1600px) {
-  .hero-menu-pill {
-    top: 3rem !important;
-    right: calc(10rem - 12px) !important;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .hero-menu-pill {
-    top: 1.5rem !important;
-    right: 1.25rem !important;
-    font-size: 0.82rem !important;
-    padding: 0.45rem 1.15rem !important;
-  }
-}
-
-.menu-pill-inner {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-}
-
-.menu-close-svg {
-  display: inline-block;
-  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
-  stroke: currentColor;
-}
-
-.hero-menu-pill.is-menu-open {
-  background: #0f0f0f !important;
-  color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.28) !important;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35) !important;
-}
-
-.hero-menu-pill:hover:not(.menu-pill-hidden) {
+.hero-menu-pill:hover {
   transform: scale(1.05) !important;
   background: #222222 !important;
 }
 
-.hero-menu-pill:hover:not(.menu-pill-hidden) .menu-close-svg {
-  transform: rotate(90deg);
+/* Navigation Menu Overlay Close Button */
+.mxd-menu__close-btn {
+  position: absolute !important;
+  top: 3rem !important;
+  right: 3rem !important;
+  z-index: 100 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+  pointer-events: auto !important;
 }
 
-.hero-menu-pill.menu-pill-hidden {
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  transform: translateY(-12px) scale(0.95) !important;
+.mxd-menu__close-btn:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  transform: scale(1.08) rotate(90deg) !important;
+}
+
+.mxd-menu__close-btn svg {
+  display: block;
+  stroke: #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+  .mxd-menu__close-btn {
+    top: 3.5rem !important;
+    right: 6rem !important;
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .mxd-menu__close-btn {
+    right: 10rem !important;
+  }
 }
 
 /* Rebuilt 3-Column Footer */

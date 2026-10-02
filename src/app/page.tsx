@@ -10,7 +10,6 @@ import TechStackSkillsSection from "@/components/TechStackSkillsSection";
 import CoreCompetenciesSection from "@/components/CoreCompetenciesSection";
 import ContactFooterSection from "@/components/ContactFooterSection";
 import AchievementCard from "@/components/AchievementCard";
-import FloatingMenu from "@/components/FloatingMenu";
 
 export default function Home() {
   return (
@@ -39,6 +38,28 @@ export default function Home() {
         {/*  Menu Overlay Start  */}
         <div className="mxd-menu__overlay">
           <div className="mxd-menu__content" data-lenis-prevent>
+
+            {/*  Menu Close Button Start  */}
+            <button
+              type="button"
+              className="mxd-menu__close-btn"
+              aria-label="Close Navigation Menu"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+            {/*  Menu Close Button End  */}
 
             {/*  Menu Logo Start  */}
             <div className="mxd-menu__logo">
@@ -333,12 +354,12 @@ export default function Home() {
             {/*  Phosphor icon  */}
             {/*  <i className="ph-bold ph-arrow-up-right"></i>  */}
           </a>
+          <button type="button" className="hero-menu-pill mxd-menu__toggle" aria-label="Open Navigation Menu">
+            MENU
+          </button>
         </div>
       </header>
       {/*  Header End  */}
-
-      {/*  Global Fixed Floating Menu  */}
-      <FloatingMenu />
 
       <main id="mxd-page-content" className="mxd-page-content">
         <div id="hero" className="hero">
