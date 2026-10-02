@@ -1733,6 +1733,32 @@ button {
   contain: paint !important;
 }
 
+/* Ensure the sticky slider text wrapper never intercepts clicks on interactive slides */
+.mxd-dv-sticky-img__content {
+  pointer-events: none !important;
+}
+
+.mxd-dv-sticky-img__btnholder {
+  pointer-events: auto !important;
+}
+
+.mxd-dv-sticky-img__titleitem h2 {
+  pointer-events: auto !important;
+}
+
+.mxd-dv-sticky-img__images {
+  pointer-events: auto !important;
+}
+
+.images__listitem {
+  pointer-events: auto !important;
+}
+
+.images__overflow.vision-slide-beige-container {
+  pointer-events: auto !important;
+  z-index: 10 !important;
+}
+
 /* ==========================================================================
    Tech Stack / Skills Dashboard Showcase (Ultra HD Vector & Interactive)
    ========================================================================== */
@@ -1741,13 +1767,13 @@ button {
   width: 100%;
   height: 100%;
   background-color: #edf1e9;
-  background-image: radial-gradient(ellipse 90% 70% at 50% 35%, #faf7f0 0%, #edf1e9 85%);
+  background-image: radial-gradient(ellipse 95% 75% at 50% 35%, #faf7f0 0%, #edf1e9 85%);
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2.2rem 1.5rem;
+  padding: clamp(0.75rem, 1.5vh, 1.6rem) clamp(1rem, 2.2vw, 2.5rem);
   scrollbar-width: thin;
   scrollbar-color: rgba(184, 115, 40, 0.25) transparent;
   pointer-events: auto !important;
@@ -1766,11 +1792,11 @@ button {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 220px;
+  width: clamp(120px, 12vw, 220px);
   height: 100%;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 .skills-decor-ribbon-left {
@@ -1790,12 +1816,12 @@ button {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 1100px;
+  max-width: min(96vw, 1680px);
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.1rem;
+  gap: clamp(0.6rem, 1.2vh, 1.1rem);
 }
 
 /* Header Section */
@@ -1805,73 +1831,79 @@ button {
   align-items: center;
   text-align: center;
   gap: 0.35rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.15rem;
 }
 
 .skills-pill-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.26rem 1.15rem;
+  padding: 0.32rem 1.6rem;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(190, 145, 95, 0.32);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.2px solid rgba(190, 145, 95, 0.4);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(12px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills-pill-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(184, 115, 40, 0.15);
 }
 
 .skills-pill-badge span {
   font-family: inherit;
-  font-size: 0.68rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: #524b44;
+  color: #443e38;
 }
 
 .skills-title-row {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.65rem;
+  gap: 0.85rem;
   position: relative;
 }
 
 .skills-main-title {
   font-family: var(--font-syne), inherit;
-  font-size: clamp(2.3rem, 4.2vw, 3.5rem);
+  font-size: clamp(3.2rem, 5.2vw, 5.4rem);
   font-weight: 900;
   font-style: italic;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   line-height: 1;
   margin: 0;
-  background: linear-gradient(110deg, #101216 0%, #222731 42%, #a46422 80%, #d89340 100%);
+  background: linear-gradient(110deg, #101216 0%, #222731 38%, #a46422 75%, #e2a250 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .skills-title-squares {
   display: grid;
-  grid-template-columns: repeat(2, 9px);
-  grid-template-rows: repeat(2, 9px);
-  gap: 3.5px;
+  grid-template-columns: repeat(2, 13px);
+  grid-template-rows: repeat(2, 13px);
+  gap: 4.5px;
   align-self: flex-start;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .skills-sq {
-  width: 9px;
-  height: 9px;
-  border: 1.8px solid #a46422;
-  border-radius: 2.2px;
+  width: 13px;
+  height: 13px;
+  border: 2.4px solid #a46422;
+  border-radius: 3px;
 }
 
 .skills-subheading {
-  font-size: clamp(0.66rem, 0.95vw, 0.76rem);
-  font-weight: 600;
-  letter-spacing: 0.28em;
+  font-size: clamp(0.78rem, 1.1vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.34em;
   text-transform: uppercase;
-  color: #6b645b;
+  color: #5c554c;
   margin: 0;
 }
 
@@ -1880,7 +1912,7 @@ button {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 0.85rem;
+  gap: clamp(0.7rem, 1.3vh, 1.15rem);
 }
 
 .skills-category-block {
@@ -1893,7 +1925,7 @@ button {
 .skills-category-header {
   display: flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.65rem;
   width: 100%;
 }
 
@@ -1903,12 +1935,19 @@ button {
   justify-content: center;
   color: #16181d;
   flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+}
+
+.skills-category-icon svg {
+  width: 22px !important;
+  height: 22px !important;
 }
 
 .skills-category-title {
-  font-size: 0.72rem;
+  font-size: clamp(0.82rem, 1.05vw, 0.94rem);
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #16181d;
   margin: 0;
@@ -1917,38 +1956,55 @@ button {
 
 .skills-category-line {
   flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(160, 140, 115, 0.4) 0%, rgba(160, 140, 115, 0.05) 100%);
-  margin-left: 0.35rem;
+  height: 1.5px;
+  background: linear-gradient(90deg, rgba(160, 140, 115, 0.45) 0%, rgba(160, 140, 115, 0.06) 100%);
+  margin-left: 0.5rem;
 }
 
 /* Skills Cards */
 .skills-cards-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.55rem;
+  gap: 0.7rem;
   width: 100%;
 }
 
 .skills-card-item {
   flex: 1 1 0px;
-  min-width: 82px;
+  min-width: 95px;
+  min-height: clamp(82px, 10.5vh, 100px);
   background: #ffffff;
-  border-radius: 12px;
-  border: 1px solid rgba(220, 215, 202, 0.75);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.035), 0 1px 2px rgba(0, 0, 0, 0.02);
+  border-radius: 14px;
+  border: 1.2px solid rgba(215, 208, 195, 0.85);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.038), 0 1px 3px rgba(0, 0, 0, 0.02);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0.65rem 0.35rem 0.55rem 0.35rem;
+  padding: clamp(0.75rem, 1.3vh, 1.05rem) 0.5rem clamp(0.65rem, 1.1vh, 0.9rem) 0.5rem;
   text-decoration: none !important;
   position: relative;
-  cursor: pointer;
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
   overflow: hidden;
   pointer-events: auto !important;
+  z-index: 5 !important;
+}
+
+/* External Link Indicator on Hover */
+.skills-card-item::before {
+  content: "↗";
+  position: absolute;
+  top: 7px;
+  right: 9px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #b87328;
+  opacity: 0;
+  transform: translate(-3px, 3px);
+  transition: all 0.22s ease;
+  pointer-events: none;
 }
 
 .skills-card-item::after {
@@ -1957,44 +2013,57 @@ button {
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #b87328, transparent);
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #c48336, transparent);
   opacity: 0;
-  transition: opacity 0.22s ease;
+  transition: opacity 0.25s ease;
 }
 
 .skills-card-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 22px -3px rgba(180, 120, 50, 0.18), 0 3px 6px rgba(0, 0, 0, 0.04);
-  border-color: rgba(180, 115, 45, 0.5);
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 34px -5px rgba(180, 120, 50, 0.24), 0 5px 12px rgba(0, 0, 0, 0.05);
+  border-color: rgba(184, 115, 40, 0.65);
+}
+
+.skills-card-item:hover::before {
+  opacity: 0.9;
+  transform: translate(0, 0);
 }
 
 .skills-card-item:hover::after {
   opacity: 1;
 }
 
+.skills-card-item:active {
+  transform: translateY(-2px) scale(0.985);
+  box-shadow: 0 8px 18px -2px rgba(180, 120, 50, 0.2);
+}
+
 .skills-card-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 28px;
-  width: 28px;
-  margin-bottom: 0.32rem;
-  transition: transform 0.22s ease;
+  height: 40px;
+  width: 40px;
+  margin-bottom: 0.45rem;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), filter 0.28s ease;
 }
 
 .skills-card-icon svg {
   display: block;
+  width: 38px !important;
+  height: 38px !important;
   max-width: 100%;
   max-height: 100%;
 }
 
 .skills-card-item:hover .skills-card-icon {
-  transform: scale(1.12);
+  transform: scale(1.18) translateY(-2px);
+  filter: drop-shadow(0 4px 8px rgba(184, 115, 40, 0.26));
 }
 
 .skills-card-label {
-  font-size: 0.7rem;
+  font-size: clamp(0.78rem, 0.98vw, 0.92rem);
   font-weight: 700;
   color: #15181e;
   text-align: center;
@@ -2008,47 +2077,47 @@ button {
 }
 
 .skills-card-subtext {
-  font-size: 0.55rem;
-  font-weight: 500;
+  font-size: clamp(0.58rem, 0.72vw, 0.66rem);
+  font-weight: 600;
   color: #727780;
   text-align: center;
   line-height: 1;
-  margin-top: 2px;
+  margin-top: 3px;
   white-space: nowrap;
 }
 
 /* Responsive adjustments */
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .skills-card-item {
-    flex: 1 1 calc(25% - 0.55rem);
-    min-width: 76px;
-  }
-  .skills-decor-ribbon {
-    opacity: 0.5;
-    width: 140px;
+    flex: 1 1 calc(25% - 0.75rem);
+    min-width: 85px;
   }
 }
 
 @media (max-width: 640px) {
   .skills-card-item {
     flex: 1 1 calc(33.333% - 0.55rem);
-    min-width: 72px;
-    padding: 0.5rem 0.25rem;
+    min-width: 76px;
+    padding: 0.65rem 0.3rem;
   }
   .skills-card-icon {
-    height: 24px;
-    width: 24px;
+    height: 30px;
+    width: 30px;
+  }
+  .skills-card-icon svg {
+    width: 28px !important;
+    height: 28px !important;
   }
   .skills-card-label {
-    font-size: 0.65rem;
+    font-size: 0.68rem;
   }
   .skills-decor-ribbon {
     display: none;
   }
   .skills-main-title {
-    font-size: 2.1rem;
+    font-size: 2.4rem;
   }
   .skills-category-title {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
 }
