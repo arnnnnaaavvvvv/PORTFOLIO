@@ -963,9 +963,9 @@ export default function Home() {
               {/*  Block - CTA with Matter.js Objects Start  */}
               <div className="mxd-block">
                 <div className="mxd-promo transparent">
-                  <div className="mxd-promo__wrap auto-height">
+                  <div className="mxd-promo__wrap" style={{ paddingBottom: "14rem" }}>
                     {/*  content  */}
-                    <div className="mxd-promo__content" style={{ paddingBottom: "12rem" }}>
+                    <div className="mxd-promo__content">
                       <div className="mxd-promo__btngroup anim-uni-in-up">
                         <a className="btn btn-line btn-line-opposite" href="#contact">
                           <span className="btn-caption mxd-scramble">Get In Touch</span>
