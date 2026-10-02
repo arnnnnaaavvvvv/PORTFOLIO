@@ -361,6 +361,8 @@ button {
 }
 
 .hero-menu-pill {
+  position: relative !important;
+  left: 12px !important;
   background: #0f0f0f !important;
   color: #ffffff !important;
   font-family: 'Space Grotesk', -apple-system, sans-serif !important;
