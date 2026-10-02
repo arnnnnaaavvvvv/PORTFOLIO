@@ -8,6 +8,7 @@ import PhilosophyInteractiveEffect from "@/components/PhilosophyInteractiveEffec
 import VisionAvatarCard from "@/components/VisionAvatarCard";
 import TechStackSkillsSection from "@/components/TechStackSkillsSection";
 import CoreCompetenciesSection from "@/components/CoreCompetenciesSection";
+import ContactFooterSection from "@/components/ContactFooterSection";
 
 export default function Home() {
   return (
@@ -955,42 +956,8 @@ export default function Home() {
           </div>
           {/*  Section - Blog Preview End  */}
         </div>
-        <div id="contact">
-          {/*  Section - CTA with Marquee Start  */}
-          <div className="mxd-section blur-section bg-color-opposite">
-            <div className="mxd-container fullwidth-container">
-
-              {/*  Block - CTA with Matter.js Objects Start  */}
-              <div className="mxd-block">
-                <div className="mxd-promo transparent">
-                  <div className="mxd-promo__wrap" style={{ paddingBottom: "14rem" }}>
-                    {/*  content  */}
-                    <div className="mxd-promo__content">
-                      <div className="mxd-promo__btngroup anim-uni-in-up">
-                        <a className="btn btn-line btn-line-opposite" href="#contact">
-                          <span className="btn-caption mxd-scramble">Get In Touch</span>
-                        </a>
-                      </div>
-                      <div className="mxd-promo__caption">
-                        <a className="active-cursor-accent" data-cursor-text="Contact Us" href="#contact">
-                          <h2 className="opposite mxd-split-lines">Let's engineer your next breakthrough</h2>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/*  Block - CTA with Matter.js Objects End  */}
-
-            </div>
-          </div>
-          {/*  Section - CTA with Marquee End  */}
-        </div>
+        <ContactFooterSection />
       </main>
-
-      {/*  Footer Start  */}
-      <Footer />
-      {/*  Footer End  */}
       {/*  Global Cursor Start  */}
       <div id="mxd-cursor" className="mxd-cursor">
         <div id="mxd-cursor__dot" className="mxd-cursor__dot"></div>
