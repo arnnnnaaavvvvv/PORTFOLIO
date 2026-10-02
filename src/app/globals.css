@@ -385,50 +385,38 @@ button {
   background: #222222 !important;
 }
 
-/* Navigation Menu Overlay Close Button */
-.mxd-menu__close-btn {
-  position: absolute !important;
-  top: 3rem !important;
-  right: 3rem !important;
+/* Navigation Header & Menu Pill State when Menu is Open */
+body.menu-open .mxd-header {
+  position: fixed !important;
   z-index: 100 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 44px !important;
-  height: 44px !important;
-  border-radius: 50% !important;
-  background: rgba(255, 255, 255, 0.12) !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  color: #ffffff !important;
-  cursor: pointer !important;
-  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+  top: 0 !important;
   pointer-events: auto !important;
 }
 
-.mxd-menu__close-btn:hover {
-  background: rgba(255, 255, 255, 0.25) !important;
-  border-color: rgba(255, 255, 255, 0.5) !important;
-  transform: scale(1.08) rotate(90deg) !important;
+body.menu-open .mxd-header__controls {
+  z-index: 101 !important;
+  pointer-events: auto !important;
 }
 
-.mxd-menu__close-btn svg {
-  display: block;
-  stroke: #ffffff;
+body.menu-open .mxd-header__link {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease, visibility 0.3s ease !important;
 }
 
-@media only screen and (min-width: 768px) {
-  .mxd-menu__close-btn {
-    top: 3.5rem !important;
-    right: 6rem !important;
-    width: 48px !important;
-    height: 48px !important;
-  }
+body.menu-open .hero-menu-pill {
+  z-index: 102 !important;
+  pointer-events: auto !important;
+  background: #0f0f0f !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45) !important;
 }
 
-@media only screen and (min-width: 1600px) {
-  .mxd-menu__close-btn {
-    right: 10rem !important;
-  }
+body.menu-open .hero-menu-pill:hover {
+  background: #222222 !important;
+  transform: scale(1.05) !important;
 }
 
 /* Rebuilt 3-Column Footer */

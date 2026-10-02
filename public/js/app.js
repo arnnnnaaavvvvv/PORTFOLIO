@@ -647,10 +647,22 @@ function mxdMenu(lenisInstance) {
       .to(menuArrows, { opacity: 1, stagger: -0.05, ease: "hop", duration: 0.75 }, 0.45);
 
       isMenuOpen = true;
+      document.body.classList.add("menu-open");
+      const menuPillOpen = document.querySelector(".hero-menu-pill");
+      if (menuPillOpen) {
+        menuPillOpen.textContent = "CLOSE";
+        menuPillOpen.setAttribute("aria-label", "Close Navigation Menu");
+      }
 
     } else {
 
       hamburgerIcon?.classList.remove("active");
+      document.body.classList.remove("menu-open");
+      const menuPillClose = document.querySelector(".hero-menu-pill");
+      if (menuPillClose) {
+        menuPillClose.textContent = "MENU";
+        menuPillClose.setAttribute("aria-label", "Open Navigation Menu");
+      }
 
       tl.to(menuOverlay, { clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", duration: 1, ease: "hop" })
       .to(menuBackdrop, {
@@ -680,20 +692,20 @@ function mxdMenu(lenisInstance) {
     }
   });
 
-  // Close button click listener
-  const menuCloseBtns = document.querySelectorAll(".mxd-menu__close-btn");
-  menuCloseBtns.forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      menuToggleBtn?.click();
-    });
-  });
-
   // Escape key listener to close menu
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && isMenuOpen) {
       menuToggleBtn?.click();
     }
+  });
+
+  // Close when clicking any link inside menu
+  document.querySelectorAll(".mxd-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      if (isMenuOpen) {
+        menuToggleBtn?.click();
+      }
+    });
   });
 
   function resetMenu() {
@@ -714,6 +726,12 @@ function mxdMenu(lenisInstance) {
     gsap.set(menuArrows, { opacity: 0 });
 
     hamburgerIcon?.classList.remove("active");
+    document.body.classList.remove("menu-open");
+    const menuPillReset = document.querySelector(".hero-menu-pill");
+    if (menuPillReset) {
+      menuPillReset.textContent = "MENU";
+      menuPillReset.setAttribute("aria-label", "Open Navigation Menu");
+    }
 
     // reset accordion state
     document.querySelectorAll(".submenu").forEach(submenu => {
