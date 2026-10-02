@@ -704,22 +704,41 @@ function mxdMenu(lenisInstance) {
     link.addEventListener("click", (e) => {
       const href = link.getAttribute("href");
       if (href && href.startsWith("#")) {
-        const target = document.querySelector(href);
-        if (target) {
-          e.preventDefault();
-          if (isMenuOpen) {
-            menuToggleBtn?.click();
-          }
-          lenisInstance?.start();
-          setTimeout(() => {
-            if (lenisInstance) {
-              lenisInstance.scrollTo(target, { duration: 1.2, offset: 0 });
-            } else {
-              target.scrollIntoView({ behavior: "smooth" });
-            }
-          }, 80);
-          return;
+        e.preventDefault();
+        if (isMenuOpen) {
+          menuToggleBtn?.click();
         }
+        lenisInstance?.start();
+
+        let targetY = 0;
+        if (href === "#achievements" || href === "#insights") {
+          const insights = document.querySelector("#insights");
+          targetY = insights ? (insights.offsetTop + 88) : 9410;
+        } else if (href === "#projects" || href === "#works") {
+          const works = document.querySelector("#works");
+          targetY = works ? works.offsetTop : 674;
+        } else if (href === "#contact") {
+          const contact = document.querySelector("#contact");
+          targetY = contact ? contact.offsetTop : 10330;
+        } else if (href === "#hero" || href === "#home") {
+          targetY = 0;
+        } else {
+          const target = document.querySelector(href);
+          targetY = target ? target.offsetTop : 0;
+        }
+
+        setTimeout(() => {
+          if (typeof gsap !== "undefined" && gsap.to) {
+            gsap.to(window, {
+              scrollTo: { y: targetY, autoKill: false },
+              duration: 1.2,
+              ease: "hop"
+            });
+          } else {
+            window.scrollTo({ top: targetY, behavior: "smooth" });
+          }
+        }, 120);
+        return;
       }
       if (isMenuOpen) {
         menuToggleBtn?.click();
@@ -1081,18 +1100,35 @@ function mxdToTop() {
 function mxdSmoothScroll() {
   const links = document.querySelectorAll('a[href*="#"]:not([href="#"]):not([href="#0"])');
   links.forEach(link => {
+    if (link.closest(".mxd-menu")) return;
+
     link.addEventListener("click", function (e) {
       const url = new URL(this.href);
       const hash = url.hash;
       if (!hash) return;
-      const target = document.querySelector(hash);
-      if (!target) return;
-      // only same-page links
       if (window.location.pathname !== url.pathname || window.location.hostname !== url.hostname) return;
       e.preventDefault();
+
+      let targetY = 0;
+      if (hash === "#achievements" || hash === "#insights") {
+        const insights = document.querySelector("#insights");
+        targetY = insights ? (insights.offsetTop + 88) : 9410;
+      } else if (hash === "#projects" || hash === "#works") {
+        const works = document.querySelector("#works");
+        targetY = works ? works.offsetTop : 674;
+      } else if (hash === "#contact") {
+        const contact = document.querySelector("#contact");
+        targetY = contact ? contact.offsetTop : 10330;
+      } else if (hash === "#hero" || hash === "#home") {
+        targetY = 0;
+      } else {
+        const target = document.querySelector(hash);
+        targetY = target ? target.offsetTop : 0;
+      }
+
       gsap.to(window, {
-        scrollTo: { y: target, autoKill: true },
-        duration: 1,
+        scrollTo: { y: targetY, autoKill: false },
+        duration: 1.2,
         ease: "hop"
       });
     });
