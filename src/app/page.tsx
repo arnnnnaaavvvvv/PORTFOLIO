@@ -7,6 +7,7 @@ import ProjectTechStack, { CLUDE_TECH_STACKS, IGNITE_TECH_STACKS, SIRUS_TECH_STA
 import PhilosophyInteractiveEffect from "@/components/PhilosophyInteractiveEffect";
 import VisionAvatarCard from "@/components/VisionAvatarCard";
 import TechStackSkillsSection from "@/components/TechStackSkillsSection";
+import CoreCompetenciesSection from "@/components/CoreCompetenciesSection";
 
 export default function Home() {
   return (
@@ -805,7 +806,7 @@ export default function Home() {
                   {/*  Page 3: Core Competencies  */}
                   <div className="images__listitem">
                     <div className="images__overflow core-competencies-slide-container">
-                      <img className="images__img core-competencies-img" src="/img/dividers/core_competencies.webp" alt="Core Competencies" />
+                      <CoreCompetenciesSection />
                     </div>
                   </div>
                 </div>
