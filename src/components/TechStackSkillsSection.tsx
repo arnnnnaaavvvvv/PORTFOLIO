@@ -438,12 +438,8 @@ export default function TechStackSkillsSection() {
       </div>
 
       <div className="skills-showcase-container">
-        {/* Top Header Badge */}
+        {/* Top Header */}
         <div className="skills-header-center">
-          <div className="skills-pill-badge">
-            <span>MY TECH STACK</span>
-          </div>
-
           {/* Headline: SKILLS with gradient and geometric accent */}
           <div className="skills-title-row">
             <h2 className="skills-main-title">SKILLS</h2>
