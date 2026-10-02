@@ -1,6 +1,8 @@
 {
   "name": "arnav-portfolio",
   "version": "0.1.0",
+  "description": "Personal Portfolio & Systems Showcase engineered by Arnav Singh",
+  "author": "Arnav Singh",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,7 +12,6 @@
   },
   "dependencies": {
     "framer-motion": "^13.4.4",
-    "lenis": "^1.3.26",
     "lucide-react": "^1.48.0",
     "next": "14.2.35",
     "react": "^18",

@@ -800,6 +800,7 @@ export default function ProjectTechStack({
               className={`techstack-badge ${isEmerald ? "techstack-badge--dark" : isDark ? "techstack-badge--dark" : "techstack-badge--light"}`}
               onMouseEnter={() => setHoveredIdx(idx)}
               onMouseLeave={() => setHoveredIdx(null)}
+              onClick={() => setHoveredIdx((prev) => (prev === idx ? null : idx))}
               style={
                 isEmerald
                   ? {
@@ -809,6 +810,7 @@ export default function ProjectTechStack({
                         ? `0 6px 20px ${tech.bgColor}, 0 0 14px ${tech.bgColor}`
                         : "0 2px 6px rgba(0, 0, 0, 0.45)",
                       transform: isHovered ? "translateY(-3px) scale(1.03)" : "translateY(0) scale(1)",
+                      WebkitTapHighlightColor: "transparent",
                     }
                   : isDark
                   ? {
@@ -818,6 +820,7 @@ export default function ProjectTechStack({
                         ? `0 6px 20px ${tech.bgColor}, 0 0 10px ${tech.bgColor}`
                         : "0 2px 6px rgba(0, 0, 0, 0.4)",
                       transform: isHovered ? "translateY(-3px) scale(1.03)" : "translateY(0) scale(1)",
+                      WebkitTapHighlightColor: "transparent",
                     }
                   : {
                       backgroundColor: isHovered ? tech.bgColor : "#ffffff",
@@ -826,6 +829,7 @@ export default function ProjectTechStack({
                         ? `0 6px 18px ${tech.bgColor}, 0 2px 6px rgba(0,0,0,0.06)`
                         : "0 2px 6px rgba(0, 0, 0, 0.03)",
                       transform: isHovered ? "translateY(-3px) scale(1.03)" : "translateY(0) scale(1)",
+                      WebkitTapHighlightColor: "transparent",
                     }
               }
             >

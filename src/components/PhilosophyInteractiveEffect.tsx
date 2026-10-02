@@ -26,8 +26,11 @@ export default function PhilosophyInteractiveEffect() {
     let distortTimeout: NodeJS.Timeout | null = null;
     let prevActiveIndex = -1;
     let rafId: number | null = null;
+    let isIntersecting = false;
 
     const checkProximity = () => {
+      if (!isIntersecting) return;
+
       const content = section.querySelector<HTMLElement>(".mxd-dv-sticky-cap__content");
       const captionText = section.querySelector<HTMLElement>(".mxd-dv-sticky-cap__text.permanent");
       const items = section.querySelectorAll<HTMLElement>(".scroll-images-row__item");
@@ -182,12 +185,35 @@ export default function PhilosophyInteractiveEffect() {
         setTrailState((prev) => (prev.visible ? { ...prev, visible: false, opacity: 0 } : prev));
       }
 
-      rafId = requestAnimationFrame(checkProximity);
+      if (isIntersecting) {
+        rafId = requestAnimationFrame(checkProximity);
+      }
     };
 
-    rafId = requestAnimationFrame(checkProximity);
+    // Use IntersectionObserver to pause the loop when section is off-screen
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        isIntersecting = entry.isIntersecting;
+        if (isIntersecting) {
+          if (!rafId) {
+            rafId = requestAnimationFrame(checkProximity);
+          }
+        } else {
+          if (rafId) {
+            cancelAnimationFrame(rafId);
+            rafId = null;
+          }
+          setTrailState((prev) => (prev.visible ? { ...prev, visible: false, opacity: 0 } : prev));
+        }
+      },
+      { rootMargin: "150px" }
+    );
+
+    observer.observe(section);
 
     return () => {
+      observer.disconnect();
       if (rafId) cancelAnimationFrame(rafId);
       if (distortTimeout) clearTimeout(distortTimeout);
     };

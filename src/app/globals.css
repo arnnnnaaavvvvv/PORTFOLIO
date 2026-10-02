@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oxanium:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Oxanium:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Permanent+Marker&family=Space+Grotesk:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap');
 
 :root {
   /* Design Tokens — Light Mode Only */
@@ -3178,5 +3178,178 @@ a.main-menu__toggle {
   .achievement-action-btn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* ===================================================
+   CROSS-DEVICE COMPATIBILITY: ANDROID, IOS, TABLETS
+   =================================================== */
+
+/* 1. iOS / Android Viewport & WebKit Resilience */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+/* 2. Touch Screen Cursor Deactivation */
+@media (hover: none) and (pointer: coarse) {
+  #mxd-cursor,
+  .mxd-cursor,
+  .mxd-cursor__dot,
+  .mxd-cursor__text,
+  .mxd-cursor__image {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
+
+/* 3. Hero Section Dynamic Viewport Scaling */
+.hero-center-stage {
+  min-height: 100vh !important;
+  min-height: 100dvh !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero-center-stage {
+    min-height: 80vh !important;
+    min-height: 80dvh !important;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .hero-center-stage {
+    min-height: 60vh !important;
+    min-height: 60dvh !important;
+  }
+}
+
+/* 4. Touch-Safe Card Physics & Interactions */
+.interactive-portrait-card,
+.vision-avatar-card {
+  touch-action: pan-y !important;
+  -webkit-touch-callout: none !important;
+  user-select: none !important;
+}
+
+/* 5. Mobile & Tablet Project Tech Stack Badges */
+@media only screen and (max-width: 600px) {
+  .card__techstack-wrapper {
+    bottom: 12px !important;
+    padding: 0 8px !important;
+    width: 100% !important;
+  }
+
+  .project-techstack-dock {
+    max-width: 96% !important;
+    padding: 6px 10px !important;
+    border-radius: 12px !important;
+    gap: 5px !important;
+  }
+
+  .project-techstack-header {
+    gap: 5px !important;
+  }
+
+  .techstack-label {
+    font-size: 9px !important;
+  }
+
+  .techstack-badge {
+    padding: 4px 7px !important;
+    gap: 4px !important;
+    border-radius: 7px !important;
+  }
+
+  .techstack-name {
+    font-size: 10px !important;
+  }
+
+  .techstack-icon svg {
+    width: 13px !important;
+    height: 13px !important;
+  }
+
+  .live-demo-box-btn {
+    padding: 6px 12px !important;
+    gap: 6px !important;
+  }
+
+  .live-demo-label {
+    font-size: 10.5px !important;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .project-techstack-dock {
+    padding: 5px 8px !important;
+    gap: 4px !important;
+  }
+
+  .techstack-badge {
+    padding: 3px 6px !important;
+    gap: 3px !important;
+  }
+
+  .techstack-name {
+    font-size: 9px !important;
+  }
+}
+
+/* 6. Navigation Menu iOS Safe Area */
+.mxd-menu__overlay {
+  min-height: 100vh !important;
+  min-height: 100dvh !important;
+  padding-top: env(safe-area-inset-top, 0px) !important;
+  padding-bottom: env(safe-area-inset-bottom, 0px) !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-menu__caption {
+    font-size: clamp(2rem, 9vw, 3.2rem) !important;
+  }
+  .main-menu__number {
+    font-size: 0.85rem !important;
+  }
+}
+
+/* 7. Achievement Card Mobile Typography */
+@media only screen and (max-width: 600px) {
+  .achievement-title {
+    font-size: clamp(1.4rem, 5.5vw, 1.85rem) !important;
+  }
+  .achievement-subtitle {
+    font-size: 0.95rem !important;
+  }
+  .achievement-desc {
+    font-size: 0.92rem !important;
+  }
+  .achievement-card {
+    padding: 22px 16px !important;
+  }
+}
+
+/* 8. Contact Section Mobile Responsive Padding */
+@media only screen and (max-width: 600px) {
+  .contact-last-page {
+    padding: 2.5rem 1rem !important;
+  }
+  .contact-big-name {
+    font-size: clamp(2.2rem, 11vw, 4rem) !important;
+  }
+  .contact-touch-btn {
+    padding: 0.85rem 1.8rem !important;
+    font-size: 0.88rem !important;
   }
 }
