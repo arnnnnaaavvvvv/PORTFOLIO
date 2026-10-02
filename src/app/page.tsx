@@ -859,21 +859,12 @@ export default function Home() {
                   <div className="mxd-section-title pre-subtitle-s controls-bottom-mobile">
                     <div className="container-fluid p-0">
                       <div className="row g-0">
-                        <div className="col-12 col-xl-6 mxd-grid-item-s">
+                        <div className="col-12 col-xl-8 mxd-grid-item-s">
                           <div className="mxd-section-title__title pre-caption">
                             <h2 className="mxd-split-lines">ACHIEVEMENTS</h2>
                           </div>
-                        </div>
-                        <div className="col-12 col-xl-5 mxd-grid-item-s">
-                          <div className="mxd-section-title__data top-controls">
-                            <div className="mxd-section-title__controls anim-uni-in-up">
-                              <a className="btn btn-line btn-line-default" href="#insights">
-                                <span className="btn-caption mxd-scramble">Engineering Briefs</span>
-                              </a>
-                            </div>
-                            <div className="mxd-section-title__caption pre-controls">
-                              <p className="t-bold t-large mxd-split-lines">A snapshot of the milestones, challenges, and <span>recognition earned along the way.</span></p>
-                            </div>
+                          <div className="mxd-section-title__caption pre-controls" style={{ marginTop: "1.5rem" }}>
+                            <p className="t-bold t-large mxd-split-lines">A snapshot of the milestones, challenges, and <span>recognition earned along the way.</span></p>
                           </div>
                         </div>
                       </div>
