@@ -139,11 +139,8 @@ export default function ContactFooterSection() {
 
         {/* Bottom Sub-bar */}
         <div className="contact-sub-bar">
-          <p className="contact-sub-bar-left">
-            © 2026 ARNAV SINGH. ALL RIGHTS RESERVED.
-          </p>
-          <p className="contact-sub-bar-right">
-            AUTONOMOUS AI SYSTEMS &amp; FULL-STACK ARCHITECTURE
+          <p className="contact-sub-bar-center">
+            © ARNAV SINGH
           </p>
         </div>
       </div>
