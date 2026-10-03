@@ -1,11 +1,11 @@
 /*! ------------------------------------------------
- * Project Name: Azurio - Digital Agency & Personal Portfolio HTML Template
- * Project Description: Stand out and express your uniqueness with Azurio - a vibrant and minimal HTML template for creatives, studios and freelancers. Impress your website visitors with a clean, stylish layout and stunning visuals.
- * Tags: mix_design, resume, portfolio, personal page, cv, template, one page, responsive, html5, css3, creative, clean, agency, studio 
+ * Project Name: Arnav Singh — Personal Portfolio & Systems Showcase
+ * Project Description: High-performance portfolio and systems engineering showcase engineered with Next.js 14, TypeScript, GSAP, and Lenis.
+ * Tags: arnav, portfolio, ai engineer, systems architect, nextjs, typescript, gsap, lenis
  * Version: 1.0.0
  * Build Date: March 2026
  * Last Update: July 2026
- * Author: mix_design */
+ * Author: Arnav Singh (https://github.com/arnnnnaaavvvvv) */
 /*! File name: main.css
  * ------------------------------------------------
  *
@@ -14,7 +14,7 @@
  * ------------------------------------------------
  *  01. Fonts
  *  02. Variables
- *  03. Template Backgrounds
+ *  03. Architectural Backgrounds
  *  04. Basic Styles
  *  05. Elements - Page Structure
  *  06. Elements - Typography
@@ -231,7 +231,7 @@
 /* Variables End */
 /* ------------------------------------------------*/
 /* ------------------------------------------------*/
-/* Template Backgrounds Start */
+/* Architectural Backgrounds Start */
 /* ------------------------------------------------*/
 .mxd-hero-01 {
   background-image: url(../img/hero/1920x1200_h01.webp);
@@ -298,7 +298,7 @@
 }
 
 /* ------------------------------------------------*/
-/* Template Backgrounds End */
+/* Architectural Backgrounds End */
 /* ------------------------------------------------*/
 /* ------------------------------------------------*/
 /* Basic Styles Start */

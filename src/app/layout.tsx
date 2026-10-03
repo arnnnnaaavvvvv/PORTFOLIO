@@ -59,7 +59,7 @@ export default function RootLayout({
         <link rel="stylesheet" type="text/css" href="/css/main.css" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `try{localStorage.setItem('template.theme','light');document.documentElement.setAttribute('color-scheme','light');}catch(e){}`,
+            __html: `try{localStorage.setItem('arnav.theme','light');document.documentElement.setAttribute('color-scheme','light');}catch(e){}`,
           }}
         />
       </head>

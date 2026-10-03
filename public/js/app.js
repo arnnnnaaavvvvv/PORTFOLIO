@@ -1,13 +1,13 @@
 /*! ------------------------------------------------
- * Project Name: Azurio - Digital Agency & Personal Portfolio HTML Template
- * Project Description: Stand out and express your uniqueness with Azurio - a vibrant and minimal HTML template for creatives, studios and freelancers. Impress your website visitors with a clean, stylish layout and stunning visuals.
- * Tags: mix_design, resume, portfolio, personal page, cv, template, one page, responsive, html5, css3, creative, clean, agency, studio
+ * Project Name: Arnav Singh — Personal Portfolio & Systems Showcase
+ * Project Description: High-performance portfolio and systems engineering showcase engineered with Next.js 14, TypeScript, GSAP, and Lenis.
+ * Tags: arnav, portfolio, ai engineer, systems architect, nextjs, typescript, gsap, lenis
  * Version: 1.0.0
  * Build Date: March 2026
  * Last Update: July 2026
- * Author: mix_design
+ * Author: Arnav Singh (https://github.com/arnnnnaaavvvvv)
  * File name: app.js
- * ------------------------------------------------
+ * ------------------------------------------------ */
 
  * ------------------------------------------------
  * Table of Contents
@@ -63,9 +63,9 @@
 // --------------------------------------------- //
 // Base - Inits Start
 // --------------------------------------------- //
-function initAzurio() {
-  if (window.__azurioInitialized) return;
-  window.__azurioInitialized = true;
+function initPortfolio() {
+  if (window.__portfolioInitialized) return;
+  window.__portfolioInitialized = true;
 
   const lenis = new Lenis();
   lenis.on('scroll', ScrollTrigger.update);
@@ -139,11 +139,11 @@ function initAzurio() {
 }
 
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initAzurio);
+  document.addEventListener("DOMContentLoaded", initPortfolio);
 } else {
-  initAzurio();
+  initPortfolio();
 }
-window.initAzurio = initAzurio;
+window.initPortfolio = initPortfolio;
 // --------------------------------------------- //
 // Base - Inits End
 // --------------------------------------------- //
@@ -3351,8 +3351,7 @@ function mxdColorSwitcher() {
   }
   function getCurrentTheme(){
     let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    // localStorage.getItem('template.theme') ? theme = localStorage.getItem('template.theme') : null;
-    const storedTheme = mxdSafeLocalGet('template.theme');
+    const storedTheme = mxdSafeLocalGet('arnav.theme');
     if (storedTheme) theme = storedTheme;
     return theme;
   }
@@ -3388,8 +3387,7 @@ function mxdColorSwitcher() {
     } else {
       theme = 'dark';
     }
-    // localStorage.setItem('template.theme', `${theme}`);
-    mxdSafeLocalSet('template.theme', theme);
+    mxdSafeLocalSet('arnav.theme', theme);
     loadTheme(theme);
   });
   loadTheme(getCurrentTheme());
