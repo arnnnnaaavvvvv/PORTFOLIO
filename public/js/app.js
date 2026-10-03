@@ -2658,7 +2658,7 @@ function mxdDvStickyMedia() {
           pointerEvents: (i === 0 && isBlankTitle(0)) ? "auto" : "none"
         });
         if (ovf.parentElement && ovf.parentElement.classList.contains("images__listitem")) {
-          ovf.parentElement.style.zIndex = i === 0 ? "25" : (i + 1).toString();
+          ovf.parentElement.style.zIndex = (i + 1).toString();
           ovf.parentElement.style.pointerEvents = i === 0 ? "auto" : "none";
         }
       });
@@ -2754,7 +2754,7 @@ function mxdDvStickyMedia() {
             ovf.style.pointerEvents = isActive ? "auto" : "none";
             if (ovf.parentElement && ovf.parentElement.classList.contains("images__listitem")) {
               ovf.parentElement.style.pointerEvents = isActive ? "auto" : "none";
-              ovf.parentElement.style.zIndex = isActive ? "25" : (i + 1).toString();
+              ovf.parentElement.style.zIndex = (i + 1).toString();
             }
           });
         }
