@@ -2635,12 +2635,12 @@ function mxdDvStickyMedia() {
       overflows.forEach((ovf, i) => {
         gsap.set(ovf, {
           clipPath: i === 0 ? FULL : CLIPPED,
-          autoAlpha: i === 0 ? 1 : 0,
-          willChange: "clip-path, opacity, transform",
+          autoAlpha: 1,
+          willChange: "clip-path, transform",
           pointerEvents: (i === 0 && isBlankTitle(0)) ? "auto" : "none"
         });
         if (ovf.parentElement && ovf.parentElement.classList.contains("images__listitem")) {
-          ovf.parentElement.style.zIndex = i === 0 ? "25" : (i + 1).toString();
+          ovf.parentElement.style.zIndex = (i + 1).toString();
           ovf.parentElement.style.pointerEvents = i === 0 ? "auto" : "none";
         }
       });
@@ -2688,7 +2688,7 @@ function mxdDvStickyMedia() {
       }
 
       for (let i = 1; i < imagesCount; i++) {
-        tl.to(overflows[i], { duration: 0.6, clipPath: FULL, autoAlpha: 1 }, "+=0.12");
+        tl.to(overflows[i], { duration: 0.6, clipPath: FULL }, "+=0.12");
 
         const wasBlank = isBlankTitle(i - 1);
         const isBlank = isBlankTitle(i);
@@ -2736,7 +2736,7 @@ function mxdDvStickyMedia() {
             ovf.style.pointerEvents = isActive ? "auto" : "none";
             if (ovf.parentElement && ovf.parentElement.classList.contains("images__listitem")) {
               ovf.parentElement.style.pointerEvents = isActive ? "auto" : "none";
-              ovf.parentElement.style.zIndex = isActive ? "25" : (i + 1).toString();
+              ovf.parentElement.style.zIndex = (i + 1).toString();
             }
           });
         }
