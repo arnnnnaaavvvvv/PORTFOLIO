@@ -356,7 +356,7 @@ export default function CoreCompetenciesSection() {
                     src={card.illustrationSrc}
                     alt={card.illustrationAlt}
                     className="competency-card-illustration-img"
-                    loading="lazy"
+                    loading="eager"
                   />
                 </div>
               </div>
