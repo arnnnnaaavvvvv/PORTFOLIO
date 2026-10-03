@@ -11,8 +11,8 @@ export default function HeroNameImage() {
     <div className="hero-scroll-container">
       <motion.div
         className="hero-image-wrap"
-        initial={shouldReduceMotion ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.98 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, ease: EASE }}
       >
         <img

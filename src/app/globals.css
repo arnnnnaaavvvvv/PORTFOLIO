@@ -289,26 +289,17 @@ button {
   object-fit: cover !important;
   object-position: center center !important;
   display: block !important;
-  image-rendering: -webkit-optimize-contrast !important;
-  image-rendering: crisp-edges !important;
-  transform: translateZ(0);
-  backface-visibility: hidden;
+  image-rendering: auto !important;
+  -webkit-backface-visibility: hidden;
 }
 
 .hero-mobile-edge-fade {
   display: none;
 }
 
-/* 3. Corner UI contrast gradient: behind top-right corner only */
+/* 3. Corner UI contrast gradient: disabled to remove corner blur */
 .hero-corner-gradient {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 380px;
-  height: 180px;
-  background: radial-gradient(ellipse at 100% 0%, rgba(13, 17, 23, 0.14) 0%, rgba(13, 17, 23, 0.04) 50%, transparent 70%);
-  pointer-events: none;
-  z-index: 2;
+  display: none !important;
 }
 
 .mxd-header-permanent .mxd-header__link {
@@ -1417,19 +1408,15 @@ a.main-menu__toggle {
 
 @keyframes philDistortPulse {
   0% {
-    filter: blur(0px);
     transform: skewX(0deg) scale(1);
   }
   30% {
-    filter: blur(1.2px);
     transform: skewX(-1.2deg) scale(1.004);
   }
   70% {
-    filter: blur(0.5px);
     transform: skewX(0.5deg) scale(1.002);
   }
   100% {
-    filter: blur(0px);
     transform: skewX(0deg) scale(1);
   }
 }
