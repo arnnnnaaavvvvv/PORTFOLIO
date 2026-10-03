@@ -1905,7 +1905,7 @@ a.main-menu__toggle {
 
 .images__listitem {
   pointer-events: auto !important;
-  background-color: #faf7f0 !important;
+  background-color: transparent !important;
 }
 
 .images__overflow.vision-slide-beige-container {
