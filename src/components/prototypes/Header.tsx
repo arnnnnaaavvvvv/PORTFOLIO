@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Magnetic from "@/components/Magnetic";
+import Magnetic from "./Magnetic";
 
 interface NavItem {
   id: string;

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Magnetic from "@/components/Magnetic";
+import Magnetic from "./Magnetic";
 import { fadeUpVariant } from "@/lib/motion";
 
 interface ContactChannel {

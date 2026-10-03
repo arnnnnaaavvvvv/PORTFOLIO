@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Magnetic from "@/components/Magnetic";
+import Magnetic from "./Magnetic";
 import { projectRowVariant, tagRevealVariant } from "@/lib/motion";
 
 export interface ProjectData {

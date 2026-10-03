@@ -1,6 +1,14 @@
 {
   "name": "arnav-portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Personal Portfolio & Systems Engineering Showcase for Arnav Singh — Full-Stack AI Engineer & Systems Architect",
+  "author": "Arnav Singh <arnav152007@gmail.com> (https://github.com/arnnnnaaavvvvv)",
+  "homepage": "https://arnavsinghportfolio.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arnnnnaaavvvvv/PORTFOLIO.git"
+  },
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",

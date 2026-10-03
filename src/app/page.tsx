@@ -1,5 +1,8 @@
 
 import React from "react";
+import Preloader from "@/components/Preloader";
+import NavigationMenu from "@/components/NavigationMenu";
+import NavigationHeader from "@/components/NavigationHeader";
 import Footer from "@/components/Footer";
 import HeroNameImage from "@/components/HeroNameImage";
 import InteractivePortraitCard from "@/components/InteractivePortraitCard";
@@ -14,149 +17,9 @@ import AchievementCard from "@/components/AchievementCard";
 export default function Home() {
   return (
     <>
-      {/*  Loader Start  */}
-      <div className="mxd-page-transition"></div>
-      <div className="mxd-loader">
-        <div className="mxd-loader__top"></div>
-        <div className="mxd-loader__images">
-          <img src="/img/arnav_loader_color.jpg" alt="Arnav Singh" />
-          <img src="/img/arnav_loader_bw.jpg" alt="Arnav Singh" />
-        </div>
-        <div className="mxd-loader__bottom">
-          <div className="mxd-loader__count">
-            <span className="count__text">0</span>
-            <span className="count__percent">%</span>
-          </div>
-          <span className="mxd-loader__caption">Loading</span>
-        </div>
-      </div>
-      {/*  Loader End  */}
-      {/*  Navigation Start  */}
-      <nav className="mxd-menu">
-        <div className="mxd-menu__backdrop"></div>
-
-        {/*  Menu Overlay Start  */}
-        <div className="mxd-menu__overlay">
-          <div className="mxd-menu__content" data-lenis-prevent>
-
-            {/*  Menu Media Start  */}
-            <div className="mxd-menu__media">
-              <div className="menu-media__wrapper">
-                <img
-                  src="/img/arnav_sketch_menu.webp"
-                  alt="Arnav Singh"
-                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
-                />
-              </div>
-            </div>
-            {/*  Menu Media End  */}
-
-            {/*  Main Navigation Start  */}
-            <div className="mxd-menu__navigation">
-              <div className="mxd-menu__inner">
-                {/*  left side  */}
-                <div className="mxd-menu__left">
-                  <div className="main-menu">
-                    <div className="main-menu__content">
-                      <ul id="main-menu" className="main-menu__accordion">
-                        {/* 01 Home */}
-                        <li className="main-menu__item">
-                          <div className="main-menu__divider divider-top"></div>
-                          <a className="main-menu__toggle" href="#hero">
-                            <div className="main-menu__link">
-                              <span className="main-menu__number">/ 01</span>
-                              <span className="main-menu__caption">Home</span>
-                            </div>
-                            <div className="main-menu__arrow">
-                              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
-                                <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                              </svg>
-                            </div>
-                          </a>
-                          <div className="main-menu__divider divider-bottom"></div>
-                        </li>
-
-                        {/* 02 Projects */}
-                        <li className="main-menu__item">
-                          <a className="main-menu__toggle" href="#projects">
-                            <div className="main-menu__link">
-                              <span className="main-menu__number">/ 02</span>
-                              <span className="main-menu__caption">Projects</span>
-                            </div>
-                            <div className="main-menu__arrow">
-                              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
-                                <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                              </svg>
-                            </div>
-                          </a>
-                          <div className="main-menu__divider divider-bottom"></div>
-                        </li>
-
-                        {/* 03 Achievements */}
-                        <li className="main-menu__item">
-                          <a className="main-menu__toggle" href="#achievements">
-                            <div className="main-menu__link">
-                              <span className="main-menu__number">/ 03</span>
-                              <span className="main-menu__caption">Achievements</span>
-                            </div>
-                            <div className="main-menu__arrow">
-                              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
-                                <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                              </svg>
-                            </div>
-                          </a>
-                          <div className="main-menu__divider divider-bottom"></div>
-                        </li>
-
-                        {/* 04 Contact */}
-                        <li className="main-menu__item">
-                          <a className="main-menu__toggle" href="#contact">
-                            <div className="main-menu__link">
-                              <span className="main-menu__number">/ 04</span>
-                              <span className="main-menu__caption">Contact</span>
-                            </div>
-                            <div className="main-menu__arrow">
-                              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
-                                <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                              </svg>
-                            </div>
-                          </a>
-                          <div className="main-menu__divider divider-bottom"></div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*  Main Navigation End  */}
-
-          </div>
-        </div>
-        {/*  Menu Overlay End  */}
-
-      </nav>
-      {/*  Navigation End  */}
-      {/*  Header Start  */}
-      <header id="header" className="mxd-header mxd-header-permanent">
-        {/*  header controls  */}
-        <div className="mxd-header__controls loading-fade">
-          <a className="btn mxd-header__link slide-right-up" href="#contact" aria-label="Say Hello">
-            <span className="btn-caption mxd-scramble">Say Hello</span>
-            <i>
-              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
-                <path d="M18,0v14.4h-3.6v-7.2h-3.6v-3.6H3.6V0h14.4ZM7.2,10.8h3.6v-3.6h-3.6s0,3.6,0,3.6ZM3.6,14.4h3.6v-3.6h-3.6v3.6ZM0,18h3.6v-3.6H0v3.6Z" />
-              </svg>
-            </i>
-            {/*  Phosphor icon  */}
-            {/*  <i className="ph-bold ph-arrow-up-right"></i>  */}
-          </a>
-          <button type="button" className="hero-menu-pill mxd-menu__toggle" aria-label="Open Navigation Menu">
-            MENU
-          </button>
-        </div>
-      </header>
-      {/*  Header End  */}
+      <Preloader />
+      <NavigationMenu />
+      <NavigationHeader />
 
       <main id="mxd-page-content" className="mxd-page-content">
         <div id="hero" className="hero">

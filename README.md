@@ -19,6 +19,8 @@ A high-performance personal portfolio built with **Next.js 14 (App Router)**, **
 - **Typography:** Space Grotesk (display), Inter (body/narrative), JetBrains Mono (data/tags).
 - **Motion:** Quintic ease-out curves (`cubic-bezier(0.16, 1, 0.3, 1)`), zero spring/bounce easing, full Lenis momentum smooth scroll, custom magnetic trailing cursor.
 
+For a detailed technical walkthrough of the component hierarchy, animation lifecycle, and directory layout, see [ARCHITECTURE.md](ARCHITECTURE.md).
+
 ---
 
 ## 🚀 Featured Systems
