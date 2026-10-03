@@ -2348,11 +2348,11 @@ a.main-menu__toggle {
 }
 
 .competencies-main-title {
-  font-family: var(--font-syne, var(--font-display, sans-serif));
+  font-family: var(--font-display, 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif);
   font-size: clamp(2rem, 3.4vh, 3.4rem);
   font-weight: 800;
-  font-style: italic;
-  letter-spacing: -0.025em;
+  font-style: normal;
+  letter-spacing: -0.02em;
   line-height: 1.05;
   margin: 0;
   background: linear-gradient(110deg, #101216 0%, #222731 38%, #a46422 75%, #e2a250 100%);
@@ -2362,11 +2362,11 @@ a.main-menu__toggle {
 }
 
 .competencies-subheading-lead {
-  font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: clamp(0.72rem, 0.95vh, 0.9rem);
-  font-weight: 700;
-  letter-spacing: 0.3em;
-  color: #27272a;
+  font-family: var(--font-body, 'Inter', -apple-system, BlinkMacSystemFont, sans-serif);
+  font-size: clamp(0.72rem, 0.95vh, 0.88rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #334155;
   text-transform: uppercase;
   margin: 0;
 }
@@ -2389,11 +2389,11 @@ a.main-menu__toggle {
 }
 
 .competencies-hairline-text {
-  font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: clamp(0.6rem, 0.76vh, 0.74rem);
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  color: #71717a;
+  font-family: var(--font-body, 'Inter', -apple-system, BlinkMacSystemFont, sans-serif);
+  font-size: clamp(0.62rem, 0.78vh, 0.75rem);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: #64748b;
   white-space: nowrap;
   text-transform: uppercase;
 }
@@ -2476,17 +2476,17 @@ a.main-menu__toggle {
 }
 
 .competency-number-pill {
-  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-family: var(--font-body, 'Inter', -apple-system, BlinkMacSystemFont, sans-serif);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: clamp(0.66rem, 0.8vh, 0.75rem);
-  font-weight: 700;
+  font-weight: 600;
   padding: 0.08rem 0.5rem;
   border-radius: 9999px;
-  background: rgba(0, 0, 0, 0.06);
-  color: #18181b;
-  letter-spacing: 0.08em;
+  background: rgba(0, 0, 0, 0.05);
+  color: #334155;
+  letter-spacing: 0.02em;
 }
 
 .competency-title-group {
@@ -2539,21 +2539,21 @@ a.main-menu__toggle {
 }
 
 .competency-card-title {
-  font-family: var(--font-display, 'Space Grotesk', -apple-system, sans-serif);
+  font-family: var(--font-display, 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif);
   font-size: clamp(1.05rem, 1.35vw, 1.35rem);
   font-weight: 700;
   color: #09090b;
   letter-spacing: -0.015em;
-  word-spacing: 0.05em;
+  word-spacing: 0.02em;
   margin: 0;
   line-height: 1.18;
 }
 
 .competency-card-subtitle {
-  font-family: var(--font-body, 'Inter', -apple-system, sans-serif);
+  font-family: var(--font-body, 'Inter', -apple-system, BlinkMacSystemFont, sans-serif);
   font-size: clamp(0.74rem, 0.88vw, 0.88rem);
   font-weight: 400;
-  color: #4b5563;
+  color: #475569;
   margin: 0;
   line-height: 1.32;
   max-width: 520px;
@@ -2613,26 +2613,26 @@ a.main-menu__toggle {
 }
 
 .competency-item-text {
-  font-family: var(--font-body, 'Inter', -apple-system, sans-serif);
+  font-family: var(--font-body, 'Inter', -apple-system, BlinkMacSystemFont, sans-serif);
   font-size: clamp(0.72rem, 0.84vw, 0.85rem);
   line-height: 1.34;
-  color: #374151;
+  color: #334155;
 }
 
 .competency-item-label {
-  font-family: var(--font-display, 'Space Grotesk', -apple-system, sans-serif);
-  font-weight: 700;
+  font-family: var(--font-display, 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif);
+  font-weight: 600;
   color: #0f172a;
   font-size: clamp(0.74rem, 0.86vw, 0.88rem);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.005em;
   margin-right: 0.32rem;
   display: inline;
 }
 
 .competency-item-detail {
-  font-family: var(--font-body, 'Inter', -apple-system, sans-serif);
-  font-weight: 450;
-  color: #374151;
+  font-family: var(--font-body, 'Inter', -apple-system, BlinkMacSystemFont, sans-serif);
+  font-weight: 400;
+  color: #334155;
 }
 
 .core-competencies-img {
