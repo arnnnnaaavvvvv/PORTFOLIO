@@ -21055,42 +21055,38 @@ form textarea:required:valid {
   }
   .hero-scroll-container {
     width: 100% !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    -webkit-overflow-scrolling: touch !important;
-    justify-content: flex-start !important;
-    scrollbar-width: none !important;
-    -ms-overflow-style: none !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     position: relative !important;
   }
   .hero-scroll-container::-webkit-scrollbar {
     display: none !important;
   }
   .hero-image-wrap {
-    min-width: 640px !important;
-    width: 640px !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 16px !important;
-    display: block !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   .hero-image {
-    min-width: 640px !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
     width: 100% !important;
     height: auto !important;
-    max-height: none !important;
-    object-position: center 45% !important;
+    max-height: 60vh !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    display: block !important;
   }
   .hero-mobile-edge-fade {
-    display: block !important;
-    position: absolute !important;
-    top: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    width: 32px !important;
-    background: linear-gradient(to right, transparent, #f2f0ea) !important;
-    pointer-events: none !important;
-    z-index: 5 !important;
+    display: none !important;
   }
   .hero-btn-wrap {
     margin-top: 28px !important;

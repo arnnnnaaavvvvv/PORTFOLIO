@@ -395,6 +395,30 @@ const SKILL_CATEGORIES: SkillCategory[] = [
 ];
 
 export default function TechStackSkillsSection() {
+  const [activeCategoryIdx, setActiveCategoryIdx] = React.useState(0);
+  const [touchStartX, setTouchStartX] = React.useState<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX === null) return;
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) {
+        // Swipe left -> next category
+        setActiveCategoryIdx((prev) => (prev + 1) % SKILL_CATEGORIES.length);
+      } else {
+        // Swipe right -> prev category
+        setActiveCategoryIdx((prev) => (prev - 1 + SKILL_CATEGORIES.length) % SKILL_CATEGORIES.length);
+      }
+    }
+    setTouchStartX(null);
+  };
+
+  const activeCategory = SKILL_CATEGORIES[activeCategoryIdx];
+
   return (
     <div className="skills-showcase-wrapper" id="skills">
       {/* Decorative silky warm champagne wave ribbons on sides */}
@@ -455,8 +479,94 @@ export default function TechStackSkillsSection() {
           <p className="skills-subheading">TOOLS &amp; TECHNOLOGIES I WORK WITH</p>
         </div>
 
-        {/* 4 Skill Categories */}
-        <div className="skills-categories-grid">
+        {/* Mobile Category Tab Selector (Visible only on <= 900px) */}
+        <div className="skills-mobile-tabs" role="tablist" aria-label="Skill Categories">
+          {SKILL_CATEGORIES.map((cat, idx) => (
+            <button
+              key={cat.title}
+              type="button"
+              role="tab"
+              aria-selected={activeCategoryIdx === idx}
+              onClick={() => setActiveCategoryIdx(idx)}
+              className={`skills-mobile-tab-btn ${activeCategoryIdx === idx ? "is-active" : ""}`}
+            >
+              <span className="skills-mobile-tab-label">
+                {idx === 0 ? "Core" : idx === 1 ? "AI & ML" : idx === 2 ? "Frontend" : "DevOps"}
+              </span>
+            </button>
+          ))}
+        </div>
+
+        {/* Mobile Single Category View (Swipeable, visible only on <= 900px) */}
+        <div
+          className="skills-mobile-view-wrapper"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          <div className="skills-category-header skills-mobile-cat-header">
+            <span className="skills-category-icon">{activeCategory.categoryIcon}</span>
+            <h3 className="skills-category-title">{activeCategory.title}</h3>
+            <div className="skills-category-line" />
+          </div>
+
+          <div className="skills-cards-grid skills-mobile-cards-grid">
+            {activeCategory.skills.map((skill) => (
+              <a
+                key={skill.name}
+                href={skill.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="skills-card-item skills-card-item--mobile"
+                title={`Visit official ${skill.name} website`}
+                aria-label={`${skill.name} official documentation`}
+              >
+                <div className="skills-card-icon">{skill.icon}</div>
+                <span className="skills-card-label">{skill.name}</span>
+                {skill.subtext && (
+                  <span className="skills-card-subtext">{skill.subtext}</span>
+                )}
+              </a>
+            ))}
+          </div>
+
+          {/* Mobile Controls & Dots */}
+          <div className="skills-mobile-controls">
+            <button
+              type="button"
+              className="skills-mobile-arrow"
+              onClick={() => setActiveCategoryIdx((prev) => (prev - 1 + SKILL_CATEGORIES.length) % SKILL_CATEGORIES.length)}
+              aria-label="Previous Skill Category"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+            </button>
+            <div className="skills-mobile-dots">
+              {SKILL_CATEGORIES.map((_, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => setActiveCategoryIdx(idx)}
+                  className={`skills-dot ${activeCategoryIdx === idx ? "is-active" : ""}`}
+                  aria-label={`Jump to Category ${idx + 1}`}
+                />
+              ))}
+            </div>
+            <button
+              type="button"
+              className="skills-mobile-arrow"
+              onClick={() => setActiveCategoryIdx((prev) => (prev + 1) % SKILL_CATEGORIES.length)}
+              aria-label="Next Skill Category"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Desktop 4 Skill Categories Grid (Visible on > 900px) */}
+        <div className="skills-categories-grid skills-categories-grid--desktop">
           {SKILL_CATEGORIES.map((category) => (
             <div key={category.title} className="skills-category-block">
               {/* Category Header Row with Icon + Label + Divider line */}

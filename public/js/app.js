@@ -1830,6 +1830,10 @@ function mxdProjectsStack() {
     let lastProgress = 0; // store scroll progress
 
     function updateClip(progress) {
+      if (window.innerWidth <= 900) {
+        gsap.set(cardImgWrapper, { clipPath: "none" });
+        return;
+      }
       const cutY = ((window.innerHeight - baseSize) / 2) * (1 - progress);
       const cutX = ((window.innerWidth - baseSize) / 2) * (1 - progress);
 
@@ -1838,9 +1842,16 @@ function mxdProjectsStack() {
       });
     }
 
-    updateClip(0);
-    gsap.set(cardImg, { scale: 0.9 });
-    gsap.set(cardCover, { opacity: 0 });
+    if (window.innerWidth <= 900) {
+      gsap.set(cardImgWrapper, { clipPath: "none" });
+      gsap.set(cardImg, { scale: 1 });
+      gsap.set(cardCover, { opacity: 0 });
+      introCard.classList.add("is-revealed");
+    } else {
+      updateClip(0);
+      gsap.set(cardImg, { scale: 0.9 });
+      gsap.set(cardCover, { opacity: 0 });
+    }
 
     const marquee = introCard.querySelector(".card__marquees");
     const titleLines = introCard.querySelectorAll(".line-mask .line");
@@ -1877,6 +1888,16 @@ function mxdProjectsStack() {
         const progress = self.progress;
         lastProgress = self.progress;
 
+        if (window.innerWidth <= 900) {
+          gsap.set(cardImgWrapper, { clipPath: "none" });
+          gsap.set(cardImg, { scale: 1 });
+          if (!introCard.contentRevealed) {
+            introCard.contentRevealed = true;
+            introCard.classList.add("is-revealed");
+            if (techStack) techStack.classList.add("is-revealed");
+          }
+          return;
+        }
         updateClip(lastProgress);
         const innerImgScale = 0.9 + progress * 0.1;
         const innerCoverOpacity = 0 + progress * 1;
