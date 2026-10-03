@@ -7,7 +7,6 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  viewportFit: "cover",
 };
 
 export const metadata: Metadata = {
@@ -54,12 +53,13 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oxanium:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Space+Grotesk:wght@400;500;600;700;800&family=Syne:wght@700;800&family=Inter:wght@400;500;600;700;800&family=Bebas+Neue&family=Anton&family=Permanent+Marker&display=swap" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="/css/loader.css" />
         <link rel="stylesheet" type="text/css" href="/css/plugins.css" />
         <link rel="stylesheet" type="text/css" href="/css/main.css" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `try{localStorage.setItem('arnav.theme','light');document.documentElement.setAttribute('color-scheme','light');}catch(e){}`,
+            __html: `try{localStorage.setItem('template.theme','light');document.documentElement.setAttribute('color-scheme','light');}catch(e){}`,
           }}
         />
       </head>

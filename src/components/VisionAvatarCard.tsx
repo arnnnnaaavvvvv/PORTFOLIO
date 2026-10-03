@@ -23,15 +23,15 @@ export default function VisionAvatarCard({
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const [isPressed, setIsPressed] = useState<boolean>(false);
 
-  const calculateTilt = useCallback((clientX: number, clientY: number) => {
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
-    const x = clientX - rect.left;
-    const y = clientY - rect.top;
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
     // Normalized coordinates (-1 to 1)
-    const xNorm = Math.max(-1, Math.min(1, (x / rect.width) * 2 - 1));
-    const yNorm = Math.max(-1, Math.min(1, (y / rect.height) * 2 - 1));
+    const xNorm = (x / rect.width) * 2 - 1;
+    const yNorm = (y / rect.height) * 2 - 1;
 
     // Responsive 3D tilt angles and magnetic translation
     const rotateX = -yNorm * 14;
@@ -49,15 +49,11 @@ export default function VisionAvatarCard({
     });
   }, []);
 
-  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    calculateTilt(e.clientX, e.clientY);
-  }, [calculateTilt]);
-
   const handleMouseEnter = useCallback(() => {
     setIsHovered(true);
   }, []);
 
-  const resetCard = useCallback(() => {
+  const handleMouseLeave = useCallback(() => {
     setIsHovered(false);
     setIsPressed(false);
     setTransform(
@@ -74,21 +70,6 @@ export default function VisionAvatarCard({
     setIsPressed(false);
   }, []);
 
-  // Touch handlers for mobile and tablet devices
-  const handleTouchStart = useCallback((e: React.TouchEvent<HTMLDivElement>) => {
-    if (e.touches.length > 0) {
-      setIsHovered(true);
-      setIsPressed(true);
-      calculateTilt(e.touches[0].clientX, e.touches[0].clientY);
-    }
-  }, [calculateTilt]);
-
-  const handleTouchMove = useCallback((e: React.TouchEvent<HTMLDivElement>) => {
-    if (e.touches.length > 0) {
-      calculateTilt(e.touches[0].clientX, e.touches[0].clientY);
-    }
-  }, [calculateTilt]);
-
   return (
     <div className="vision-avatar-wrapper">
       <div
@@ -101,18 +82,12 @@ export default function VisionAvatarCard({
           transition: isHovered
             ? "transform 0.08s ease-out"
             : "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease",
-          touchAction: "pan-y",
-          WebkitTapHighlightColor: "transparent",
         }}
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
-        onMouseLeave={resetCard}
+        onMouseLeave={handleMouseLeave}
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={resetCard}
-        onTouchCancel={resetCard}
         role="button"
         tabIndex={0}
         aria-label={altText}

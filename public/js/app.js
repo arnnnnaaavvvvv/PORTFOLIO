@@ -1,8 +1,11 @@
 /*! ------------------------------------------------
- * Project Name: ARNAV SINGH PORTFOLIO
- * Project Description: Personal Portfolio & Engineering Systems Showcase engineered by Arnav Singh.
+ * Project Name: Azurio - Digital Agency & Personal Portfolio HTML Template
+ * Project Description: Stand out and express your uniqueness with Azurio - a vibrant and minimal HTML template for creatives, studios and freelancers. Impress your website visitors with a clean, stylish layout and stunning visuals.
+ * Tags: mix_design, resume, portfolio, personal page, cv, template, one page, responsive, html5, css3, creative, clean, agency, studio
  * Version: 1.0.0
- * Author: Arnav Singh
+ * Build Date: March 2026
+ * Last Update: July 2026
+ * Author: mix_design
  * File name: app.js
  * ------------------------------------------------
 
@@ -60,9 +63,9 @@
 // --------------------------------------------- //
 // Base - Inits Start
 // --------------------------------------------- //
-function initArnavEngine() {
-  if (window.__arnavEngineInitialized) return;
-  window.__arnavEngineInitialized = true;
+function initAzurio() {
+  if (window.__azurioInitialized) return;
+  window.__azurioInitialized = true;
 
   const lenis = new Lenis();
   lenis.on('scroll', ScrollTrigger.update);
@@ -136,11 +139,11 @@ function initArnavEngine() {
 }
 
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initArnavEngine);
+  document.addEventListener("DOMContentLoaded", initAzurio);
 } else {
-  initArnavEngine();
+  initAzurio();
 }
-window.initArnavEngine = initArnavEngine;
+window.initAzurio = initAzurio;
 // --------------------------------------------- //
 // Base - Inits End
 // --------------------------------------------- //
@@ -1830,10 +1833,6 @@ function mxdProjectsStack() {
     let lastProgress = 0; // store scroll progress
 
     function updateClip(progress) {
-      if (window.innerWidth <= 900) {
-        gsap.set(cardImgWrapper, { clipPath: "none" });
-        return;
-      }
       const cutY = ((window.innerHeight - baseSize) / 2) * (1 - progress);
       const cutX = ((window.innerWidth - baseSize) / 2) * (1 - progress);
 
@@ -1842,16 +1841,9 @@ function mxdProjectsStack() {
       });
     }
 
-    if (window.innerWidth <= 900) {
-      gsap.set(cardImgWrapper, { clipPath: "none" });
-      gsap.set(cardImg, { scale: 1 });
-      gsap.set(cardCover, { opacity: 0 });
-      introCard.classList.add("is-revealed");
-    } else {
-      updateClip(0);
-      gsap.set(cardImg, { scale: 0.9 });
-      gsap.set(cardCover, { opacity: 0 });
-    }
+    updateClip(0);
+    gsap.set(cardImg, { scale: 0.9 });
+    gsap.set(cardCover, { opacity: 0 });
 
     const marquee = introCard.querySelector(".card__marquees");
     const titleLines = introCard.querySelectorAll(".line-mask .line");
@@ -1888,16 +1880,6 @@ function mxdProjectsStack() {
         const progress = self.progress;
         lastProgress = self.progress;
 
-        if (window.innerWidth <= 900) {
-          gsap.set(cardImgWrapper, { clipPath: "none" });
-          gsap.set(cardImg, { scale: 1 });
-          if (!introCard.contentRevealed) {
-            introCard.contentRevealed = true;
-            introCard.classList.add("is-revealed");
-            if (techStack) techStack.classList.add("is-revealed");
-          }
-          return;
-        }
         updateClip(lastProgress);
         const innerImgScale = 0.9 + progress * 0.1;
         const innerCoverOpacity = 0 + progress * 1;
@@ -2658,7 +2640,7 @@ function mxdDvStickyMedia() {
           pointerEvents: (i === 0 && isBlankTitle(0)) ? "auto" : "none"
         });
         if (ovf.parentElement && ovf.parentElement.classList.contains("images__listitem")) {
-          ovf.parentElement.style.zIndex = (i + 1).toString();
+          ovf.parentElement.style.zIndex = i === 0 ? "25" : (i + 1).toString();
           ovf.parentElement.style.pointerEvents = i === 0 ? "auto" : "none";
         }
       });
@@ -2754,7 +2736,7 @@ function mxdDvStickyMedia() {
             ovf.style.pointerEvents = isActive ? "auto" : "none";
             if (ovf.parentElement && ovf.parentElement.classList.contains("images__listitem")) {
               ovf.parentElement.style.pointerEvents = isActive ? "auto" : "none";
-              ovf.parentElement.style.zIndex = (i + 1).toString();
+              ovf.parentElement.style.zIndex = isActive ? "25" : (i + 1).toString();
             }
           });
         }
@@ -3370,7 +3352,7 @@ function mxdColorSwitcher() {
   function getCurrentTheme(){
     let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     // localStorage.getItem('template.theme') ? theme = localStorage.getItem('template.theme') : null;
-    const storedTheme = mxdSafeLocalGet('arnav.theme') || mxdSafeLocalGet('template.theme');
+    const storedTheme = mxdSafeLocalGet('template.theme');
     if (storedTheme) theme = storedTheme;
     return theme;
   }
@@ -3406,8 +3388,8 @@ function mxdColorSwitcher() {
     } else {
       theme = 'dark';
     }
-    // localStorage.setItem('arnav.theme', `${theme}`);
-    mxdSafeLocalSet('arnav.theme', theme);
+    // localStorage.setItem('template.theme', `${theme}`);
+    mxdSafeLocalSet('template.theme', theme);
     loadTheme(theme);
   });
   loadTheme(getCurrentTheme());
