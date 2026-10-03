@@ -1,23 +1,8 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 
 export default function PhilosophyInteractiveEffect() {
-  const svgRef = useRef<SVGSVGElement | null>(null);
-  const [trailState, setTrailState] = useState<{
-    visible: boolean;
-    d: string;
-    opacity: number;
-    headX: number;
-    headY: number;
-  }>({
-    visible: false,
-    d: "",
-    opacity: 0,
-    headX: 0,
-    headY: 0,
-  });
-
   useEffect(() => {
     const section = document.getElementById("services");
     if (!section) return;
@@ -43,12 +28,9 @@ export default function PhilosophyInteractiveEffect() {
 
       const viewportHeight = window.innerHeight;
       const viewportWidth = window.innerWidth;
-      const isMobile = viewportWidth < 768;
 
       let maxProximity = 0;
       let activeItemIndex = -1;
-      let activeObjRect: DOMRect | null = null;
-      let activeSide: "left" | "right" | "center" = "center";
 
       for (let index = 0; index < items.length; index++) {
         const item = items[index];
@@ -94,8 +76,6 @@ export default function PhilosophyInteractiveEffect() {
         if (proximity > maxProximity) {
           maxProximity = proximity;
           activeItemIndex = index;
-          activeObjRect = rect;
-          activeSide = objCenterX < textCenterX ? "left" : objCenterX > textCenterX ? "right" : "center";
         }
 
         // Card edge glow when near or on text
@@ -107,7 +87,7 @@ export default function PhilosophyInteractiveEffect() {
         }
       }
 
-      // --- 1. ADAPTIVE TYPOGRAPHY TRANSITION ---
+      // --- ADAPTIVE TYPOGRAPHY TRANSITION ---
       if (maxProximity > 0.25) {
         content.classList.add("philosophy-text-illuminated");
 
@@ -127,61 +107,6 @@ export default function PhilosophyInteractiveEffect() {
 
       prevActiveIndex = activeItemIndex;
 
-      // --- 2. DYNAMIC LIGHT TRAIL BEAM ---
-      if (!isMobile && maxProximity > 0.22 && activeObjRect) {
-        let startX = 0;
-        let startY = activeObjRect.top + activeObjRect.height * 0.45;
-
-        if (activeSide === "left") {
-          startX = activeObjRect.right - 4;
-        } else if (activeSide === "right") {
-          startX = activeObjRect.left + 4;
-        } else {
-          startX = activeObjRect.left + activeObjRect.width * 0.5;
-          startY = activeObjRect.top < textCenterY ? activeObjRect.bottom - 4 : activeObjRect.top + 4;
-        }
-
-        let endX = 0;
-        let endY = textRect.top + textRect.height * 0.5;
-
-        if (activeSide === "left") {
-          endX = textRect.left + 20;
-        } else if (activeSide === "right") {
-          endX = textRect.right - 20;
-        } else {
-          endX = textCenterX;
-          endY = activeObjRect.top < textCenterY ? textRect.top + 10 : textRect.bottom - 10;
-        }
-
-        const deltaX = endX - startX;
-        const deltaY = endY - startY;
-
-        let pathD = "";
-        if (Math.abs(deltaX) > 50) {
-          const cp1X = startX + deltaX * 0.45;
-          const cp1Y = startY + deltaY * 0.1 - 40;
-          const cp2X = startX + deltaX * 0.8;
-          const cp2Y = endY - 20;
-          pathD = `M ${startX} ${startY} C ${cp1X} ${cp1Y}, ${cp2X} ${cp2Y}, ${endX} ${endY}`;
-        } else {
-          const cp1X = startX + (startX < viewportWidth / 2 ? 60 : -60);
-          const cp1Y = startY + deltaY * 0.5;
-          pathD = `M ${startX} ${startY} Q ${cp1X} ${cp1Y}, ${endX} ${endY}`;
-        }
-
-        const opacity = Math.min(1, Math.max(0, (maxProximity - 0.22) * 1.5));
-
-        setTrailState({
-          visible: true,
-          d: pathD,
-          opacity,
-          headX: startX,
-          headY: startY,
-        });
-      } else {
-        setTrailState((prev) => (prev.visible ? { ...prev, visible: false, opacity: 0 } : prev));
-      }
-
       rafId = requestAnimationFrame(checkProximity);
     };
 
@@ -193,65 +118,5 @@ export default function PhilosophyInteractiveEffect() {
     };
   }, []);
 
-  return (
-    <svg
-      ref={svgRef}
-      className="philosophy-light-trail-svg"
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100vw",
-        height: "100vh",
-        pointerEvents: "none",
-        zIndex: 3,
-        opacity: trailState.visible ? trailState.opacity : 0,
-        transition: "opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1)",
-      }}
-      aria-hidden="true"
-    >
-      <defs>
-        <linearGradient id="philLightBeamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#ffd89b" stopOpacity="0.9" />
-          <stop offset="45%" stopColor="#fff8ec" stopOpacity="1" />
-          <stop offset="100%" stopColor="#f6d365" stopOpacity="0.2" />
-        </linearGradient>
-        <filter id="philLightBeamGlow" x="-30%" y="-30%" width="160%" height="160%">
-          <feGaussianBlur stdDeviation="4.5" result="blur" />
-          <feMerge>
-            <feMergeNode in="blur" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-      </defs>
-      {trailState.d && (
-        <>
-          <path
-            d={trailState.d}
-            fill="none"
-            stroke="url(#philLightBeamGrad)"
-            strokeWidth="4.2"
-            filter="url(#philLightBeamGlow)"
-            strokeLinecap="round"
-            opacity="0.85"
-          />
-          <path
-            d={trailState.d}
-            fill="none"
-            stroke="#ffffff"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            opacity="0.95"
-          />
-          <circle
-            cx={trailState.headX}
-            cy={trailState.headY}
-            r="4"
-            fill="#ffffff"
-            filter="url(#philLightBeamGlow)"
-          />
-        </>
-      )}
-    </svg>
-  );
+  return null;
 }
