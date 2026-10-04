@@ -8,6 +8,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-13.4-black?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 [![Lenis](https://img.shields.io/badge/Lenis-Smooth_Scroll-black?style=for-the-badge)](https://lenis.darkroom.engineering/)
+[![Live Demo](https://img.shields.io/badge/Live_Portfolio-Vercel-D8A94E?style=for-the-badge&logo=vercel&logoColor=black)](https://arnavsinghportfolio.vercel.app)
 
 ---
 
@@ -71,6 +72,7 @@ npm run start
 
 ## 📬 Connect
 
+* **Portfolio / Live Site:** [arnavsinghportfolio.vercel.app](https://arnavsinghportfolio.vercel.app)
 * **Email:** [arnav152007@gmail.com](mailto:arnav152007@gmail.com)
 * **Phone / WhatsApp:** [+91 8423622491](tel:+918423622491)
 * **GitHub:** [@arnnnnaaavvvvv](https://github.com/arnnnnaaavvvvv)
