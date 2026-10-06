@@ -15,13 +15,24 @@ export default function HeroNameImage() {
         animate={{ opacity: 1 }}
         transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, ease: EASE }}
       >
-        <img
-          src="/hero-name.png"
-          alt="Arnav Singh — Full-Stack AI Developer"
-          className="hero-image"
-        />
+        <picture className="hero-picture">
+          <source
+            media="(max-width: 768px)"
+            srcSet="/hero-name-mobile.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 768px)"
+            srcSet="/hero-name-mobile.png"
+            type="image/png"
+          />
+          <img
+            src="/hero-name.png"
+            alt="Arnav Singh — Full-Stack AI Developer"
+            className="hero-image"
+          />
+        </picture>
       </motion.div>
-      <div className="hero-mobile-edge-fade" aria-hidden="true" />
     </div>
   );
 }
