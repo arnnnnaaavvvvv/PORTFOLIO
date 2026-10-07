@@ -35,7 +35,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
 export default function SocialIcons({ className = "" }: { className?: string }) {
   return (
     <div className={`footer-social-icons ${className}`.trim()}>
-      {/* GitHub - Lucide style outline (strokeWidth 1.5, size 20) */}
+      {/* GitHub - Lucide style outline (strokeWidth 1.8, size 20) */}
       <a
         href="https://github.com/arnnnnaaavvvvv"
         target="_blank"
@@ -49,7 +49,7 @@ export default function SocialIcons({ className = "" }: { className?: string }) 
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth="1.8"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -58,7 +58,7 @@ export default function SocialIcons({ className = "" }: { className?: string }) 
         </svg>
       </a>
 
-      {/* LinkedIn - Lucide style outline (strokeWidth 1.5, size 20) */}
+      {/* LinkedIn - Lucide style outline (strokeWidth 1.8, size 20) */}
       <a
         href="https://www.linkedin.com/in/arnav-singh-986722252"
         target="_blank"
@@ -72,7 +72,7 @@ export default function SocialIcons({ className = "" }: { className?: string }) 
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth="1.8"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
@@ -82,16 +82,16 @@ export default function SocialIcons({ className = "" }: { className?: string }) 
         </svg>
       </a>
 
-      {/* Mail - Lucide-react (strokeWidth 1.5, size 20) */}
+      {/* Mail - Lucide-react (strokeWidth 1.8, size 20) */}
       <a
         href="mailto:arnav152007@gmail.com"
         className="footer-icon-link"
         aria-label="Send email"
       >
-        <Mail size={20} strokeWidth={1.5} />
+        <Mail size={20} strokeWidth={1.8} />
       </a>
 
-      {/* X / Twitter - Modern stroke outline (strokeWidth 1.5, size 20) */}
+      {/* X / Twitter - Modern stroke outline (strokeWidth 1.8, size 20) */}
       <a
         href="https://x.com/"
         target="_blank"
@@ -105,7 +105,7 @@ export default function SocialIcons({ className = "" }: { className?: string }) 
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth="1.8"
           strokeLinecap="round"
           strokeLinejoin="round"
         >

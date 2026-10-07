@@ -647,10 +647,9 @@ a.main-menu__toggle {
   #hero .pinned-section__inner,
   #hero .mxd-hero-01,
   .hero-center-stage {
-    height: 100vh !important;
+    height: 100svh !important;
     height: 100dvh !important;
-    min-height: 100vh !important;
-    min-height: 100dvh !important;
+    min-height: 100svh !important;
     max-height: 100dvh !important;
     width: 100% !important;
     max-width: 100vw !important;
@@ -663,7 +662,7 @@ a.main-menu__toggle {
   .hero-scroll-container {
     width: 100% !important;
     height: 100% !important;
-    min-height: 100vh !important;
+    min-height: 100svh !important;
     min-height: 100dvh !important;
     max-height: 100dvh !important;
     overflow: hidden !important;
@@ -678,7 +677,7 @@ a.main-menu__toggle {
     width: 100% !important;
     max-width: 100% !important;
     height: 100% !important;
-    min-height: 100vh !important;
+    min-height: 100svh !important;
     min-height: 100dvh !important;
     max-height: 100dvh !important;
     margin: 0 !important;
@@ -701,7 +700,7 @@ a.main-menu__toggle {
     min-width: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    min-height: 100vh !important;
+    min-height: 100svh !important;
     min-height: 100dvh !important;
     max-height: 100dvh !important;
     object-fit: cover !important;
@@ -715,6 +714,11 @@ a.main-menu__toggle {
 
   .hero-menu-pill {
     left: 0 !important;
+  }
+
+  /* Hide stray isolated icon on mobile */
+  .mxd-header__link {
+    display: none !important;
   }
 
   .mxd-header {
@@ -760,14 +764,14 @@ a.main-menu__toggle {
     left: 0 !important;
     right: 0 !important;
     width: 100% !important;
-    padding: 16px 20px max(20px, env(safe-area-inset-bottom, 20px)) !important;
+    padding: 14px 20px max(28px, env(safe-area-inset-bottom, 28px)) !important;
     flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
     background-color: transparent !important;
     border-top: none !important;
     margin: 0 !important;
-    z-index: 10 !important;
+    z-index: 50 !important;
   }
 
   .hero-footer .footer-col-left {
@@ -780,8 +784,65 @@ a.main-menu__toggle {
     width: auto !important;
   }
 
+  .hero-footer .footer-social-icons {
+    gap: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .hero-footer .footer-icon-link {
+    color: #1a1a1a !important;
+    opacity: 0.85 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 32px !important;
+    height: 32px !important;
+    transition: opacity 150ms ease, transform 150ms ease !important;
+  }
+
+  .hero-footer .footer-icon-link:active,
+  .hero-footer .footer-icon-link:hover {
+    opacity: 1 !important;
+    color: #000000 !important;
+    transform: scale(1.08) !important;
+  }
+
+  .hero-footer .footer-icon-link svg {
+    width: 20px !important;
+    height: 20px !important;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.08)) !important;
+  }
+
   .hero-footer .footer-resume-link {
-    font-size: 11px !important;
+    font-family: var(--font-mono, 'JetBrains Mono', monospace) !important;
+    font-size: 11.5px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em !important;
+    color: #1a1a1a !important;
+    opacity: 0.85 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 6px 12px !important;
+    background: rgba(0, 0, 0, 0.04) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 9999px !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    transition: all 150ms ease !important;
+  }
+
+  .hero-footer .footer-resume-link:active,
+  .hero-footer .footer-resume-link:hover {
+    color: #000000 !important;
+    opacity: 1 !important;
+    background: rgba(0, 0, 0, 0.08) !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .hero-footer .footer-resume-link .resume-sep {
+    color: #666666 !important;
+    margin: 0 4px !important;
   }
 }
 
