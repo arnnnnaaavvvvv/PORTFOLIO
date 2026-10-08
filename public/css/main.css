@@ -21051,12 +21051,17 @@ form textarea:required:valid {
 
 /* 4. Responsive check: mobile under 768px (Android and iOS devices) */
 @media only screen and (max-width: 768px) {
+  #hero,
+  .hero,
   #hero .mxd-hero-section,
   #hero .pinned-section__inner,
   #hero .mxd-hero-01,
   .hero-center-stage {
-    height: 100svh !important;
+    height: 100% !important;
     height: 100dvh !important;
+    height: 100svh !important;
+    min-height: 100% !important;
+    min-height: 100dvh !important;
     min-height: 100svh !important;
     max-height: 100dvh !important;
     width: 100% !important;
@@ -21065,11 +21070,14 @@ form textarea:required:valid {
     padding: 0 !important;
     margin: 0 !important;
     position: relative !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
   }
 
   .hero-scroll-container {
     width: 100% !important;
     height: 100% !important;
+    min-height: 100% !important;
     min-height: 100svh !important;
     min-height: 100dvh !important;
     max-height: 100dvh !important;
@@ -21085,6 +21093,7 @@ form textarea:required:valid {
     width: 100% !important;
     max-width: 100% !important;
     height: 100% !important;
+    min-height: 100% !important;
     min-height: 100svh !important;
     min-height: 100dvh !important;
     max-height: 100dvh !important;
@@ -21099,6 +21108,8 @@ form textarea:required:valid {
   .hero-picture {
     width: 100% !important;
     height: 100% !important;
+    min-height: 100% !important;
+    min-height: 100dvh !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -21108,6 +21119,7 @@ form textarea:required:valid {
     min-width: 0 !important;
     width: 100% !important;
     height: 100% !important;
+    min-height: 100% !important;
     min-height: 100svh !important;
     min-height: 100dvh !important;
     max-height: 100dvh !important;
@@ -21130,6 +21142,12 @@ form textarea:required:valid {
   }
 
   .mxd-header {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 50 !important;
     padding-top: max(16px, env(safe-area-inset-top, 16px)) !important;
     padding-left: max(16px, env(safe-area-inset-left, 16px)) !important;
     padding-right: max(16px, env(safe-area-inset-right, 16px)) !important;
