@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import AnimatedCursor from "@/components/AnimatedCursor";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -64,6 +65,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <AnimatedCursor />
         {children}
         <Script src="/js/libs.min.js" strategy="afterInteractive" />
         <Script src="/js/app.js" strategy="afterInteractive" />

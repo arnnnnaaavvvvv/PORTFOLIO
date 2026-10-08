@@ -3337,3 +3337,22 @@ a.main-menu__toggle {
     justify-content: center;
   }
 }
+
+/* ==========================================================================
+   Global Custom Animated Trailing & Concentric Cursor
+   ========================================================================== */
+@media (hover: hover) and (pointer: fine) {
+  *,
+  *::before,
+  *::after {
+    cursor: none !important;
+  }
+}
+
+#mxd-cursor,
+.mxd-cursor {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
