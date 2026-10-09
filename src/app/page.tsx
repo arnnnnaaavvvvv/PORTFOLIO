@@ -6,7 +6,8 @@ import NavigationHeader from "@/components/NavigationHeader";
 import Footer from "@/components/Footer";
 import HeroNameImage from "@/components/HeroNameImage";
 import InteractivePortraitCard from "@/components/InteractivePortraitCard";
-import ProjectTechStack, { CLUDE_TECH_STACKS, IGNITE_TECH_STACKS, SIRUS_TECH_STACKS } from "@/components/ProjectTechStack";
+import ProjectTechStack, { NEUROSENSE_TECH_STACKS, CLUDE_TECH_STACKS, IGNITE_TECH_STACKS, SIRUS_TECH_STACKS } from "@/components/ProjectTechStack";
+import ProjectMobileCard from "@/components/ProjectMobileCard";
 import PhilosophyInteractiveEffect from "@/components/PhilosophyInteractiveEffect";
 import VisionAvatarCard from "@/components/VisionAvatarCard";
 import TechStackSkillsSection from "@/components/TechStackSkillsSection";
@@ -150,136 +151,228 @@ export default function Home() {
                       {/*  Marquee Divider End  */}
                     </div>
                     <div className="card__wrapper">
-                      <div className="card__content" style={{ zIndex: 20 }}>
-                        <div className="card__descr" style={{ justifyContent: "flex-end", width: "100%", pointerEvents: "none" }}>
-                          <div className="card__btngroup" style={{ marginLeft: "auto", display: "flex", justifyContent: "flex-end", pointerEvents: "auto" }}>
-                            <a
-                              className="live-demo-box-btn"
-                              href="https://neurosense-orcin.vercel.app"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              title="Open Live Demo"
-                            >
-                              <span className="live-demo-pulse-dot"></span>
-                              <span className="live-demo-label">LIVE DEMO</span>
-                              <span className="live-demo-icon-box">
-                                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                  <path d="M7 17L17 7M17 7H7M17 7V17" />
-                                </svg>
-                              </span>
-                            </a>
+                      {/* Mobile View: Perfectly aligned, responsive card for mobile devices */}
+                      <ProjectMobileCard
+                        id="neurosense"
+                        tagNumber="01"
+                        tagCategory="CLINICAL BIOSIGNALS"
+                        brandName="NeuroSense"
+                        brandIcon={
+                          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#0f172a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M12 2a4 4 0 0 0-4 4v1a3 3 0 0 0-3 3v2a3 3 0 0 0 2.2 2.9A4 4 0 0 0 11 20v2h2v-2a4 4 0 0 0 3.8-5.1A3 3 0 0 0 19 12v-2a3 3 0 0 0-3-3V6a4 4 0 0 0-4-4z" />
+                            <path d="M9 12h6M12 9v6" />
+                          </svg>
+                        }
+                        titlePrimary="Precision Neural Decoding."
+                        titleHighlight="Real-Time Stress & Anxiety Biomarkers."
+                        description="An intelligent clinical EEG platform analyzing electrical brain rhythms to detect Acute Cognitive Overload, Executive Workload, and State Anxiety Paroxysms."
+                        liveDemoUrl="https://neurosense-orcin.vercel.app"
+                        techItems={NEUROSENSE_TECH_STACKS}
+                        theme="light"
+                      />
+
+                      {/* Desktop View: Fullscreen landing page showcase */}
+                      <div className="card__desktop-view">
+                        <div className="card__content" style={{ zIndex: 20 }}>
+                          <div className="card__descr" style={{ justifyContent: "flex-end", width: "100%", pointerEvents: "none" }}>
+                            <div className="card__btngroup" style={{ marginLeft: "auto", display: "flex", justifyContent: "flex-end", pointerEvents: "auto" }}>
+                              <a
+                                className="live-demo-box-btn"
+                                href="https://neurosense-orcin.vercel.app"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="Open Live Demo"
+                              >
+                                <span className="live-demo-pulse-dot"></span>
+                                <span className="live-demo-label">LIVE DEMO</span>
+                                <span className="live-demo-icon-box">
+                                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                  </svg>
+                                </span>
+                              </a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      {/* Tech Stack Footer Section */}
-                      <div className="card__techstack-wrapper" style={{ zIndex: 25, pointerEvents: "auto" }}>
-                        <ProjectTechStack />
-                      </div>
-                      <div className="card__image" style={{ pointerEvents: "none" }}>
-                        <img className="card__media" src="/img/works/showcase-stack/neurosense.png?v=2" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast" }} />
-                        <div className="card__cover" style={{ backgroundColor: "transparent", pointerEvents: "none" }}></div>
+                        {/* Tech Stack Footer Section */}
+                        <div className="card__techstack-wrapper" style={{ zIndex: 25, pointerEvents: "auto" }}>
+                          <ProjectTechStack />
+                        </div>
+                        <div className="card__image" style={{ pointerEvents: "none" }}>
+                          <img className="card__media" src="/img/works/showcase-stack/neurosense.png?v=2" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast" }} />
+                          <div className="card__cover" style={{ backgroundColor: "transparent", pointerEvents: "none" }}></div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   {/*  single card  */}
                   <div className="mxd-stack-cards__card" style={{ backgroundColor: "#030712" }}>
                     <div className="card__wrapper" style={{ backgroundColor: "#030712" }}>
-                      <div className="card__content" style={{ zIndex: 20 }}>
-                        <div className="card__descr" style={{ justifyContent: "flex-end", width: "100%", pointerEvents: "none", opacity: 1, transform: "none" }}>
-                          <div className="card__btngroup" style={{ marginLeft: "auto", display: "flex", justifyContent: "flex-end", pointerEvents: "auto" }}>
-                            <a
-                              className="live-demo-box-btn"
-                              href="https://frontend-mu-roan-llgeruknl5.vercel.app"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              title="Open Live Demo"
-                            >
-                              <span className="live-demo-pulse-dot"></span>
-                              <span className="live-demo-label">LIVE DEMO</span>
-                              <span className="live-demo-icon-box">
-                                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                  <path d="M7 17L17 7M17 7H7M17 7V17" />
-                                </svg>
-                              </span>
-                            </a>
+                      {/* Mobile View: Perfectly aligned, responsive card for mobile devices */}
+                      <ProjectMobileCard
+                        id="clude"
+                        tagNumber="02"
+                        tagCategory="ROOT-CAUSE REASONING"
+                        brandName="Clude"
+                        brandIcon={
+                          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#60a5fa" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="4 17 10 11 4 5" />
+                            <line x1="12" y1="19" x2="20" y2="19" />
+                          </svg>
+                        }
+                        titlePrimary="Pinpoint the exact commit that broke production"
+                        titleHighlight="with AI Precision."
+                        description="AI-powered root-cause reasoning and AST codebase walkthroughs to maximize incident resolution speed and onboard engineers to complex repositories."
+                        liveDemoUrl="https://frontend-mu-roan-llgeruknl5.vercel.app"
+                        techItems={CLUDE_TECH_STACKS}
+                        theme="dark"
+                      />
+
+                      {/* Desktop View: Fullscreen landing page showcase */}
+                      <div className="card__desktop-view">
+                        <div className="card__content" style={{ zIndex: 20 }}>
+                          <div className="card__descr" style={{ justifyContent: "flex-end", width: "100%", pointerEvents: "none", opacity: 1, transform: "none" }}>
+                            <div className="card__btngroup" style={{ marginLeft: "auto", display: "flex", justifyContent: "flex-end", pointerEvents: "auto" }}>
+                              <a
+                                className="live-demo-box-btn"
+                                href="https://frontend-mu-roan-llgeruknl5.vercel.app"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="Open Live Demo"
+                              >
+                                <span className="live-demo-pulse-dot"></span>
+                                <span className="live-demo-label">LIVE DEMO</span>
+                                <span className="live-demo-icon-box">
+                                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                  </svg>
+                                </span>
+                              </a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      {/* Tech Stack Footer Section */}
-                      <div className="card__techstack-wrapper is-revealed" style={{ zIndex: 25, pointerEvents: "auto", opacity: 1, transform: "none" }}>
-                        <ProjectTechStack items={CLUDE_TECH_STACKS} theme="dark" />
-                      </div>
-                      <div className="card__image" style={{ pointerEvents: "none", backgroundColor: "#030712", overflow: "hidden" }}>
-                        <img className="card__media" src="/img/works/showcase-stack/clude.png" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast", top: "-2px", height: "calc(100% + 4px)", position: "relative", objectFit: "cover" }} />
-                        <div className="card__cover" style={{ backgroundColor: "transparent", pointerEvents: "none" }}></div>
+                        {/* Tech Stack Footer Section */}
+                        <div className="card__techstack-wrapper is-revealed" style={{ zIndex: 25, pointerEvents: "auto", opacity: 1, transform: "none" }}>
+                          <ProjectTechStack items={CLUDE_TECH_STACKS} theme="dark" />
+                        </div>
+                        <div className="card__image" style={{ pointerEvents: "none", backgroundColor: "#030712", overflow: "hidden" }}>
+                          <img className="card__media" src="/img/works/showcase-stack/clude.png" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast", top: "-2px", height: "calc(100% + 4px)", position: "relative", objectFit: "cover" }} />
+                          <div className="card__cover" style={{ backgroundColor: "transparent", pointerEvents: "none" }}></div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   {/*  single card  */}
                   <div className="mxd-stack-cards__card" style={{ backgroundColor: "#04121d" }}>
                     <div className="card__wrapper" style={{ backgroundColor: "#04121d" }}>
-                      <div className="card__content" style={{ zIndex: 20 }}>
-                        <div className="card__descr" style={{ justifyContent: "flex-end", width: "100%", pointerEvents: "none", opacity: 1, transform: "none" }}>
-                          <div className="card__btngroup" style={{ marginLeft: "auto", display: "flex", justifyContent: "flex-end", pointerEvents: "auto" }}>
-                            <a
-                              className="live-demo-box-btn"
-                              href="https://ignite-lemon-nu.vercel.app/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              title="Open Live Demo"
-                            >
-                              <span className="live-demo-pulse-dot"></span>
-                              <span className="live-demo-label">LIVE DEMO</span>
-                              <span className="live-demo-icon-box">
-                                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                  <path d="M7 17L17 7M17 7H7M17 7V17" />
-                                </svg>
-                              </span>
-                            </a>
+                      {/* Mobile View: Perfectly aligned, responsive card for mobile devices */}
+                      <ProjectMobileCard
+                        id="ignite"
+                        tagNumber="03"
+                        tagCategory="GEOSPATIAL EMERGENCY AI"
+                        brandName="IGNITE"
+                        brandIcon={
+                          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#34d399" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <polygon points="3 20 9 4 13 14 17 8 21 20 3 20" />
+                            <circle cx="17" cy="8" r="2" fill="#34d399" />
+                          </svg>
+                        }
+                        titlePrimary="Navigate High-Risk Trails & Remote India"
+                        titleHighlight="with Total Safety."
+                        description="Real-time IMD weather radar, autonomous hazard re-routing, explainable AMS hypoxia prediction, and multi-agency emergency rescue coverage across 28 States & 8 UTs."
+                        liveDemoUrl="https://ignite-lemon-nu.vercel.app/"
+                        techItems={IGNITE_TECH_STACKS}
+                        theme="dark"
+                      />
+
+                      {/* Desktop View: Fullscreen landing page showcase */}
+                      <div className="card__desktop-view">
+                        <div className="card__content" style={{ zIndex: 20 }}>
+                          <div className="card__descr" style={{ justifyContent: "flex-end", width: "100%", pointerEvents: "none", opacity: 1, transform: "none" }}>
+                            <div className="card__btngroup" style={{ marginLeft: "auto", display: "flex", justifyContent: "flex-end", pointerEvents: "auto" }}>
+                              <a
+                                className="live-demo-box-btn"
+                                href="https://ignite-lemon-nu.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="Open Live Demo"
+                              >
+                                <span className="live-demo-pulse-dot"></span>
+                                <span className="live-demo-label">LIVE DEMO</span>
+                                <span className="live-demo-icon-box">
+                                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                  </svg>
+                                </span>
+                              </a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      {/* Tech Stack Footer Section */}
-                      <div className="card__techstack-wrapper is-revealed" style={{ zIndex: 25, pointerEvents: "auto", opacity: 1, transform: "none" }}>
-                        <ProjectTechStack items={IGNITE_TECH_STACKS} theme="dark" />
-                      </div>
-                      <div className="card__image" style={{ pointerEvents: "none", backgroundColor: "#04121d", overflow: "hidden" }}>
-                        <img className="card__media" src="/img/works/showcase-stack/ignite.png?v=4" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast", top: "-2px", height: "calc(100% + 4px)", position: "relative", objectFit: "cover" }} />
-                        <div className="card__cover" style={{ backgroundColor: "transparent", pointerEvents: "none" }}></div>
+                        {/* Tech Stack Footer Section */}
+                        <div className="card__techstack-wrapper is-revealed" style={{ zIndex: 25, pointerEvents: "auto", opacity: 1, transform: "none" }}>
+                          <ProjectTechStack items={IGNITE_TECH_STACKS} theme="dark" />
+                        </div>
+                        <div className="card__image" style={{ pointerEvents: "none", backgroundColor: "#04121d", overflow: "hidden" }}>
+                          <img className="card__media" src="/img/works/showcase-stack/ignite.png?v=4" alt="Project Preview Image" style={{ imageRendering: "-webkit-optimize-contrast", top: "-2px", height: "calc(100% + 4px)", position: "relative", objectFit: "cover" }} />
+                          <div className="card__cover" style={{ backgroundColor: "transparent", pointerEvents: "none" }}></div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   {/*  single card  */}
                   <div className="mxd-stack-cards__card" style={{ backgroundColor: "#0c1411" }}>
                     <div className="card__wrapper" style={{ backgroundColor: "#0c1411" }}>
-                      <div className="card__content" style={{ zIndex: 20 }}>
-                        <div className="card__descr" style={{ justifyContent: "flex-end", width: "100%", pointerEvents: "none", opacity: 1, transform: "none" }}>
-                          <div className="card__btngroup" style={{ marginLeft: "auto", display: "flex", justifyContent: "flex-end", pointerEvents: "auto" }}>
-                            <a
-                              className="live-demo-box-btn"
-                              href="https://web-frontend-three-gamma.vercel.app/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              title="Open Live Demo"
-                            >
-                              <span className="live-demo-pulse-dot"></span>
-                              <span className="live-demo-label">LIVE DEMO</span>
-                              <span className="live-demo-icon-box">
-                                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                  <path d="M7 17L17 7M17 7H7M17 7V17" />
-                                </svg>
-                              </span>
-                            </a>
+                      {/* Mobile View: Perfectly aligned, responsive card for mobile devices */}
+                      <ProjectMobileCard
+                        id="sirus"
+                        tagNumber="04"
+                        tagCategory="QUANTITATIVE SYSTEMS"
+                        brandName="SIRUS"
+                        brandIcon={
+                          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#10b981" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                            <polyline points="16 7 22 7 22 13" />
+                          </svg>
+                        }
+                        titlePrimary="Automated quantitative trading."
+                        titleHighlight="Built for systematic edge."
+                        description="Execute algorithmic strategies with direct market access across Equities, Crypto, and Futures with vectorized backtesting and automated multi-tenant risk orchestration."
+                        liveDemoUrl="https://web-frontend-three-gamma.vercel.app/"
+                        techItems={SIRUS_TECH_STACKS}
+                        theme="emerald"
+                      />
+
+                      {/* Desktop View: Fullscreen landing page showcase */}
+                      <div className="card__desktop-view">
+                        <div className="card__content" style={{ zIndex: 20 }}>
+                          <div className="card__descr" style={{ justifyContent: "flex-end", width: "100%", pointerEvents: "none", opacity: 1, transform: "none" }}>
+                            <div className="card__btngroup" style={{ marginLeft: "auto", display: "flex", justifyContent: "flex-end", pointerEvents: "auto" }}>
+                              <a
+                                className="live-demo-box-btn"
+                                href="https://web-frontend-three-gamma.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="Open Live Demo"
+                              >
+                                <span className="live-demo-pulse-dot"></span>
+                                <span className="live-demo-label">LIVE DEMO</span>
+                                <span className="live-demo-icon-box">
+                                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                  </svg>
+                                </span>
+                              </a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      {/* Tech Stack Footer Section */}
-                      <div className="card__techstack-wrapper is-revealed" style={{ zIndex: 25, pointerEvents: "auto", opacity: 1, transform: "none" }}>
-                        <ProjectTechStack items={SIRUS_TECH_STACKS} theme="emerald" />
-                      </div>
-                      <div className="card__image" style={{ pointerEvents: "none", backgroundColor: "#0f1515", overflow: "hidden" }}>
-                        <img className="card__media" src="/img/works/showcase-stack/sirus.png?v=5" alt="SIRUS - Automated Quantitative Trading" style={{ imageRendering: "-webkit-optimize-contrast", top: "-2px", height: "calc(100% + 4px)", position: "relative", objectFit: "cover" }} />
-                        <div className="card__cover" style={{ backgroundColor: "transparent", pointerEvents: "none" }}></div>
+                        {/* Tech Stack Footer Section */}
+                        <div className="card__techstack-wrapper is-revealed" style={{ zIndex: 25, pointerEvents: "auto", opacity: 1, transform: "none" }}>
+                          <ProjectTechStack items={SIRUS_TECH_STACKS} theme="emerald" />
+                        </div>
+                        <div className="card__image" style={{ pointerEvents: "none", backgroundColor: "#0f1515", overflow: "hidden" }}>
+                          <img className="card__media" src="/img/works/showcase-stack/sirus.png?v=5" alt="SIRUS - Automated Quantitative Trading" style={{ imageRendering: "-webkit-optimize-contrast", top: "-2px", height: "calc(100% + 4px)", position: "relative", objectFit: "cover" }} />
+                          <div className="card__cover" style={{ backgroundColor: "transparent", pointerEvents: "none" }}></div>
+                        </div>
                       </div>
                     </div>
                   </div>
