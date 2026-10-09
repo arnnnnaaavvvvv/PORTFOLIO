@@ -69,7 +69,7 @@ export default function Hero() {
             >
               <img
                 src="/hero-name.png"
-                alt="Arnav Singh — Full-Stack AI Developer"
+                alt="Arnav Singh — Full-Stack AI Engineer"
                 className="hero-image"
               />
             </motion.div>

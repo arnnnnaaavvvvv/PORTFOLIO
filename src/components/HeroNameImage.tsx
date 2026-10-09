@@ -28,7 +28,7 @@ export default function HeroNameImage() {
           />
           <img
             src="/hero-name.png"
-            alt="Arnav Singh — Full-Stack AI Developer"
+            alt="Arnav Singh — Full-Stack AI Engineer"
             className="hero-image"
           />
         </picture>
