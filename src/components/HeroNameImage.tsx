@@ -18,16 +18,16 @@ export default function HeroNameImage() {
         <picture className="hero-picture">
           <source
             media="(max-width: 768px)"
-            srcSet="/hero-name-mobile.webp"
+            srcSet="/hero-name-mobile.webp?v=3"
             type="image/webp"
           />
           <source
             media="(max-width: 768px)"
-            srcSet="/hero-name-mobile.png"
+            srcSet="/hero-name-mobile.png?v=3"
             type="image/png"
           />
           <img
-            src="/hero-name.png"
+            src="/hero-name.png?v=3"
             alt="Arnav Singh — Full-Stack AI Engineer"
             className="hero-image"
           />
