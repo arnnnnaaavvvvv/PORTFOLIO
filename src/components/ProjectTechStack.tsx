@@ -812,7 +812,7 @@ export default function ProjectTechStack({
                     }
                   : isDark
                   ? {
-                      backgroundColor: isHovered ? "rgba(255, 255, 255, 0.12)" : "rgba(255, 255, 255, 0.05)",
+                      backgroundColor: isHovered ? "rgba(255, 255, 255, 0.14)" : "rgba(255, 255, 255, 0.06)",
                       borderColor: isHovered ? tech.borderColor : "rgba(255, 255, 255, 0.12)",
                       boxShadow: isHovered
                         ? `0 6px 20px ${tech.bgColor}, 0 0 10px ${tech.bgColor}`
@@ -820,11 +820,11 @@ export default function ProjectTechStack({
                       transform: isHovered ? "translateY(-3px) scale(1.03)" : "translateY(0) scale(1)",
                     }
                   : {
-                      backgroundColor: isHovered ? tech.bgColor : "#ffffff",
-                      borderColor: isHovered ? tech.borderColor : "rgba(226, 232, 240, 0.9)",
+                      backgroundColor: isHovered ? tech.bgColor : "rgba(255, 255, 255, 0.92)",
+                      borderColor: isHovered ? tech.borderColor : "rgba(15, 23, 42, 0.08)",
                       boxShadow: isHovered
                         ? `0 6px 18px ${tech.bgColor}, 0 2px 6px rgba(0,0,0,0.06)`
-                        : "0 2px 6px rgba(0, 0, 0, 0.03)",
+                        : "0 1px 3px rgba(0, 0, 0, 0.03)",
                       transform: isHovered ? "translateY(-3px) scale(1.03)" : "translateY(0) scale(1)",
                     }
               }

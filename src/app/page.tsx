@@ -169,6 +169,8 @@ export default function Home() {
                         liveDemoUrl="https://neurosense-orcin.vercel.app"
                         techItems={NEUROSENSE_TECH_STACKS}
                         theme="light"
+                        actionLabel="Explore Benchmark Cases"
+                        metrics={["128Hz Raw EEG", "Biomarker ML", "Clinical Grade"]}
                       />
 
                       {/* Desktop View: Fullscreen landing page showcase */}
@@ -226,6 +228,8 @@ export default function Home() {
                         liveDemoUrl="https://frontend-mu-roan-llgeruknl5.vercel.app"
                         techItems={CLUDE_TECH_STACKS}
                         theme="dark"
+                        actionLabel="Launch Studio"
+                        metrics={["Sub-sec AST Parse", "Git Blame AI", "Zero-Shot RCA"]}
                       />
 
                       {/* Desktop View: Fullscreen landing page showcase */}
@@ -283,6 +287,8 @@ export default function Home() {
                         liveDemoUrl="https://ignite-lemon-nu.vercel.app/"
                         techItems={IGNITE_TECH_STACKS}
                         theme="dark"
+                        actionLabel="Open Radar Map"
+                        metrics={["IMD Radar Mesh", "28 States & 8 UTs", "AMS Hypoxia AI"]}
                       />
 
                       {/* Desktop View: Fullscreen landing page showcase */}
@@ -340,6 +346,8 @@ export default function Home() {
                         liveDemoUrl="https://web-frontend-three-gamma.vercel.app/"
                         techItems={SIRUS_TECH_STACKS}
                         theme="emerald"
+                        actionLabel="Launch Terminal"
+                        metrics={["Sub-ms DMA Direct", "Multi-Tenant Risk", "Vectorized Backtest"]}
                       />
 
                       {/* Desktop View: Fullscreen landing page showcase */}
