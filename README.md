@@ -34,11 +34,15 @@ For a detailed technical walkthrough of the component hierarchy, animation lifec
    * Fuses live IMD meteorological telemetry, 6 environmental zones, Acute Mountain Sickness (AMS) altitude curves, and emergency mesh dispatch across all 28 States & 8 Union Territories.
    * *Stack:* FastAPI, React 19 + Vite, Leaflet.js Offline GIS, Deterministic Risk AST, WebSockets.
 
-3. **[SIRUS](https://github.com/arnnnnaaavvvvv/SIRUS)** — Enterprise Multi-Tenant Quantitative Engine & Algorithmic Trading Platform
+3. **[NeuroSense](https://github.com/arnnnnaaavvvvv/NeuroSense)** — Clinical EEG & Polysomnography Telemetry Intelligence
+   * Clinical-grade EEG/PSG telemetry platform featuring pre-onset early-warning lookback windows, multi-window rate-of-change escalation velocity & acceleration tracking, 128x128 STFT spectrograms, and zero-hallucination deterministic RAG clinical protocol retrieval.
+   * *Stack:* Next.js 14, Python 3.11, PyTorch 2.2+, FastAPI, SciPy Biosignal Processing, LOSO-CV (93.8% Acc).
+
+4. **[SIRUS](https://github.com/arnnnnaaavvvvv/SIRUS)** — Enterprise Multi-Tenant Quantitative Engine & Algorithmic Trading Platform
    * Direct Market Access (Zerodha Kite, Alpaca, KuCoin, IBKR) with 540,000 ticks/sec vectorized backtester, AES-256 Demat envelope vault, and Redis Streams event bus.
    * *Stack:* Next.js 14, Three.js 3D wave particles, Python FastAPI, Redis Streams, NumPy/Pandas Vectorized Engine.
 
-4. **[Talent Intelligence Platform](https://github.com/arnnnnaaavvvvv/AI-Developer-Copilot-Career-Intelligence-Platform)** — AI Developer Copilot & Career Platform
+5. **[Talent Intelligence Platform](https://github.com/arnnnnaaavvvvv/AI-Developer-Copilot-Career-Intelligence-Platform)** — AI Developer Copilot & Career Platform
    * Semantic ATS scoring, skill-gap vector projections, and salary regression using dense embeddings and Qdrant HNSW vector search.
 
 ---
