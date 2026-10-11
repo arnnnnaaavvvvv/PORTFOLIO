@@ -42,9 +42,6 @@ For a detailed technical walkthrough of the component hierarchy, animation lifec
    * Direct Market Access (Zerodha Kite, Alpaca, KuCoin, IBKR) with 540,000 ticks/sec vectorized backtester, AES-256 Demat envelope vault, and Redis Streams event bus.
    * *Stack:* Next.js 14, Three.js 3D wave particles, Python FastAPI, Redis Streams, NumPy/Pandas Vectorized Engine.
 
-5. **[Talent Intelligence Platform](https://github.com/arnnnnaaavvvvv/AI-Developer-Copilot-Career-Intelligence-Platform)** — AI Developer Copilot & Career Platform
-   * Semantic ATS scoring, skill-gap vector projections, and salary regression using dense embeddings and Qdrant HNSW vector search.
-
 ---
 
 ## 🛠️ Getting Started
