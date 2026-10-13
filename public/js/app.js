@@ -67,12 +67,22 @@ function initPortfolio() {
   if (window.__portfolioInitialized) return;
   window.__portfolioInitialized = true;
 
-  const lenis = new Lenis();
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 992;
+
+  const lenis = new Lenis({
+    lerp: isMobile ? 0.12 : 0.08,
+    duration: isMobile ? 1.0 : 1.2,
+    smoothWheel: true,
+    wheelMultiplier: 1,
+    touchMultiplier: 1.25,
+    infinite: false,
+  });
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add((time) => {
-    lenis.raf(time * 1000)
+    lenis.raf(time * 1000);
   });
-  gsap.ticker.lagSmoothing(0);
+  // Gracefully smooth out frame drops on mobile rather than sudden visual leaps
+  gsap.ticker.lagSmoothing(500, 33);
 
   gsap.registerPlugin(ScrollTrigger, CustomEase, SplitText, Flip, ScrollToPlugin, InertiaPlugin);
   CustomEase.create("hop", ".87, 0, .13, 1");
@@ -2769,42 +2779,85 @@ function mxdDvStickyMedia() {
 // Divider - Sticky Caption Start
 // --------------------------------------------- //
 function mxdDvStickyCaption() {
-  document.querySelectorAll(".mxd-dv-sticky-cap").forEach((caption) => {
+  ScrollTrigger.matchMedia({
+    // Desktop layout (>= 992px): Flip animation between top, center, and bottom areas
+    "(min-width: 992px)": function() {
+      document.querySelectorAll(".mxd-dv-sticky-cap").forEach((caption) => {
+        const content = caption.querySelector(".mxd-dv-sticky-cap__content");
+        const topArea = caption.querySelector(".mxd-dv-sticky-cap__top");
+        const centerArea = caption.querySelector(".mxd-dv-sticky-cap__center");
+        const bottomArea = caption.querySelector(".mxd-dv-sticky-cap__bottom");
+        const scrollArea = caption.querySelector(".mxd-dv-sticky-cap__scroll");
+        if (!content || !topArea || !centerArea || !bottomArea || !scrollArea) return;
 
-    const content = caption.querySelector(".mxd-dv-sticky-cap__content");
-    const topArea = caption.querySelector(".mxd-dv-sticky-cap__top");
-    const centerArea = caption.querySelector(".mxd-dv-sticky-cap__center");
-    const bottomArea = caption.querySelector(".mxd-dv-sticky-cap__bottom");
-    const scrollArea = caption.querySelector(".mxd-dv-sticky-cap__scroll");
-    if (!content || !topArea || !centerArea || !bottomArea || !scrollArea) return;
-    // 1. Flip from top → center when section hits top of viewport
-    ScrollTrigger.create({
-      trigger: caption,
-      start: "top top",
-      onEnter: () => flipTo(centerArea),
-      onEnterBack: () => flipTo(centerArea),
-      onLeaveBack: () => flipTo(topArea),
-    });
-    // 2. Flip from center → bottom when scroll area bottom touches bottom
-    ScrollTrigger.create({
-      trigger: scrollArea,
-      start: "bottom bottom",
-      onEnter: () => flipTo(bottomArea),
-      onLeaveBack: () => flipTo(centerArea),
-    });
+        // Reset to top area
+        if (content.parentNode !== topArea) {
+          topArea.appendChild(content);
+        }
 
-    function flipTo(targetContainer) {
-      // Avoid unnecessary re-append if already inside the target
-      if (content.parentNode === targetContainer) return;
-      const state = Flip.getState(content);
-      targetContainer.appendChild(content);
-      Flip.from(state, {
-        duration: 0.6,
-        ease: "none",
-        absolute: true,
+        function flipTo(targetContainer) {
+          if (content.parentNode === targetContainer) return;
+          const state = Flip.getState(content);
+          targetContainer.appendChild(content);
+          Flip.from(state, {
+            duration: 0.6,
+            ease: "none",
+            absolute: true,
+          });
+        }
+
+        const st1 = ScrollTrigger.create({
+          trigger: caption,
+          start: "top top",
+          onEnter: () => flipTo(centerArea),
+          onEnterBack: () => flipTo(centerArea),
+          onLeaveBack: () => flipTo(topArea),
+        });
+
+        const st2 = ScrollTrigger.create({
+          trigger: scrollArea,
+          start: "bottom bottom",
+          onEnter: () => flipTo(bottomArea),
+          onLeaveBack: () => flipTo(centerArea),
+        });
+
+        return () => {
+          st1.kill();
+          st2.kill();
+        };
+      });
+    },
+
+    // Mobile & Tablet (< 992px): Natural flow with silky smooth stagger entrance & zero overlap
+    "(max-width: 991px)": function() {
+      document.querySelectorAll(".mxd-dv-sticky-cap").forEach((caption) => {
+        const content = caption.querySelector(".mxd-dv-sticky-cap__content");
+        const topArea = caption.querySelector(".mxd-dv-sticky-cap__top");
+        if (content && topArea && content.parentNode !== topArea) {
+          topArea.appendChild(content);
+        }
+
+        // Smooth fluid reveal for each specialization card on mobile
+        const cards = caption.querySelectorAll(".scroll-images-row__obj");
+        cards.forEach((card) => {
+          gsap.fromTo(card,
+            { opacity: 0.82, y: 26, scale: 0.98 },
+            {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              duration: 0.6,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: card,
+                start: "top 92%",
+                toggleActions: "play none none reverse",
+              }
+            }
+          );
+        });
       });
     }
-
   });
 }
 // --------------------------------------------- //
@@ -2893,6 +2946,9 @@ mxdSlideLeftToRight.forEach((element) => {
 // ClipPath Image Common Animations
 const imageContainer = document.querySelectorAll(".mxd-clip-image");
 imageContainer.forEach((element) => {
+  if (window.innerWidth < 992 && element.closest("#services")) {
+    return;
+  }
   const image = element.querySelector("img");
   gsap.set(element, { clipPath: "inset(0% 100% 1% 0%)" });
   gsap.set(image, { scale: 1.2 });

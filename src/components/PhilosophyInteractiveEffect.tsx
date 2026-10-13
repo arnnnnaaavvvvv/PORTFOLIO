@@ -13,6 +13,31 @@ export default function PhilosophyInteractiveEffect() {
     let rafId: number | null = null;
 
     const checkProximity = () => {
+      // On mobile / tablet screens (< 992px), layout is sequential with zero card overlap.
+      // Exit early to eliminate mobile layout thrashing and battery consumption.
+      if (window.innerWidth < 992) {
+        const content = section.querySelector<HTMLElement>(".mxd-dv-sticky-cap__content");
+        const captionText = section.querySelector<HTMLElement>(".mxd-dv-sticky-cap__text.permanent");
+        if (content?.classList.contains("philosophy-text-illuminated")) {
+          content.classList.remove("philosophy-text-illuminated");
+        }
+        if (captionText?.classList.contains("is-distorting")) {
+          captionText.classList.remove("is-distorting");
+        }
+        const items = section.querySelectorAll<HTMLElement>(".scroll-images-row__obj");
+        items.forEach((obj) => obj.classList.remove("has-edge-glow"));
+        rafId = requestAnimationFrame(checkProximity);
+        return;
+      }
+
+      // Desktop performance optimization: only compute proximity when section is near viewport
+      const sectionRect = section.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      if (sectionRect.bottom < -200 || sectionRect.top > viewportHeight + 200) {
+        rafId = requestAnimationFrame(checkProximity);
+        return;
+      }
+
       const content = section.querySelector<HTMLElement>(".mxd-dv-sticky-cap__content");
       const captionText = section.querySelector<HTMLElement>(".mxd-dv-sticky-cap__text.permanent");
       const items = section.querySelectorAll<HTMLElement>(".scroll-images-row__item");
@@ -25,8 +50,6 @@ export default function PhilosophyInteractiveEffect() {
       const textRect = captionText.getBoundingClientRect();
       const textCenterX = textRect.left + textRect.width / 2;
       const textCenterY = textRect.top + textRect.height / 2;
-
-      const viewportHeight = window.innerHeight;
       const viewportWidth = window.innerWidth;
 
       let maxProximity = 0;

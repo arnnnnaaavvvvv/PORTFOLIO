@@ -82,6 +82,14 @@ html.lenis body {
   overflow: hidden;
 }
 
+/* Enhanced hardware-accelerated touch scrolling */
+@media (max-width: 991px) {
+  html, body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: none;
+  }
+}
+
 /* Links & Buttons Reset */
 a {
   color: inherit;
@@ -1604,6 +1612,165 @@ a.main-menu__toggle {
   image-rendering: -webkit-optimize-contrast;
   transform: translateZ(0);
   backface-visibility: hidden;
+}
+
+/* ===================================================
+   Mobile & Tablet Philosophy & Services Flow (< 992px)
+   Eliminates sticky text collision/overlap on phone screens,
+   ensuring an ultra-smooth, sequential, editorial transition.
+   =================================================== */
+@media only screen and (max-width: 991px) {
+  #services .mxd-dv-sticky-cap {
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
+    overflow: visible !important;
+    background-color: #faf7f0 !important;
+  }
+
+  #services .mxd-dv-sticky-cap__static {
+    position: relative !important;
+    top: auto !important;
+    height: auto !important;
+    min-height: unset !important;
+    padding: clamp(3.25rem, 7vw, 4.5rem) 1.25rem 1.75rem 1.25rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    z-index: 2 !important;
+    overflow: visible !important;
+    mix-blend-mode: normal !important;
+    transform: none !important;
+  }
+
+  #services .mxd-dv-sticky-cap__top,
+  #services .mxd-dv-sticky-cap__center,
+  #services .mxd-dv-sticky-cap__bottom {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  #services .mxd-dv-sticky-cap__content {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 640px !important;
+    padding: 0 !important;
+    gap: 1.5rem !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  #services .mxd-dv-sticky-cap__btngroup {
+    margin-bottom: 0.25rem !important;
+  }
+
+  #services .mxd-dv-sticky-cap__caption {
+    width: 100% !important;
+    padding: 0 0.5rem !important;
+  }
+
+  #services .mxd-dv-sticky-cap__text.permanent {
+    font-size: clamp(1.4rem, 4.6vw, 1.85rem) !important;
+    line-height: 1.54 !important;
+    letter-spacing: -0.015em !important;
+    word-spacing: 0.03em !important;
+    color: #1a1d20 !important;
+    text-shadow: none !important;
+    margin: 0 !important;
+    filter: none !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  #services .mxd-dv-sticky-cap__text.permanent span {
+    color: #4b5563 !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+  }
+
+  /* Prevent illumination override or distortion skew on mobile */
+  #services .mxd-dv-sticky-cap__content.philosophy-text-illuminated .mxd-dv-sticky-cap__text.permanent {
+    color: #1a1d20 !important;
+    text-shadow: none !important;
+  }
+
+  #services .mxd-dv-sticky-cap__content.philosophy-text-illuminated .mxd-dv-sticky-cap__text.permanent span {
+    color: #4b5563 !important;
+  }
+
+  #services .mxd-dv-sticky-cap__text.is-distorting {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  #services .mxd-dv-sticky-cap__scroll {
+    position: relative !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 4.5rem !important;
+    overflow: visible !important;
+  }
+
+  #services .scroll-images-row {
+    margin-bottom: 0 !important;
+    width: 100% !important;
+  }
+
+  #services .scroll-images-row .col-12.col-md-1 {
+    display: none !important;
+  }
+
+  #services .scroll-images-row__item {
+    padding: 0 1rem !important;
+    margin-bottom: 2rem !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  #services .scroll-images-row__item:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  #services .scroll-images-row__obj {
+    width: 100% !important;
+    max-width: 440px !important;
+    background: #121418 !important;
+    border-radius: 18px !important;
+    box-shadow: 
+      0 14px 34px -8px rgba(0, 0, 0, 0.42),
+      0 4px 14px -2px rgba(0, 0, 0, 0.22) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    transform: translateZ(0);
+    will-change: transform, opacity;
+  }
+
+  #services .scroll-images-row__image {
+    border-radius: 17px !important;
+  }
+
+  #services .scroll-images-row__image.mxd-clip-image {
+    clip-path: none !important;
+    -webkit-clip-path: none !important;
+  }
+
+  #services .scroll-images-row__image img {
+    border-radius: 17px !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    transform: none !important;
+  }
 }
 
 /* Philosophy Badge Pill (Ultra-Premium Obsidian Capsule) */
